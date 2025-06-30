@@ -1,0 +1,26 @@
+{
+  "projectSlides": {
+    "corti": [
+      { "img": "teasers/corti.jpg", "blurb": "Corti is a healthcare AI company that builds specialized language models to support medical professionals in real time." },
+      { "img": "teasers/corti2.jpg", "blurb": "I worked on product strategy and user research to help Corti scale their impact in medtech." }
+    ],
+    "nomad": [
+      { "img": "teasers/nomad.jpg", "blurb": "Nomad is a travel tech platform connecting digital nomads with global workspaces and communities." },
+      { "img": "teasers/nomad2.jpg", "blurb": "I led the launch of new features to boost user engagement and retention." }
+    ],
+    "skingenius": [
+      { "img": "teasers/skingenius.jpg", "blurb": "SkinGenius uses AI to provide personalized skincare recommendations." },
+      { "img": "teasers/skingenius2.jpg", "blurb": "I drove product-market fit through data analysis and rapid prototyping." }
+    ],
+    "zapo": [
+      { "img": "teasers/zapo.jpg", "blurb": "Zapo is a B2B SaaS platform that drives growth for local businesses by generating high-quality leads." },
+      { "img": "teasers/zapo2.jpg", "blurb": "I worked on onboarding flows and growth strategy for Zapo's product team." }
+    ]
+  },
+  "teasersData": [
+    { "id": "corti", "title": "Corti.ai – Healthcare AI Assistant", "tags": "medtech, ai" },
+    { "id": "nomad", "title": "Nomad – Travel Tech Platform", "tags": "travel, SaaS" },
+    { "id": "skingenius", "title": "SkinGenius – AI Skincare", "tags": "ai, health" },
+    { "id": "zapo", "title": "Zapo – Team Management SaaS", "tags": "b2b, SaaS" }
+  ]
+} 

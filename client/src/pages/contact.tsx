@@ -87,7 +87,7 @@ export default function Contact() {
       <section className="py-20 bg-gradient-to-br from-background via-primary/5 to-background">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div
-            ref={heroRef.ref}
+            ref={heroRef.ref as React.RefObject<HTMLDivElement>}
             className={`text-center fade-in ${heroRef.isVisible ? "visible" : ""}`}
           >
             <h1 className="font-display text-4xl md:text-6xl font-bold text-foreground mb-6">
@@ -98,27 +98,6 @@ export default function Contact() {
               I'm always excited to discuss product opportunities, collaborate on interesting projects, 
               or just chat about the future of technology and design.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button
-                size="lg"
-                onClick={handleScheduleMeeting}
-                className="inline-flex items-center px-8 py-4 hover-glow bg-primary text-primary-foreground hover:bg-primary/90"
-              >
-                <Calendar className="mr-2 h-5 w-5" />
-                Schedule a Chat
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="inline-flex items-center px-8 py-4 hover-glow border-border/50"
-                onClick={() => {
-                  document.getElementById("contact-form")?.scrollIntoView({ behavior: "smooth" });
-                }}
-              >
-                <Send className="mr-2 h-5 w-5" />
-                Send Message
-              </Button>
-            </div>
           </div>
         </div>
       </section>
@@ -127,7 +106,7 @@ export default function Contact() {
       <section className="py-20 bg-background">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div
-            ref={methodsRef.ref}
+            ref={methodsRef.ref as React.RefObject<HTMLDivElement>}
             className={`text-center mb-16 fade-in ${methodsRef.isVisible ? "visible" : ""}`}
           >
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
@@ -170,113 +149,6 @@ export default function Contact() {
                 </CardContent>
               </Card>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Form */}
-      <section className="py-20 bg-muted/30">
-        <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div
-            ref={formRef.ref}
-            id="contact-form"
-            className={`slide-in-right ${formRef.isVisible ? "visible" : ""}`}
-          >
-            <div className="text-center mb-12">
-              <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
-                Send a Message
-              </h2>
-              <p className="text-xl text-muted-foreground">
-                Have a specific project in mind? Let's discuss the details.
-              </p>
-            </div>
-
-            <Card className="cursor-glow hover-glow border-border/50 bg-card/50 backdrop-blur-sm">
-              <CardContent className="p-8">
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div className="space-y-2">
-                      <Label htmlFor="name" className="text-sm font-medium text-foreground">
-                        Name
-                      </Label>
-                      <Input
-                        id="name"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleInputChange}
-                        placeholder="Your name"
-                        required
-                        className="bg-background border-border/50"
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="email" className="text-sm font-medium text-foreground">
-                        Email
-                      </Label>
-                      <Input
-                        id="email"
-                        name="email"
-                        type="email"
-                        value={formData.email}
-                        onChange={handleInputChange}
-                        placeholder="your.email@example.com"
-                        required
-                        className="bg-background border-border/50"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="subject" className="text-sm font-medium text-foreground">
-                      Subject
-                    </Label>
-                    <Input
-                      id="subject"
-                      name="subject"
-                      value={formData.subject}
-                      onChange={handleInputChange}
-                      placeholder="What would you like to discuss?"
-                      required
-                      className="bg-background border-border/50"
-                    />
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="message" className="text-sm font-medium text-foreground">
-                      Message
-                    </Label>
-                    <Textarea
-                      id="message"
-                      name="message"
-                      value={formData.message}
-                      onChange={handleInputChange}
-                      placeholder="Tell me more about your project, ideas, or how we might work together..."
-                      rows={6}
-                      required
-                      className="bg-background border-border/50 resize-none"
-                    />
-                  </div>
-
-                  <Button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className="w-full hover-glow bg-primary text-primary-foreground hover:bg-primary/90 disabled:opacity-50"
-                  >
-                    {isSubmitting ? (
-                      <>
-                        <div className="w-4 h-4 border-2 border-current border-t-transparent rounded-full animate-spin mr-2" />
-                        Sending...
-                      </>
-                    ) : (
-                      <>
-                        <Send className="mr-2 h-4 w-4" />
-                        Send Message
-                      </>
-                    )}
-                  </Button>
-                </form>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </section>

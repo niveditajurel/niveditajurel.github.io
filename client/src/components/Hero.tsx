@@ -147,7 +147,7 @@ export function Hero() {
                 <span className="absolute inset-0 bg-accent/20 rounded-md -z-10 scale-105 blur-sm opacity-0 hover:opacity-100 transition" />
               </span>
               <br />
-              you can count on
+              turning complexity into clarity
             </h1>
 
             {/* Typewriter */}

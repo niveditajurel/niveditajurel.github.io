@@ -1,0 +1,127 @@
+Add (1) a “Tiny Fraction of My Work” hover-reveal section with two project cards, and (2) a subtle right-side hero animation.
+
+Context – React + Tailwind portfolio already has Hero, About, full Projects page, etc.
+Rule – Do not delete or move existing components; just append new ones.
+
+1 · Mini-Projects Section
+Files
+
+/src/data/teasers.json
+
+json
+Copy
+Edit
+[
+  {
+    "id": "skingenius",
+    "title": "Skingenius – AI Skincare Recommender",
+    "tags": "beautytech • ai",
+    "thumb": "/teasers/skingenius.jpg",
+    "summary": "Redesigned onboarding & quiz flow → +30 % engagement.",
+    "href": "/projects/skingenius"
+  },
+  {
+    "id": "nomad",
+    "title": "Nomad AI – SMB Valuation SaaS",
+    "tags": "fintech • ai",
+    "thumb": "/teasers/nomad.jpg",
+    "summary": "Dynamic pricing engine projected 42 % lift in conversions.",
+    "href": "/projects/nomad"
+  }
+]
+(Add two 1200×900 JPEGs in /public/teasers/.)
+
+/src/components/WorkTeasers.jsx
+
+jsx
+Copy
+Edit
+import items from '../data/teasers.json';
+import { motion } from 'framer-motion';
+
+const Teaser = ({ item }) => (
+  <a href={item.href} className="group relative block w-full overflow-hidden rounded-[32px] bg-base-200">
+    {/* thumbnail */}
+    <img src={item.thumb} alt={item.title} className="w-full h-72 object-cover transition-transform duration-700 group-hover:scale-110" />
+
+    {/* sliding summary */}
+    <motion.div
+      initial={{ y: '100%' }}
+      whileHover={{ y: 0 }}
+      transition={{ type: 'tween', ease: 'easeOut', duration: 0.55 }}
+      className="absolute inset-0 flex flex-col justify-between p-6 bg-flair/90 text-ink dark:bg-accent/90 dark:text-base rounded-[32px]"
+    >
+      <p className="text-lg leading-snug font-medium max-w-xs">{item.summary}</p>
+      <div className="mt-6">
+        <h3 className="text-xl font-semibold">{item.title}</h3>
+        <p className="text-sm opacity-70">{item.tags}</p>
+      </div>
+    </motion.div>
+  </a>
+);
+
+const WorkTeasers = () => (
+  <section id="tiny-work" className="py-28">
+    <div className="container mx-auto px-6">
+      <h2 className="text-4xl lg:text-5xl font-semibold mb-12">
+        A&nbsp;tiny&nbsp;fraction&nbsp;of&nbsp;my&nbsp;work
+      </h2>
+      <div className="grid gap-12 md:grid-cols-2">
+        {items.map(i => <Teaser key={i.id} item={i} />)}
+      </div>
+    </div>
+  </section>
+);
+
+export default WorkTeasers;
+Import WorkTeasers just below the Hero in App.jsx (or Landing component):
+
+jsx
+Copy
+Edit
+import WorkTeasers from './components/WorkTeasers';
+…
+<Hero />
+<WorkTeasers />
+…
+2 · Right-Side Hero Animation
+Inside Hero.jsx (keep current text/CTA layout):
+
+Wrap everything in relative isolate.
+
+Add an animated “data-ring” SVG on the right, visible only on lg screens:
+
+jsx
+Copy
+Edit
+<svg
+  className="hidden lg:block absolute top-12 right-8 w-[420px] h-[420px] opacity-40 dark:opacity-60 pointer-events-none"
+  viewBox="0 0 200 200"
+>
+  <defs>
+    <radialGradient id="ring" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stopColor="transparent" />
+      <stop offset="100%" stopColor="currentColor" />
+    </radialGradient>
+  </defs>
+  <circle
+    cx="100" cy="100" r="92"
+    fill="none" stroke="url(#ring)" strokeWidth="0.8"
+    strokeDasharray="3 6"
+    className="animate-spin-slow"
+  />
+</svg>
+Add keyframe to index.css:
+
+css
+Copy
+Edit
+@keyframes spin-slow { from { transform: rotate(0deg); } to { transform: rotate(360deg);} }
+.animate-spin-slow { animation: spin-slow 40s linear infinite; }
+Ensure overflow-hidden on Hero container so ring doesn’t scroll-bar flash.
+
+3 · Commit Message
+"Add WorkTeasers hover-reveal section + subtle hero data-ring animation"
+
+Deliver only new/modified files & keyframes; leave all existing content untouched.
+

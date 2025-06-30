@@ -1,0 +1,77 @@
+Context – We have a React + Tailwind project with a clean hero (headline, blurb, CTA buttons, dark-mode toggle, CTA tracking). There’s no head-shot now.
+Goal – Infuse the hero with the colour-rich, layered energy of hellodani.co using lightweight CSS/SVG tricks—no heavy libraries.
+
+1 · Replace background
+  • Wrap the entire Hero in a relative isolate container.
+  • Add two overlapping radial-gradient “glow” divs:
+
+jsx
+Copy
+Edit
+{/* glow #1 – top left */}
+<div className="absolute -top-56 -left-48 w-[580px] h-[580px] rounded-full bg-[radial-gradient(circle_at_center,rgba(91,141,239,0.35)_0%,transparent_70%)] blur-[120px] animate-slowPulse pointer-events-none" />
+{/* glow #2 – bottom right */}
+<div className="absolute bottom-[-220px] right-[-260px] w-[680px] h-[680px] rounded-full bg-[radial-gradient(circle_at_center,rgba(248,150,118,0.35)_0%,transparent_70%)] blur-[140px] animate-slowPulseReverse pointer-events-none" />
+  • Define keyframes in index.css:
+
+css
+Copy
+Edit
+@keyframes slowPulse   { 0%,100%{transform:scale(1);} 50%{transform:scale(1.2);} }
+@keyframes slowPulseReverse{0%,100%{transform:scale(1);}50%{transform:scale(0.85);} }
+.animate-slowPulse        { animation: slowPulse 18s ease-in-out infinite; }
+.animate-slowPulseReverse { animation: slowPulseReverse 18s ease-in-out infinite; }
+2 · Add a playful scroll cue
+  • At the bottom-centre of the hero insert:
+
+jsx
+Copy
+Edit
+<div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-ink/60 dark:text-base/60">
+  <div className="w-[22px] h-[38px] rounded-xl border border-current flex justify-center">
+    <div className="w-[4px] h-[8px] bg-current rounded-full animate-scrollDot" />
+  </div>
+  <span className="text-xs tracking-wide">scroll</span>
+</div>
+  • In CSS:
+
+css
+Copy
+Edit
+@keyframes scrollDot{0%{opacity:0;transform:translateY(-6px);}30%{opacity:1;}100%{opacity:0;transform:translateY(6px);} }
+.animate-scrollDot{animation:scrollDot 2.5s infinite;}
+3 · Slight text-colour flourish
+  • Split the headline so noun changes colour on hover, à la Dani:
+
+jsx
+Copy
+Edit
+<h1 className="text-5xl lg:text-6xl font-semibold leading-[1.15]">
+  Turning empathy into&nbsp;
+  <span className="relative inline-block transition-colors duration-300 hover:text-flair">
+    product strategy
+    <span className="absolute inset-0 bg-accent/20 rounded-md -z-10 scale-105 blur-sm opacity-0 hover:opacity-100 transition" />
+  </span>
+</h1>
+4 · Palette tweaks for vibrancy
+  • Add soft-mint (#4ADE80) to tailwind.config.js as mint, then:
+   – Primary accent = accent (#5B8DEF) for buttons/links
+   – Secondary flair = flair (#F89676) & mint for subtle blobs/highlights
+
+5 · Button micro-motion
+  • For each CTA, add group + subtle diagonal-slide arrow:
+
+jsx
+Copy
+Edit
+<button className="group inline-flex items-center gap-2 px-7 py-3 rounded-full bg-accent text-base-100 font-semibold shadow-lg hover:shadow-xl transition">
+  Explore My Work
+  <span className="transform translate-x-0 group-hover:translate-x-1 transition">
+    →
+  </span>
+</button>
+6 · Commit message suggestion
+"Hero ✨ vibrant glows + scroll cue (hellodani style)".
+
+Deliver only modified files and keyframe additions—no other sections changed.
+

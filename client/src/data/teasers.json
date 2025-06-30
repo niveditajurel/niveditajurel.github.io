@@ -1,0 +1,34 @@
+[
+  {
+    "id": "corti",
+    "title": "Corti.ai – Healthcare AI Assistant",
+    "tags": "medtech, ai",
+    "thumb": "/teasers/corti.jpg",
+    "summary": "Corti is a healthcare AI company that builds specialized language models to support medical professionals in real time.",
+    "href": "/projects/corti"
+  },
+  {
+    "id": "zapo",
+    "title": "Zapo – Team Management SaaS",
+    "tags": "b2b, SaaS",
+    "thumb": "/teasers/zapo.jpg",
+    "summary": "Zapo is a UK-based platform that drives growth for local businesses by generating high-quality leads and managing team schedules.",
+    "href": "/projects/zapo"
+  },
+  {
+    "id": "sandhill",
+    "title": "Sandhill – Investment Platform",
+    "tags": "fintech, investment",
+    "thumb": "/teasers/skingenius.jpg",
+    "summary": "Sandhill (formerly Stonks) is a private investment platform providing access to top pre-IPO companies like SpaceX, OpenAI, and Notion.",
+    "href": "/projects/sandhill"
+  },
+  {
+    "id": "adfonic",
+    "title": "Adfonic – Ad Optimization Tool",
+    "tags": "SaaS, advertising",
+    "thumb": "/teasers/nomad.jpg",
+    "summary": "Adfonic is a smart tool that helps advertisers avoid fake clicks, save money, and get better results from their ads.",
+    "href": "/projects/adfonic"
+  }
+]

@@ -1,0 +1,93 @@
+2 · Global styles
+• In index.css add:
+
+css
+Copy
+Edit
+@layer utilities {
+  .animate-blob {
+    animation: blob 18s infinite;
+  }
+  @keyframes blob {
+    0%,100% { transform: translate(0,0) scale(1); }
+    33%   { transform: translate(50px,-60px) scale(1.1); }
+    66%   { transform: translate(-40px,30px) scale(0.9); }
+  }
+}
+3 · Nav update (Nav.jsx)
+
+jsx
+Copy
+Edit
+import { FaLinkedin, FaGithub, FaTwitter } from 'react-icons/fa';
+...
+<div className="flex items-center gap-6">
+  <a href="https://linkedin.com/in/your-handle" aria-label="LinkedIn" target="_blank" rel="noreferrer">
+    <FaLinkedin className="w-5 h-5 hover:text-accent transition" />
+  </a>
+  <a href="https://github.com/your-handle" aria-label="GitHub" target="_blank" rel="noreferrer">
+    <FaGithub className="w-5 h-5 hover:text-accent transition" />
+  </a>
+  <a href="https://twitter.com/your-handle" aria-label="Twitter/X" target="_blank" rel="noreferrer">
+    <FaTwitter className="w-5 h-5 hover:text-accent transition" />
+  </a>
+  {/* dark-mode toggle button already present */}  
+</div>
+• Move the “Download Resume” action into the Hero’s CTA row (keeps it prominent without cluttering the nav).
+
+4 · Hero overhaul (Hero.jsx)
+
+jsx
+Copy
+Edit
+const Hero = () => (
+  <section id="home" className="relative overflow-hidden py-32 bg-base dark:bg-ink text-ink dark:text-base">
+    {/* animated gradient blob */}
+    <div className="absolute -top-40 -left-40 w-[480px] h-[480px] bg-gradient-to-br from-accent/40 to-flair/30 rounded-full blur-3xl animate-blob" />
+
+    <div className="container mx-auto relative z-10 grid lg:grid-cols-2 gap-12 items-center">
+      {/* text block */}
+      <div>
+        <h1 className="text-5xl lg:text-6xl font-[600] leading-tight">
+          Turning empathy into <span className="text-accent">product&nbsp;strategy</span>
+        </h1>
+
+        {/* typewriter (already imported) */}
+        <div className="mt-4 text-xl font-medium tracking-wide">
+          {typedWords}  {/* 0→1 Thinker etc. */}
+        </div>
+
+        <p className="mt-6 max-w-xl text-lg">
+          Early-career Product Manager passionate about crafting data-driven experiences that delight users and drive growth.
+        </p>
+
+        <div className="mt-10 flex gap-6">
+          <button
+            onClick={() => trackEvent('Explore My Work')}
+            className="group relative inline-flex items-center gap-2 px-6 py-3 rounded-full bg-accent text-base font-semibold text-base-100 hover:shadow-lg transition"
+          >
+            Explore My Work →
+          </button>
+          <a
+            href="/resume.pdf"
+            onClick={() => trackEvent('Download Resume')}
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-ink/40 dark:border-base/40 hover:bg-ink/5 dark:hover:bg-base/10 transition"
+          >
+            <ArrowDownTrayIcon className="w-5 h-5" />
+            Download Resume
+          </a>
+        </div>
+      </div>
+
+      {/* profile photo */}
+      <img
+        src="/profile.jpg"
+        alt="Nivedita profile"
+        className="w-64 h-64 lg:w-80 lg:h-80 rounded-full object-cover shadow-2xl mx-auto"
+      />
+    </div>
+  </section>
+);
+5 · Commit suggestion: "Replace nav resume with socials, new palette, animated hero blob + photo"
+
+6 · Remember to import Fa* icons (npm i react-icons) and your profile photo (/public/profile.jpg).

@@ -1,34 +1,96 @@
 [
   {
-    "id": "corti",
-    "title": "Corti.ai – Healthcare AI Assistant",
-    "tags": "medtech, ai",
-    "thumb": "teasers/corti.jpg",
-    "summary": "Corti is a healthcare AI company that builds specialized language models to support medical professionals in real time.",
-    "href": "/projects/corti"
+    "id": "nomad-ai",
+    "title": "Nomad AI",
+    "subtitle": "AI-powered SMB Valuation & Exit-Planning Platform",
+    "description": "Consultant PM for an AI-driven valuation platform. Led pricing & analytics strategy projected to lift free→paid conversion by 42% and MRR by 28%. +865% user growth in 4 months.",
+    "image": "/placeholders/nomad-dashboard.png",
+    "tags": ["AI", "FinTech", "SaaS", "Product Management"],
+    "metrics": {
+      "users": "608",
+      "growth": "+865%",
+      "timeline": "4 months",
+      "impact": "+42% conversion, +28% MRR"
+    },
+    "challenge": "Baby-boomer owners plan to exit ~$10T worth of small businesses, but affordable digital valuation tools are scarce. Nomad AI set out to democratise exit planning with a RAG engine merging accounting data & macro trends.",
+    "solution": "Designed scalable pricing, analytics, and data reliability for MVP. Automated ETL, built cost-benefit model, and launched pricing experiments.",
+    "process": [
+      "Interviewed 8 business-broker & advisor personas",
+      "Benchmarked 6 competitors on pricing & features",
+      "Authored Pricing PRD with 4 models",
+      "Built ROI model (13:1 benefit-cost)",
+      "Defined AARRR, Lean Analytics, OMTM metrics",
+      "Integrated Mage AI for ETL automation",
+      "Created Jira roadmap, mapped 2-week sprints",
+      "Produced Figma wireframes, ran feedback sessions"
+    ],
+    "results": [
+      "608 users (+865% in 4 months)",
+      "+42% projected free→paid conversion",
+      "+28% projected MRR",
+      "MVP launched, analytics & pricing experiments live"
+    ],
+    "role": "Consultant Product Manager: Led pricing, analytics, and GTM for MVP launch with a 4-person founder/engineering team.",
+    "href": "/projects/nomad-ai"
   },
   {
-    "id": "zapo",
-    "title": "Zapo – Team Management SaaS",
-    "tags": "b2b, SaaS",
-    "thumb": "teasers/zapo.jpg",
-    "summary": "Zapo is a UK-based platform that drives growth for local businesses by generating high-quality leads and managing team schedules.",
-    "href": "/projects/zapo"
+    "id": "eco-track",
+    "title": "EcoTrack",
+    "subtitle": "Sustainability Dashboard for Small Businesses",
+    "description": "A comprehensive platform helping small businesses track, analyze, and reduce their environmental impact through actionable insights.",
+    "image": "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&h=600&fit=crop",
+    "tags": ["Web Platform", "Sustainability", "Analytics"],
+    "metrics": {
+      "users": "200+",
+      "growth": "120%",
+      "timeline": "6 months",
+      "impact": "30% average carbon footprint reduction"
+    },
+    "challenge": "Small businesses want to be more sustainable but lack the tools and knowledge to measure and improve their environmental impact effectively.",
+    "solution": "Built an intuitive dashboard that aggregates sustainability data from multiple sources and provides personalized recommendations for reducing environmental impact.",
+    "process": [
+      "Partnered with 15 local businesses to understand sustainability pain points",
+      "Researched carbon accounting methodologies and industry standards",
+      "Designed wireframes focusing on data visualization and actionable insights",
+      "Built MVP with energy tracking and basic reporting features",
+      "Implemented advanced analytics and recommendation engine"
+    ],
+    "results": [
+      "200+ businesses onboarded in pilot program",
+      "120% quarter-over-quarter growth in active users",
+      "30% average reduction in reported carbon footprint",
+      "Featured in 3 sustainability publications"
+    ],
+    "role": "Owned end-to-end product development from concept to launch, including market research, feature prioritization, and go-to-market strategy."
   },
   {
-    "id": "sandhill",
-    "title": "Sandhill – Investment Platform",
-    "tags": "fintech, investment",
-    "thumb": "teasers/skingenius.jpg",
-    "summary": "Sandhill (formerly Stonks) is a private investment platform providing access to top pre-IPO companies like SpaceX, OpenAI, and Notion.",
-    "href": "/projects/sandhill"
-  },
-  {
-    "id": "adfonic",
-    "title": "Adfonic – Ad Optimization Tool",
-    "tags": "SaaS, advertising",
-    "thumb": "teasers/nomad.jpg",
-    "summary": "Adfonic is a smart tool that helps advertisers avoid fake clicks, save money, and get better results from their ads.",
-    "href": "/projects/adfonic"
+    "id": "study-sync",
+    "title": "StudySync",
+    "subtitle": "Collaborative Learning Platform",
+    "description": "A peer-to-peer study platform that connects students with complementary skills and creates structured study groups for better learning outcomes.",
+    "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=600&fit=crop",
+    "tags": ["EdTech", "Community", "Matching Algorithm"],
+    "metrics": {
+      "users": "5K+",
+      "growth": "200%",
+      "timeline": "4 months",
+      "impact": "25% improvement in study effectiveness"
+    },
+    "challenge": "Students struggle to find effective study partners and often study in isolation, leading to decreased motivation and learning outcomes.",
+    "solution": "Created a matching algorithm that pairs students based on learning styles, subject strengths, and availability, then provides structured tools for collaborative studying.",
+    "process": [
+      "Surveyed 200+ students about study habits and collaboration preferences",
+      "Analyzed existing study group formation patterns on campus",
+      "Designed and tested matching algorithm with different weighting factors",
+      "Built core platform with messaging, scheduling, and progress tracking",
+      "Ran pilot program with computer science and business students"
+    ],
+    "results": [
+      "5,000+ students signed up during beta launch",
+      "200% month-over-month growth in study sessions",
+      "25% improvement in self-reported study effectiveness",
+      "Adopted by 3 university departments as official study tool"
+    ],
+    "role": "Led product design and development, conducted user research, and coordinated with university administrators for pilot program implementation."
   }
 ]

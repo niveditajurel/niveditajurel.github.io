@@ -61,28 +61,28 @@ export function Footer() {
             <div className="flex space-x-4">
               <a 
                 href="https://www.linkedin.com/in/nivedita-niv/" 
-                aria-label="LinkedIn" 
+                aria-label="LinkedIn profile" 
                 target="_blank" 
                 rel="noreferrer"
-                className="w-10 h-10 bg-muted hover:bg-accent/10 rounded-lg flex items-center justify-center text-muted-foreground hover:text-accent transition-all duration-200"
+                className="w-10 h-10 bg-muted hover:bg-accent/10 rounded-lg flex items-center justify-center text-muted-foreground hover:text-accent transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
               >
                 <FaLinkedin className="w-5 h-5" />
               </a>
               <a 
                 href="https://github.com/niveditajurel" 
-                aria-label="GitHub" 
+                aria-label="GitHub profile" 
                 target="_blank" 
                 rel="noreferrer"
-                className="w-10 h-10 bg-muted hover:bg-accent/10 rounded-lg flex items-center justify-center text-muted-foreground hover:text-accent transition-all duration-200"
+                className="w-10 h-10 bg-muted hover:bg-accent/10 rounded-lg flex items-center justify-center text-muted-foreground hover:text-accent transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
               >
                 <FaGithub className="w-5 h-5" />
               </a>
               <a 
                 href="https://x.com/nniv266" 
-                aria-label="Twitter/X" 
+                aria-label="Twitter/X profile" 
                 target="_blank" 
                 rel="noreferrer"
-                className="w-10 h-10 bg-muted hover:bg-accent/10 rounded-lg flex items-center justify-center text-muted-foreground hover:text-accent transition-all duration-200"
+                className="w-10 h-10 bg-muted hover:bg-accent/10 rounded-lg flex items-center justify-center text-muted-foreground hover:text-accent transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
               >
                 <FaTwitter className="w-5 h-5" />
               </a>
@@ -101,6 +101,15 @@ export function Footer() {
             <span>for the web</span>
           </p>
         </div>
+      </div>
+      <div className="fixed bottom-4 left-0 w-full flex justify-center z-50 md:hidden pointer-events-none">
+        <a
+          href="#contact"
+          className="pointer-events-auto bg-accent text-accent-foreground px-8 py-3 rounded-full shadow-lg font-bold text-lg focus:outline-none focus-visible:ring-4 focus-visible:ring-accent transition-all duration-200 hover:bg-accent/90"
+          aria-label="Let’s Talk - contact section"
+        >
+          Let’s Talk
+        </a>
       </div>
     </footer>
   );

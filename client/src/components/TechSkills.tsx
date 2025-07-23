@@ -148,7 +148,7 @@ export function TechSkills() {
                 </div>
 
                 {/* Hover effect */}
-                <div className="absolute inset-0 border-2 border-transparent group-hover:border-accent/20 rounded-2xl transition-all duration-500" />
+                <div className="absolute inset-0 border-2 border-transparent group-hover:border-[hsl(var(--accent))]/20 rounded-2xl transition-all duration-500" />
               </motion.div>
             );
           })}

@@ -17,18 +17,18 @@ export function DaniStyleWork() {
             Fraction of my work
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Real-world stories where clear insights meet human-centered design and ship.
+          Real-world stories where clear insights meet human-centered design and ship.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {teasersData.map((project) => (
             <DaniStyleProjectCard
-              key={project.id}
+                key={project.id}
               project={project}
               slides={projectSlides[project.id as keyof typeof projectSlides] || []}
               isOpen={hoveredId === project.id}
-              onMouseEnter={() => setHoveredId(project.id)}
-              onMouseLeave={() => setHoveredId(null)}
+                onMouseEnter={() => setHoveredId(project.id)}
+                onMouseLeave={() => setHoveredId(null)}
             />
           ))}
         </div>
@@ -36,9 +36,9 @@ export function DaniStyleWork() {
         {/* CTA Button */}
         <div className="text-center mt-16">
           <Link href="/projects">
-            <button className="group inline-flex items-center gap-2 px-8 py-4 rounded-full bg-ink dark:bg-base text-base dark:text-ink shadow-lg hover:shadow-xl transition-all duration-300 font-medium">
+            <button className="group inline-flex items-center gap-2 px-8 py-4 rounded-full bg-ink dark:bg-base text-base dark:text-ink shadow-lg hover:shadow-xl transition-all duration-300 font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-accent" aria-label="View all projects" tabIndex={0}>
               View all projects
-              <ArrowRight className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" aria-hidden="true" />
             </button>
           </Link>
         </div>

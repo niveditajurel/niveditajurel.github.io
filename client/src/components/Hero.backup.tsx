@@ -1,10 +1,13 @@
+// BACKUP - Original Hero Component
+// To restore the original design, replace the content of Hero.tsx with this file
+
 import { useState, useEffect } from 'react';
 import { Link } from 'wouter';
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { ArrowRight, Download, Sparkles, Globe, ChevronDown } from 'lucide-react';
+import { ArrowRight, Download, Sparkles, Globe } from 'lucide-react';
 import { trackEvent } from '@/utils/analytics';
 import React from 'react';
 
@@ -56,7 +59,7 @@ export function Hero() {
   }, [displayText, isTyping, currentTextIndex]);
 
   const handleExploreWork = () => {
-    trackEvent('See My Work');
+    trackEvent('Explore My Work');
   };
 
   const handleDownloadResume = () => {
@@ -90,8 +93,16 @@ export function Hero() {
     <section className="relative isolate overflow-hidden py-24 sm:py-32 bg-base dark:bg-ink text-ink dark:text-base min-h-screen flex flex-col lg:flex-row items-center justify-between">
       {/* Glow #1 - top left */}
       <div className="absolute -top-56 -left-48 w-[580px] h-[580px] rounded-full bg-[radial-gradient(circle_at_center,rgba(91,141,239,0.35)_0%,transparent_70%)] blur-[120px] animate-slowPulse pointer-events-none" />
+      
       {/* Glow #2 - bottom right */}
       <div className="absolute bottom-[-220px] right-[-260px] w-[680px] h-[680px] rounded-full bg-[radial-gradient(circle_at_center,rgba(248,150,118,0.35)_0%,transparent_70%)] blur-[140px] animate-slowPulseReverse pointer-events-none" />
+      
+      {/* Floating organic shapes */}
+      {/* <FloatingShapes /> */}
+      
+      {/* Floating tech icons */}
+      {/* <FloatingTechIcons /> */}
+
       {/* Left: Text Content */}
       <motion.div
         className="w-full lg:w-1/2 flex flex-col items-center lg:items-start text-center lg:text-left px-4 sm:px-8"
@@ -120,34 +131,37 @@ export function Hero() {
               className="animate-pulse-line"
             />
           </svg>
+
           {/* Text block */}
           <motion.div variants={itemVariants}>
             <div className="flex flex-col items-center lg:items-start w-full mb-6">
               <Badge 
                 variant="secondary" 
-                className="mb-2 px-4 py-2 text-sm font-medium bg-[hsl(var(--accent))]/10 text-accent border-[hsl(var(--accent))]/20 cursor-glow"
+                className="mb-2 px-4 py-2 text-sm font-medium bg-accent/10 text-accent border-accent/20 cursor-glow"
               >
-                <Sparkles className="w-4 h-4 mr-2" aria-hidden="true" />
+                <Sparkles className="w-4 h-4 mr-2" />
                 Available for New Opportunities
               </Badge>
               <Badge 
                 variant="secondary" 
-                className="px-4 py-2 text-sm font-medium bg-[hsl(var(--accent))]/10 text-accent border-[hsl(var(--accent))]/20 cursor-glow"
+                className="px-4 py-2 text-sm font-medium bg-accent/10 text-accent border-accent/20 cursor-glow"
               >
-                <Globe className="w-4 h-4 mr-2" aria-hidden="true" />
+                <Globe className="w-4 h-4 mr-2" />
                 Open to relocation
               </Badge>
             </div>
+            
             <h1 className="text-5xl lg:text-6xl font-semibold leading-[1.15] mb-4 text-ink dark:text-base">
               Hi, I'm Nivedita
               <br />
               <span className="relative inline-block transition-colors duration-300 hover:text-flair">
                 Product Manager
-                <span className="absolute inset-0 bg-[hsl(var(--accent))]/20 rounded-md -z-10 scale-105 blur-sm opacity-0 hover:opacity-100 transition" />
+                <span className="absolute inset-0 bg-accent/20 rounded-md -z-10 scale-105 blur-sm opacity-0 hover:opacity-100 transition" />
               </span>
               <br />
-              turning complexity into clarity
+             turning complexity into clarity
             </h1>
+
             {/* Typewriter */}
             <div className="mt-4 text-xl font-medium tracking-wide mb-6">
               <span className="inline-block min-h-[2.5rem]">
@@ -155,26 +169,25 @@ export function Hero() {
                 <span className="animate-pulse">|</span>
               </span>
             </div>
-            {/* Restore original supporting copy paragraph */}
+
             <p className="max-w-xl text-lg mb-10 text-muted-foreground">
-              I shape raw ideas into intuitive, data-smart products that scale from MVP to market. Anchored in computer-science depth and a founder's mindset, I blend deep user empathy with emerging AI to move products swiftly from MVP to market scale.
+            I shape raw ideas into intuitive, data-smart products that scale from MVP to market. Anchored in computer-science depth and a founder's mindset, I blend deep user empathy with emerging AI to move products swiftly from MVP to market scale.
             </p>
+
             <div className="flex flex-col sm:flex-row gap-6">
               <Link href="/projects">
-                <Button
-                  asChild
-                  variant="default"
-                  size="lg"
-                  className="group px-10 py-5 rounded-full text-2xl font-extrabold shadow-2xl bg-gradient-to-r from-blue-600 via-flair to-accent text-white transition-all duration-300 hover:scale-105 focus-visible:ring-4 focus-visible:ring-flair"
-                  aria-label="See My Work - portfolio projects"
-                  autoFocus
+                <button 
+                  className="group inline-flex items-center gap-2 px-7 py-3 rounded-full text-base shadow-lg hover:shadow-xl transition cursor-glow hover-glow focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 font-medium bg-[#242424] text-[#d6d6d6]"
+                  onClick={handleExploreWork}
+                  aria-label="Explore my portfolio projects"
                 >
-                  <a>
-                    See My Work
-                    <ArrowRight className="ml-2 w-6 h-6 group-hover:translate-x-1 transition" aria-hidden="true" />
-                  </a>
-                </Button>
+                  Chat with me
+                  <span className="transform translate-x-0 group-hover:translate-x-1 transition">
+                    →
+                  </span>
+                </button>
               </Link>
+              
               <a 
                 href="https://drive.google.com/file/d/1RJoTocjJjHskvaqAdWpVu4aGavceRWwi/view?usp=sharing"
                 target="_blank"
@@ -182,9 +195,8 @@ export function Hero() {
                 className="group inline-flex items-center gap-2 px-7 py-3 rounded-full border border-ink/40 dark:border-base/40 hover:bg-ink/5 dark:hover:bg-base/10 transition-all duration-200 cursor-glow hover-glow focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2"
                 onClick={handleDownloadResume}
                 aria-label="Download my resume PDF"
-                tabIndex={0}
               >
-                <Download className="w-5 h-5" aria-hidden="true" />
+                <Download className="w-5 h-5" />
                 Download Resume
                 <span className="transform translate-x-0 group-hover:translate-x-1 transition opacity-0 group-hover:opacity-100">
                   →
@@ -194,6 +206,7 @@ export function Hero() {
           </motion.div>
         </motion.div>
       </motion.div>
+
       {/* Right: Image with glow, responsive and animated in */}
       <motion.div
         className="w-full lg:w-1/2 flex justify-center items-center mt-12 lg:mt-0"
@@ -251,21 +264,34 @@ export function Hero() {
           </div>
         </div>
       </motion.div>
-      {/* Scroll cue/arrow */}
+
+      {/* Add global CSS for hover/focus if not already present */}
+      <style>{`
+        .profile-img-hover:hover, .profile-img-hover:focus {
+          transform: scale(1.12) rotate(3deg) !important;
+          box-shadow: 0 12px 48px 0 rgba(80, 63, 205, 0.25) !important;
+          outline: none;
+        }
+      `}</style>
+
+      {/* Add border pulse animation */}
+      <style>{`
+        @keyframes borderPulse {
+          0%, 100% { filter: blur(8px) opacity(0.7); }
+          50% { filter: blur(16px) opacity(1); }
+        }
+        .animate-borderPulse {
+          animation: borderPulse 3s ease-in-out infinite;
+        }
+      `}</style>
+
+      {/* Scroll cue */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-ink/60 dark:text-base/60">
-        <button
-          aria-label="Scroll to next section"
-          className="w-[44px] h-[44px] flex items-center justify-center rounded-full bg-accent/10 hover:bg-accent/20 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
-          onClick={() => {
-            const next = document.getElementById('about-section');
-            if (next) next.scrollIntoView({ behavior: 'smooth' });
-          }}
-          tabIndex={0}
-        >
-          <ChevronDown className="w-7 h-7" aria-hidden="true" />
-        </button>
-        <span className="text-xs tracking-wide">Scroll</span>
+        <div className="w-[22px] h-[38px] rounded-xl border border-current flex justify-center">
+          <div className="w-[4px] h-[8px] bg-current rounded-full animate-scrollDot" />
+        </div>
+        <span className="text-xs tracking-wide">scroll</span>
       </div>
     </section>
   );
-}
+} 

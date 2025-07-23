@@ -84,9 +84,9 @@ export function WorkTeasers() {
             There's a product case study as well. Feel free to get in touch to check it out.
           </p>
           <Link href="/projects">
-            <button className="group inline-flex items-center gap-2 px-8 py-4 rounded-full bg-ink dark:bg-base text-base dark:text-ink shadow-lg hover:shadow-xl transition-all duration-300 font-medium">
+            <button className="group inline-flex items-center gap-2 px-8 py-4 rounded-full bg-ink dark:bg-base text-base dark:text-ink shadow-lg hover:shadow-xl transition-all duration-300 font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-accent" aria-label="View all projects" tabIndex={0}>
               View all projects
-              <ArrowRight className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" aria-hidden="true" />
             </button>
           </Link>
         </motion.div>

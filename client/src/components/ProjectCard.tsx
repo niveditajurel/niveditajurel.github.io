@@ -77,7 +77,7 @@ export function ProjectCard({ project, variants }: ProjectCardProps) {
           {project.tags.split(', ').map((tag) => (
             <span
               key={tag}
-              className="px-2 py-1 text-xs font-medium bg-accent/10 text-accent rounded-md"
+              className="px-2 py-1 text-xs font-medium bg-[hsl(var(--accent))]/10 text-accent rounded-md"
             >
               {tag}
             </span>
@@ -90,7 +90,7 @@ export function ProjectCard({ project, variants }: ProjectCardProps) {
           </div>
         </Link>
       </div>
-      <div className="absolute inset-0 bg-gradient-to-r from-accent/5 to-flair/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[hsl(var(--accent))]/5 to-[hsl(var(--flair))]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
     </motion.div>
   );
 } 

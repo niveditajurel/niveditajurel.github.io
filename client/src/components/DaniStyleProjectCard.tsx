@@ -41,7 +41,7 @@ export function DaniStyleProjectCard({
         alt={project.title}
         className="w-full h-64 object-cover rounded-2xl transition-all duration-500"
       />
-      <div className="absolute top-4 right-4 bg-accent/90 text-white text-xs font-semibold px-3 py-1 rounded-full shadow-md">
+      <div className="absolute top-4 right-4 bg-accent opacity-90 text-white text-xs font-semibold px-3 py-1 rounded-full shadow-md">
         Shipped
       </div>
       <div className="absolute bottom-0 left-0 w-full p-4 flex flex-col gap-2 z-10">

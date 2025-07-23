@@ -460,13 +460,70 @@
   }
 
   .animate-gradient-text {
-    background-size: 200% auto;
-    animation: gradientText 3s ease infinite;
+    animation: gradientText 3s ease-in-out infinite;
   }
 
   .hero-img-hover:hover {
-    transform: scale(1.12) rotate(3deg) !important;
-    box-shadow: 0 12px 48px 0 rgba(80, 63, 205, 0.25) !important;
-    transition: transform 0.5s cubic-bezier(0.4,0,0.2,1), box-shadow 0.5s cubic-bezier(0.4,0,0.2,1);
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center px-6 py-3 rounded-lg bg-accent text-accent-foreground font-medium transition-all duration-300 hover-glow;
+  }
+  
+  .btn-primary:hover {
+    @apply bg-accent;
+    opacity: 0.9;
+  }
+  
+  .btn-secondary {
+    @apply inline-flex items-center px-6 py-3 rounded-lg border border-border bg-background text-foreground font-medium hover:bg-muted transition-all duration-300 hover-glow;
+  }
+
+  /* Wispr Flow inspired animations */
+  @keyframes blob {
+    0% {
+      transform: translate(0px, 0px) scale(1);
+    }
+    33% {
+      transform: translate(30px, -50px) scale(1.1);
+    }
+    66% {
+      transform: translate(-20px, 20px) scale(0.9);
+    }
+    100% {
+      transform: translate(0px, 0px) scale(1);
+    }
+  }
+
+  .animate-blob {
+    animation: blob 7s infinite;
+  }
+
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+
+  /* Strong focus states for accessibility */
+  .focus-visible:focus-visible {
+    outline: 2px solid hsl(var(--accent-color));
+    outline-offset: 2px;
+    box-shadow: 0 0 0 4px hsl(var(--accent-color) / 0.3);
+  }
+
+  /* Example for high-contrast button */
+  .btn-primary, .btn-secondary, .btn-accent, .btn-cta {
+    @apply focus-visible:ring-4 focus-visible:ring-accent;
+  }
+
+  /* Ensure badge and button text contrast */
+  .badge, .btn-primary, .btn-secondary, .btn-accent, .btn-cta {
+    color: hsl(var(--accent-foreground));
+    background-color: hsl(var(--accent));
   }
 }

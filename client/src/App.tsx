@@ -12,12 +12,15 @@ import Projects from "@/pages/projects";
 import Experience from "@/pages/experience";
 import Contact from "@/pages/contact";
 import NotFound from "@/pages/not-found";
+import NomadAiCaseStudy from './pages/projects/nomad-ai';
+
 
 function Router() {
   return (
     <Switch>
       <Route path="/" component={Home} />
       <Route path="/about" component={About} />
+      <Route path="/projects/nomad-ai" component={NomadAiCaseStudy} />
       <Route path="/projects" component={Projects} />
       <Route path="/experience" component={Experience} />
       <Route path="/contact" component={Contact} />

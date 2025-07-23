@@ -158,10 +158,10 @@ export default function Contact() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="flex items-center justify-center space-x-2 text-muted-foreground">
             <MapPin className="h-5 w-5" />
-            <span className="text-lg">Currently based in Berkeley, CA</span>
+            <span className="text-lg">Currently in Dallas, TX, USA</span>
           </div>
           <p className="text-muted-foreground mt-2">
-            Open to remote opportunities and willing to relocate for the right role.
+            Open to relocation
           </p>
         </div>
       </section>

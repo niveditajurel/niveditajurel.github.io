@@ -42,7 +42,7 @@ export function Navigation() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href="/">
-            <div className="flex items-center space-x-2 cursor-pointer hover-glow -ml-8">
+            <div className="flex items-center space-x-2 cursor-pointer hover-glow -ml-8" tabIndex={0} aria-label="Go to Home" role="link">
               <div className="w-8 h-8 bg-gradient-to-br from-primary to-primary/80 rounded-lg flex items-center justify-center">
               </div>
               <span className="font-body font-semibold text-2xl text-foreground">
@@ -61,6 +61,9 @@ export function Navigation() {
                       ? "text-primary"
                       : "text-muted-foreground"
                   }`}
+                  tabIndex={0}
+                  aria-label={`Go to ${item.name}`}
+                  role="link"
                 >
                   {item.name}
                 </span>
@@ -110,9 +113,9 @@ export function Navigation() {
               aria-label={theme === "light" ? "Switch to dark mode" : "Switch to light mode"}
             >
               {theme === "light" ? (
-                <Moon className="h-4 w-4" />
+                <Moon className="h-4 w-4" aria-hidden="true" />
               ) : (
-                <Sun className="h-4 w-4" />
+                <Sun className="h-4 w-4" aria-hidden="true" />
               )}
             </Button>
 
@@ -122,11 +125,12 @@ export function Navigation() {
               size="sm"
               className="md:hidden"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label={isMobileMenuOpen ? "Close mobile menu" : "Open mobile menu"}
             >
               {isMobileMenuOpen ? (
-                <X className="h-5 w-5" />
+                <X className="h-5 w-5" aria-hidden="true" />
               ) : (
-                <Menu className="h-5 w-5" />
+                <Menu className="h-5 w-5" aria-hidden="true" />
               )}
             </Button>
           </div>

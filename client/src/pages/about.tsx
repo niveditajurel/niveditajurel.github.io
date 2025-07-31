@@ -270,12 +270,15 @@ const values = [
         {/* Hero - Personal Introduction */}
         <motion.section 
             ref={heroRef.ref}
-          className={`max-w-5xl mx-auto text-center ${heroRef.isVisible ? "visible" : ""}`}
+            className={`max-w-5xl mx-auto text-center ${heroRef.isVisible ? "visible" : ""}`}
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: 'easeOut' }}
         >
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={heroRef.isVisible ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 1, delay: 0.2 }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2, duration: 0.7, ease: 'easeOut' }}
             className="mb-12"
           >
             <motion.div
@@ -560,7 +563,7 @@ const values = [
               >
                 <motion.a 
                   href="https://drive.google.com/file/d/1RJoTocjJjHskvaqAdWpVu4aGavceRWwi/view" 
-                  className="btn-primary group relative overflow-hidden focus:outline-none focus-visible:ring-2 focus-visible:ring-accent" 
+                  className="btn-primary group relative overflow-hidden focus:outline-none focus-visible:ring-2 focus-visible:ring-accent bg-black text-white hover:bg-neutral-900" 
                   whileHover={{ scale: 1.05 }} 
                   whileTap={{ scale: 0.95 }} 
                   target="_blank" rel="noopener noreferrer" 
@@ -575,7 +578,7 @@ const values = [
                   href="https://linkedin.com/in/nivedita-niv" 
                   target="_blank" 
                   rel="noreferrer" 
-                  className="btn-secondary group relative overflow-hidden focus:outline-none focus-visible:ring-2 focus-visible:ring-accent" 
+                  className="btn-secondary group relative overflow-hidden focus:outline-none focus-visible:ring-2 focus-visible:ring-accent bg-black text-white hover:bg-neutral-900" 
                   whileHover={{ scale: 1.05 }} 
                   whileTap={{ scale: 0.95 }} 
                   aria-label="Connect with me on LinkedIn" 

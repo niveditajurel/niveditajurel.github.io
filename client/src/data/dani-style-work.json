@@ -1,12 +1,12 @@
 {
   "projectSlides": {
+    "nomad-ai": [
+      { "img": "teasers/nomad-ai-t-w.jpeg", "blurb": "Nomad AI is an AI-powered SMB valuation and exit-planning platform that democratizes business valuations." },
+      { "img": "teasers/nomad-ai-t-w.jpeg", "blurb": "I led pricing strategy, analytics setup, and GTM for MVP launch, contributing to +865% user growth in 4 months." }
+    ],
     "corti": [
       { "img": "teasers/corti.jpg", "blurb": "Corti is a healthcare AI company that builds specialized language models to support medical professionals in real time." },
       { "img": "teasers/corti2.jpg", "blurb": "I worked on product strategy and user research to help Corti scale their impact in medtech." }
-    ],
-    "nomad": [
-      { "img": "teasers/nomad.jpg", "blurb": "Nomad is a travel tech platform connecting digital nomads with global workspaces and communities." },
-      { "img": "teasers/nomad2.jpg", "blurb": "I led the launch of new features to boost user engagement and retention." }
     ],
     "skingenius": [
       { "img": "teasers/skingenius.jpg", "blurb": "SkinGenius uses AI to provide personalized skincare recommendations." },
@@ -18,8 +18,8 @@
     ]
   },
   "teasersData": [
+    { "id": "nomad-ai", "title": "Nomad AI – SMB Valuation Platform", "tags": "AI, FinTech, SaaS", "href": "/projects/nomad-ai" },
     { "id": "corti", "title": "Corti.ai – Healthcare AI Assistant", "tags": "medtech, ai" },
-    { "id": "nomad", "title": "Nomad – Travel Tech Platform", "tags": "travel, SaaS" },
     { "id": "skingenius", "title": "SkinGenius – AI Skincare", "tags": "ai, health" },
     { "id": "zapo", "title": "Zapo – Team Management SaaS", "tags": "b2b, SaaS" }
   ]

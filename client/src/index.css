@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -64,7 +67,10 @@
   
   body {
     @apply bg-background text-foreground font-sans antialiased;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    letter-spacing: -0.01em;
   }
   
   html {
@@ -72,11 +78,62 @@
   }
   
   .font-display {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Helvetica Neue', sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.02em;
   }
   
   .font-body {
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+  }
+
+  /* Enhanced typography for headings */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Helvetica Neue', sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+  }
+
+  /* Body text improvements */
+  p, span, div {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Helvetica Neue', sans-serif;
+    letter-spacing: -0.01em;
+  }
+
+  /* Button text styling */
+  button, .btn {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+  }
+
+  /* Serif typography for specific pages */
+  .font-serif {
+    font-family: 'Merriweather', Georgia, 'Times New Roman', serif;
+    font-weight: 400;
+    line-height: 1.7;
+    letter-spacing: 0.01em;
+  }
+
+  .font-serif h1, .font-serif h2, .font-serif h3, .font-serif h4, .font-serif h5, .font-serif h6 {
+    font-family: 'Merriweather', Georgia, 'Times New Roman', serif;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    line-height: 1.3;
+  }
+
+  .font-serif p, .font-serif span, .font-serif div {
+    font-family: 'Merriweather', Georgia, 'Times New Roman', serif;
+    letter-spacing: 0.01em;
+  }
+
+  .font-serif button, .font-serif .btn {
+    font-family: 'Merriweather', Georgia, 'Times New Roman', serif;
+    font-weight: 600;
+    letter-spacing: 0.01em;
   }
 }
 

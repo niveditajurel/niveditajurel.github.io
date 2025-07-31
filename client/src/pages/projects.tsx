@@ -13,6 +13,7 @@ import {
 } from "@/components/ui/dialog";
 import { ExternalLink, ArrowRight, Users, TrendingUp, Clock, Target } from "lucide-react";
 import projectsData from "../data/teasers.json";
+import { motion } from 'framer-motion';
 
 const projects = projectsData as typeof projectsData;
 
@@ -24,7 +25,7 @@ export default function Projects() {
   return (
     <div className="min-h-screen pt-16">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-background via-primary/5 to-background">
+      <motion.section initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, ease: 'easeOut' }} className="py-20 bg-gradient-to-br from-background via-primary/5 to-background">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div
             ref={heroRef.ref as React.RefObject<HTMLDivElement>}
@@ -40,10 +41,10 @@ export default function Projects() {
             </p>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Projects Grid */}
-      <section className="py-20 bg-background">
+      <motion.section initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }} className="py-20 bg-background">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div
             ref={projectsRef.ref as React.RefObject<HTMLDivElement>}
@@ -60,11 +61,11 @@ export default function Projects() {
                 <CardContent className="p-0">
                   <div className="grid lg:grid-cols-2 gap-0">
                     {/* Image */}
-                    <div className="relative overflow-hidden">
+                    <div className="relative overflow-hidden bg-black flex items-center justify-center p-4">
                       <img
                         src={project.image}
                         alt={project.title}
-                        className="w-full h-64 lg:h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                        className="w-3/4 h-48 lg:h-3/4 object-contain transition-transform duration-500 group-hover:scale-105 max-w-full max-h-full"
                       />
                       <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     </div>
@@ -110,7 +111,7 @@ export default function Projects() {
             ))}
           </div>
         </div>
-      </section>
+      </motion.section>
     </div>
   );
 }

@@ -2,6 +2,7 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { CalendarDays, MapPin, ExternalLink } from "lucide-react";
+import { motion } from 'framer-motion';
 
 const experiences = [
   {
@@ -255,7 +256,7 @@ export default function Experience() {
   return (
     <div className="min-h-screen pt-16">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-background via-primary/5 to-background">
+      <motion.section initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, ease: 'easeOut' }} className="py-20 bg-gradient-to-br from-background via-primary/5 to-background">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div
             ref={heroRef.ref}
@@ -270,10 +271,10 @@ export default function Experience() {
             </p>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Experience Timeline */}
-      <section className="py-20 bg-background">
+      <motion.section initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }} className="py-20 bg-background">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div
             ref={experienceRef.ref}
@@ -298,10 +299,10 @@ export default function Experience() {
             ))}
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Education Section */}
-      <section className="py-20 bg-muted/30">
+      <motion.section initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.4, ease: 'easeOut' }} className="py-20 bg-muted/30">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div
             ref={educationRef.ref}
@@ -369,7 +370,7 @@ export default function Experience() {
             </Card>
           ))}
         </div>
-      </section>
+      </motion.section>
     </div>
   );
 }

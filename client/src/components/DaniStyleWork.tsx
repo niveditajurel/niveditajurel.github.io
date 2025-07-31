@@ -36,7 +36,7 @@ export function DaniStyleWork() {
         {/* CTA Button */}
         <div className="text-center mt-16">
           <Link href="/projects">
-            <button className="group inline-flex items-center gap-2 px-8 py-4 rounded-full bg-ink dark:bg-base text-base dark:text-ink shadow-lg hover:shadow-xl transition-all duration-300 font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-accent" aria-label="View all projects" tabIndex={0}>
+            <button className="group inline-flex items-center gap-2 px-8 py-4 rounded-full bg-black text-white shadow-lg hover:shadow-xl transition-all duration-300 font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-accent" aria-label="View all projects" tabIndex={0}>
               View all projects
               <ArrowRight className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" aria-hidden="true" />
             </button>

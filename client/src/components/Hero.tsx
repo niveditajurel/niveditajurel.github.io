@@ -159,13 +159,13 @@ export function Hero() {
             <p className="max-w-xl text-lg mb-10 text-muted-foreground">
               I shape raw ideas into intuitive, data-smart products that scale from MVP to market. Anchored in computer-science depth and a founder's mindset, I blend deep user empathy with emerging AI to move products swiftly from MVP to market scale.
             </p>
-            <div className="flex flex-col sm:flex-row gap-6">
+            <div className="flex flex-col sm:flex-row gap-6 items-center">
               <Link href="/projects">
                 <Button
                   asChild
                   variant="default"
                   size="lg"
-                  className="group px-10 py-5 rounded-full text-2xl font-extrabold shadow-2xl bg-gradient-to-r from-blue-600 via-flair to-accent text-white transition-all duration-300 hover:scale-105 focus-visible:ring-4 focus-visible:ring-flair"
+                  className="group px-10 py-5 rounded-full text-2xl font-extrabold shadow-2xl bg-black text-white hover:bg-neutral-900 focus-visible:ring-4 focus-visible:ring-flair"
                   aria-label="See My Work - portfolio projects"
                   autoFocus
                 >
@@ -179,15 +179,15 @@ export function Hero() {
                 href="https://drive.google.com/file/d/1RJoTocjJjHskvaqAdWpVu4aGavceRWwi/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex items-center gap-2 px-7 py-3 rounded-full border border-ink/40 dark:border-base/40 hover:bg-ink/5 dark:hover:bg-base/10 transition-all duration-200 cursor-glow hover-glow focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2"
+                className="group inline-flex items-center gap-2 px-10 py-5 rounded-full border border-ink/40 dark:border-base/40 hover:bg-ink/5 dark:hover:bg-base/10 transition-all duration-200 cursor-glow hover-glow focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 text-2xl font-extrabold shadow-2xl min-h-[64px] min-w-[220px] justify-center"
                 onClick={handleDownloadResume}
                 aria-label="Download my resume PDF"
                 tabIndex={0}
               >
-                <Download className="w-5 h-5" aria-hidden="true" />
+                <Download className="w-6 h-6" aria-hidden="true" />
                 Download Resume
                 <span className="transform translate-x-0 group-hover:translate-x-1 transition opacity-0 group-hover:opacity-100">
-                  →
+                  
                 </span>
               </a>
             </div>

@@ -176,7 +176,7 @@ export function Hero() {
                 </Button>
               </Link>
               <a 
-                href="https://drive.google.com/file/d/1RJoTocjJjHskvaqAdWpVu4aGavceRWwi/view?usp=sharing"
+                href="https://drive.google.com/file/d/1RTBlSBIM6AnV3tBhFuGj34yHxIZoS7fm/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group inline-flex items-center gap-2 px-10 py-5 rounded-full border border-ink/40 dark:border-base/40 hover:bg-ink/5 dark:hover:bg-base/10 transition-all duration-200 cursor-glow hover-glow focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 text-2xl font-extrabold shadow-2xl min-h-[64px] min-w-[220px] justify-center"

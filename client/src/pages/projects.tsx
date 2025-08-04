@@ -61,11 +61,17 @@ export default function Projects() {
                 <CardContent className="p-0">
                   <div className="grid lg:grid-cols-2 gap-0">
                     {/* Image */}
-                    <div className="relative overflow-hidden bg-black flex items-center justify-center p-4">
+                    <div className={`relative overflow-hidden flex items-center justify-center p-4 ${
+                      project.id === "skingenius" ? "bg-[#ce6c47]" : "bg-black"
+                    }`}>
                       <img
                         src={project.image}
                         alt={project.title}
-                        className="w-3/4 h-48 lg:h-3/4 object-contain transition-transform duration-500 group-hover:scale-105 max-w-full max-h-full"
+                        className={`transition-transform duration-500 group-hover:scale-105 max-w-full max-h-full ${
+                          project.id === "skingenius" 
+                            ? "w-full h-64 lg:h-full object-contain" 
+                            : "w-3/4 h-48 lg:h-3/4 object-contain"
+                        }`}
                       />
                       <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     </div>
@@ -96,12 +102,16 @@ export default function Projects() {
                       {project.href && (
                         <a
                           href={project.href}
-                          className="inline-flex items-center px-4 py-2 mt-2 rounded-lg bg-primary text-primary-foreground font-semibold shadow hover:bg-primary/90 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                          className={`inline-flex items-center px-6 py-3 mt-2 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300 focus:outline-none group ${
+                            project.id === "nomad-ai" || project.id === "skingenius"
+                              ? "bg-white text-black border-2 border-black hover:bg-gray-50 focus-visible:ring-2 focus-visible:ring-gray-500"
+                              : "bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 focus-visible:ring-2 focus-visible:ring-blue-500"
+                          }`}
                           aria-label={`View case study for ${project.title}`}
                           tabIndex={0}
                         >
                           View Case Study
-                          <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
+                          <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300" aria-hidden="true" />
                         </a>
                       )}
                     </div>

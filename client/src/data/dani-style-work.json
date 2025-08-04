@@ -19,8 +19,6 @@
   },
   "teasersData": [
     { "id": "nomad-ai", "title": "Nomad AI – SMB Valuation Platform", "tags": "AI, FinTech, SaaS", "href": "/projects/nomad-ai" },
-    { "id": "corti", "title": "Corti.ai – Healthcare AI Assistant", "tags": "medtech, ai" },
-    { "id": "skingenius", "title": "SkinGenius – AI Skincare", "tags": "ai, health" },
-    { "id": "zapo", "title": "Zapo – Team Management SaaS", "tags": "b2b, SaaS" }
+    { "id": "skingenius", "title": "SkinGenius – AI Skincare", "tags": "ai, health, ecommerce", "href": "/projects/skingenius" }
   ]
 } 

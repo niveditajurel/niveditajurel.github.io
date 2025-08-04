@@ -419,7 +419,7 @@ const values = [
                       </p>
                     </div>
                 
-                <ChevronRight className="absolute bottom-6 right-6 w-6 h-6 text-muted-foreground group-hover:text-accent group-hover:translate-x-2 transition-all duration-300" />
+
               </motion.div>
             ))}
           </div>

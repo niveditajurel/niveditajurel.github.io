@@ -31,12 +31,16 @@ export function DaniStyleProjectCard({
 }: DaniStyleProjectCardProps) {
   // Check if this is the Nomad AI project
   const isNomadAI = project.id === 'nomad-ai';
+  // Check if this is the Skingenius project
+  const isSkingenius = project.id === 'skingenius';
   
   const CardContent = () => (
     <div
       className={`group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer ${
         isNomadAI 
           ? 'bg-black dark:bg-black' 
+          : isSkingenius
+          ? 'bg-[#f5f6f6] dark:bg-[#f5f6f6] border-2 border-gray-300'
           : 'bg-white dark:bg-gray-900'
       }`}
       onMouseEnter={onMouseEnter}
@@ -54,26 +58,32 @@ export function DaniStyleProjectCard({
           className={`rounded-2xl transition-all duration-500 ${
             isNomadAI 
               ? 'w-3/4 h-48 object-contain' 
+              : isSkingenius
+              ? 'w-11/12 h-60 object-contain'
               : 'w-full h-64 object-cover'
           }`}
         />
       </div>
-      <div className="absolute top-4 right-4 bg-accent opacity-90 text-white text-xs font-semibold px-3 py-1 rounded-full shadow-md">
-        Shipped
-      </div>
-      <div className="absolute bottom-0 left-0 w-full p-4 flex flex-col gap-2 z-10">
-        <h3 className="text-lg font-semibold text-white mb-1 drop-shadow-lg">{project.title}</h3>
-        <div className="flex flex-wrap gap-2">
-          {project.tags.split(', ').map((tag) => (
-            <span
-              key={tag}
-              className="px-3 py-1 text-xs font-medium bg-white/20 backdrop-blur-sm text-white rounded-full border border-white/30"
-            >
-              {tag}
-            </span>
-          ))}
+
+              <div className="absolute bottom-0 left-0 w-full p-4 flex flex-col gap-2 z-10">
+          <h3 className={`text-lg font-semibold mb-1 drop-shadow-lg ${
+            isSkingenius ? 'text-black' : 'text-white'
+          }`}>{project.title}</h3>
+          <div className="flex flex-wrap gap-2">
+            {project.tags.split(', ').map((tag) => (
+              <span
+                key={tag}
+                className={`px-3 py-1 text-xs font-medium rounded-full border ${
+                  isSkingenius 
+                    ? 'bg-black/10 backdrop-blur-sm text-black border-black/30' 
+                    : 'bg-white/20 backdrop-blur-sm text-white border-white/30'
+                }`}
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
         </div>
-      </div>
       <motion.div
         initial={{ translateY: '100%', opacity: 0 }}
         animate={isOpen ? { translateY: '0%', opacity: 1 } : { translateY: '100%', opacity: 0 }}

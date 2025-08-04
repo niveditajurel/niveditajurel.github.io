@@ -34,6 +34,37 @@
     "href": "/projects/nomad-ai"
   },
   {
+    "id": "skingenius",
+    "title": "Skingenius",
+    "subtitle": "AI-Powered Personalized Skincare Platform",
+    "description": "AI-driven skincare recommendations and personalized treatment plans for users seeking effective, science-backed skincare solutions.",
+    "image": "/teasers/skingenius.jpg",
+    "tags": ["AI", "E-commerce", "Personalization", "Product Management"],
+    "metrics": {
+      "users": "User Engagement",
+      "growth": "Recommendation Accuracy", 
+      "timeline": "User Retention",
+      "impact": "Conversion Rate"
+    },
+    "challenge": "Users struggle to find the right skincare products and routines due to overwhelming choices and lack of personalized guidance.",
+    "solution": "Built an AI-powered platform that analyzes skin conditions and provides personalized product recommendations and treatment plans.",
+    "process": [
+      "Conducted user research and market analysis",
+      "Developed AI-powered skin analysis algorithms",
+      "Created personalized recommendation engine",
+      "Implemented user behavior tracking and A/B testing",
+      "Designed intuitive user interface and experience"
+    ],
+    "results": [
+      "User engagement tracking and session duration optimization",
+      "AI recommendation accuracy and prediction validation",
+      "30-day and 90-day user retention analysis",
+      "Free to paid conversion rate optimization"
+    ],
+    "role": "Product Manager for a cross-functional team, leading development of AI-powered skin analysis and recommendation engine.",
+    "href": "/projects/skingenius"
+  },
+  {
     "id": "eco-track",
     "title": "EcoTrack",
     "subtitle": "Sustainability Dashboard for Small Businesses",

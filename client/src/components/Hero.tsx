@@ -87,7 +87,7 @@ export function Hero() {
   };
 
   return (
-    <section className="relative isolate overflow-hidden py-24 sm:py-32 bg-base dark:bg-ink text-ink dark:text-base min-h-screen flex flex-col lg:flex-row items-center justify-between">
+    <section className="relative isolate overflow-hidden py-16 sm:py-20 bg-base dark:bg-ink text-ink dark:text-base min-h-screen flex flex-col lg:flex-row items-center justify-between">
       {/* Glow #1 - top left */}
       <div className="absolute -top-56 -left-48 w-[580px] h-[580px] rounded-full bg-[radial-gradient(circle_at_center,rgba(91,141,239,0.35)_0%,transparent_70%)] blur-[120px] animate-slowPulse pointer-events-none" />
       {/* Glow #2 - bottom right */}

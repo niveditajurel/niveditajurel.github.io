@@ -13,6 +13,7 @@ import Experience from "@/pages/experience";
 import Contact from "@/pages/contact";
 import NotFound from "@/pages/not-found";
 import NomadAiCaseStudy from './pages/projects/nomad-ai';
+import SkingeniusCaseStudy from './pages/projects/skingenius';
 
 
 function Router() {
@@ -21,6 +22,7 @@ function Router() {
       <Route path="/" component={Home} />
       <Route path="/about" component={About} />
       <Route path="/projects/nomad-ai" component={NomadAiCaseStudy} />
+      <Route path="/projects/skingenius" component={SkingeniusCaseStudy} />
       <Route path="/projects" component={Projects} />
       <Route path="/experience" component={Experience} />
       <Route path="/contact" component={Contact} />
@@ -36,7 +38,7 @@ function App() {
         <TooltipProvider>
           <div className="relative min-h-screen flex flex-col">
             <Navigation />
-            <main className="flex-1">
+            <main className="flex-1 pt-16">
               <Router />
             </main>
             <Footer />

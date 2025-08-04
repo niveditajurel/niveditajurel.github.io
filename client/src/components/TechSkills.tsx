@@ -91,7 +91,7 @@ export function TechSkills() {
   };
 
   return (
-    <section className="py-24 bg-gradient-to-b from-base to-secondary/20 dark:from-ink dark:to-secondary/10">
+    <section className="py-16 bg-gradient-to-b from-base to-secondary/20 dark:from-ink dark:to-secondary/10">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8" ref={ref}>
         <motion.div
           variants={containerVariants}

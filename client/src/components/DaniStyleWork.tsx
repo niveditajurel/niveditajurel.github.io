@@ -10,7 +10,7 @@ export function DaniStyleWork() {
   const [hoveredId, setHoveredId] = useState<string | null>(null);
 
   return (
-    <section className="py-24 bg-base dark:bg-ink">
+    <section className="py-16 bg-base dark:bg-ink">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-4xl font-semibold mb-4 text-ink dark:text-base">

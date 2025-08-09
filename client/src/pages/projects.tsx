@@ -79,15 +79,23 @@ export default function Projects() {
                     {/* Content */}
                     <div className="p-8 lg:p-12 flex flex-col justify-center">
                       <div className="flex flex-wrap gap-2 mb-4">
-                        {project.tags.map((tag, tagIndex) => (
-                          <Badge
-                            key={tagIndex}
-                            variant="secondary"
-                            className="bg-primary/10 text-primary border-primary/20"
-                          >
-                            {tag}
-                          </Badge>
-                        ))}
+                        {project.tags.map((raw, tagIndex) => {
+                          const t = raw.trim();
+                          const tag = (/^ai$/i.test(t) ? 'AI'
+                            : /^fintech$/i.test(t) ? 'Fintech'
+                            : /^saas$/i.test(t) ? 'SaaS'
+                            : /^e-?commerce$/i.test(t) ? 'E-commerce'
+                            : t);
+                          return (
+                            <Badge
+                              key={tagIndex}
+                              variant="secondary"
+                              className="bg-ink/10 dark:bg-base/10 text-ink dark:text-base border-transparent"
+                            >
+                              {tag}
+                            </Badge>
+                          );
+                        })}
                       </div>
 
                       <h3 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-2">

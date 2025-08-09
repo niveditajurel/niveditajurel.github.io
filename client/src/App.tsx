@@ -36,7 +36,7 @@ function App() {
     <ThemeProvider defaultTheme="light" storageKey="portfolio-theme">
       <QueryClientProvider client={queryClient}>
         <TooltipProvider>
-          <div className="relative min-h-screen flex flex-col">
+          <div className="h-16 relative min-h-screen flex flex-col">
             <Navigation />
             <main className="flex-1 pt-16">
               <Router />

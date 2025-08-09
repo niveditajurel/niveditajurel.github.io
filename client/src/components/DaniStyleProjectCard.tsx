@@ -34,13 +34,23 @@ export function DaniStyleProjectCard({
   // Check if this is the Skingenius project
   const isSkingenius = project.id === 'skingenius';
   
+  const normalizeTag = (rawTag: string) => {
+    const t = rawTag.trim();
+    if (/^fintech$/i.test(t)) return 'Fintech';
+    if (/^saas$/i.test(t)) return 'SaaS';
+    if (/^ai$/i.test(t)) return 'AI';
+    if (/^e-?commerce$/i.test(t)) return 'E-commerce';
+    if (/^health$/i.test(t)) return 'Health';
+    return t;
+  };
+  
   const CardContent = () => (
     <div
-      className={`group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer ${
+      className={`group relative overflow-hidden rounded-2xl shadow-xl/20 hover:shadow-2xl transition-all duration-500 cursor-pointer ${
         isNomadAI 
           ? 'bg-black dark:bg-black' 
           : isSkingenius
-          ? 'bg-[#f5f6f6] dark:bg-[#f5f6f6] border-2 border-gray-300'
+          ? 'bg-[#f5f6f6] dark:bg-[#f5f6f6] border border-gray-200'
           : 'bg-white dark:bg-gray-900'
       }`}
       onMouseEnter={onMouseEnter}
@@ -70,24 +80,26 @@ export function DaniStyleProjectCard({
             isSkingenius ? 'text-black' : 'text-white'
           }`}>{project.title}</h3>
           <div className="flex flex-wrap gap-2">
-            {project.tags.split(', ').map((tag) => (
+            {project.tags.split(', ').map((rawTag) => {
+              const tag = normalizeTag(rawTag);
+              return (
               <span
                 key={tag}
                 className={`px-3 py-1 text-xs font-medium rounded-full border ${
                   isSkingenius 
-                    ? 'bg-black/10 backdrop-blur-sm text-black border-black/30' 
-                    : 'bg-white/20 backdrop-blur-sm text-white border-white/30'
+                    ? 'bg-black/10 backdrop-blur-sm text-black border-black/20' 
+                    : 'bg-white/20 backdrop-blur-sm text-white border-white/20'
                 }`}
               >
                 {tag}
               </span>
-            ))}
+            );})}
           </div>
         </div>
       <motion.div
         initial={{ translateY: '100%', opacity: 0 }}
         animate={isOpen ? { translateY: '0%', opacity: 1 } : { translateY: '100%', opacity: 0 }}
-        transition={{ type: 'spring', stiffness: 300, damping: 30, duration: 0.4 }}
+        transition={{ duration: 0.5, ease: 'easeOut' }}
         className="absolute top-0 left-0 w-full h-full z-20 flex flex-col items-center justify-center"
         style={{ 
           background: isNomadAI ? 'rgba(0,0,0,0.98)' : 'rgba(255,255,255,0.98)', 
@@ -99,24 +111,30 @@ export function DaniStyleProjectCard({
             isNomadAI ? 'text-white' : 'text-ink dark:text-base'
           }`}>{project.title}</h3>
           <div className="flex flex-wrap gap-2 mb-4 justify-center">
-            {project.tags.split(', ').map((tag) => (
-              <span
-                key={tag}
-                className={`px-3 py-1 text-xs font-medium rounded-full border ${
-                  isNomadAI 
-                    ? 'bg-white/20 text-white border-white/30' 
-                    : 'bg-accent/10 text-accent border-accent/20'
-                }`}
-              >
-                {tag}
-              </span>
-            ))}
+            {project.tags.split(', ').map((rawTag) => {
+              const tag = normalizeTag(rawTag);
+              return (
+                <span
+                  key={tag}
+                  className={`px-3 py-1 text-xs font-medium rounded-full border ${
+                    isNomadAI 
+                      ? 'bg-white/10 text-white border-white/20' 
+                      : 'bg-ink/10 dark:bg-base/10 text-ink dark:text-base border-transparent'
+                  }`}
+                >
+                  {tag}
+                </span>
+              );
+            })}
           </div>
           <p className={`text-lg max-w-md ${
             isNomadAI ? 'text-white/80' : 'text-ink/80 dark:text-base/80'
           }`}>
             {slides[0]?.blurb}
           </p>
+          <div className={`mt-4 text-sm font-semibold ${isNomadAI ? 'text-white/90' : 'text-ink/90 dark:text-base/90'}`}>
+            View case study →
+          </div>
         </div>
       </motion.div>
     </div>

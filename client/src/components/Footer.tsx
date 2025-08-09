@@ -8,6 +8,22 @@ export function Footer() {
   return (
     <footer className="bg-base dark:bg-ink border-t border-border/50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        {/* CTA Row */}
+        <div className="mb-12 rounded-2xl border border-border/50 p-8 lg:p-10 bg-background/60 backdrop-blur">
+          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+            <div>
+              <h3 className="text-2xl font-semibold text-foreground">Let’s build something meaningful</h3>
+              <p className="text-muted-foreground mt-1">I turn ambiguity into shippable, user-loved products.</p>
+            </div>
+            <a
+              href="/contact"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full border-2 border-ink dark:border-base hover:bg-ink/5 dark:hover:bg-base/10 transition-all font-semibold"
+              aria-label="Contact"
+            >
+              Contact →
+            </a>
+          </div>
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Brand Section */}
           <div className="space-y-4">

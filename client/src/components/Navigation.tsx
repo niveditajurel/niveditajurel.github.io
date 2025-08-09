@@ -77,7 +77,7 @@ export function Navigation() {
             <div className="hidden sm:flex items-center gap-4">
               <a 
                 href="https://www.linkedin.com/in/nivedita-niv/" 
-                aria-label="LinkedIn" 
+                aria-label="LinkedIn profile"
                 target="_blank" 
                 rel="noreferrer"
                 className="text-muted-foreground hover:text-accent transition-colors duration-200"
@@ -86,7 +86,7 @@ export function Navigation() {
               </a>
               <a 
                 href="https://github.com/niveditajurel" 
-                aria-label="GitHub" 
+                aria-label="GitHub profile"
                 target="_blank" 
                 rel="noreferrer"
                 className="text-muted-foreground hover:text-accent transition-colors duration-200"
@@ -95,7 +95,7 @@ export function Navigation() {
               </a>
               <a 
                 href="https://x.com/nniv266" 
-                aria-label="Twitter/X" 
+                aria-label="Twitter/X profile"
                 target="_blank" 
                 rel="noreferrer"
                 className="text-muted-foreground hover:text-accent transition-colors duration-200"

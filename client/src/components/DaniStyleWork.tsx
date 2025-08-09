@@ -17,7 +17,7 @@ export function DaniStyleWork() {
             Fraction of my work
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-          Real-world stories where clear insights meet human-centered design and ship.
+            Real products, real problems—built simply, shipped fast.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">

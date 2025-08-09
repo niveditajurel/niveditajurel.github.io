@@ -8,9 +8,9 @@ import { ArrowRight, Download, Sparkles, Globe, ChevronDown } from 'lucide-react
 import { trackEvent } from '@/utils/analytics';
 import React from 'react';
 
-const typewriterTexts = [
+  const typewriterTexts = [
   "0→1 Thinker",
-  "Data-Led Decisions", 
+  "Data-Led Decisions",
   "User-First Mindset"
 ];
 
@@ -34,7 +34,7 @@ export function Hero() {
           setDisplayText(currentFullText.slice(0, displayText.length + 1));
         }, 100);
       } else {
-        // Pause before deleting
+        // Keep full word visible for 2s before deleting
         timeoutId = setTimeout(() => {
           setIsTyping(false);
         }, 2000);
@@ -47,8 +47,10 @@ export function Hero() {
         }, 50);
       } else {
         // Move to next text
-        setCurrentTextIndex((prev) => (prev + 1) % typewriterTexts.length);
-        setIsTyping(true);
+        timeoutId = setTimeout(() => {
+          setCurrentTextIndex((prev) => (prev + 1) % typewriterTexts.length);
+          setIsTyping(true);
+        }, 400); // 400ms pause before next word starts typing
       }
     }
 
@@ -56,11 +58,11 @@ export function Hero() {
   }, [displayText, isTyping, currentTextIndex]);
 
   const handleExploreWork = () => {
-    trackEvent('See My Work');
+    trackEvent('See My Work', {});
   };
 
   const handleDownloadResume = () => {
-    trackEvent('Download Resume');
+    trackEvent('Download Resume', {});
   };
 
   const containerVariants = {
@@ -87,7 +89,7 @@ export function Hero() {
   };
 
   return (
-    <section className="relative isolate overflow-hidden py-16 sm:py-20 bg-base dark:bg-ink text-ink dark:text-base min-h-screen flex flex-col lg:flex-row items-center justify-between">
+    <section className="relative isolate overflow-hidden py-12 sm:py-16 bg-base dark:bg-ink min-h-[80vh] text-ink dark:text-base flex flex-col lg:flex-row items-start justify-start">
       {/* Glow #1 - top left */}
       <div className="absolute -top-56 -left-48 w-[580px] h-[580px] rounded-full bg-[radial-gradient(circle_at_center,rgba(91,141,239,0.35)_0%,transparent_70%)] blur-[120px] animate-slowPulse pointer-events-none" />
       {/* Glow #2 - bottom right */}
@@ -104,22 +106,6 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.7, ease: 'easeOut' }}
         >
-          {/* Data pulse line SVG */}
-          <svg 
-            className="absolute top-8 left-1/2 -translate-x-1/2 w-96 h-16 pointer-events-none mix-blend-difference opacity-10"
-            viewBox="0 0 384 64"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path 
-              d="M0,32 Q96,8 192,32 T384,32" 
-              stroke="currentColor" 
-              strokeWidth="1" 
-              fill="none"
-              strokeDasharray="4 4"
-              className="animate-pulse-line"
-            />
-          </svg>
           {/* Text block */}
           <motion.div variants={itemVariants}>
             <div className="flex flex-col items-center lg:items-start w-full mb-6">
@@ -138,28 +124,23 @@ export function Hero() {
                 Open to relocation
               </Badge>
             </div>
-            <h1 className="text-5xl lg:text-6xl font-semibold leading-[1.15] mb-4 text-ink dark:text-base">
-              Hi, I'm Nivedita
-              <br />
-              <span className="relative inline-block transition-colors duration-300 hover:text-flair">
-                Product Manager
-                <span className="absolute inset-0 bg-[hsl(var(--accent))]/20 rounded-md -z-10 scale-105 blur-sm opacity-0 hover:opacity-100 transition" />
-              </span>
-              <br />
-              turning complexity into clarity
+            <h1 className="text-5xl lg:text-4xl font-semibold leading-tight mb-2 text-ink dark:text-base">
+              Hi, I'm Nivedita <br />
+              Product Manager turning complexity into clarity.
             </h1>
             {/* Typewriter */}
-            <div className="mt-4 text-xl font-medium tracking-wide mb-6">
+            <div className="mt-2 text-xl font-medium tracking-wide mb-4">
               <span className="inline-block min-h-[2.5rem]">
                 {displayText}
                 <span className="animate-pulse">|</span>
               </span>
             </div>
             {/* Restore original supporting copy paragraph */}
-            <p className="max-w-xl text-lg mb-10 text-muted-foreground">
-              I shape raw ideas into intuitive, data-smart products that scale from MVP to market. Anchored in computer-science depth and a founder's mindset, I blend deep user empathy with emerging AI to move products swiftly from MVP to market scale.
+            <br/>
+            <p className="mt-6 max-w-xl text-lg mb-6 text-muted-foreground">
+            I shape raw ideas into data-smart products that scale. Grounded in technical rigor and a founder’s mindset, I pair empathy with practical AI to move from MVP to market.
             </p>
-            <div className="flex flex-col sm:flex-row gap-6 items-center">
+            <div className="flex flex-col sm:flex-row gap-4 items-center">
               <Link href="/projects">
                 <Button
                   asChild
@@ -167,7 +148,7 @@ export function Hero() {
                   size="lg"
                   className="group px-10 py-5 rounded-full text-2xl font-extrabold shadow-2xl bg-black text-white hover:bg-neutral-900 focus-visible:ring-4 focus-visible:ring-flair"
                   aria-label="See My Work - portfolio projects"
-                  autoFocus
+                  
                 >
                   <a>
                     See My Work
@@ -179,16 +160,13 @@ export function Hero() {
                 href="https://drive.google.com/file/d/1RTBlSBIM6AnV3tBhFuGj34yHxIZoS7fm/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex items-center gap-2 px-10 py-5 rounded-full border border-ink/40 dark:border-base/40 hover:bg-ink/5 dark:hover:bg-base/10 transition-all duration-200 cursor-glow hover-glow focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 text-2xl font-extrabold shadow-2xl min-h-[64px] min-w-[220px] justify-center"
+                className="group inline-flex items-center gap-2 px-6 py-3 rounded-full border-2 border-ink dark:border-base hover:bg-ink/5 dark:hover:bg-base/10 transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 text-lg font-semibold justify-center"
                 onClick={handleDownloadResume}
                 aria-label="Download my resume PDF"
                 tabIndex={0}
               >
-                <Download className="w-6 h-6" aria-hidden="true" />
+                <Download className="w-5 h-5" aria-hidden="true" />
                 Download Resume
-                <span className="transform translate-x-0 group-hover:translate-x-1 transition opacity-0 group-hover:opacity-100">
-                  
-                </span>
               </a>
             </div>
           </motion.div>
@@ -202,8 +180,8 @@ export function Hero() {
         transition={{ delay: 0.4, duration: 0.8, ease: 'easeOut' }}
       >
         <div className="relative flex items-center justify-center" style={{ height: 'min(70vw, 620px)' }}>
-          {/* Background gradient glow with visible pulse */}
-          <div className="absolute z-0 w-[90vw] max-w-[600px] h-[90vw] max-h-[600px] rounded-full bg-gradient-to-br from-blue-400 via-purple-400 to-pink-400 opacity-60 blur-2xl animate-pulse" />
+          {/* Background gradient glow with slow pulse */}
+          <div className="absolute z-0 w-[90vw] max-w-[560px] h-[90vw] max-h-[560px] rounded-full bg-gradient-to-br from-blue-400 via-purple-400 to-pink-400 opacity-25 blur-2xl animate-[pulse_30s_ease-in-out_infinite]" />
           {/* Floating keyword bubbles - white translucent with colored text */}
           <motion.span
             className="absolute left-[44%] top-[-2%] -translate-x-1/2 bg-white/70 dark:bg-base/80 rounded-full px-6 py-2 shadow-xl text-green-600 font-semibold text-base md:text-lg opacity-95 pointer-events-none select-none border border-accent/40"
@@ -245,8 +223,8 @@ export function Hero() {
             <img
               src="/me1.PNG"
               alt="Nivedita portrait"
-              className="w-[90vw] max-w-[580px] h-auto pointer-events-auto cursor-pointer profile-img-hover"
-              style={{ display: 'block', borderRadius: '50%', transition: 'transform 0.5s cubic-bezier(0.4,0,0.2,1), box-shadow 0.5s cubic-bezier(0.4,0,0.2,1)' }}
+              className="w-[85vw] max-w-[520px] h-auto profile-img-hover drop-shadow-2xl"
+              style={{ display: 'block', borderRadius: '50%', transition: 'transform 0.5s cubic-bezier(0.4,0,0.2,1), box-shadow 0.5s cubic-bezier(0.4,0,0.2,1)', boxShadow: '0 20px 60px rgba(0,0,0,0.2)' }}
             />
           </div>
         </div>

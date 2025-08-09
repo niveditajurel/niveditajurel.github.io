@@ -1,7 +1,7 @@
 {
   "projectSlides": {
     "nomad-ai": [
-      { "img": "teasers/nomad-ai-t-w.jpeg", "blurb": "Nomad AI is an AI-powered SMB valuation and exit-planning platform that democratizes business valuations." },
+      { "img": "teasers/nomad-ai-t-w.jpeg", "blurb": "Redesigned pricing workflow → clearer valuations & faster buy-in." },
       { "img": "teasers/nomad-ai-t-w.jpeg", "blurb": "I led pricing strategy, analytics setup, and GTM for MVP launch, contributing to +865% user growth in 4 months." }
     ],
     "corti": [
@@ -18,7 +18,7 @@
     ]
   },
   "teasersData": [
-    { "id": "nomad-ai", "title": "Nomad AI – SMB Valuation Platform", "tags": "AI, FinTech, SaaS", "href": "/projects/nomad-ai" },
-    { "id": "skingenius", "title": "SkinGenius – AI Skincare", "tags": "ai, health, ecommerce", "href": "/projects/skingenius" }
+    { "id": "nomad-ai", "title": "Nomad AI – SMB Valuation Platform", "tags": "AI, Fintech, SaaS", "href": "/projects/nomad-ai" },
+    { "id": "skingenius", "title": "SkinGenius – AI Skincare", "tags": "AI, E-commerce", "href": "/projects/skingenius" }
   ]
 } 

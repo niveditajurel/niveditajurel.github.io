@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -7,6 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 import { Mail, Linkedin, Github, Twitter, Send, MapPin, Calendar } from "lucide-react";
+import { motion } from "framer-motion";
 
 const contactMethods = [
   {
@@ -53,6 +54,10 @@ export default function Contact() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
@@ -82,25 +87,40 @@ export default function Contact() {
   };
 
   return (
-    <div className="min-h-screen pt-16">
+    <div className="min-h-screen pt-16 page-transition">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-background via-primary/5 to-background">
+      <motion.section 
+        className="py-20 bg-gradient-to-br from-background via-primary/5 to-background"
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+      >
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div
             ref={heroRef.ref as React.RefObject<HTMLDivElement>}
             className={`text-center fade-in ${heroRef.isVisible ? "visible" : ""}`}
           >
-            <h1 className="font-display text-4xl md:text-6xl font-bold text-foreground mb-6">
+            <motion.h1 
+              className="font-display text-4xl md:text-6xl font-bold text-foreground mb-6"
+              initial={{ opacity: 0, y: 20 }}
+              animate={heroRef.isVisible ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6 }}
+            >
               Let's{" "}
               <span className="text-gradient">Connect</span>
-            </h1>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
+            </motion.h1>
+            <motion.p 
+              className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8"
+              initial={{ opacity: 0, y: 20 }}
+              animate={heroRef.isVisible ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
               I'm always excited to discuss product opportunities, collaborate on interesting projects, 
               or just chat about the future of technology and design.
-            </p>
+            </motion.p>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Contact Methods */}
       <section className="py-20 bg-background">
@@ -119,52 +139,72 @@ export default function Contact() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
             {contactMethods.map((method, index) => (
-              <Card
+              <motion.div
                 key={index}
-                className={`group cursor-glow hover-glow border-border/50 bg-card/50 backdrop-blur-sm transition-all duration-300 slide-in-left ${
-                  methodsRef.isVisible ? "visible" : ""
-                }`}
-                style={{ animationDelay: `${index * 0.1}s` }}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1, duration: 0.6 }}
               >
-                <CardContent className="p-6 text-center">
-                  <a
-                    href={method.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block"
-                  >
-                    <div className="w-12 h-12 mx-auto mb-4 bg-primary/10 rounded-lg flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                      <method.icon className="h-6 w-6 text-primary" />
-                    </div>
-                    <h3 className="font-body font-semibold text-foreground mb-2">
-                      {method.label}
-                    </h3>
-                    <p className="text-sm text-primary font-medium mb-2">
-                      {method.value}
-                    </p>
-                    <p className="text-xs text-muted-foreground">
-                      {method.description}
-                    </p>
-                  </a>
-                </CardContent>
-              </Card>
+                <Card
+                  className={`group cursor-glow hover-glow border-border/50 bg-card/50 backdrop-blur-sm transition-all duration-300 card-hover ${
+                    methodsRef.isVisible ? "visible" : ""
+                  }`}
+                >
+                  <CardContent className="p-6 text-center">
+                    <motion.a
+                      href={method.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block"
+                      whileHover={{ scale: 1.02 }}
+                      whileTap={{ scale: 0.98 }}
+                    >
+                      <motion.div 
+                        className="w-12 h-12 mx-auto mb-4 bg-primary/10 rounded-lg flex items-center justify-center group-hover:bg-primary/20 transition-colors"
+                        whileHover={{ rotate: 5, scale: 1.1 }}
+                      >
+                        <method.icon className="h-6 w-6 text-primary" />
+                      </motion.div>
+                      <h3 className="font-body font-semibold text-foreground mb-2">
+                        {method.label}
+                      </h3>
+                      <p className="text-sm text-primary font-medium mb-2">
+                        {method.value}
+                      </p>
+                      <p className="text-xs text-muted-foreground">
+                        {method.description}
+                      </p>
+                    </motion.a>
+                  </CardContent>
+                </Card>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
       {/* Location Section */}
-      <section className="py-20 bg-background">
+      <motion.section 
+        className="py-20 bg-background"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="flex items-center justify-center space-x-2 text-muted-foreground">
+          <motion.div 
+            className="flex items-center justify-center space-x-2 text-muted-foreground"
+            whileHover={{ scale: 1.05 }}
+          >
             <MapPin className="h-5 w-5" />
             <span className="text-lg">Currently in Dallas, TX, USA</span>
-          </div>
+          </motion.div>
           <p className="text-muted-foreground mt-2">
             Open to relocation
           </p>
         </div>
-      </section>
+      </motion.section>
     </div>
   );
 }

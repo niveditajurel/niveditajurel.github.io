@@ -1,21 +1,31 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Redirecting...</title>
-    <meta http-equiv="refresh" content="0; url=/">
-    <script>
-      // GitHub Pages client-side routing redirect
-      (function() {
-        var l = window.location;
-        var pathname = l.pathname.replace(/\/+/g, '/');
-        var redirect = '/?redirect=' + encodeURIComponent(pathname + l.search + l.hash);
-        window.location.replace(redirect);
-      })();
-    </script>
-  </head>
-  <body>
-    <h1>Redirecting...</h1>
-    <p>If you are not redirected, <a id="redirect-link" href="/">click here</a>.</p>
-  </body>
-</html> 
+
+<head>
+  <meta charset="utf-8">
+  <title>Redirecting...</title>
+  <meta http-equiv="refresh" content="0; url=/">
+  <script>
+    // GitHub Pages client-side routing redirect for HashRouter
+    (function () {
+      var l = window.location;
+      var pathname = l.pathname;
+      var search = l.search;
+      var hash = l.hash;
+
+      // Redirect to the same path but with a hash
+      // e.g. /about -> /#/about
+      // We only do this if we are not already at the root
+      if (pathname !== '/') {
+        window.location.replace('/#' + pathname + search + hash);
+      }
+    })();
+  </script>
+</head>
+
+<body>
+  <h1>Redirecting...</h1>
+  <p>If you are not redirected, <a id="redirect-link" href="/">click here</a>.</p>
+</body>
+
+</html>

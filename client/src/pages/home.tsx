@@ -13,17 +13,17 @@ export default function Home() {
   return (
     <div className="min-h-screen page-transition">
       {/* Hero Section */}
-      <motion.div 
-        initial={{ opacity: 0, y: 40 }} 
-        animate={{ opacity: 1, y: 0 }} 
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: 'easeOut' }}
       >
         <Hero />
       </motion.div>
 
       {/* Daniella-style Work Section */}
-      <motion.div 
-        initial={{ opacity: 0, y: 40 }} 
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.8, ease: 'easeOut' }}
@@ -32,8 +32,8 @@ export default function Home() {
       </motion.div>
 
       {/* Skills Section */}
-      <motion.div 
-        initial={{ opacity: 0, y: 40 }} 
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.8, ease: 'easeOut' }}

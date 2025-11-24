@@ -1,12 +1,12 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { 
-  BarChart3, 
-  Users, 
-  TrendingUp, 
-  Target, 
-  Zap, 
+import {
+  BarChart3,
+  Users,
+  TrendingUp,
+  Target,
+  Zap,
   Shield,
   Lightbulb,
   GitBranch
@@ -81,13 +81,13 @@ export function TechSkills() {
           animate={isInView ? "visible" : "hidden"}
           className="text-center mb-16"
         >
-          <motion.h2 
+          <motion.h2
             variants={itemVariants}
             className="text-3xl lg:text-4xl font-semibold mb-4 text-ink dark:text-base"
           >
             Core strengths I bring
           </motion.h2>
-          <motion.p 
+          <motion.p
             variants={itemVariants}
             className="text-lg text-muted-foreground max-w-2xl mx-auto"
           >

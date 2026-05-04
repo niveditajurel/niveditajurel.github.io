@@ -86,3 +86,8 @@ jspm_packages/
 server/public
 vite.config.ts.*
 *.tar.gz
+
+# Local AI/tooling notes
+.impeccable.md
+ME.md
+SKILL.md

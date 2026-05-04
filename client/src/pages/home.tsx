@@ -1,45 +1,37 @@
-import { Hero } from "@/components/Hero";
-import { TechSkills } from "@/components/TechSkills";
-import { DaniStyleWork } from "@/components/DaniStyleWork";
-import { motion } from 'framer-motion';
-import { useEffect } from 'react';
+import { Hero } from "@/components/sections/Hero";
+import { TheLab } from "@/components/sections/TheLab";
+import { JourneyPreview } from "@/components/sections/JourneyPreview";
+import { BackgroundComponents } from "@/components/ui/background-components";
+import { siteConfig } from "@/data/site";
+import { useEffect } from "react";
 
 export default function Home() {
   useEffect(() => {
-    // Smooth scroll to top on mount
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "auto" });
+  }, []);
+
+  useEffect(() => {
+    if (!siteConfig.experiments.clayNotionLanding) {
+      delete document.body.dataset.designMode;
+      return;
+    }
+
+    document.body.dataset.designMode = "clay-notion";
+
+    return () => {
+      delete document.body.dataset.designMode;
+    };
   }, []);
 
   return (
-    <div className="min-h-screen page-transition">
-      {/* Hero Section */}
-      <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: 'easeOut' }}
-      >
-        <Hero />
-      </motion.div>
-
-      {/* Daniella-style Work Section */}
-      <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.8, ease: 'easeOut' }}
-      >
-        <DaniStyleWork />
-      </motion.div>
-
-      {/* Skills Section */}
-      <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.8, ease: 'easeOut' }}
-      >
-        <TechSkills />
-      </motion.div>
-    </div>
+    <BackgroundComponents
+      variant={siteConfig.experiments.clayNotionLanding ? "clay-notion-paper" : "concentric-squares"}
+      className="min-h-screen bg-background"
+      contentClassName="relative"
+    >
+      <Hero />
+      <TheLab />
+      <JourneyPreview />
+    </BackgroundComponents>
   );
 }

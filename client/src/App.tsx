@@ -14,6 +14,7 @@ import Projects from "@/pages/projects";
 import Experience from "@/pages/experience";
 import Contact from "@/pages/contact";
 import NotFound from "@/pages/not-found";
+import AnandPagCaseStudy from './pages/projects/anand-pag';
 import NomadAiCaseStudy from './pages/projects/nomad-ai';
 import SkingeniusCaseStudy from './pages/projects/skingenius';
 
@@ -23,9 +24,12 @@ function Router() {
     <Switch>
       <Route path="/" component={Home} />
       <Route path="/about" component={About} />
+      <Route path="/projects/anand-pag" component={AnandPagCaseStudy} />
       <Route path="/projects/nomad-ai" component={NomadAiCaseStudy} />
       <Route path="/projects/skingenius" component={SkingeniusCaseStudy} />
+      <Route path="/work" component={Projects} />
       <Route path="/projects" component={Projects} />
+      <Route path="/journey" component={Experience} />
       <Route path="/experience" component={Experience} />
       <Route path="/contact" component={Contact} />
       <Route component={NotFound} />
@@ -41,7 +45,7 @@ function App() {
           <WouterRouter hook={useHashLocation}>
             <div className="relative min-h-screen flex flex-col">
               <Navigation />
-              <main className="flex-1 pt-16">
+              <main className="flex-1 pt-[5.5rem] md:pt-[5.75rem]">
                 <Router />
               </main>
               <Footer />

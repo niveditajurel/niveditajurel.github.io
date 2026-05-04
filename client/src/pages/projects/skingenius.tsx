@@ -30,7 +30,7 @@ const MetricCard = ({ value, label, note, icon }: MetricCardProps) => {
       tabIndex={0}
       aria-label={label}
     >
-                  <div className="absolute inset-0 bg-gradient-to-r from-[#4A9A8F]/10 to-[#E85A7A]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#4A9A8F]/10 to-[#E85A7A]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       <div className="relative z-10 flex flex-col items-center justify-center h-full">
         {icon && (
           <div className="mb-3 p-3 rounded-xl bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400">
@@ -58,11 +58,11 @@ const milestones = [
 const Timeline = () => (
   <TooltipProvider>
     <div className="relative">
-                                     <div className="absolute top-6 left-0 right-0 h-1 bg-gray-300 rounded-full opacity-60" />
+      <div className="absolute top-6 left-0 right-0 h-1 bg-gray-300 rounded-full opacity-60" />
       <div className="flex items-center justify-between gap-4 overflow-x-auto scrollbar-none snap-x snap-mandatory py-8 px-2">
         {milestones.map((m, i) => (
-          <motion.div 
-            key={i} 
+          <motion.div
+            key={i}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: i * 0.1 }}
@@ -73,7 +73,7 @@ const Timeline = () => (
                 <motion.button
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
-                                     className="w-12 h-12 rounded-full bg-black border-2 border-gray-300 shadow-lg focus:outline-none focus:ring-2 focus:ring-gray-400 transition-all duration-200 flex items-center justify-center text-white text-lg font-bold"
+                  className="w-12 h-12 rounded-full bg-black border-2 border-gray-300 shadow-lg focus:outline-none focus:ring-2 focus:ring-gray-400 transition-all duration-200 flex items-center justify-center text-white text-lg font-bold"
                   tabIndex={0}
                   aria-label={m.label}
                 >
@@ -218,32 +218,32 @@ const accordionData = [
               </tr>
             </thead>
             <tbody>
-                             <tr className="bg-gradient-to-r from-green-100 to-green-200 dark:from-green-900/30 dark:to-green-800/30 rounded-lg">
-                 <td className="px-3 py-3 font-semibold rounded-l-lg text-green-800 dark:text-green-300">User Engagement</td>
-                 <td className="px-3 py-3 text-gray-800 dark:text-gray-200">Session duration tracking</td>
-                 <td className="px-3 py-3 text-gray-800 dark:text-gray-200">Feature adoption rates</td>
-                 <td className="px-3 py-3 font-bold text-green-600 dark:text-green-400 rounded-r-lg">Core focus</td>
-               </tr>
-               <tr className="bg-gradient-to-r from-blue-100 to-blue-200 dark:from-blue-900/30 dark:to-blue-800/30 rounded-lg">
-                 <td className="px-3 py-3 font-semibold rounded-l-lg text-blue-800 dark:text-blue-300">Recommendation Accuracy</td>
-                 <td className="px-3 py-3 text-gray-800 dark:text-gray-200">AI model training</td>
-                 <td className="px-3 py-3 text-gray-800 dark:text-gray-200">Prediction validation</td>
-                 <td className="px-3 py-3 text-blue-600 dark:text-blue-400 rounded-r-lg">Primary KPI</td>
-               </tr>
-               <tr className="bg-gradient-to-r from-[#4A9A8F]/20 to-[#4A9A8F]/30 rounded-lg">
-                 <td className="px-3 py-3 font-semibold rounded-l-lg text-[#4A9A8F]">User Retention</td>
-                 <td className="px-3 py-3 text-gray-800">30-day retention</td>
-                 <td className="px-3 py-3 text-gray-800">90-day retention</td>
-                 <td className="px-3 py-3 text-[#4A9A8F] rounded-r-lg">Growth indicator</td>
-               </tr>
+              <tr className="bg-gradient-to-r from-green-100 to-green-200 dark:from-green-900/30 dark:to-green-800/30 rounded-lg">
+                <td className="px-3 py-3 font-semibold rounded-l-lg text-green-800 dark:text-green-300">User Engagement</td>
+                <td className="px-3 py-3 text-gray-800 dark:text-gray-200">Session duration tracking</td>
+                <td className="px-3 py-3 text-gray-800 dark:text-gray-200">Feature adoption rates</td>
+                <td className="px-3 py-3 font-bold text-green-600 dark:text-green-400 rounded-r-lg">Core focus</td>
+              </tr>
+              <tr className="bg-gradient-to-r from-blue-100 to-blue-200 dark:from-blue-900/30 dark:to-blue-800/30 rounded-lg">
+                <td className="px-3 py-3 font-semibold rounded-l-lg text-blue-800 dark:text-blue-300">Recommendation Accuracy</td>
+                <td className="px-3 py-3 text-gray-800 dark:text-gray-200">AI model training</td>
+                <td className="px-3 py-3 text-gray-800 dark:text-gray-200">Prediction validation</td>
+                <td className="px-3 py-3 text-blue-600 dark:text-blue-400 rounded-r-lg">Primary KPI</td>
+              </tr>
+              <tr className="bg-gradient-to-r from-[#4A9A8F]/20 to-[#4A9A8F]/30 rounded-lg">
+                <td className="px-3 py-3 font-semibold rounded-l-lg text-[#4A9A8F]">User Retention</td>
+                <td className="px-3 py-3 text-gray-800">30-day retention</td>
+                <td className="px-3 py-3 text-gray-800">90-day retention</td>
+                <td className="px-3 py-3 text-[#4A9A8F] rounded-r-lg">Growth indicator</td>
+              </tr>
             </tbody>
           </table>
         </div>
-                 <div className="mt-4 p-4 rounded-lg bg-gray-50 dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700">
-           <p className="text-sm text-gray-700 dark:text-gray-300">
-             <strong className="text-blue-600 dark:text-blue-400">Focus:</strong> These metrics were the primary KPIs tracked throughout the project development and launch phases.
-           </p>
-         </div>
+        <div className="mt-4 p-4 rounded-lg bg-gray-50 dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700">
+          <p className="text-sm text-gray-700 dark:text-gray-300">
+            <strong className="text-blue-600 dark:text-blue-400">Focus:</strong> These metrics were the primary KPIs tracked throughout the project development and launch phases.
+          </p>
+        </div>
       </div>
     ),
   },
@@ -301,17 +301,17 @@ export default function SkingeniusCaseStudy() {
       <div className="min-h-screen bg-[#F8FAFC] text-[#111827] px-6 md:px-16 py-8 font-sans">
 
         {/* Enhanced Hero / Snapshot */}
-        <motion.section 
-          initial={{ opacity: 0, y: 40 }} 
-          animate={{ opacity: 1, y: 0 }} 
-          transition={{ duration: 0.8, ease: 'easeOut' }} 
+        <motion.section
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: 'easeOut' }}
           className="w-full rounded-3xl bg-white border border-gray-100 shadow-lg mb-16 p-8 md:p-16 flex flex-col items-center gap-8 relative overflow-hidden"
         >
-          
+
           <h1 className="text-4xl md:text-6xl font-extrabold text-center mb-4 text-[#111827] leading-relaxed pb-2">
-            <a 
-              href="https://skingenius.io/" 
-              target="_blank" 
+            <a
+              href="https://skingenius.io/"
+              target="_blank"
               rel="noopener noreferrer"
               className="hover:text-[#4A9A8F] transition-colors duration-300"
             >
@@ -324,7 +324,7 @@ export default function SkingeniusCaseStudy() {
           <p className="text-xl md:text-2xl text-gray-700 font-semibold text-center mb-6 max-w-4xl leading-relaxed">
             AI-driven skincare recommendations and personalized treatment plans for users seeking effective, science-backed skincare solutions.
           </p>
-          <motion.div 
+          <motion.div
             className="w-full flex justify-center mt-8"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -347,13 +347,13 @@ export default function SkingeniusCaseStudy() {
 
 
         {/* Enhanced Key Wins */}
-        <motion.section 
-          initial={{ opacity: 0, y: 40 }} 
-          animate={{ opacity: 1, y: 0 }} 
-          transition={{ duration: 0.8, ease: 'easeOut' }} 
+        <motion.section
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: 'easeOut' }}
           className="mb-16"
         >
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -433,13 +433,13 @@ export default function SkingeniusCaseStudy() {
         </motion.section>
 
         {/* Enhanced Timeline */}
-        <motion.section 
-          initial={{ opacity: 0, y: 40 }} 
-          animate={{ opacity: 1, y: 0 }} 
-          transition={{ duration: 0.8, ease: 'easeOut' }} 
+        <motion.section
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: 'easeOut' }}
           className="mb-16"
         >
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -451,13 +451,13 @@ export default function SkingeniusCaseStudy() {
         </motion.section>
 
         {/* Enhanced Accordion Deep Dive */}
-        <motion.section 
-          initial={{ opacity: 0, y: 40 }} 
-          animate={{ opacity: 1, y: 0 }} 
-          transition={{ duration: 0.8, ease: 'easeOut' }} 
+        <motion.section
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: 'easeOut' }}
           className="mb-16"
         >
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -486,10 +486,10 @@ export default function SkingeniusCaseStudy() {
         </motion.section>
 
         {/* Project Documentation */}
-        <motion.section 
-          initial={{ opacity: 0, y: 40 }} 
-          animate={{ opacity: 1, y: 0 }} 
-          transition={{ duration: 0.8, ease: 'easeOut' }} 
+        <motion.section
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: 'easeOut' }}
           className="mb-16"
         >
           <motion.div
@@ -531,13 +531,13 @@ export default function SkingeniusCaseStudy() {
         </motion.section>
 
         {/* Platform Evolution - Moved to end for better story flow */}
-        <motion.section 
-          initial={{ opacity: 0, y: 40 }} 
-          animate={{ opacity: 1, y: 0 }} 
-          transition={{ duration: 0.8, ease: 'easeOut' }} 
+        <motion.section
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: 'easeOut' }}
           className="mb-16"
         >
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -545,7 +545,7 @@ export default function SkingeniusCaseStudy() {
           >
             Platform Evolution
           </motion.h2>
-          
+
           {/* App Screenshots & Wireframes */}
           <div className="max-w-6xl mx-auto">
             <motion.div

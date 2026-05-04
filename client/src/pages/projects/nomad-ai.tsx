@@ -61,8 +61,8 @@ const Timeline = () => (
       <div className="absolute top-6 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-blue-500 rounded-full opacity-40" />
       <div className="flex items-center justify-between gap-4 overflow-x-auto scrollbar-none snap-x snap-mandatory py-8 px-2">
         {milestones.map((m, i) => (
-          <motion.div 
-            key={i} 
+          <motion.div
+            key={i}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: i * 0.1 }}
@@ -304,14 +304,14 @@ export default function NomadAiCaseStudy() {
         </div>
 
         {/* Enhanced Hero / Snapshot */}
-        <motion.section 
-          initial={{ opacity: 0, y: 40 }} 
-          animate={{ opacity: 1, y: 0 }} 
-          transition={{ duration: 0.8, ease: 'easeOut' }} 
+        <motion.section
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: 'easeOut' }}
           className="w-full rounded-3xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 shadow-2xl mb-16 p-8 md:p-16 flex flex-col items-center gap-8"
         >
 
-          
+
           <h1 className="text-4xl md:text-6xl font-extrabold text-center mb-4 text-gray-900 dark:text-white leading-relaxed pb-2 font-serif">
             Nomad AI – AI‑powered SMB Valuation & Exit‑Planning Platform
           </h1>
@@ -321,7 +321,7 @@ export default function NomadAiCaseStudy() {
           <p className="text-xl md:text-2xl text-blue-600 dark:text-blue-400 font-semibold text-center mb-6 max-w-4xl leading-relaxed font-serif">
             AI‑driven valuations in minutes for small‑business owners facing a $10 T succession wave (target market: 12 M+ SMB owners).
           </p>
-          <motion.div 
+          <motion.div
             className="w-full flex justify-center mt-8"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -339,13 +339,13 @@ export default function NomadAiCaseStudy() {
         </motion.section>
 
         {/* Enhanced Key Wins */}
-        <motion.section 
-          initial={{ opacity: 0, y: 40 }} 
-          animate={{ opacity: 1, y: 0 }} 
-          transition={{ duration: 0.8, ease: 'easeOut' }} 
+        <motion.section
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: 'easeOut' }}
           className="mb-16"
         >
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -362,13 +362,13 @@ export default function NomadAiCaseStudy() {
         </motion.section>
 
         {/* Enhanced Timeline */}
-        <motion.section 
-          initial={{ opacity: 0, y: 40 }} 
-          animate={{ opacity: 1, y: 0 }} 
-          transition={{ duration: 0.8, ease: 'easeOut' }} 
+        <motion.section
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: 'easeOut' }}
           className="mb-16"
         >
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -380,13 +380,13 @@ export default function NomadAiCaseStudy() {
         </motion.section>
 
         {/* Enhanced Accordion Deep Dive */}
-        <motion.section 
-          initial={{ opacity: 0, y: 40 }} 
-          animate={{ opacity: 1, y: 0 }} 
-          transition={{ duration: 0.8, ease: 'easeOut' }} 
+        <motion.section
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: 'easeOut' }}
           className="mb-16"
         >
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -415,10 +415,10 @@ export default function NomadAiCaseStudy() {
         </motion.section>
 
         {/* Enhanced Artifacts */}
-        <motion.section 
-          initial={{ opacity: 0, y: 40 }} 
-          animate={{ opacity: 1, y: 0 }} 
-          transition={{ duration: 0.8, ease: 'easeOut' }} 
+        <motion.section
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: 'easeOut' }}
           className="mb-16"
         >
           <motion.div

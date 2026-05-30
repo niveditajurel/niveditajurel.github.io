@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import { motion } from "framer-motion";
 import { Link } from "wouter";
 import {
   ArrowLeft,
@@ -249,11 +248,11 @@ function SectionIntro({
 }) {
   return (
     <div className="max-w-3xl space-y-3">
-      <p className="text-sm font-semibold uppercase tracking-[0.22em] text-muted-foreground">{eyebrow}</p>
-      <h2 className="font-editorial text-[clamp(2rem,3vw,3.1rem)] font-medium leading-[0.95] tracking-[-0.05em] text-foreground">
+      <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#7a5637]">{eyebrow}</p>
+      <h2 className="font-editorial text-[clamp(2rem,3vw,3.1rem)] font-medium leading-[0.95] tracking-[-0.05em] text-[#201712]">
         {title}
       </h2>
-      <p className="text-base leading-7 text-muted-foreground">{description}</p>
+      <p className="text-base leading-7 text-[#4f3523]">{description}</p>
     </div>
   );
 }
@@ -275,18 +274,24 @@ export default function AnandPagCaseStudy() {
       className="min-h-screen bg-background"
       contentClassName="relative"
     >
-      <div className="px-4 pb-20 pt-6 sm:px-6 lg:px-8 lg:pb-28 lg:pt-8">
+      <div
+        className={cn(
+          "px-4 pb-20 pt-6 sm:px-6 lg:px-8 lg:pb-28 lg:pt-8",
+          "[&_a]:text-[#201712]",
+          "[&_button]:text-[#201712]",
+          "[&_h1]:text-[#201712]",
+          "[&_h2]:text-[#201712]",
+          "[&_h3]:text-[#201712]",
+          "[&_li]:text-[#4f3523]",
+          "[&_svg]:text-[#8f5a2d]",
+        )}
+      >
         <section className="mx-auto max-w-7xl border-b border-border/65 pb-10 lg:pb-12">
           <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(22rem,0.76fr)] lg:items-start">
-            <motion.div
-              initial={{ opacity: 0, y: 24 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.65, ease: "easeOut" }}
-              className="space-y-6"
-            >
-              <div className="flex flex-wrap items-center gap-3 text-sm font-medium text-muted-foreground">
+            <div className="space-y-6">
+              <div className="flex flex-wrap items-center gap-3 text-sm font-medium text-[#6d4a2c]">
                 <Link href="/work">
-                  <span className="inline-flex cursor-pointer items-center gap-2 transition-colors hover:text-foreground">
+                  <span className="inline-flex cursor-pointer items-center gap-2 transition-colors hover:text-[#201712]">
                     <ArrowLeft className="h-4 w-4" />
                     Back to work
                   </span>
@@ -296,13 +301,13 @@ export default function AnandPagCaseStudy() {
               </div>
 
               <div className="space-y-4">
-                <p className="text-sm font-semibold uppercase tracking-[0.22em] text-muted-foreground">
+                <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#7a5637]">
                   Case Study
                 </p>
-                <h1 className="font-editorial text-[clamp(3rem,5vw,5.4rem)] font-medium leading-[0.9] tracking-[-0.07em] text-foreground">
+                <h1 className="font-editorial text-[clamp(3rem,5vw,5.4rem)] font-medium leading-[0.9] tracking-[-0.07em] text-[#201712]">
                   Rebuilding service-order execution for Cintas Fire National Accounts.
                 </h1>
-                <p className="max-w-3xl text-lg leading-8 text-foreground/80">
+                <p className="max-w-3xl text-lg leading-8 text-[#4f3523]">
                   I led product delivery for a technically complex, integration-heavy cloud workflow
                   platform that replaced a legacy vendor-operations system. The platform digitized
                   service-order execution across internal operations teams and external vendors,
@@ -311,10 +316,10 @@ export default function AnandPagCaseStudy() {
               </div>
 
               <div className="paper-panel rounded-[1.9rem] px-5 py-5 sm:px-6">
-                <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-muted-foreground">
+                <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-[#7a5637]">
                   TL;DR
                 </p>
-                <p className="mt-3 text-base leading-7 text-foreground/82">
+                <p className="mt-3 text-base leading-7 text-[#4f3523]">
                   This platform created near real-time coordination under five minutes across systems,
                   improved background-job reliability from 95% to 100%, and made high-volume document
                   bundling stable enough to process 200+ service-order bundles in 2-4 minutes. I worked
@@ -329,31 +334,26 @@ export default function AnandPagCaseStudy() {
                     key={link.id}
                     type="button"
                     onClick={() => scrollToSection(link.id)}
-                    className="rounded-full border border-border/70 bg-background/82 px-4 py-2 text-sm font-semibold text-foreground transition-colors duration-200 hover:border-primary/35 hover:text-primary"
+                    className="rounded-full border border-border/70 bg-background/82 px-4 py-2 text-sm font-semibold text-[#201712] transition-colors duration-200 hover:border-[#8f5a2d] hover:text-[#6f4a2a]"
                   >
                     {link.label}
                   </button>
                 ))}
               </div>
-            </motion.div>
+            </div>
 
-            <motion.aside
-              initial={{ opacity: 0, y: 26 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.08, ease: "easeOut" }}
-              className="space-y-4"
-            >
+            <aside className="space-y-4">
               <div className="paper-panel rounded-[2rem] px-5 py-5 sm:px-6">
-                <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-muted-foreground">
+                <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-[#7a5637]">
                   Snapshot
                 </p>
                 <div className="mt-4 space-y-3">
                   {contextFacts.map((fact) => (
                     <div key={fact.label} className="rounded-[1.2rem] border border-border/60 bg-background/72 px-4 py-3">
-                      <p className="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-foreground/55">
+                      <p className="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-[#7a5637]">
                         {fact.label}
                       </p>
-                      <p className="mt-1.5 text-sm leading-6 text-foreground/78">{fact.value}</p>
+                      <p className="mt-1.5 text-sm leading-6 text-[#4f3523]">{fact.value}</p>
                     </div>
                   ))}
                 </div>
@@ -365,14 +365,14 @@ export default function AnandPagCaseStudy() {
                     key={stat.label}
                     className="rounded-[1.5rem] border border-border/70 bg-background/82 px-4 py-4 shadow-[0_18px_40px_-34px_rgba(81,57,24,0.12)]"
                   >
-                    <p className="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-foreground/55">
+                    <p className="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-[#7a5637]">
                       {stat.label}
                     </p>
-                    <p className="mt-2 text-lg font-semibold tracking-[-0.03em] text-foreground">{stat.value}</p>
+                    <p className="mt-2 text-lg font-semibold tracking-[-0.03em] text-[#201712]">{stat.value}</p>
                   </div>
                 ))}
               </div>
-            </motion.aside>
+            </aside>
           </div>
         </section>
 
@@ -387,13 +387,13 @@ export default function AnandPagCaseStudy() {
             </div>
 
             <div className="rounded-[2rem] border border-border/70 bg-[#fffdf8]/80 px-5 py-5 sm:px-6">
-              <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-muted-foreground">
+              <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-[#7a5637]">
                 Problem
               </p>
-              <ul className="mt-4 space-y-3 text-sm leading-6 text-foreground/78 sm:text-base">
+              <ul className="mt-4 space-y-3 text-sm leading-6 text-[#4f3523] sm:text-base">
                 {problemPoints.map((point) => (
                   <li key={point} className="flex gap-3">
-                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-foreground/45" />
+                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#7a5637]" />
                     <span>{point}</span>
                   </li>
                 ))}
@@ -403,28 +403,28 @@ export default function AnandPagCaseStudy() {
 
           <section className="grid gap-6 lg:grid-cols-2">
             <div className="rounded-[2rem] border border-border/70 bg-background/82 px-5 py-5 sm:px-6">
-              <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-muted-foreground">
+              <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-[#7a5637]">
                 Outcomes
               </p>
-              <ul className="mt-4 space-y-3 text-sm leading-6 text-foreground/78 sm:text-base">
+              <ul className="mt-4 space-y-3 text-sm leading-6 text-[#4f3523] sm:text-base">
                 {outcomeMetrics.map((metric) => (
                   <li key={metric} className="flex gap-3">
                     <Gauge className="mt-1 h-4 w-4 shrink-0 text-[#a36b37]" />
-                    <span>{metric}</span>
+                    <span className="text-[#4f3523]">{metric}</span>
                   </li>
                 ))}
               </ul>
             </div>
 
             <div className="rounded-[2rem] border border-border/70 bg-background/82 px-5 py-5 sm:px-6">
-              <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-muted-foreground">
+              <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-[#7a5637]">
                 Platform Health
               </p>
-              <ul className="mt-4 space-y-3 text-sm leading-6 text-foreground/78 sm:text-base">
+              <ul className="mt-4 space-y-3 text-sm leading-6 text-[#4f3523] sm:text-base">
                 {platformHealth.map((metric) => (
                   <li key={metric} className="flex gap-3">
-                    <ShieldCheck className="mt-1 h-4 w-4 shrink-0 text-[#6c7a50]" />
-                    <span>{metric}</span>
+                    <ShieldCheck className="mt-1 h-4 w-4 shrink-0 text-[#8f5a2d]" />
+                    <span className="text-[#4f3523]">{metric}</span>
                   </li>
                 ))}
               </ul>
@@ -442,13 +442,13 @@ export default function AnandPagCaseStudy() {
               <div className="rounded-[2rem] border border-border/70 bg-background/82 px-5 py-5 sm:px-6">
                 <div className="flex items-center gap-3">
                   <Users2 className="h-5 w-5 text-[#a36b37]" />
-                  <h3 className="text-xl font-semibold tracking-[-0.03em] text-foreground">Internal users</h3>
+                  <h3 className="text-xl font-semibold tracking-[-0.03em] text-[#201712]">Internal users</h3>
                 </div>
                 <div className="mt-4 space-y-4">
                   {internalUsers.map((user) => (
                     <div key={user.persona} className="rounded-[1.25rem] border border-border/60 bg-background/70 px-4 py-4">
-                      <p className="text-sm font-semibold text-foreground">{user.persona}</p>
-                      <p className="mt-1.5 text-sm leading-6 text-foreground/76">{user.job}</p>
+                      <p className="text-sm font-semibold text-[#201712]">{user.persona}</p>
+                      <p className="mt-1.5 text-sm leading-6 text-[#4f3523]">{user.job}</p>
                     </div>
                   ))}
                 </div>
@@ -456,14 +456,14 @@ export default function AnandPagCaseStudy() {
 
               <div className="rounded-[2rem] border border-border/70 bg-background/82 px-5 py-5 sm:px-6">
                 <div className="flex items-center gap-3">
-                  <Building2 className="h-5 w-5 text-[#6c7a50]" />
-                  <h3 className="text-xl font-semibold tracking-[-0.03em] text-foreground">External vendors</h3>
+                  <Building2 className="h-5 w-5 text-[#8f5a2d]" />
+                  <h3 className="text-xl font-semibold tracking-[-0.03em] text-[#201712]">External vendors</h3>
                 </div>
                 <div className="mt-4 space-y-4">
                   {externalUsers.map((user) => (
                     <div key={user.persona} className="rounded-[1.25rem] border border-border/60 bg-background/70 px-4 py-4">
-                      <p className="text-sm font-semibold text-foreground">{user.persona}</p>
-                      <p className="mt-1.5 text-sm leading-6 text-foreground/76">{user.job}</p>
+                      <p className="text-sm font-semibold text-[#201712]">{user.persona}</p>
+                      <p className="mt-1.5 text-sm leading-6 text-[#4f3523]">{user.job}</p>
                     </div>
                   ))}
                 </div>
@@ -480,26 +480,26 @@ export default function AnandPagCaseStudy() {
 
             <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.72fr)]">
               <div className="rounded-[2rem] border border-border/70 bg-background/82 px-5 py-5 sm:px-6">
-                <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-muted-foreground">
+                <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-[#7a5637]">
                   What the platform covered
                 </p>
-                <ul className="mt-4 space-y-3 text-sm leading-6 text-foreground/78 sm:text-base">
+                <ul className="mt-4 space-y-3 text-sm leading-6 text-[#4f3523] sm:text-base">
                   {solutionPoints.map((point) => (
                     <li key={point} className="flex gap-3">
-                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-foreground/45" />
-                      <span>{point}</span>
+                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#7a5637]" />
+                      <span className="text-[#4f3523]">{point}</span>
                     </li>
                   ))}
                 </ul>
               </div>
 
               <div className="rounded-[2rem] border border-border/70 bg-[#fffdf8]/82 px-5 py-5 sm:px-6">
-                <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-muted-foreground">
+                <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-[#7a5637]">
                   Design principles
                 </p>
                 <div className="mt-4 space-y-4">
                   {solutionPrinciples.map((principle) => (
-                    <div key={principle} className="rounded-[1.25rem] border border-border/60 bg-background/70 px-4 py-4 text-sm leading-6 text-foreground/78">
+                    <div key={principle} className="rounded-[1.25rem] border border-border/60 bg-background/70 px-4 py-4 text-sm leading-6 text-[#4f3523]">
                       {principle}
                     </div>
                   ))}
@@ -527,11 +527,11 @@ export default function AnandPagCaseStudy() {
                     <div className="inline-flex rounded-full bg-[#f4dfcf] p-3 text-[#8f5a2d]">
                       <Icon className="h-5 w-5" />
                     </div>
-                    <h3 className="mt-4 text-[1.45rem] font-semibold tracking-[-0.04em] text-foreground">
+                    <h3 className="mt-4 text-[1.45rem] font-semibold tracking-[-0.04em] text-[#201712]">
                       {item.title}
                     </h3>
-                    <p className="mt-3 text-sm leading-6 text-foreground/78 sm:text-base">{item.detail}</p>
-                    <div className="mt-4 rounded-[1.2rem] border border-border/60 bg-background/70 px-4 py-3 text-sm font-medium leading-6 text-foreground/78">
+                    <p className="mt-3 text-sm leading-6 text-[#4f3523] sm:text-base">{item.detail}</p>
+                    <div className="mt-4 rounded-[1.2rem] border border-border/60 bg-background/70 px-4 py-3 text-sm font-medium leading-6 text-[#4f3523]">
                       {item.impact}
                     </div>
                   </div>
@@ -551,25 +551,25 @@ export default function AnandPagCaseStudy() {
               <div className="rounded-[2rem] border border-border/70 bg-background/82 px-5 py-5 sm:px-6">
                 <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
                   <div className="max-w-3xl">
-                    <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-muted-foreground">
+                    <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-[#7a5637]">
                       Module A
                     </p>
-                    <h3 className="mt-2 text-[1.7rem] font-semibold tracking-[-0.045em] text-foreground">
+                    <h3 className="mt-2 text-[1.7rem] font-semibold tracking-[-0.045em] text-[#201712]">
                       {"Evidence Upload -> Classification -> System Sync"}
                     </h3>
-                    <p className="mt-3 text-sm leading-6 text-foreground/78 sm:text-base">
+                    <p className="mt-3 text-sm leading-6 text-[#4f3523] sm:text-base">
                       The goal was to reduce missing documentation, improve invoice readiness, and create
                       traceability across a multi-step evidence workflow.
                     </p>
                   </div>
-                  <div className="rounded-full border border-border/60 bg-[#eef3e2] px-4 py-2 text-sm font-semibold text-[#51643e]">
+                  <div className="rounded-full border border-border/60 bg-[#f1e5d8] px-4 py-2 text-sm font-semibold text-[#6f4a2a]">
                     {"Reliability impact: 95% -> 100% job success"}
                   </div>
                 </div>
 
                 <div className="mt-6 grid gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.8fr)]">
                   <div>
-                    <p className="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-foreground/55">
+                    <p className="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-[#7a5637]">
                       Lifecycle
                     </p>
                     <div className="mt-4 space-y-3">
@@ -581,21 +581,21 @@ export default function AnandPagCaseStudy() {
                           <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#f4dfcf] text-sm font-semibold text-[#8f5a2d]">
                             {index + 1}
                           </div>
-                          <p className="text-sm leading-6 text-foreground/78">{step}</p>
+                          <p className="text-sm leading-6 text-[#4f3523]">{step}</p>
                         </div>
                       ))}
                     </div>
                   </div>
 
                   <div>
-                    <p className="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-foreground/55">
+                    <p className="text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-[#7a5637]">
                       Failure modes handled
                     </p>
                     <div className="mt-4 space-y-3">
                       {failureModes.map((mode) => (
                         <div
                           key={mode}
-                          className="rounded-[1.25rem] border border-border/60 bg-background/70 px-4 py-4 text-sm leading-6 text-foreground/78"
+                          className="rounded-[1.25rem] border border-border/60 bg-background/70 px-4 py-4 text-sm leading-6 text-[#4f3523]"
                         >
                           {mode}
                         </div>
@@ -608,18 +608,18 @@ export default function AnandPagCaseStudy() {
               <div className="rounded-[2rem] border border-border/70 bg-background/82 px-5 py-5 sm:px-6">
                 <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
                   <div className="max-w-3xl">
-                    <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-muted-foreground">
+                    <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-[#7a5637]">
                       Module B
                     </p>
-                    <h3 className="mt-2 text-[1.7rem] font-semibold tracking-[-0.045em] text-foreground">
+                    <h3 className="mt-2 text-[1.7rem] font-semibold tracking-[-0.045em] text-[#201712]">
                       High-volume document bundling at operational scale
                     </h3>
-                    <p className="mt-3 text-sm leading-6 text-foreground/78 sm:text-base">
+                    <p className="mt-3 text-sm leading-6 text-[#4f3523] sm:text-base">
                       Heavy document operations were routed to asynchronous processing so users could
                       track progress instead of waiting through unstable synchronous jobs.
                     </p>
                   </div>
-                  <div className="rounded-full border border-border/60 bg-[#e7edf8] px-4 py-2 text-sm font-semibold text-[#4e6288]">
+                  <div className="rounded-full border border-border/60 bg-[#f1e5d8] px-4 py-2 text-sm font-semibold text-[#6f4a2a]">
                     Performance impact: 200+ orders in 2-4 min
                   </div>
                 </div>
@@ -633,7 +633,7 @@ export default function AnandPagCaseStudy() {
                   ].map((step) => (
                     <div
                       key={step}
-                      className="rounded-[1.25rem] border border-border/60 bg-background/70 px-4 py-4 text-sm leading-6 text-foreground/78"
+                      className="rounded-[1.25rem] border border-border/60 bg-background/70 px-4 py-4 text-sm leading-6 text-[#4f3523]"
                     >
                       {step}
                     </div>
@@ -656,10 +656,10 @@ export default function AnandPagCaseStudy() {
                   key={decision.title}
                   className="rounded-[2rem] border border-border/70 bg-background/82 px-5 py-5 sm:px-6"
                 >
-                  <h3 className="text-[1.35rem] font-semibold tracking-[-0.04em] text-foreground">
+                  <h3 className="text-[1.35rem] font-semibold tracking-[-0.04em] text-[#201712]">
                     {decision.title}
                   </h3>
-                  <p className="mt-3 text-sm leading-6 text-foreground/78 sm:text-base">{decision.reason}</p>
+                  <p className="mt-3 text-sm leading-6 text-[#4f3523] sm:text-base">{decision.reason}</p>
                 </div>
               ))}
             </div>
@@ -681,13 +681,13 @@ export default function AnandPagCaseStudy() {
                     key={item.title}
                     className="rounded-[2rem] border border-border/70 bg-background/82 px-5 py-5 sm:px-6"
                   >
-                    <div className="inline-flex rounded-full bg-[#eef3e2] p-3 text-[#51643e]">
+                    <div className="inline-flex rounded-full bg-[#f1e5d8] p-3 text-[#8f5a2d]">
                       <Icon className="h-5 w-5" />
                     </div>
-                    <h3 className="mt-4 text-[1.2rem] font-semibold tracking-[-0.03em] text-foreground">
+                    <h3 className="mt-4 text-[1.2rem] font-semibold tracking-[-0.03em] text-[#201712]">
                       {item.title}
                     </h3>
-                    <p className="mt-3 text-sm leading-6 text-foreground/78">{item.detail}</p>
+                    <p className="mt-3 text-sm leading-6 text-[#4f3523]">{item.detail}</p>
                   </div>
                 );
               })}
@@ -705,13 +705,13 @@ export default function AnandPagCaseStudy() {
               <div className="rounded-[2rem] border border-border/70 bg-background/82 px-5 py-5 sm:px-6">
                 <div className="flex items-center gap-3">
                   <Gauge className="h-5 w-5 text-[#a36b37]" />
-                  <h3 className="text-xl font-semibold tracking-[-0.03em] text-foreground">Measured and validated</h3>
+                  <h3 className="text-xl font-semibold tracking-[-0.03em] text-[#201712]">Measured and validated</h3>
                 </div>
-                <ul className="mt-4 space-y-3 text-sm leading-6 text-foreground/78 sm:text-base">
+                <ul className="mt-4 space-y-3 text-sm leading-6 text-[#4f3523] sm:text-base">
                   {measuredResults.map((result) => (
                     <li key={result} className="flex gap-3">
-                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-foreground/45" />
-                      <span>{result}</span>
+                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#7a5637]" />
+                      <span className="text-[#4f3523]">{result}</span>
                     </li>
                   ))}
                 </ul>
@@ -719,14 +719,14 @@ export default function AnandPagCaseStudy() {
 
               <div className="rounded-[2rem] border border-border/70 bg-background/82 px-5 py-5 sm:px-6">
                 <div className="flex items-center gap-3">
-                  <Clock3 className="h-5 w-5 text-[#6c7a50]" />
-                  <h3 className="text-xl font-semibold tracking-[-0.03em] text-foreground">Targeted business outcomes</h3>
+                  <Clock3 className="h-5 w-5 text-[#8f5a2d]" />
+                  <h3 className="text-xl font-semibold tracking-[-0.03em] text-[#201712]">Targeted business outcomes</h3>
                 </div>
-                <ul className="mt-4 space-y-3 text-sm leading-6 text-foreground/78 sm:text-base">
+                <ul className="mt-4 space-y-3 text-sm leading-6 text-[#4f3523] sm:text-base">
                   {targetedResults.map((result) => (
                     <li key={result} className="flex gap-3">
-                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-foreground/45" />
-                      <span>{result}</span>
+                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#7a5637]" />
+                      <span className="text-[#4f3523]">{result}</span>
                     </li>
                   ))}
                 </ul>
@@ -738,13 +738,13 @@ export default function AnandPagCaseStudy() {
             <div className="rounded-[2rem] border border-border/70 bg-background/82 px-5 py-5 sm:px-6">
               <div className="flex items-center gap-3">
                 <RefreshCcw className="h-5 w-5 text-[#a36b37]" />
-                <h3 className="text-[1.5rem] font-semibold tracking-[-0.04em] text-foreground">What I learned</h3>
+                <h3 className="text-[1.5rem] font-semibold tracking-[-0.04em] text-[#201712]">What I learned</h3>
               </div>
-              <ul className="mt-4 space-y-3 text-sm leading-6 text-foreground/78 sm:text-base">
+              <ul className="mt-4 space-y-3 text-sm leading-6 text-[#4f3523] sm:text-base">
                 {learnings.map((item) => (
                   <li key={item} className="flex gap-3">
-                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-foreground/45" />
-                    <span>{item}</span>
+                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#7a5637]" />
+                    <span className="text-[#4f3523]">{item}</span>
                   </li>
                 ))}
               </ul>
@@ -752,14 +752,14 @@ export default function AnandPagCaseStudy() {
 
             <div className="rounded-[2rem] border border-border/70 bg-background/82 px-5 py-5 sm:px-6">
               <div className="flex items-center gap-3">
-                <ArrowRight className="h-5 w-5 text-[#6c7a50]" />
-                <h3 className="text-[1.5rem] font-semibold tracking-[-0.04em] text-foreground">What I would do next</h3>
+                <ArrowRight className="h-5 w-5 text-[#8f5a2d]" />
+                <h3 className="text-[1.5rem] font-semibold tracking-[-0.04em] text-[#201712]">What I would do next</h3>
               </div>
-              <ul className="mt-4 space-y-3 text-sm leading-6 text-foreground/78 sm:text-base">
+              <ul className="mt-4 space-y-3 text-sm leading-6 text-[#4f3523] sm:text-base">
                 {nextSteps.map((item) => (
                   <li key={item} className="flex gap-3">
-                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-foreground/45" />
-                    <span>{item}</span>
+                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#7a5637]" />
+                    <span className="text-[#4f3523]">{item}</span>
                   </li>
                 ))}
               </ul>
@@ -769,10 +769,10 @@ export default function AnandPagCaseStudy() {
           <section className="rounded-[2.2rem] border border-border/70 bg-background/82 px-5 py-6 sm:px-6 lg:px-7">
             <div className="grid gap-6 lg:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)] lg:items-start">
               <div className="space-y-3">
-                <p className="text-sm font-semibold uppercase tracking-[0.22em] text-muted-foreground">
+                <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#7a5637]">
                   Tooling Summary
                 </p>
-                <h2 className="font-editorial text-[clamp(1.9rem,3vw,2.8rem)] font-medium leading-[0.95] tracking-[-0.05em] text-foreground">
+                <h2 className="font-editorial text-[clamp(1.9rem,3vw,2.8rem)] font-medium leading-[0.95] tracking-[-0.05em] text-[#201712]">
                   The tool choices were practical: reduce ambiguity, speed delivery, and keep launch quality high.
                 </h2>
               </div>
@@ -781,7 +781,7 @@ export default function AnandPagCaseStudy() {
                 {tooling.map((item) => (
                   <div
                     key={item}
-                    className="rounded-[1.3rem] border border-border/60 bg-background/72 px-4 py-4 text-sm leading-6 text-foreground/78"
+                    className="rounded-[1.3rem] border border-border/60 bg-background/72 px-4 py-4 text-sm leading-6 text-[#4f3523]"
                   >
                     {item}
                   </div>
@@ -791,7 +791,7 @@ export default function AnandPagCaseStudy() {
 
             <div className="mt-8 flex flex-wrap gap-3 border-t border-border/60 pt-6">
               <Link href="/work">
-                <span className="inline-flex cursor-pointer items-center gap-2 rounded-full bg-[#1f1a14] px-6 py-3.5 text-sm font-semibold text-[#fff8ef] shadow-[0_16px_36px_-26px_rgba(31,26,20,0.42)] transition-transform duration-200 hover:-translate-y-0.5">
+                <span className="inline-flex cursor-pointer items-center gap-2 rounded-full bg-[#eadbcf] px-6 py-3.5 text-sm font-semibold text-[#201712] shadow-[0_16px_36px_-26px_rgba(81,57,24,0.28)] transition-transform duration-200 hover:-translate-y-0.5">
                   Back to work archive
                   <ArrowRight className="h-4 w-4" />
                 </span>
@@ -800,7 +800,7 @@ export default function AnandPagCaseStudy() {
                 href={siteConfig.links.resume}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-2 rounded-full border border-border bg-background/82 px-6 py-3.5 text-sm font-semibold text-foreground transition-colors duration-200 hover:border-primary/35 hover:text-primary"
+                className="inline-flex items-center gap-2 rounded-full border border-border bg-background/82 px-6 py-3.5 text-sm font-semibold text-[#201712] transition-colors duration-200 hover:border-[#8f5a2d] hover:text-[#6f4a2a]"
               >
                 View resume
                 <ArrowUpRight className="h-4 w-4" />

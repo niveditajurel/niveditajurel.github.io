@@ -5,6 +5,7 @@ import { IconType } from "react-icons";
 export interface NavLink {
     name: string;
     href: string;
+    sectionId?: string;
 }
 
 export interface SocialLink {
@@ -29,9 +30,8 @@ export const siteConfig = {
     },
     nav: [
         { name: "Home", href: "/" },
-        { name: "Work", href: "/work" },
+        { name: "Work", href: "/projects" },
         { name: "Journey", href: "/journey" },
-        { name: "About", href: "/about" },
     ] as NavLink[],
     experiments: {
         // Flip this to false to instantly revert the Clay × Notion landing-page experiment.

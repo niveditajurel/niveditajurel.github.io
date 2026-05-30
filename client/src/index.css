@@ -110,6 +110,8 @@
     font-family: 'Newsreader', serif;
     font-weight: 500;
     letter-spacing: -0.03em;
+    font-kerning: normal;
+    text-rendering: optimizeLegibility;
   }
 
   .font-mono {
@@ -163,15 +165,25 @@
   body[data-design-mode="clay-notion"] h2 {
     font-family: 'Newsreader', serif;
     font-weight: 500;
-    letter-spacing: -0.04em;
+    letter-spacing: -0.03em;
+    font-kerning: normal;
+    text-rendering: optimizeLegibility;
   }
 
   body[data-design-mode="clay-notion"] h1 {
-    letter-spacing: -0.06em;
+    letter-spacing: -0.045em;
   }
 }
 
 @layer components {
+  .clay-section-heading {
+    @apply text-balance text-3xl font-semibold leading-[1.02] tracking-[-0.03em] md:text-4xl;
+  }
+
+  .clay-card-title {
+    @apply text-balance text-[1.28rem] font-semibold leading-[1.08] tracking-[-0.02em];
+  }
+
   .text-gradient {
     @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
   }

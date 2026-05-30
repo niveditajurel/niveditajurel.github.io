@@ -33,9 +33,58 @@ export interface ProjectData {
   results?: string[];
   role?: string;
   href?: string;
+  externalHref?: string;
 }
 
 export const projects: ProjectData[] = [
+  {
+    id: "uber-driver-navigation",
+    title: "When Dispatch Competes With Navigation",
+    subtitle: "Context-aware ride request UX for safer driver attention",
+    description:
+      "A product strategy and UX systems-thinking case study exploring how ride-hailing platforms can preserve back-to-back trip value without letting request overlays compete with navigation during safety-critical driving moments.",
+    image: "",
+    tags: ["Marketplace", "Driver UX", "Product Strategy", "Safety Systems"],
+    eyebrow: "Driver marketplace UX",
+    period: "Independent case study",
+    teaser:
+      "Reframed a visible UI issue as a deeper interruption-management problem spanning navigation, dispatch logic, driver cognition, and marketplace efficiency.",
+    recruiterSignal:
+      "Strong signal for senior product judgment: balancing safety, driver trust, and marketplace throughput instead of solving only the surface interface.",
+    ctaLabel: "Open case study",
+    imageMode: "none",
+    theme: {
+      surface: "from-[#e7ddd0] via-[#f4eee4] to-[#fbf7f1]",
+      imageSurface: "bg-[#181410]",
+      badge: "bg-[#fff8ef]/80",
+      accent: "bg-[#b59667]",
+    },
+    metrics: {
+      users: "US + India observations",
+      growth: "Maneuver-aware MVP",
+      timeline: "Interruption management",
+      impact: "Safety-first dispatch UX",
+    },
+    challenge:
+      "Incoming ride requests can appear during active navigation and compete with turn-by-turn guidance, especially near exits, lane changes, dense intersections, and repeated city-turn sequences.",
+    solution:
+      "Proposed a maneuver-aware compact request mode that adapts request presentation based on speed, maneuver proximity, and risk, while preserving the marketplace value of back-to-back trips.",
+    process: [
+      "Synthesized field observations from the United States and India",
+      "Mapped the issue as a systems problem across safety, navigation, driver earnings, and dispatch UX",
+      "Explored multiple request-presentation concepts including shield, banner, audio, and adaptive states",
+      "Defined MVP logic, measurement strategy, and staged experimentation",
+    ],
+    results: [
+      "Produced a portfolio-quality product case study with high-fidelity UI concepts",
+      "Defined a context-aware interaction model rather than a one-off visual tweak",
+      "Created a testable MVP with metrics spanning safety proxies and marketplace guardrails",
+      "Framed the recommendation as senior PM and builder thinking, not only interface polish",
+    ],
+    role:
+      "Product strategy, UX systems thinking, and concept prototyping for a marketplace safety problem.",
+    href: "/projects/uber-driver-navigation",
+  },
   {
     id: "anand-pag",
     title: "Anand PAG / Cintas FNA",

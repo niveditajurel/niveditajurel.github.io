@@ -29,28 +29,35 @@ export const JourneyPreview = () => {
   const isClayNotionMode = siteConfig.experiments.clayNotionLanding;
 
   return (
-    <section className="bg-transparent px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
+    <section id="journey-preview" className="bg-transparent px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
       <div className="mx-auto max-w-7xl border-t border-border/70 pt-8">
-        <div className="grid gap-10 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:items-start">
-          <div className="space-y-4">
+        <div className="mb-8 space-y-3">
+          <div className="space-y-3">
             <p className="text-sm font-semibold uppercase tracking-[0.22em] text-muted-foreground">
               Journey Preview
             </p>
-            <h2 className={cn("text-3xl font-bold text-foreground md:text-4xl", isClayNotionMode && "font-editorial font-medium tracking-[-0.045em] md:text-[3rem]")}>
-              The through-line is not one title. It is the way each step sharpened the product lens.
-            </h2>
-            <p className="max-w-xl text-base leading-7 text-muted-foreground">
-              The path runs through entrepreneurship communities, cross-sector roles, and a steady move
-              toward product work that balances systems thinking with empathy.
-            </p>
-            <Link href="/journey">
-              <span className="inline-flex cursor-pointer items-center gap-2 text-sm font-semibold text-foreground transition-colors hover:text-primary">
-                Read the full journey
-                <ArrowRight className="h-4 w-4" />
-              </span>
-            </Link>
+            <div className="flex flex-col gap-4 xl:flex-row xl:items-end xl:justify-between">
+              <h2 className={cn("clay-section-heading max-w-[14ch] text-foreground md:text-[2.6rem]", isClayNotionMode && "font-editorial")}>
+                How the product lens got sharper over time.
+              </h2>
+              <div className="max-w-[38rem] space-y-3 xl:text-right">
+                <p className="text-base leading-7 text-muted-foreground">
+                  The path runs through entrepreneurship communities, cross-sector roles, and a
+                  steady move toward product work that balances systems thinking with empathy.
+                </p>
+                <Link href="/journey">
+                  <span className="inline-flex cursor-pointer items-center gap-2 text-sm font-semibold text-foreground transition-colors hover:text-primary xl:ml-auto">
+                    Read the full journey
+                    <ArrowRight className="h-4 w-4" />
+                  </span>
+                </Link>
+              </div>
+            </div>
           </div>
+        </div>
 
+        <div className="grid gap-10 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:items-start">
+          <div className="hidden lg:block" />
           <div className="grid gap-4">
             {journeyMoments.map((moment, index) => (
               <motion.article
@@ -68,7 +75,7 @@ export const JourneyPreview = () => {
                 <div className="mb-3 text-xs font-semibold uppercase tracking-[0.18em] text-primary">
                   {moment.period}
                 </div>
-                <h3 className={cn("text-xl font-semibold text-foreground", isClayNotionMode && "font-editorial font-medium text-[1.42rem] tracking-[-0.03em]")}>{moment.title}</h3>
+                <h3 className={cn("clay-card-title text-foreground", isClayNotionMode && "font-editorial text-[1.42rem]")}>{moment.title}</h3>
                 <p className="mt-3 text-sm leading-6 text-muted-foreground">{moment.description}</p>
               </motion.article>
             ))}

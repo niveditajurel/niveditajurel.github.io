@@ -8,10 +8,19 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
   const [location] = useLocation();
   const isClayNotionMode = siteConfig.experiments.clayNotionLanding;
+  const isHome = location === "/";
   const showFloatingMobileCta =
     location !== "/work" &&
     location !== "/projects" &&
     !location.startsWith("/projects/");
+
+  const handleHomeSectionClick = (id: string) => {
+    if (!isHome) {
+      return;
+    }
+
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
 
   return (
     <footer className={cn(
@@ -108,9 +117,10 @@ export function Footer() {
             <div className="space-y-3">
               {[
                 { name: "Home", href: "/" },
-                { name: "Work", href: "/work" },
+                { name: "Featured Work", href: "/", sectionId: "featured-work" },
+                { name: "Case Studies + Builds", href: "/", sectionId: "case-studies-builds" },
+                { name: "What I’m Building With", href: "/", sectionId: "toolkit" },
                 { name: "Journey", href: "/journey" },
-                { name: "About", href: "/about" },
               ].map((link, index) => (
                 <motion.div
                   key={link.href}
@@ -120,8 +130,9 @@ export function Footer() {
                   transition={{ delay: index * 0.05 }}
                 >
                   <Link href={link.href}>
-                    <motion.span 
+                    <motion.span
                       className="text-sm text-muted-foreground hover:text-accent transition-colors duration-200 cursor-pointer block"
+                      onClick={() => link.sectionId ? handleHomeSectionClick(link.sectionId) : undefined}
                       whileHover={{ x: 4 }}
                     >
                       {link.name}

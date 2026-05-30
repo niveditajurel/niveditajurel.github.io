@@ -1,10 +1,9 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { ArrowRight, ArrowUpRight, NotebookPen, Search } from "lucide-react";
-import { projects } from "@/data/projects";
 import { siteConfig } from "@/data/site";
 import { cn } from "@/lib/utils";
-import { DoodleSpark, DoodleUnderline } from "@/components/ui/doodle-accents";
+import { DoodleArrow, DoodleSpark, DoodleUnderline } from "@/components/ui/doodle-accents";
 
 const experienceSignals = [
   "Startup PM",
@@ -33,52 +32,17 @@ const productSignals = [
   },
 ];
 
-const featuredProjectMeta: Record<
-  string,
-  {
-    summary: string;
-    proof: string;
-    roleLabel: string;
-    linkLabel: string;
-  }
-> = {
-  "anand-pag": {
-    summary:
-      "Replaced a legacy vendor-operations workflow with a cloud platform built for coordination, document readiness, and operational reliability.",
-    proof: "<5 min sync, 100% job success",
-    roleLabel: "Builder PM",
-    linkLabel: "Open case study",
-  },
-  "nomad-ai": {
-    summary:
-      "Defined pricing, analytics, and MVP structure for an AI-native valuation product.",
-    proof: "+865% user growth",
-    roleLabel: "Consultant PM",
-    linkLabel: "Open case study",
-  },
-  skingenius: {
-    summary:
-      "Refined onboarding and recommendations so the first session felt clearer and easier to trust.",
-    proof: "+30% engagement",
-    roleLabel: "Product manager",
-    linkLabel: "Open case study",
-  },
-};
-
-const featuredProjects = projects.flatMap((project) => {
-  const meta = featuredProjectMeta[project.id];
-
-  return meta ? [{ project, meta }] : [];
-});
-
 export const Hero = () => {
   const isClayNotionMode = siteConfig.experiments.clayNotionLanding;
+  const scrollToFeaturedWork = () => {
+    document.getElementById("featured-work")?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
 
   return (
     <section
       className={cn(
-        "relative isolate overflow-hidden bg-transparent px-0 pb-10 pt-6 sm:pt-8 lg:min-h-[calc(100svh-5.75rem)] lg:pb-10 lg:pt-7",
-        isClayNotionMode && "lg:min-h-[calc(100svh-5.75rem)]",
+        "relative isolate overflow-hidden bg-transparent px-0 pb-10 pt-2 sm:pt-3 lg:min-h-[calc(100svh-4.65rem)] lg:pb-10 lg:pt-3",
+        isClayNotionMode && "lg:min-h-[calc(100svh-4.65rem)]",
       )}
     >
       <div className="pointer-events-none absolute inset-0 -z-10">
@@ -127,14 +91,15 @@ export const Hero = () => {
               </motion.div>
 
               {isClayNotionMode ? (
-                <motion.p
+                <motion.div
                   initial={{ opacity: 0, y: 8, rotate: -3 }}
                   animate={{ opacity: 1, y: 0, rotate: -2 }}
                   transition={{ duration: 0.58, delay: 0.18, ease: "easeOut" }}
-                  className="hidden pt-3 font-hand text-[1.45rem] leading-none text-[#b87944] md:block"
+                  className="relative hidden pl-8 pt-3 md:block"
                 >
-                  builder instincts
-                </motion.p>
+                  <p className="font-hand text-[1.45rem] leading-none text-[#b87944]">AI-first</p>
+                  <DoodleArrow className="absolute -left-3 top-0 h-7 w-16 text-[#b87944]" delay={0.28} />
+                </motion.div>
               ) : null}
             </div>
 
@@ -142,9 +107,9 @@ export const Hero = () => {
               initial={isClayNotionMode ? { opacity: 0, y: 8 } : undefined}
               animate={isClayNotionMode ? { opacity: 1, y: 0 } : undefined}
               transition={isClayNotionMode ? { duration: 0.58, delay: 0.14, ease: "easeOut" } : undefined}
-              className="ml-1 inline-flex items-center rounded-full border border-[#1f1a14]/20 bg-[#fffaf1]/76 px-3.5 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-[#463a2b] shadow-[0_14px_30px_-26px_rgba(31,26,20,0.24)] sm:text-[0.8rem]"
+              className="ml-1 inline-flex items-center pt-1 text-[0.77rem] font-semibold uppercase tracking-[0.18em] text-[#6a5846] sm:text-[0.82rem]"
             >
-              AI-first Product Manager
+              Product Builder + Manager
             </motion.div>
 
             <motion.p
@@ -157,7 +122,7 @@ export const Hero = () => {
                 isClayNotionMode && "text-[1rem] font-semibold leading-7",
               )}
             >
-              A generalist with engineering roots and builder instincts
+              Focused on product clarity, systems thinking, and execution
             </motion.p>
 
           </div>
@@ -168,9 +133,9 @@ export const Hero = () => {
               animate={isClayNotionMode ? { opacity: 1, y: 0 } : undefined}
               transition={isClayNotionMode ? { duration: 0.72, delay: 0.14, ease: "easeOut" } : undefined}
               className={cn(
-                "max-w-[16ch] text-balance text-[clamp(2.55rem,3.9vw,4.25rem)] font-semibold leading-[0.92] tracking-[-0.055em] text-foreground",
+                "max-w-[16ch] text-balance text-[clamp(2.55rem,3.9vw,4.25rem)] font-semibold leading-[0.98] tracking-[-0.04em] text-foreground",
                 isClayNotionMode &&
-                  "max-w-[16ch] font-editorial text-[clamp(2.65rem,4vw,4.35rem)] leading-[0.92] tracking-[-0.062em]",
+                  "max-w-[16ch] font-editorial text-[clamp(2.65rem,4vw,4.35rem)] leading-[0.98] tracking-[-0.045em]",
               )}
             >
               I bring{" "}
@@ -203,22 +168,26 @@ export const Hero = () => {
               initial={isClayNotionMode ? { opacity: 0, y: 10 } : undefined}
               animate={isClayNotionMode ? { opacity: 1, y: 0 } : undefined}
               transition={isClayNotionMode ? { duration: 0.58, delay: 0.28, ease: "easeOut" } : undefined}
-              className="flex flex-wrap gap-2"
+              className="flex flex-wrap items-center gap-x-3 gap-y-2 text-[0.92rem] font-medium tracking-[-0.01em] text-[#5f5143]"
             >
-              {experienceSignals.map((signal) => (
-                <span
-                  key={signal}
-                  className="rounded-full border border-[#1f1a14]/18 bg-[#fffaf1]/66 px-3.5 py-1.5 text-[0.78rem] font-semibold tracking-[-0.01em] text-[#463a2b]"
-                >
-                  {signal}
-                </span>
+              {experienceSignals.map((signal, index) => (
+                <div key={signal} className="inline-flex items-center gap-3">
+                  {index > 0 ? (
+                    <span aria-hidden="true" className="h-1 w-1 rounded-full bg-[#c98b57]" />
+                  ) : null}
+                  <span>{signal}</span>
+                </div>
               ))}
             </motion.div>
 
           </div>
 
           <div className="flex flex-wrap items-center gap-3 pt-1">
-            <Link href="/work">
+            <button
+              type="button"
+              onClick={scrollToFeaturedWork}
+              className="appearance-none border-0 bg-transparent p-0"
+            >
               <span
                 className={cn(
                   "inline-flex cursor-pointer items-center gap-2 rounded-full bg-foreground px-5 py-3 text-sm font-semibold text-background transition-transform duration-200 hover:-translate-y-0.5",
@@ -229,7 +198,7 @@ export const Hero = () => {
                 View Work
                 <ArrowRight className="h-4 w-4" />
               </span>
-            </Link>
+            </button>
             <a
               href={siteConfig.links.resume}
               target="_blank"
@@ -245,11 +214,12 @@ export const Hero = () => {
             <Link href="/journey">
               <span
                 className={cn(
-                  "inline-flex cursor-pointer items-center gap-2 rounded-full border border-border bg-background/88 px-5 py-3 text-sm font-semibold text-foreground backdrop-blur-sm transition-colors duration-200 hover:border-primary/40 hover:text-primary",
-                  isClayNotionMode && "bg-[#fffaf1]/84 px-6 py-3.5 hover:bg-[#fff5e6]",
+                  "inline-flex cursor-pointer items-center gap-2 px-1 py-2 text-sm font-semibold text-[#57493b] transition-colors duration-200 hover:text-[#1f1a14]",
+                  isClayNotionMode && "hover:text-[#1f1a14]",
                 )}
               >
                 Explore Journey
+                <ArrowRight className="h-4 w-4" />
               </span>
             </Link>
           </div>
@@ -384,127 +354,6 @@ export const Hero = () => {
           </motion.div>
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 26 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.72, delay: 0.22, ease: "easeOut" }}
-          className="relative lg:col-span-2"
-        >
-          <div
-            className={cn(
-              "rounded-[2.15rem] border border-border/70 bg-background/76 p-5 shadow-[0_24px_70px_-56px_rgba(15,23,42,0.24)] backdrop-blur-sm sm:p-6 lg:p-7",
-              isClayNotionMode && "paper-panel bg-[#fffdf7]/84 shadow-[0_26px_60px_-44px_rgba(81,57,24,0.16)]",
-            )}
-          >
-            <div className="flex flex-col gap-4 border-b border-border/60 pb-5 lg:flex-row lg:items-end lg:justify-between">
-              <div className="max-w-[36rem] space-y-2.5">
-                <h2
-                  className={cn(
-                    "text-[clamp(1.45rem,2vw,2rem)] font-semibold leading-[0.96] tracking-[-0.04em] text-foreground",
-                    isClayNotionMode && "font-editorial font-medium text-[clamp(1.85rem,2.4vw,2.45rem)] tracking-[-0.05em]",
-                  )}
-                >
-                  Featured Work
-                </h2>
-                <p className="max-w-[34rem] text-sm leading-6 text-muted-foreground sm:text-[0.98rem]">
-                  A quick look at product work across enterprise systems, AI products, and customer-facing experiences.
-                </p>
-              </div>
-
-              <Link href="/work">
-                <span className="inline-flex cursor-pointer items-center gap-2 text-sm font-semibold text-foreground transition-colors hover:text-primary">
-                  Browse the full work page
-                  <ArrowRight className="h-4 w-4" />
-                </span>
-              </Link>
-            </div>
-
-            <div className="mt-5 grid items-stretch gap-4 lg:grid-cols-3">
-              {featuredProjects.map(({ project, meta }, index) => {
-                return (
-                  <Link key={project.id} href={project.href ?? "/work"}>
-                    <span
-                      className={cn(
-                        `group relative block h-full min-h-[21.75rem] cursor-pointer overflow-hidden rounded-[1.8rem] border border-border/70 bg-gradient-to-br ${project.theme.surface} p-5 text-left shadow-[0_18px_50px_-42px_rgba(15,23,42,0.2)] transition-transform duration-200 hover:-translate-y-1`,
-                        isClayNotionMode && "shadow-[0_22px_48px_-40px_rgba(81,57,24,0.16)]",
-                      )}
-                    >
-                      <span
-                        aria-hidden="true"
-                        className={cn("absolute -right-2 top-2 h-24 w-24 rounded-full opacity-45 blur-2xl", project.theme.accent)}
-                      />
-
-                      <span className="relative flex h-full flex-col gap-5">
-                        <span className="space-y-4">
-                          <span className="flex items-start justify-between gap-4">
-                            <span className="flex flex-wrap gap-2">
-                              <span
-                                className={cn(
-                                  "inline-flex items-center rounded-full border border-black/10 px-3 py-1 text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-foreground/78",
-                                  project.theme.badge,
-                                )}
-                              >
-                                {project.eyebrow}
-                              </span>
-                            </span>
-                            <span className="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-foreground/55">
-                              0{index + 1}
-                            </span>
-                          </span>
-
-                          <span className="block space-y-2.5">
-                            <span className="block text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-foreground/56">
-                              {project.period}
-                            </span>
-                            <span
-                              className={cn(
-                                "block text-[1.45rem] font-semibold leading-[1.04] tracking-[-0.04em] text-foreground",
-                                isClayNotionMode && "font-editorial font-medium text-[1.66rem] tracking-[-0.043em]",
-                              )}
-                            >
-                              {project.title}
-                            </span>
-                            <span className="block max-w-[29ch] text-[0.98rem] leading-6 text-foreground/76">
-                              {meta.summary}
-                            </span>
-                          </span>
-                        </span>
-
-                        <span className="mt-auto block space-y-3">
-                          <span className="flex flex-wrap gap-2">
-                            <span
-                              className={cn(
-                                "rounded-full border border-black/10 px-3 py-2 text-[0.78rem] font-semibold leading-5 text-foreground/76 backdrop-blur-sm",
-                                project.theme.badge,
-                              )}
-                            >
-                              {meta.roleLabel}
-                            </span>
-                            <span
-                              className={cn(
-                                "rounded-full border border-black/10 px-3 py-2 text-[0.78rem] font-semibold leading-5 text-foreground/88 backdrop-blur-sm",
-                                project.theme.badge,
-                              )}
-                            >
-                              {meta.proof}
-                            </span>
-                          </span>
-
-                          <span className="flex items-center justify-end gap-2 border-t border-black/10 pt-4 text-sm font-semibold text-foreground">
-                            <span className="inline-flex items-center gap-2 transition-transform duration-200 group-hover:translate-x-1">
-                              {meta.linkLabel}
-                              <ArrowRight className="h-4 w-4" />
-                            </span>
-                          </span>
-                        </span>
-                      </span>
-                    </span>
-                  </Link>
-                );
-              })}
-            </div>
-          </div>
-        </motion.div>
       </div>
     </section>
   );

@@ -88,15 +88,15 @@ export const projects: ProjectData[] = [
   {
     id: "anand-pag",
     title: "Anand PAG / Cintas FNA",
-    subtitle: "Integration-heavy cloud workflow platform for vendor operations",
+    subtitle: "Integration-heavy vendor operations system",
     description:
-      "Led product delivery for a cloud workflow platform that replaced a legacy vendor-operations system and digitized service-order execution across internal teams and external vendors.",
+      "Led product delivery for a cloud vendor-operations system that replaced a legacy workflow and digitized service-order execution across internal teams and external vendors.",
     image: "",
-    tags: ["Enterprise", "Workflow Platform", "Operations", "Product Delivery"],
-    eyebrow: "Enterprise workflow platform",
+    tags: ["Enterprise", "Vendor Ops", "Workflow Systems", "Product Delivery"],
+    eyebrow: "Enterprise operations system",
     period: "2025",
     teaser:
-      "Led delivery for a technically complex workflow platform that replaced a legacy operations system and created near real-time coordination, stronger document readiness, and more reliable high-volume processing.",
+      "Led a technically complex workflow rebuild that replaced a legacy operations system and made cross-team coordination, document readiness, and high-volume processing more reliable.",
     recruiterSignal:
       "Strong signal for builder-style PM ownership in integration-heavy enterprise systems where workflow clarity, reliability, and launch readiness matter.",
     ctaLabel: "Open case study",
@@ -138,15 +138,15 @@ export const projects: ProjectData[] = [
     title: "Nomad AI",
     subtitle: "AI-powered SMB Valuation & Exit-Planning Platform",
     description:
-      "Consultant Product Manager for an AI valuation platform, shaping pricing, analytics, and MVP decisions for a founder-led launch.",
-    image: "/nomad-ai-t-w.jpeg",
+      "Consultant Product Manager for an AI valuation platform, shaping pricing, analytics, and MVP decisions for a founder-led launch in a trust-sensitive category.",
+    image: "/nomad-ai-dashboard.png",
     tags: ["AI", "FinTech", "SaaS", "Product Management"],
     eyebrow: "AI fintech",
     period: "May 2024 - Jul 2024",
     teaser:
-      "Built the pricing strategy, analytics foundation, and go-to-market structure for an AI-native valuation product entering a high-stakes, trust-sensitive market.",
+      "Built the pricing strategy, analytics foundation, and launch structure for an AI-native valuation product entering a high-stakes, trust-sensitive market.",
     recruiterSignal:
-      "A good read on commercial product judgment: balancing user trust, monetization, analytics, and launch sequencing with a lean team.",
+      "Strong signal for commercial product judgment: balancing user trust, monetization, analytics, and launch sequencing with a lean founder team.",
     ctaLabel: "Open case study",
     imageMode: "contain",
     theme: {
@@ -176,31 +176,32 @@ export const projects: ProjectData[] = [
       "Produced wireframes and ran feedback reviews with the team",
     ],
     results: [
-      "608 users and +865% user growth in 4 months",
-      "+42% projected free-to-paid conversion lift",
-      "+28% projected MRR uplift from pricing strategy changes",
+      "Later platform context: 608 users and +865% user growth after launch",
+      "+42% projected free-to-paid conversion lift from pricing changes",
+      "+28% projected MRR uplift from revised packaging",
       "MVP launched with pricing and analytics experiments in motion",
     ],
     role:
-      "Consultant Product Manager working with a 4-person founder and engineering team across pricing, analytics, and launch strategy.",
+      "Consultant Product Manager working with a 4-person founder and engineering team across pricing, analytics, ETL reliability, and launch strategy.",
     href: "/projects/nomad-ai",
+    externalHref: "https://usenomad.ai/",
   },
   {
     id: "skingenius",
     title: "Skingenius",
     subtitle: "AI-Powered Personalized Skincare Platform",
     description:
-      "Product management work on an AI-driven skincare experience focused on onboarding clarity, recommendation quality, and stronger first-session engagement.",
-    image: "/teasers/skingenius.jpg",
+      "Product management work on an AI-driven skincare experience focused on onboarding clarity, recommendation trust, and stronger first-session engagement.",
+    image: "/teasers/skingenius1.jpg",
     tags: ["AI", "E-commerce", "Personalization", "Product Management"],
     eyebrow: "AI consumer product",
     period: "Aug 2024 - Dec 2024",
     teaser:
       "Refined onboarding and recommendation flows so a beauty-tech product felt easier to trust, easier to finish, and more useful from the very first session.",
     recruiterSignal:
-      "Shows B2C product instincts: making personalization feel clear, reducing drop-off in onboarding, and translating AI value into user-facing UX wins.",
+      "Shows B2C product instincts: making personalization feel clear, reducing onboarding drop-off, and translating AI value into user-facing trust.",
     ctaLabel: "Open case study",
-    imageMode: "cover",
+    imageMode: "contain",
     theme: {
       surface: "from-[#f7ddd2] via-[#fbefea] to-[#fff8f4]",
       imageSurface: "bg-[#f4d1c4]",
@@ -233,5 +234,6 @@ export const projects: ProjectData[] = [
     role:
       "Product Manager leading a cross-functional team across AI recommendations, onboarding, and delivery planning.",
     href: "/projects/skingenius",
+    externalHref: "https://skingenius.io/",
   },
 ];

@@ -1,0 +1,358 @@
+- generic [ref=e3]:
+  - navigation [ref=e4]:
+    - generic [ref=e6]:
+      - link "Nivedita" [ref=e8] [cursor=pointer]:
+        - /url: "#/"
+        - generic [ref=e10]: Nivedita
+      - generic [ref=e12]:
+        - link "Home" [ref=e13] [cursor=pointer]:
+          - /url: "#/"
+          - generic [ref=e14]:
+            - img [ref=e15]
+            - text: Home
+        - link "Work" [ref=e18] [cursor=pointer]:
+          - /url: "#/projects"
+          - generic [ref=e19]:
+            - img [ref=e20]
+            - text: Work
+        - link "Journey" [ref=e24] [cursor=pointer]:
+          - /url: "#/journey"
+          - generic [ref=e25]:
+            - img [ref=e26]
+            - text: Journey
+      - generic [ref=e35]:
+        - link "LinkedIn profile" [ref=e36] [cursor=pointer]:
+          - /url: https://www.linkedin.com/in/nivedita-niv/
+          - img [ref=e37]
+        - link "GitHub profile" [ref=e39] [cursor=pointer]:
+          - /url: https://github.com/niveditajurel
+          - img [ref=e40]
+        - link "X profile" [ref=e42] [cursor=pointer]:
+          - /url: https://x.com/nniv266
+          - img [ref=e43]
+        - link "Instagram profile" [ref=e45] [cursor=pointer]:
+          - /url: https://www.instagram.com/niv_yaps/
+          - img [ref=e46]
+  - main [ref=e48]:
+    - generic [ref=e1023]:
+      - generic [ref=e1025]:
+        - generic [ref=e1026]:
+          - generic [ref=e1027]:
+            - link "Back to work" [ref=e1028] [cursor=pointer]:
+              - /url: "#/work"
+              - generic [ref=e1029]:
+                - img [ref=e1030]
+                - text: Back to work
+            - generic [ref=e1033]: Learning Council
+          - generic [ref=e1034]:
+            - paragraph [ref=e1035]: Self-initiated build
+            - 'heading "Learning Council: a persistent multi-agent workspace that learns from every project." [level=1] [ref=e1036]'
+            - paragraph [ref=e1037]: Built in the multiagentcontext codebase, Learning Council explores how an AI team can create, critique, revise, and then remember what it learned so the next task starts smarter.
+          - generic [ref=e1038]:
+            - paragraph [ref=e1039]: Why this page exists
+            - paragraph [ref=e1040]: This is a product-builder case study for a real self-initiated project. The goal is to show the product idea, the system thinking, and the current build surfaces without pretending it is already a fully validated company product.
+          - generic [ref=e1041]:
+            - button "Context" [ref=e1042] [cursor=pointer]
+            - button "Build" [ref=e1043] [cursor=pointer]
+            - button "System" [ref=e1044] [cursor=pointer]
+            - button "Judgment" [ref=e1045] [cursor=pointer]
+        - complementary [ref=e1046]:
+          - generic [ref=e1049]:
+            - generic [ref=e1050]:
+              - generic [ref=e1051]:
+                - paragraph [ref=e1052]: Product loop
+                - heading "From task to memory to better next output." [level=3] [ref=e1053]
+              - img [ref=e1055]
+            - generic [ref=e1058]:
+              - generic [ref=e1059]:
+                - generic [ref=e1061]:
+                  - img [ref=e1062]
+                  - generic [ref=e1069]: Task intake
+                - generic [ref=e1071]:
+                  - img [ref=e1072]
+                  - generic [ref=e1084]: Council assembly
+                - generic [ref=e1086]:
+                  - img [ref=e1087]
+                  - generic [ref=e1090]: Critique + revision
+                - generic [ref=e1092]:
+                  - img [ref=e1093]
+                  - generic [ref=e1096]: Memory extraction
+              - generic [ref=e1097]: Session 2 should feel materially smarter because Session 1 left behind usable taste, skill, and project memory.
+            - generic [ref=e1098]:
+              - generic [ref=e1099]:
+                - paragraph [ref=e1100]: Creates
+                - paragraph [ref=e1101]: Landing pages, pricing pages, PRDs, strategy work, and other artifacts.
+              - generic [ref=e1102]:
+                - paragraph [ref=e1103]: Remembers
+                - paragraph [ref=e1104]: Taste rules, domain rules, project decisions, and rejected patterns.
+              - generic [ref=e1105]:
+                - paragraph [ref=e1106]: Shows
+                - paragraph [ref=e1107]: Agent timeline, retrieved memories, comparison view, and review logic.
+          - generic [ref=e1108]:
+            - generic [ref=e1109]:
+              - paragraph [ref=e1110]: Type
+              - paragraph [ref=e1111]: Self-initiated product build
+            - generic [ref=e1112]:
+              - paragraph [ref=e1113]: Codebase
+              - paragraph [ref=e1114]: Built in the multiagentcontext project
+            - generic [ref=e1115]:
+              - paragraph [ref=e1116]: Product
+              - paragraph [ref=e1117]: Persistent multi-agent workspace
+            - generic [ref=e1118]:
+              - paragraph [ref=e1119]: Focus
+              - paragraph [ref=e1120]: Memory, critique, reusable judgment, and visible orchestration
+      - generic [ref=e1121]:
+        - generic [ref=e1122]:
+          - generic [ref=e1124]:
+            - paragraph [ref=e1125]: Context
+            - 'heading "The core idea is simple: most agent systems collaborate once, then forget." [level=2] [ref=e1126]'
+            - paragraph [ref=e1127]: "Learning Council started from a product question: what if an AI team could keep the useful judgment from one project and reuse it in the next one without the user repeating everything again?"
+          - generic [ref=e1128]:
+            - paragraph [ref=e1129]: Why this idea is interesting
+            - list [ref=e1130]:
+              - listitem [ref=e1131]:
+                - generic [ref=e1133]: Most agent systems collaborate once, produce an output, and then forget the judgment that made the work better.
+              - listitem [ref=e1134]:
+                - generic [ref=e1136]: "Users keep repeating the same guidance: use the same positioning, avoid this tone, remember the last decision, and do not make that mistake again."
+              - listitem [ref=e1137]:
+                - generic [ref=e1139]: "Learning Council explores a different model: every project becomes a learning event for the AI team."
+        - generic [ref=e1140]:
+          - generic [ref=e1141]:
+            - paragraph [ref=e1142]: Product problem
+            - list [ref=e1143]:
+              - listitem [ref=e1144]:
+                - generic [ref=e1146]: Run-based multi-agent systems can coordinate inside one workflow but still lose the useful learning after the run ends.
+              - listitem [ref=e1147]:
+                - generic [ref=e1149]: Chat history alone is not enough when users want persistent taste, domain caution, project decisions, and reusable critique standards.
+              - listitem [ref=e1150]:
+                - generic [ref=e1152]: "Teams need to see where quality came from: which agents reviewed the work, what memories were retrieved, and what changed between the first and second pass."
+          - generic [ref=e1153]:
+            - paragraph [ref=e1154]: One-line product framing
+            - paragraph [ref=e1155]: A multi-agent workspace where every project teaches the AI team how to work better with you.
+        - generic [ref=e1156]:
+          - generic [ref=e1157]:
+            - paragraph [ref=e1158]: Visual model
+            - heading "A quick visual of the product loop and the workspace it creates." [level=2] [ref=e1159]
+            - paragraph [ref=e1160]: The product is easier to understand when the user can see both the council run and the persistent memory model at a glance.
+          - generic [ref=e1161]:
+            - generic [ref=e1162]:
+              - paragraph [ref=e1163]: Council run diagram
+              - generic [ref=e1164]:
+                - generic [ref=e1166]:
+                  - generic [ref=e1167]: "1"
+                  - paragraph [ref=e1168]: User starts a task
+                - generic [ref=e1171]:
+                  - generic [ref=e1172]: "2"
+                  - paragraph [ref=e1173]: Director forms the council
+                - generic [ref=e1176]:
+                  - generic [ref=e1177]: "3"
+                  - paragraph [ref=e1178]: Agents critique and revise
+                - generic [ref=e1181]:
+                  - generic [ref=e1182]: "4"
+                  - paragraph [ref=e1183]: Memory gets extracted
+                - generic [ref=e1186]:
+                  - generic [ref=e1187]: "5"
+                  - paragraph [ref=e1188]: Next task retrieves the learning
+            - generic [ref=e1189]:
+              - paragraph [ref=e1190]: Low-fi workspace wireframe
+              - generic [ref=e1192]:
+                - generic [ref=e1193]:
+                  - generic [ref=e1194]:
+                    - paragraph [ref=e1195]: Prompt
+                    - paragraph [ref=e1196]: Create a pricing page using previous positioning and finance-safe tone.
+                  - generic [ref=e1197]:
+                    - paragraph [ref=e1198]: Retrieved memories
+                    - generic [ref=e1199]:
+                      - generic [ref=e1200]: Premium, direct positioning
+                      - generic [ref=e1201]: No guaranteed outcomes
+                      - generic [ref=e1202]: Reuse wealth desk metaphor
+                - generic [ref=e1203]:
+                  - generic [ref=e1204]:
+                    - paragraph [ref=e1205]: Active council
+                    - generic [ref=e1206]:
+                      - generic [ref=e1207]: Director
+                      - generic [ref=e1208]: Taste critic
+                      - generic [ref=e1209]: Frontend brain
+                      - generic [ref=e1210]: Domain risk
+                  - generic [ref=e1211]:
+                    - paragraph [ref=e1212]: Output compare
+                    - generic [ref=e1213]:
+                      - generic [ref=e1214]: Baseline output
+                      - generic [ref=e1215]: Learned council output
+        - generic [ref=e1216]:
+          - generic [ref=e1217]:
+            - paragraph [ref=e1218]: Product pillars
+            - heading "This is not just a chatbot surface. It is a collaboration and memory system." [level=2] [ref=e1219]
+            - paragraph [ref=e1220]: "The current product framing is strongest when it stays focused on a few visible ideas: persistent memory, visible orchestration, project-specific context, and better follow-up outputs."
+          - generic [ref=e1221]:
+            - generic [ref=e1222]:
+              - img [ref=e1224]
+              - heading "Visible council work" [level=3] [ref=e1227]
+              - paragraph [ref=e1228]: "The product makes the orchestration legible: task intake, selected brains, agent timeline, retrieved memories, and final output all stay visible."
+            - generic [ref=e1229]:
+              - img [ref=e1231]
+              - heading "Structured memory" [level=3] [ref=e1243]
+              - paragraph [ref=e1244]: It preserves more than chat history. The system stores taste rules, skill rules, project decisions, domain constraints, approved patterns, and rejected patterns.
+            - generic [ref=e1245]:
+              - img [ref=e1247]
+              - heading "Project-specific context" [level=3] [ref=e1251]
+              - paragraph [ref=e1252]: Each project can carry its own positioning, artifact history, domain rules, and next-step suggestions so the council works with context instead of generic prompts.
+            - generic [ref=e1253]:
+              - img [ref=e1255]
+              - heading "Better second output" [level=3] [ref=e1257]
+              - paragraph [ref=e1258]: The real value is not the first artifact alone. It is whether the next task starts smarter because the system remembered what the user and team actually care about.
+        - generic [ref=e1259]:
+          - generic [ref=e1260]:
+            - paragraph [ref=e1261]: Current build
+            - heading "The current product already shows a real surface area, not only an idea." [level=2] [ref=e1262]
+            - paragraph [ref=e1263]: The build in multiagentcontext already demonstrates the main workflow through a landing story, a workspace, memory controls, and comparison views.
+          - generic [ref=e1264]:
+            - generic [ref=e1265]:
+              - heading "Landing and demo story" [level=3] [ref=e1266]
+              - paragraph [ref=e1267]: "A clear product narrative that shows the core wedge: agents should not start from scratch on every task."
+            - generic [ref=e1268]:
+              - heading "Task builder" [level=3] [ref=e1269]
+              - paragraph [ref=e1270]: A prompt intake flow that selects artifact type, memories, and council configuration before the run starts.
+            - generic [ref=e1271]:
+              - heading "Agent run workspace" [level=3] [ref=e1272]
+              - paragraph [ref=e1273]: Visible run state, retrieved memories, selected brains, logs, and a live timeline so the system does not feel like a black box.
+            - generic [ref=e1274]:
+              - heading "Artifact comparison" [level=3] [ref=e1275]
+              - paragraph [ref=e1276]: A before-versus-after view that compares baseline output with the memory-shaped council output.
+            - generic [ref=e1277]:
+              - heading "Memory center" [level=3] [ref=e1278]
+              - paragraph [ref=e1279]: A place to inspect, edit, scope, activate, or remove memories by type rather than hiding them behind prompts.
+            - generic [ref=e1280]:
+              - heading "Brain library and marketplace preview" [level=3] [ref=e1281]
+              - paragraph [ref=e1282]: A model for personal brains, project brains, prebuilt brains, and external expert brains without losing the primacy of user-owned context.
+        - generic [ref=e1284]:
+          - generic [ref=e1285]:
+            - paragraph [ref=e1286]: Memory model
+            - heading "The product gets more compelling when memory is treated as a first-class UX surface." [level=2] [ref=e1287]
+            - paragraph [ref=e1288]: The difference here is not only storing context. It is making memory types, scope, and reuse visible enough that users understand what the system learned and why the next run changed.
+          - generic [ref=e1289]:
+            - generic [ref=e1290]: Taste rules
+            - generic [ref=e1291]: Skill rules
+            - generic [ref=e1292]: Project decisions
+            - generic [ref=e1293]: Domain constraints
+            - generic [ref=e1294]: Approved patterns
+            - generic [ref=e1295]: Rejected patterns
+            - generic [ref=e1296]: Artifacts and retrospectives
+            - generic [ref=e1297]: Collaboration history
+        - generic [ref=e1298]:
+          - generic [ref=e1299]:
+            - paragraph [ref=e1300]: System thinking
+            - heading "The product loop ties task intake, agent collaboration, memory extraction, and future retrieval together." [level=2] [ref=e1301]
+            - paragraph [ref=e1302]: That loop is what makes this more than a one-off orchestration demo. The design question is how to keep every step visible and controllable without overloading the user.
+          - generic [ref=e1303]:
+            - generic [ref=e1304]:
+              - heading "Task + director layer" [level=3] [ref=e1305]
+              - paragraph [ref=e1306]: A director analyzes the task, detects needed capabilities, and forms the right council for that run.
+            - generic [ref=e1307]:
+              - heading "Agent runtime + rooms" [level=3] [ref=e1308]
+              - paragraph [ref=e1309]: Agents collaborate in visible rooms and pass messages through a shared workflow rather than operating as hidden one-shot tools.
+            - generic [ref=e1310]:
+              - heading "Memory + knowledge layer" [level=3] [ref=e1311]
+              - paragraph [ref=e1312]: Lessons are extracted into structured memory and linked so future runs can retrieve the right judgment automatically.
+            - generic [ref=e1313]:
+              - heading "Artifact + review layer" [level=3] [ref=e1314]
+              - paragraph [ref=e1315]: The system compares baseline and improved output so users can see whether memory and critique actually improved the work.
+        - generic [ref=e1316]:
+          - generic [ref=e1317]:
+            - paragraph [ref=e1318]: PM judgment
+            - heading "The strongest framing here is reusable judgment, not agent spectacle." [level=2] [ref=e1319]
+            - paragraph [ref=e1320]: The product gets sharper when it emphasizes visible learning, explainable improvement, and user control instead of leaning on generic multi-agent hype.
+          - generic [ref=e1321]:
+            - generic [ref=e1322]:
+              - img [ref=e1324]
+              - heading "Memory has to be inspectable" [level=3] [ref=e1327]
+              - paragraph [ref=e1328]: If the system remembers something important, the user should be able to see it, edit it, scope it, or turn it off.
+            - generic [ref=e1329]:
+              - img [ref=e1331]
+              - heading "Orchestration should be visible" [level=3] [ref=e1334]
+              - paragraph [ref=e1335]: A multi-agent product earns trust when users can see who contributed, what was retrieved, and why the output changed.
+            - generic [ref=e1336]:
+              - img [ref=e1338]
+              - heading "Reusable judgment beats raw activity" [level=3] [ref=e1341]
+              - paragraph [ref=e1342]: The product value is not that many agents spoke. It is that the next run gets smarter in a measurable, legible way.
+        - generic [ref=e1343]:
+          - generic [ref=e1344]:
+            - paragraph [ref=e1345]: What I would test next
+            - list [ref=e1346]:
+              - listitem [ref=e1347]:
+                - generic [ref=e1349]: Prove output improvement more rigorously across repeated tasks, not only in the demo story.
+              - listitem [ref=e1350]:
+                - generic [ref=e1352]: Tighten artifact capture from the live backend so the workspace consistently records structured output.
+              - listitem [ref=e1353]:
+                - generic [ref=e1355]: Stress-test memory governance, privacy, and permission boundaries before expanding toward team and marketplace use cases.
+              - listitem [ref=e1356]:
+                - generic [ref=e1358]: Learn where users want automation versus explicit review in the memory extraction and feedback loop.
+          - generic [ref=e1359]:
+            - paragraph [ref=e1360]: Why it belongs in the portfolio
+            - paragraph [ref=e1361]: This project is a strong proof surface because it shows product strategy, system design, AI-native workflow thinking, and a real interaction model all in one build. It is not just an opinion about multi-agent software. It is a product point of view turned into a working surface.
+        - generic [ref=e1363]:
+          - generic [ref=e1364]:
+            - paragraph [ref=e1365]: Final takeaway
+            - heading "The interesting question is not whether many agents can run. It is whether the system can remember enough to improve the next decision." [level=2] [ref=e1366]
+            - paragraph [ref=e1367]: Learning Council is my exploration of that question. It treats memory, critique, and reusable judgment as product surfaces, not hidden implementation details.
+          - link "Back to work" [ref=e1368] [cursor=pointer]:
+            - /url: "#/work"
+            - generic [ref=e1369]:
+              - text: Back to work
+              - img [ref=e1370]
+  - contentinfo [ref=e966]:
+    - generic [ref=e967]:
+      - generic [ref=e969]:
+        - generic [ref=e970]:
+          - paragraph [ref=e971]: good product work starts with sharper questions
+          - heading "Let's build something meaningful" [level=3] [ref=e972]
+          - paragraph [ref=e973]: AI-first product work, grounded in clarity, systems thinking, and execution.
+        - link "Contact" [ref=e974] [cursor=pointer]:
+          - /url: "#/contact"
+          - generic "Contact" [ref=e975]:
+            - text: Start a conversation
+            - img [ref=e976]
+      - generic [ref=e978]:
+        - generic [ref=e979]:
+          - generic [ref=e981]:
+            - generic [ref=e982]: Nivedita
+            - generic [ref=e983]: product manager
+          - paragraph [ref=e984]: AI-first Product Manager focused on clear product thinking, structured execution, and human-centered outcomes.
+        - generic [ref=e985]:
+          - heading "Quick Links" [level=3] [ref=e986]
+          - generic [ref=e987]:
+            - link "Home" [ref=e989] [cursor=pointer]:
+              - /url: "#/"
+              - generic [ref=e990]: Home
+            - link "Featured Work" [ref=e992] [cursor=pointer]:
+              - /url: "#/"
+              - generic [ref=e993]: Featured Work
+            - link "Case Studies + Builds" [ref=e995] [cursor=pointer]:
+              - /url: "#/"
+              - generic [ref=e996]: Case Studies + Builds
+            - link "What I’m Building With" [ref=e998] [cursor=pointer]:
+              - /url: "#/"
+              - generic [ref=e999]: What I’m Building With
+            - link "Journey" [ref=e1001] [cursor=pointer]:
+              - /url: "#/journey"
+              - generic [ref=e1002]: Journey
+        - generic [ref=e1003]:
+          - heading "Connect" [level=3] [ref=e1004]
+          - generic [ref=e1005]:
+            - link "LinkedIn profile" [ref=e1006] [cursor=pointer]:
+              - /url: https://www.linkedin.com/in/nivedita-niv/
+              - img [ref=e1007]
+            - link "GitHub profile" [ref=e1009] [cursor=pointer]:
+              - /url: https://github.com/niveditajurel
+              - img [ref=e1010]
+            - link "X profile" [ref=e1012] [cursor=pointer]:
+              - /url: https://x.com/nniv266
+              - img [ref=e1013]
+            - link "Instagram profile" [ref=e1015] [cursor=pointer]:
+              - /url: https://www.instagram.com/niv_yaps/
+              - img [ref=e1016]
+      - generic [ref=e1018]:
+        - paragraph [ref=e1019]: © 2026 Nivedita. All rights reserved.
+        - paragraph [ref=e1020]: Built for thoughtful product conversations and future teams.
+  - region "Notifications (F8)":
+    - list

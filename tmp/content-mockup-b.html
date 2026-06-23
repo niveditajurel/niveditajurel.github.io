@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Content Mockup B</title>
+    <style>
+      :root {
+        --bg: #f7f0e7;
+        --paper: rgba(255, 252, 247, 0.92);
+        --ink: #201712;
+        --muted: #6d5b4c;
+        --line: rgba(132, 102, 75, 0.18);
+        --accent: #b46f3b;
+      }
+
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: Georgia, "Times New Roman", serif;
+        color: var(--ink);
+        background:
+          linear-gradient(rgba(255,255,255,0.18), rgba(255,255,255,0.18)),
+          repeating-linear-gradient(
+            90deg,
+            rgba(186, 154, 123, 0.05) 0,
+            rgba(186, 154, 123, 0.05) 1px,
+            transparent 1px,
+            transparent 38px
+          ),
+          var(--bg);
+      }
+
+      .frame {
+        width: 1440px;
+        height: 960px;
+        margin: 0 auto;
+        padding: 52px 72px 56px;
+      }
+
+      .section {
+        border-top: 1px solid var(--line);
+        padding-top: 30px;
+      }
+
+      .top {
+        display: grid;
+        grid-template-columns: 1fr 0.95fr;
+        gap: 54px;
+        align-items: end;
+      }
+
+      .eyebrow {
+        font: 700 15px/1.2 ui-sans-serif, system-ui, -apple-system, sans-serif;
+        letter-spacing: 0.28em;
+        text-transform: uppercase;
+        color: #5f4a38;
+        margin-bottom: 14px;
+      }
+
+      h1 {
+        margin: 0;
+        max-width: 550px;
+        font-size: 72px;
+        line-height: 0.96;
+        letter-spacing: -0.05em;
+        font-weight: 500;
+      }
+
+      .support {
+        margin: 0;
+        font: 400 20px/1.75 ui-sans-serif, system-ui, -apple-system, sans-serif;
+        color: var(--muted);
+      }
+
+      .layout {
+        margin-top: 34px;
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 20px;
+      }
+
+      .panel {
+        border: 1px solid var(--line);
+        border-radius: 34px;
+        background: var(--paper);
+        box-shadow: 0 18px 44px -36px rgba(67, 44, 25, 0.24);
+        overflow: hidden;
+      }
+
+      .feature {
+        min-height: 586px;
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        padding: 26px;
+      }
+
+      .format {
+        font: 700 12px/1.2 ui-sans-serif, system-ui, sans-serif;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: #8d684b;
+      }
+
+      .feature-title {
+        margin: 14px 0 12px;
+        font-size: 46px;
+        line-height: 0.96;
+        letter-spacing: -0.04em;
+        font-weight: 500;
+        max-width: 9ch;
+      }
+
+      .desc {
+        margin: 0;
+        font: 400 18px/1.65 ui-sans-serif, system-ui, -apple-system, sans-serif;
+        color: var(--muted);
+      }
+
+      .carousel {
+        margin-top: 22px;
+        display: grid;
+        grid-template-columns: 1.3fr 0.95fr;
+        gap: 14px;
+        align-items: stretch;
+      }
+
+      .hero-reel {
+        border-radius: 28px;
+        border: 1px solid rgba(92,69,50,0.14);
+        background:
+          radial-gradient(circle at top right, rgba(224, 207, 179, 0.8), transparent 34%),
+          linear-gradient(180deg, #efe0d0, #f7eee6);
+        min-height: 290px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero-reel::before {
+        content: "";
+        position: absolute;
+        inset: 18px;
+        border-radius: 22px;
+        background:
+          linear-gradient(180deg, rgba(255,255,255,0.25), rgba(34,25,19,0.08)),
+          linear-gradient(180deg, #dac8b7, #f3e8dc 42%, #ecd8c8);
+      }
+
+      .hero-reel::after {
+        content: "";
+        position: absolute;
+        left: 22px;
+        right: 22px;
+        bottom: 22px;
+        height: 82px;
+        border-radius: 20px;
+        background: rgba(255,250,244,0.86);
+      }
+
+      .badge {
+        position: absolute;
+        left: 26px;
+        top: 24px;
+        padding: 10px 14px;
+        border-radius: 999px;
+        border: 1px solid rgba(92,69,50,0.12);
+        background: rgba(255,250,244,0.84);
+        font: 700 12px/1 ui-sans-serif, system-ui, sans-serif;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: #6f4127;
+        z-index: 2;
+      }
+
+      .thumbs {
+        display: grid;
+        gap: 12px;
+      }
+
+      .thumb {
+        border-radius: 22px;
+        border: 1px solid rgba(92,69,50,0.12);
+        min-height: 138px;
+        background:
+          linear-gradient(180deg, rgba(255,255,255,0.22), rgba(34,25,19,0.08)),
+          linear-gradient(180deg, #e7d7c7, #f4ebe2);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .thumb::after {
+        content: "";
+        position: absolute;
+        left: 14px;
+        right: 14px;
+        bottom: 14px;
+        height: 42px;
+        border-radius: 14px;
+        background: rgba(255,250,244,0.78);
+      }
+
+      .meta-row {
+        margin-top: 18px;
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+
+      .pill {
+        padding: 10px 14px;
+        border-radius: 999px;
+        border: 1px solid rgba(143, 86, 54, 0.18);
+        background: rgba(255, 250, 244, 0.86);
+        font: 700 12px/1 ui-sans-serif, system-ui, sans-serif;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: #8f5636;
+      }
+
+      .stack {
+        display: grid;
+        gap: 18px;
+      }
+
+      .mini-card {
+        padding: 24px;
+        min-height: 284px;
+      }
+
+      .mini-title {
+        margin: 14px 0 10px;
+        font-size: 34px;
+        line-height: 0.96;
+        letter-spacing: -0.04em;
+        font-weight: 500;
+      }
+
+      .preview {
+        margin-top: 18px;
+        border-radius: 24px;
+        border: 1px solid rgba(92,69,50,0.08);
+        background: rgba(255,255,255,0.58);
+        padding: 16px;
+      }
+
+      .linkedin {
+        background: linear-gradient(180deg, #eef4ff, #f8fbff);
+      }
+
+      .linkedin-head {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .avatar {
+        width: 42px;
+        height: 42px;
+        border-radius: 999px;
+        background: #7da1eb;
+      }
+
+      .line {
+        height: 10px;
+        border-radius: 999px;
+        background: #dbe6ff;
+      }
+
+      .line.small { width: 116px; }
+      .line.tiny { width: 94px; margin-top: 8px; }
+      .line.wide { width: 100%; margin-top: 18px; background: #d4e2ff; }
+      .line.mid { width: 78%; margin-top: 10px; background: #e2ebff; }
+      .image-panel {
+        margin-top: 18px;
+        height: 86px;
+        border-radius: 18px;
+        background: linear-gradient(135deg, #d9e8ff, #edf5ff);
+      }
+
+      .platforms {
+        display: grid;
+        gap: 12px;
+      }
+
+      .platform {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 12px 14px;
+        border-radius: 18px;
+        background: #fff7ef;
+      }
+
+      .square {
+        width: 40px;
+        height: 40px;
+        border-radius: 12px;
+        background: #f2dcc7;
+        display: grid;
+        place-items: center;
+        font: 700 12px/1 ui-sans-serif, system-ui, sans-serif;
+        color: #8f5636;
+      }
+
+      .platform-name {
+        font: 700 12px/1.2 ui-sans-serif, system-ui, sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 0.16em;
+        color: #8f5636;
+      }
+
+      .platform-line {
+        margin-top: 8px;
+        height: 10px;
+        width: 150px;
+        border-radius: 999px;
+        background: #ead8c5;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="frame">
+      <section class="section">
+        <div class="top">
+          <div>
+            <div class="eyebrow">Content</div>
+            <h1>Writing and content that show how I think.</h1>
+          </div>
+          <p class="support">
+            A cleaner, more media-forward approach: feature one strong content lane, then let LinkedIn, Medium, and Substack support it.
+          </p>
+        </div>
+
+        <div class="layout">
+          <article class="panel feature">
+            <div>
+              <div class="format">Featured content lane</div>
+              <div class="feature-title">Instagram reels and visual notes</div>
+              <p class="desc">Use one dominant reel preview to make the section feel alive, then support it with smaller content surfaces instead of giving every platform equal weight.</p>
+            </div>
+            <div class="carousel">
+              <div class="hero-reel">
+                <div class="badge">Latest reel</div>
+              </div>
+              <div class="thumbs">
+                <div class="thumb"></div>
+                <div class="thumb"></div>
+              </div>
+            </div>
+            <div class="meta-row">
+              <div class="pill">Instagram</div>
+              <div class="pill">Ideas in public</div>
+              <div class="pill">Open profile</div>
+            </div>
+          </article>
+
+          <div class="stack">
+            <article class="panel mini-card">
+              <div class="format">Professional essays</div>
+              <div class="mini-title">LinkedIn posts</div>
+              <p class="desc">Shorter public writing on PM judgment, systems thinking, and career direction.</p>
+              <div class="preview linkedin">
+                <div class="linkedin-head">
+                  <div class="avatar"></div>
+                  <div>
+                    <div class="line small"></div>
+                    <div class="line tiny"></div>
+                  </div>
+                </div>
+                <div class="line wide"></div>
+                <div class="line mid"></div>
+                <div class="image-panel"></div>
+              </div>
+            </article>
+
+            <article class="panel mini-card">
+              <div class="format">Archive + essays</div>
+              <div class="mini-title">Medium and Substack</div>
+              <p class="desc">Longer reflections, essays, and notes that do not need to compete with reels visually.</p>
+              <div class="preview">
+                <div class="platforms">
+                  <div class="platform">
+                    <div class="square">ME</div>
+                    <div>
+                      <div class="platform-name">Medium</div>
+                      <div class="platform-line"></div>
+                    </div>
+                  </div>
+                  <div class="platform">
+                    <div class="square">SU</div>
+                    <div>
+                      <div class="platform-name">Substack</div>
+                      <div class="platform-line" style="width:132px"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

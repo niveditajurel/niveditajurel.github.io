@@ -1,0 +1,280 @@
+- generic [ref=e3]:
+  - navigation [ref=e4]:
+    - generic [ref=e6]:
+      - link "Nivedita" [ref=e8] [cursor=pointer]:
+        - /url: "#/"
+        - generic [ref=e10]: Nivedita
+      - generic [ref=e12]:
+        - link "Home" [ref=e13] [cursor=pointer]:
+          - /url: "#/"
+          - generic [ref=e14]:
+            - img [ref=e15]
+            - text: Home
+        - link "Work" [ref=e18] [cursor=pointer]:
+          - /url: "#/projects"
+          - generic [ref=e19]:
+            - img [ref=e20]
+            - text: Work
+        - link "Journey" [ref=e24] [cursor=pointer]:
+          - /url: "#/journey"
+          - generic [ref=e25]:
+            - img [ref=e26]
+            - text: Journey
+      - generic [ref=e35]:
+        - link "LinkedIn profile" [ref=e36] [cursor=pointer]:
+          - /url: https://www.linkedin.com/in/nivedita-niv/
+          - img [ref=e37]
+        - link "GitHub profile" [ref=e39] [cursor=pointer]:
+          - /url: https://github.com/niveditajurel
+          - img [ref=e40]
+        - link "X profile" [ref=e42] [cursor=pointer]:
+          - /url: https://x.com/nniv266
+          - img [ref=e43]
+        - link "Instagram profile" [ref=e45] [cursor=pointer]:
+          - /url: https://www.instagram.com/niv_yaps/
+          - img [ref=e46]
+  - main [ref=e48]:
+    - generic [ref=e51]:
+      - generic [ref=e53]:
+        - generic [ref=e54]:
+          - generic [ref=e55]:
+            - link "Back to work" [ref=e56] [cursor=pointer]:
+              - /url: "#/work"
+              - generic [ref=e57]:
+                - img [ref=e58]
+                - text: Back to work
+            - generic [ref=e61]: Skingenius
+          - generic [ref=e62]:
+            - paragraph [ref=e63]: AI consumer product case study
+            - heading "Making AI skincare recommendations easier to trust from the first session." [level=1] [ref=e64]
+            - paragraph [ref=e65]: I worked on an AI skincare platform where the key product problem was not only recommendation logic. It was onboarding clarity, first-session trust, and making the product feel useful early enough that users kept going.
+          - generic [ref=e66]:
+            - paragraph [ref=e67]: TL;DR
+            - paragraph [ref=e68]: "I focused on the product layer between AI output and user trust: reduce onboarding friction, sharpen recommendation framing, and give the team a faster way to iterate on what users actually finished and engaged with."
+          - generic [ref=e69]:
+            - button "Problem" [ref=e70] [cursor=pointer]
+            - button "Scope" [ref=e71] [cursor=pointer]
+            - button "Visuals" [ref=e72] [cursor=pointer]
+            - button "Results" [ref=e73] [cursor=pointer]
+        - complementary [ref=e74]:
+          - img "Skingenius landing screen showing a mobile product experience for personalized skincare." [ref=e76]
+          - generic [ref=e77]:
+            - generic [ref=e78]:
+              - paragraph [ref=e79]: Role
+              - paragraph [ref=e80]: Product Manager
+            - generic [ref=e81]:
+              - paragraph [ref=e82]: Product
+              - paragraph [ref=e83]: AI-powered skincare recommendation platform
+            - generic [ref=e84]:
+              - paragraph [ref=e85]: Focus
+              - paragraph [ref=e86]: Onboarding clarity, recommendation trust, and first-session value
+            - generic [ref=e87]:
+              - paragraph [ref=e88]: Timeline
+              - paragraph [ref=e89]: Aug 2024 to Dec 2024
+          - generic [ref=e90]:
+            - generic [ref=e91]:
+              - paragraph [ref=e92]: Engagement
+              - paragraph [ref=e93]: +30%
+              - paragraph [ref=e94]: Lift during the project window
+            - generic [ref=e95]:
+              - paragraph [ref=e96]: Quiz completion
+              - paragraph [ref=e97]: +25%
+              - paragraph [ref=e98]: From onboarding-flow improvements
+            - generic [ref=e99]:
+              - paragraph [ref=e100]: Release efficiency
+              - paragraph [ref=e101]: +33%
+              - paragraph [ref=e102]: Faster cross-functional delivery rhythm
+      - generic [ref=e103]:
+        - generic [ref=e104]:
+          - generic [ref=e106]:
+            - paragraph [ref=e107]: Problem
+            - heading "The product needed to feel useful before the user had to fully trust the AI." [level=2] [ref=e108]
+            - paragraph [ref=e109]: Skingenius was trying to personalize skincare routines, but early product friction made that promise harder to believe. The first session had to become clearer, quicker, and more obviously valuable.
+          - generic [ref=e110]:
+            - paragraph [ref=e111]: Core friction
+            - list [ref=e112]:
+              - listitem [ref=e113]:
+                - generic [ref=e115]: Onboarding asked for commitment before users understood what the product would do for them.
+              - listitem [ref=e116]:
+                - generic [ref=e118]: Recommendations could feel generic, which weakened trust in the AI layer.
+              - listitem [ref=e119]:
+                - generic [ref=e121]: The first session needed to feel lighter, clearer, and more useful much earlier.
+        - generic [ref=e122]:
+          - paragraph [ref=e123]: Recruiter signal
+          - paragraph [ref=e124]: "This case study shows B2C PM instincts: how to make personalization feel clearer, reduce onboarding abandonment, and turn AI value into a better first-run experience instead of only a model story."
+        - generic [ref=e125]:
+          - generic [ref=e126]:
+            - paragraph [ref=e127]: What I Owned
+            - heading "The work sat at the boundary between product flow, recommendation trust, and delivery pace." [level=2] [ref=e128]
+            - paragraph [ref=e129]: I was not only improving screens. I was improving how the experience introduced itself, how recommendations felt, and how quickly the team could turn learnings into shipped changes.
+          - generic [ref=e130]:
+            - generic [ref=e131]:
+              - img [ref=e133]
+              - heading "Onboarding clarity" [level=3] [ref=e136]
+              - paragraph [ref=e137]: Reviewed the quiz and onboarding journey to find where users dropped off and where the product was asking too much too early.
+            - generic [ref=e138]:
+              - img [ref=e140]
+              - heading "Recommendation framing" [level=3] [ref=e143]
+              - paragraph [ref=e144]: Refined how product suggestions were explained so the experience felt more personalized, specific, and worth trusting.
+            - generic [ref=e145]:
+              - img [ref=e147]
+              - heading "Delivery rhythm" [level=3] [ref=e150]
+              - paragraph [ref=e151]: Managed agile roadmaps in Jira and tightened execution loops so the team could ship improvements faster and learn sooner.
+        - generic [ref=e152]:
+          - generic [ref=e153]:
+            - paragraph [ref=e154]: Product Moves
+            - heading "The most important changes made the value of the system easier to understand." [level=2] [ref=e155]
+            - paragraph [ref=e156]: These were product decisions about sequencing, framing, and trust. They mattered because recommendation products fail when the output feels generic or the setup feels too heavy.
+          - generic [ref=e157]:
+            - generic [ref=e158]:
+              - heading "Reduce onboarding friction" [level=3] [ref=e159]
+              - paragraph [ref=e160]: Simplified the way the quiz progressed so the user could move forward with less hesitation and better context.
+            - generic [ref=e161]:
+              - heading "Make recommendations feel earned" [level=3] [ref=e162]
+              - paragraph [ref=e163]: Improved how the product connected inputs, skin profile cues, and suggested routines so the output felt less generic.
+            - generic [ref=e164]:
+              - heading "Track trust and completion signals" [level=3] [ref=e165]
+              - paragraph [ref=e166]: Used engagement and completion metrics to evaluate whether the first-run journey was getting easier to finish and easier to believe.
+        - generic [ref=e167]:
+          - generic [ref=e168]:
+            - paragraph [ref=e169]: Visual Evidence
+            - heading "The experience work spanned onboarding, recommendation detail, and earlier concept exploration." [level=2] [ref=e170]
+            - paragraph [ref=e171]: "I kept this section visual on purpose. It shows the surfaces where the product had to earn clarity: what the user tells the system, what the system gives back, and how the product architecture evolved."
+          - generic [ref=e172]:
+            - generic [ref=e173]:
+              - img "Earlier Skingenius concept dashboard." [ref=e175]
+              - paragraph [ref=e176]: Earlier concept
+              - paragraph [ref=e177]: The earlier dashboard view helped test what information mattered, but the product needed a more focused consumer flow to build trust faster.
+            - generic [ref=e178]:
+              - generic [ref=e179]:
+                - img "Skingenius onboarding flow showing an allergy-selection screen in the mobile app." [ref=e181]
+                - paragraph [ref=e182]: Mobile onboarding flow
+                - paragraph [ref=e183]: A clearer quiz path makes the first session easier to finish.
+              - generic [ref=e184]:
+                - img "Skingenius recommendation detail view showing product benefits and usage guidance." [ref=e186]
+                - paragraph [ref=e187]: Recommendation detail
+                - paragraph [ref=e188]: The product page starts explaining fit, benefits, and how to use the recommendation.
+        - generic [ref=e189]:
+          - generic [ref=e190]:
+            - paragraph [ref=e191]: PM Judgment
+            - heading "The product needed more clarity, not more feature theater." [level=2] [ref=e192]
+            - paragraph [ref=e193]: That principle shaped how I approached the recommendation experience. The job was to make the system easier to understand and easier to finish, not only to make it look more intelligent.
+          - generic [ref=e194]:
+            - generic [ref=e195]:
+              - heading "Trust before sophistication" [level=3] [ref=e196]
+              - paragraph [ref=e197]: The product did not need to feel more complex. It needed to feel more understandable. The first session had to explain value clearly before the AI layer could feel impressive.
+            - generic [ref=e198]:
+              - heading "Less friction, not less personalization" [level=3] [ref=e199]
+              - paragraph [ref=e200]: The goal was not to remove important user inputs. It was to sequence them better so personalization still felt credible without overwhelming the user.
+            - generic [ref=e201]:
+              - heading "Shipping pace matters in consumer AI" [level=3] [ref=e202]
+              - paragraph [ref=e203]: The recommendation experience improves through iteration. A faster product-delivery loop mattered because it let the team refine trust signals and onboarding quality continuously.
+        - generic [ref=e204]:
+          - generic [ref=e205]:
+            - paragraph [ref=e206]: Results
+            - heading "The improvements showed up in both user behavior and team execution." [level=2] [ref=e207]
+            - paragraph [ref=e208]: That combination matters in consumer AI products. Better flows help users stay, and faster iteration helps the team keep improving the trust layer around the product.
+          - generic [ref=e209]:
+            - generic [ref=e210]:
+              - paragraph [ref=e211]: Key outcome
+              - paragraph [ref=e212]: The first session became easier to complete and more convincing as a personalization experience.
+            - generic [ref=e213]:
+              - generic [ref=e214]:
+                - img [ref=e216]
+                - text: Engagement increased by 30%.
+              - generic [ref=e219]:
+                - img [ref=e221]
+                - text: Quiz completion improved by 25%.
+              - generic [ref=e224]:
+                - img [ref=e226]
+                - text: Release efficiency improved by 33% through clearer agile planning and iteration.
+        - generic [ref=e229]:
+          - generic [ref=e230]:
+            - generic [ref=e231]:
+              - img [ref=e232]
+              - heading "What I learned" [level=3] [ref=e235]
+            - list [ref=e236]:
+              - listitem [ref=e237]:
+                - generic [ref=e239]: For consumer AI products, onboarding is part of the product promise, not just setup.
+              - listitem [ref=e240]:
+                - generic [ref=e242]: Recommendation quality is partly model quality and partly explanation quality.
+              - listitem [ref=e243]:
+                - generic [ref=e245]: Product managers can improve perceived intelligence by clarifying flow, framing, and timing, not only by asking for more features.
+          - generic [ref=e246]:
+            - generic [ref=e247]:
+              - img [ref=e248]
+              - heading "What I would do next" [level=3] [ref=e252]
+            - list [ref=e253]:
+              - listitem [ref=e254]:
+                - generic [ref=e256]: Add clearer explanation layers for why a recommendation matches the user profile.
+              - listitem [ref=e257]:
+                - generic [ref=e259]: Measure which onboarding steps create the most hesitation and whether they can be deferred.
+              - listitem [ref=e260]:
+                - generic [ref=e262]: Test how routine-building and follow-up usage cues affect retention after the first session.
+        - generic [ref=e263]:
+          - generic [ref=e264]:
+            - generic [ref=e265]:
+              - paragraph [ref=e266]: Closing Takeaway
+              - heading "In consumer AI, product trust often improves through clearer sequencing and better explanation before it improves through more complexity." [level=2] [ref=e267]
+            - paragraph [ref=e268]: "This case study shows how I approach consumer product problems: identify the moment where the product asks for too much trust, reduce the friction there, and give the team the signals and delivery rhythm needed to keep improving."
+          - generic [ref=e269]:
+            - link "Back to work archive" [ref=e270] [cursor=pointer]:
+              - /url: "#/work"
+              - generic [ref=e271]:
+                - text: Back to work archive
+                - img [ref=e272]
+            - link "View resume" [ref=e274] [cursor=pointer]:
+              - /url: https://drive.google.com/file/d/1RJoTocjJjHskvaqAdWpVu4aGavceRWwi/view
+              - text: View resume
+              - img [ref=e275]
+  - contentinfo [ref=e278]:
+    - generic [ref=e279]:
+      - generic [ref=e280]:
+        - generic [ref=e281]:
+          - paragraph [ref=e282]: Available for product conversations
+          - heading "Let's build something clear, useful, and shippable." [level=2] [ref=e283]
+        - generic [ref=e284]:
+          - link "Start a conversation" [ref=e285] [cursor=pointer]:
+            - /url: mailto:niveditajurel@gmail.com
+            - img [ref=e286]
+            - text: Start a conversation
+          - link "View resume" [ref=e289] [cursor=pointer]:
+            - /url: https://drive.google.com/file/d/1RJoTocjJjHskvaqAdWpVu4aGavceRWwi/view
+            - text: View resume
+            - img [ref=e290]
+      - generic [ref=e293]:
+        - generic [ref=e294]:
+          - paragraph [ref=e295]: Nivedita
+          - paragraph [ref=e296]: AI-first Product Manager focused on clear product thinking, systems, and execution.
+        - generic [ref=e297]:
+          - link "Home" [ref=e298] [cursor=pointer]:
+            - /url: "#/"
+          - link "Work" [ref=e299] [cursor=pointer]:
+            - /url: "#/projects"
+          - link "Journey" [ref=e300] [cursor=pointer]:
+            - /url: "#/journey"
+          - link "Contact" [ref=e301] [cursor=pointer]:
+            - /url: "#/contact"
+            - generic [ref=e302]:
+              - text: Contact
+              - img [ref=e303]
+        - generic [ref=e305]:
+          - link "LinkedIn profile" [ref=e306] [cursor=pointer]:
+            - /url: https://www.linkedin.com/in/nivedita-niv/
+            - img [ref=e307]
+          - link "GitHub profile" [ref=e309] [cursor=pointer]:
+            - /url: https://github.com/niveditajurel
+            - img [ref=e310]
+          - link "X profile" [ref=e312] [cursor=pointer]:
+            - /url: https://x.com/nniv266
+            - img [ref=e313]
+          - link "Instagram profile" [ref=e315] [cursor=pointer]:
+            - /url: https://www.instagram.com/niv_yaps/
+            - img [ref=e316]
+      - generic [ref=e318]:
+        - paragraph [ref=e319]: © 2026 Nivedita. All rights reserved.
+        - paragraph [ref=e320]: Built for thoughtful product conversations and future teams.
+  - button "Scroll to top" [ref=e321] [cursor=pointer]:
+    - img [ref=e322]
+  - region "Notifications (F8)":
+    - list

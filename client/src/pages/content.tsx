@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
+import { Link } from "wouter";
 import { BackgroundComponents } from "@/components/ui/background-components";
 import { cn } from "@/lib/utils";
 import { contentItems } from "@/data/content";
@@ -114,6 +115,42 @@ export default function Content() {
                     </h3>
                     <p className="mt-3 text-sm leading-6 text-muted-foreground">{item.description}</p>
 
+                    {item.featuredPieces?.length ? (
+                      <div className="mt-5 space-y-2">
+                        {item.featuredPieces.map((piece) => (
+                          <a
+                            key={`${piece.platform}-${piece.title}`}
+                            href={piece.href}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="block text-sm leading-6 text-foreground/84 transition-colors hover:text-primary"
+                          >
+                            <span className="mr-2 text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-[#8f5636]">
+                              {piece.platform}
+                            </span>
+                            {piece.title}
+                          </a>
+                        ))}
+                      </div>
+                    ) : null}
+
+                    {item.platformLinks?.length ? (
+                      <div className="mt-5 flex flex-wrap gap-2">
+                        {item.platformLinks.map((link) => (
+                          <a
+                            key={link.label}
+                            href={link.href}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="inline-flex items-center gap-1 rounded-full border border-border/70 bg-background/82 px-3 py-1 text-[0.72rem] font-semibold text-foreground transition-colors hover:border-primary/40 hover:text-primary"
+                          >
+                            {link.label}
+                            <ArrowUpRight className="h-3.5 w-3.5" />
+                          </a>
+                        ))}
+                      </div>
+                    ) : null}
+
                     {item.href ? (
                       <a
                         href={item.href}
@@ -124,7 +161,15 @@ export default function Content() {
                         Open source
                         <ArrowUpRight className="h-4 w-4" />
                       </a>
-                    ) : null}
+                    ) : (
+                      <Link
+                        href="/projects#writing"
+                        className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-foreground transition-colors hover:text-primary"
+                      >
+                        Back to writing overview
+                        <ArrowUpRight className="h-4 w-4" />
+                      </Link>
+                    )}
                   </motion.article>
                 ))}
               </div>

@@ -193,7 +193,7 @@ export default function Contact() {
             whileHover={{ scale: 1.05 }}
           >
             <MapPin className="h-5 w-5" />
-            <span className="text-lg">Currently in Dallas, TX, USA</span>
+            <span className="text-lg">Currently in United States</span>
           </motion.div>
           <p className="text-muted-foreground mt-2">
             Open to relocation

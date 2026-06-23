@@ -31,6 +31,7 @@ export const siteConfig = {
     nav: [
         { name: "Home", href: "/" },
         { name: "Work", href: "/projects" },
+        { name: "Fun", href: "/fun" },
         { name: "Journey", href: "/journey" },
     ] as NavLink[],
     experiments: {

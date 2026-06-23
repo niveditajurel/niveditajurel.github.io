@@ -1,0 +1,434 @@
+- generic [ref=e3]:
+  - navigation [ref=e4]:
+    - generic [ref=e6]:
+      - link "Nivedita" [ref=e8] [cursor=pointer]:
+        - /url: "#/"
+        - generic [ref=e10]: Nivedita
+      - generic [ref=e12]:
+        - link "Home" [ref=e13] [cursor=pointer]:
+          - /url: "#/"
+          - generic [ref=e14]:
+            - img [ref=e15]
+            - text: Home
+        - link "Work" [ref=e18] [cursor=pointer]:
+          - /url: "#/projects"
+          - generic [ref=e19]:
+            - img [ref=e20]
+            - text: Work
+        - link "Journey" [ref=e24] [cursor=pointer]:
+          - /url: "#/journey"
+          - generic [ref=e25]:
+            - img [ref=e26]
+            - text: Journey
+      - generic [ref=e35]:
+        - link "LinkedIn profile" [ref=e36] [cursor=pointer]:
+          - /url: https://www.linkedin.com/in/nivedita-niv/
+          - img [ref=e37]
+        - link "GitHub profile" [ref=e39] [cursor=pointer]:
+          - /url: https://github.com/niveditajurel
+          - img [ref=e40]
+        - link "X profile" [ref=e42] [cursor=pointer]:
+          - /url: https://x.com/nniv266
+          - img [ref=e43]
+        - link "Instagram profile" [ref=e45] [cursor=pointer]:
+          - /url: https://www.instagram.com/niv_yaps/
+          - img [ref=e46]
+  - main [ref=e48]:
+    - generic [ref=e51]:
+      - generic [ref=e53]:
+        - generic [ref=e54]:
+          - generic [ref=e55]:
+            - link "Back to work" [ref=e56] [cursor=pointer]:
+              - /url: "#/work"
+              - generic [ref=e57]:
+                - img [ref=e58]
+                - text: Back to work
+            - generic [ref=e61]: Anand PAG / Cintas Fire National Accounts
+          - generic [ref=e62]:
+            - paragraph [ref=e63]: Case Study
+            - heading "Rebuilding service-order execution for Cintas Fire National Accounts." [level=1] [ref=e64]
+            - paragraph [ref=e65]: I led product delivery for a technically complex, integration-heavy cloud workflow platform that replaced a legacy vendor-operations system. The product digitized service-order execution across internal operations teams and external vendors, improving coordination speed, reliability, and launch readiness.
+          - generic [ref=e66]:
+            - paragraph [ref=e67]: TL;DR
+            - paragraph [ref=e68]: "This platform created near real-time coordination under five minutes across systems, improved background-job reliability from 95% to 100%, and made high-volume document bundling stable enough to process 200+ service-order bundles in 2-4 minutes. I worked as a builder PM: prototypes in Visily, a lightweight coded prototype in Cursor, tight iteration loops, and structured UAT readiness."
+          - generic [ref=e69]:
+            - button "Context" [ref=e70] [cursor=pointer]
+            - button "Solution" [ref=e71] [cursor=pointer]
+            - button "Modules" [ref=e72] [cursor=pointer]
+            - button "Delivery" [ref=e73] [cursor=pointer]
+            - button "Results" [ref=e74] [cursor=pointer]
+        - complementary [ref=e75]:
+          - generic [ref=e76]:
+            - paragraph [ref=e77]: Snapshot
+            - generic [ref=e78]:
+              - generic [ref=e79]:
+                - paragraph [ref=e80]: Company / Client
+                - paragraph [ref=e81]: Anand PAG embedded with Cintas Fire National Accounts
+              - generic [ref=e82]:
+                - paragraph [ref=e83]: Role
+                - paragraph [ref=e84]: Builder-style Product Manager across workflow logic, integrations, QA, and launch readiness
+              - generic [ref=e85]:
+                - paragraph [ref=e86]: Product
+                - paragraph [ref=e87]: Cloud workflow platform replacing a legacy vendor-operations system
+              - generic [ref=e88]:
+                - paragraph [ref=e89]: Core business goal
+                - paragraph [ref=e90]: Reduce cycle time and target a 30% reduction in invoice delays
+          - generic [ref=e91]:
+            - generic [ref=e92]:
+              - paragraph [ref=e93]: Cross-system sync
+              - paragraph [ref=e94]: <5 min
+            - generic [ref=e95]:
+              - paragraph [ref=e96]: Job success rate
+              - paragraph [ref=e97]: 95% -> 100%
+            - generic [ref=e98]:
+              - paragraph [ref=e99]: Document bundling
+              - paragraph [ref=e100]: 200+ orders in 2-4 min
+            - generic [ref=e101]:
+              - paragraph [ref=e102]: Primary user base
+              - paragraph [ref=e103]: 200+ admins + 500 vendors
+      - generic [ref=e104]:
+        - generic [ref=e105]:
+          - generic [ref=e107]:
+            - paragraph [ref=e108]: Context
+            - heading "Enterprise operations were moving through too many handoffs and too little shared visibility." [level=2] [ref=e109]
+            - paragraph [ref=e110]: The legacy tool and its workarounds created real operational drag. Internal teams and vendors were coordinating across fragmented systems, and documentation quality directly affected invoice readiness.
+          - generic [ref=e111]:
+            - paragraph [ref=e112]: Problem
+            - list [ref=e113]:
+              - listitem [ref=e114]:
+                - generic [ref=e116]: Fragmented execution across systems and teams
+              - listitem [ref=e117]:
+                - generic [ref=e119]: Slow back-and-forth coordination that often took 3-5 days
+              - listitem [ref=e120]:
+                - generic [ref=e122]: Inconsistent documentation submission and tracking
+              - listitem [ref=e123]:
+                - generic [ref=e125]: Missing or misclassified evidence delaying invoice readiness
+              - listitem [ref=e126]:
+                - generic [ref=e128]: Limited real-time visibility into vendor progress and order status
+        - generic [ref=e129]:
+          - generic [ref=e130]:
+            - paragraph [ref=e131]: Outcomes
+            - list [ref=e132]:
+              - listitem [ref=e133]:
+                - img [ref=e134]
+                - generic [ref=e137]: Reduced 3-5 day coordination loops to near real-time visibility and actionability
+              - listitem [ref=e138]:
+                - img [ref=e139]
+                - generic [ref=e142]: Target a 30% reduction in invoice delays
+              - listitem [ref=e143]:
+                - img [ref=e144]
+                - generic [ref=e147]: Increase self-serve workflow completion and reduce spreadsheet or email workarounds
+          - generic [ref=e148]:
+            - paragraph [ref=e149]: Platform Health
+            - list [ref=e150]:
+              - listitem [ref=e151]:
+                - img [ref=e152]
+                - generic [ref=e155]: Cross-system sync latency under 5 minutes
+              - listitem [ref=e156]:
+                - img [ref=e157]
+                - generic [ref=e160]: Background job success improved from 95% to 100%
+              - listitem [ref=e161]:
+                - img [ref=e162]
+                - generic [ref=e165]: High-volume bundling supported 200+ service orders in 2-4 minutes
+              - listitem [ref=e166]:
+                - img [ref=e167]
+                - generic [ref=e170]: "Launch readiness gates: UAT >95%, defect leakage <5%, P0 <24h, P1 <48h"
+        - generic [ref=e171]:
+          - generic [ref=e172]:
+            - paragraph [ref=e173]: Users and JTBD
+            - heading "The workflow had to serve both internal operations teams and external vendors without losing traceability." [level=2] [ref=e174]
+            - paragraph [ref=e175]: The product was not for one user type. It had to coordinate different incentives, responsibilities, and failure modes across the people doing the work and the people preparing it for invoicing.
+          - generic [ref=e176]:
+            - generic [ref=e177]:
+              - generic [ref=e178]:
+                - img [ref=e179]
+                - heading "Internal users" [level=3] [ref=e183]
+              - generic [ref=e184]:
+                - generic [ref=e185]:
+                  - paragraph [ref=e186]: Operations Coordinator
+                  - paragraph [ref=e187]: Dispatch orders, track progress, resolve scheduling issues, and manage exceptions.
+                - generic [ref=e188]:
+                  - paragraph [ref=e189]: AR / Billing
+                  - paragraph [ref=e190]: Ensure documentation completeness for invoice readiness and track delays or missing items.
+                - generic [ref=e191]:
+                  - paragraph [ref=e192]: FNA Administrator
+                  - paragraph [ref=e193]: Manage vendor eligibility, access governance, contacts, SLAs, and audit-ready history.
+                - generic [ref=e194]:
+                  - paragraph [ref=e195]: Document Reviewer
+                  - paragraph [ref=e196]: Validate and label evidence, then trigger classification workflow.
+            - generic [ref=e197]:
+              - generic [ref=e198]:
+                - img [ref=e199]
+                - heading "External vendors" [level=3] [ref=e203]
+              - generic [ref=e204]:
+                - generic [ref=e205]:
+                  - paragraph [ref=e206]: Vendor Dispatcher
+                  - paragraph [ref=e207]: Accept or reject work, schedule service, and coordinate technicians.
+                - generic [ref=e208]:
+                  - paragraph [ref=e209]: Vendor Technician
+                  - paragraph [ref=e210]: Execute work, upload evidence, and provide completion notes.
+                - generic [ref=e211]:
+                  - paragraph [ref=e212]: Vendor Billing
+                  - paragraph [ref=e213]: Verify documentation requirements before invoicing.
+                - generic [ref=e214]:
+                  - paragraph [ref=e215]: Vendor Admin
+                  - paragraph [ref=e216]: Manage team access and workflow visibility.
+        - generic [ref=e217]:
+          - generic [ref=e218]:
+            - paragraph [ref=e219]: Solution Overview
+            - heading "A secure workflow platform built around explicit ownership and reliable background processing." [level=2] [ref=e220]
+            - paragraph [ref=e221]: The product centralized service-order execution and evidence handling for internal and external users, while making long-running operations trustworthy enough for enterprise use.
+          - generic [ref=e222]:
+            - generic [ref=e223]:
+              - paragraph [ref=e224]: What the platform covered
+              - list [ref=e225]:
+                - listitem [ref=e226]:
+                  - generic [ref=e228]: Service order dispatch and acknowledgement
+                - listitem [ref=e229]:
+                  - generic [ref=e231]: Scheduling and status governance
+                - listitem [ref=e232]:
+                  - generic [ref=e234]: Evidence upload with a structured classification lifecycle
+                - listitem [ref=e235]:
+                  - generic [ref=e237]: High-volume document generation and exports
+                - listitem [ref=e238]:
+                  - generic [ref=e240]: Monitoring and operational readiness for go-live
+            - generic [ref=e241]:
+              - paragraph [ref=e242]: Design principles
+              - generic [ref=e243]:
+                - generic [ref=e244]: Operational governance via explicit workflow statuses and clear ownership
+                - generic [ref=e245]: Reliability at scale via asynchronous processing for long-running operations
+        - generic [ref=e246]:
+          - generic [ref=e247]:
+            - paragraph [ref=e248]: Builder PM Approach
+            - heading "I worked like a builder, not a handoff PM." [level=2] [ref=e249]
+            - paragraph [ref=e250]: This was the only practical way to reduce ambiguity in an integration-heavy workflow product with multiple stakeholders and go-live pressure.
+          - generic [ref=e251]:
+            - generic [ref=e252]:
+              - img [ref=e254]
+              - heading "Rapid clarity through prototypes" [level=3] [ref=e258]
+              - paragraph [ref=e259]: Built workflow prototypes in Visily straight after discovery sessions, then created a lightweight coded prototype in Cursor to reduce interpretation gaps and expose edge cases early.
+              - generic [ref=e260]: Faster stakeholder alignment, clearer scope boundaries, and fewer late surprises.
+            - generic [ref=e261]:
+              - img [ref=e263]
+              - heading "AI-first PM leverage" [level=3] [ref=e266]
+              - paragraph [ref=e267]: Used AI-assisted workflows for story drafts, acceptance criteria, test scenarios, and documentation structure, then standardized QA and UAT artifacts through ClickUp automations.
+              - generic [ref=e268]: More time for product decisions, risk management, and usability instead of admin overhead.
+        - generic [ref=e269]:
+          - generic [ref=e270]:
+            - paragraph [ref=e271]: Key Modules
+            - heading "The core product work was about making complex operations legible, recoverable, and scalable." [level=2] [ref=e272]
+            - paragraph [ref=e273]: "Two modules carried most of the product and technical risk: the evidence-classification lifecycle and high-volume document operations."
+          - generic [ref=e274]:
+            - generic [ref=e275]:
+              - generic [ref=e276]:
+                - generic [ref=e277]:
+                  - paragraph [ref=e278]: Module A
+                  - heading "Evidence Upload -> Classification -> System Sync" [level=3] [ref=e279]
+                  - paragraph [ref=e280]: The goal was to reduce missing documentation, improve invoice readiness, and create traceability across a multi-step evidence workflow.
+                - generic [ref=e281]: "Reliability impact: 95% -> 100% job success"
+              - generic [ref=e282]:
+                - generic [ref=e283]:
+                  - paragraph [ref=e284]: Lifecycle
+                  - generic [ref=e285]:
+                    - generic [ref=e286]:
+                      - generic [ref=e287]: "1"
+                      - paragraph [ref=e288]: Vendor uploads document -> NEW
+                    - generic [ref=e289]:
+                      - generic [ref=e290]: "2"
+                      - paragraph [ref=e291]: Submission job -> SUBMITTED
+                    - generic [ref=e292]:
+                      - generic [ref=e293]: "3"
+                      - paragraph [ref=e294]: Preparation job (split / convert) -> UNCLASSIFIED
+                    - generic [ref=e295]:
+                      - generic [ref=e296]: "4"
+                      - paragraph [ref=e297]: Reviewer labels pages -> LABELED
+                    - generic [ref=e298]:
+                      - generic [ref=e299]: "5"
+                      - paragraph [ref=e300]: Consolidation job -> CLASSIFIED + ARCHIVED
+                    - generic [ref=e301]:
+                      - generic [ref=e302]: "6"
+                      - paragraph [ref=e303]: Send-to-core-system job syncs evidence metadata and artifacts
+                    - generic [ref=e304]:
+                      - generic [ref=e305]: "7"
+                      - paragraph [ref=e306]: Service order transitions to Document Review for SLA tracking
+                - generic [ref=e307]:
+                  - paragraph [ref=e308]: Failure modes handled
+                  - generic [ref=e309]:
+                    - generic [ref=e310]: Integration failures modeled as recoverable retry states
+                    - generic [ref=e311]: Incomplete labeling blocked before consolidation
+                    - generic [ref=e312]: Non-PDF conversion and missing reference handling
+                    - generic [ref=e313]: Job delays and partial failures surfaced with explicit statuses
+            - generic [ref=e314]:
+              - generic [ref=e315]:
+                - generic [ref=e316]:
+                  - paragraph [ref=e317]: Module B
+                  - heading "High-volume document bundling at operational scale" [level=3] [ref=e318]
+                  - paragraph [ref=e319]: Heavy document operations were routed to asynchronous processing so users could track progress instead of waiting through unstable synchronous jobs.
+                - generic [ref=e320]: "Performance impact: 200+ orders in 2-4 min"
+              - generic [ref=e321]:
+                - generic [ref=e322]: User selects a high-volume set of 200+ service orders
+                - generic [ref=e323]: System creates a background job and trackable queue entry
+                - generic [ref=e324]: Status-driven visibility shows Processing -> Completed -> Failed / Retry
+                - generic [ref=e325]: User downloads only when the bundle is ready
+        - generic [ref=e326]:
+          - generic [ref=e327]:
+            - paragraph [ref=e328]: PM Decisions and Tradeoffs
+            - heading "The hardest product decisions were about state design, system trust, and release pressure." [level=2] [ref=e329]
+            - paragraph [ref=e330]: These choices were not cosmetic. They shaped whether the product could coordinate real operational work without creating more failure paths.
+          - generic [ref=e331]:
+            - generic [ref=e332]:
+              - heading "Workflow status model redesign" [level=3] [ref=e333]
+              - paragraph [ref=e334]: Statuses were the backbone of coordination, ownership, SLAs, and next-step clarity. I aligned stakeholders on definitions, simplified the UX, and shipped critical logic changes within one week.
+            - generic [ref=e335]:
+              - heading "Async over synchronous processing" [level=3] [ref=e336]
+              - paragraph [ref=e337]: High-volume operations and multi-step document workflows were too failure-prone under synchronous execution, so I pushed for background jobs with explicit states, retries, and visible recovery paths.
+            - generic [ref=e338]:
+              - heading "Release sequencing and scope control" [level=3] [ref=e339]
+              - paragraph [ref=e340]: Multiple stakeholders, parallel engineering streams, and go-live pressure required impact-versus-risk prioritization and documented tradeoffs to prevent scope churn.
+        - generic [ref=e341]:
+          - generic [ref=e342]:
+            - paragraph [ref=e343]: Delivery Process
+            - heading "Delivery discipline mattered as much as product thinking." [level=2] [ref=e344]
+            - paragraph [ref=e345]: This program needed fast definition loops, pragmatic prioritization, and launch gates strong enough to keep defects from rolling into production workflow.
+          - generic [ref=e346]:
+            - generic [ref=e347]:
+              - img [ref=e349]
+              - heading "Discovery and definition" [level=3] [ref=e353]
+              - paragraph [ref=e354]: Stakeholder workshops, workflow mapping, JTBD framing by persona, prototype-driven validation, and KPI definition tied to cycle time and invoice readiness.
+            - generic [ref=e355]:
+              - img [ref=e357]
+              - heading "Prioritization" [level=3] [ref=e361]
+              - paragraph [ref=e362]: Impact versus effort, plus operational risk and launch readiness. Defects were triaged by severity tied to workflow breakers and data integrity.
+            - generic [ref=e363]:
+              - img [ref=e365]
+              - heading "Execution" [level=3] [ref=e367]
+              - paragraph [ref=e368]: Weekly sprint cycles, explicit acceptance criteria, state-transition definitions, and a tight QA loop with fast iteration.
+            - generic [ref=e369]:
+              - img [ref=e371]
+              - heading "Validation and launch readiness" [level=3] [ref=e375]
+              - paragraph [ref=e376]: Authored regression suites and UAT scripts, led walkthroughs and defect triage, and partnered with Cloud ALM plus ClickUp to enforce launch quality gates.
+        - generic [ref=e377]:
+          - generic [ref=e378]:
+            - paragraph [ref=e379]: Results
+            - heading "The platform proved out on reliability and performance before business outcomes fully matured." [level=2] [ref=e380]
+            - paragraph [ref=e381]: The strongest validated signals came from testing, iteration, and launch-readiness work. Business outcomes were framed as targeted impact tied to the new workflow foundation.
+          - generic [ref=e382]:
+            - generic [ref=e383]:
+              - generic [ref=e384]:
+                - img [ref=e385]
+                - heading "Measured and validated" [level=3] [ref=e388]
+              - list [ref=e389]:
+                - listitem [ref=e390]:
+                  - generic [ref=e392]: Cross-system sync latency under 5 minutes
+                - listitem [ref=e393]:
+                  - generic [ref=e395]: Background job success improved from 95% to 100%
+                - listitem [ref=e396]:
+                  - generic [ref=e398]: High-volume bundling supported 200+ service orders in 2-4 minutes
+            - generic [ref=e399]:
+              - generic [ref=e400]:
+                - img [ref=e401]
+                - heading "Targeted business outcomes" [level=3] [ref=e404]
+              - list [ref=e405]:
+                - listitem [ref=e406]:
+                  - generic [ref=e408]: 3-5 days of back-and-forth reduced to near real-time actionability
+                - listitem [ref=e409]:
+                  - generic [ref=e411]: Targeted 30% reduction in invoice delays through stronger evidence readiness
+                - listitem [ref=e412]:
+                  - generic [ref=e414]: Higher self-serve completion with fewer manual workarounds
+        - generic [ref=e415]:
+          - generic [ref=e416]:
+            - generic [ref=e417]:
+              - img [ref=e418]
+              - heading "What I learned" [level=3] [ref=e423]
+            - list [ref=e424]:
+              - listitem [ref=e425]:
+                - generic [ref=e427]: In workflow products, the status model is the product because it drives ownership, trust, and operational clarity.
+              - listitem [ref=e428]:
+                - generic [ref=e430]: Prototypes remove ambiguity faster than long requirements decks in enterprise environments.
+              - listitem [ref=e431]:
+                - generic [ref=e433]: Reliability is a product feature when async processing, retries, and explicit job states are designed into the workflow.
+              - listitem [ref=e434]:
+                - generic [ref=e436]: AI-first PM workflows create leverage when they absorb repetitive overhead and leave judgment for tradeoffs and edge cases.
+          - generic [ref=e437]:
+            - generic [ref=e438]:
+              - img [ref=e439]
+              - heading "What I would do next" [level=3] [ref=e441]
+            - list [ref=e442]:
+              - listitem [ref=e443]:
+                - generic [ref=e445]: Build an operational KPI dashboard for time-in-status, rework loops, invoice readiness time, and job failure rates.
+              - listitem [ref=e446]:
+                - generic [ref=e448]: Add friction analytics for drop-offs, incomplete labeling frequency, and retry hotspots.
+              - listitem [ref=e449]:
+                - generic [ref=e451]: Expand self-serve and exception tooling with clearer recovery paths, stronger error messaging, and admin intervention tools.
+              - listitem [ref=e452]:
+                - generic [ref=e454]: Harden monitoring and alerting around stuck states and failure spikes.
+        - generic [ref=e455]:
+          - generic [ref=e456]:
+            - generic [ref=e457]:
+              - paragraph [ref=e458]: Tooling Summary
+              - 'heading "The tool choices were practical: reduce ambiguity, speed delivery, and keep launch quality high." [level=2] [ref=e459]'
+            - generic [ref=e460]:
+              - generic [ref=e461]: Visily for workflow prototypes
+              - generic [ref=e462]: Cursor for a lightweight coded prototype
+              - generic [ref=e463]: ClickUp for workflow automation, QA artifacts, and defect tracking
+              - generic [ref=e464]: Regression suites, UAT scripts, and walkthrough facilitation for readiness
+              - generic [ref=e465]: Cloud ALM for client-side operational monitoring
+          - generic [ref=e466]:
+            - link "Back to work archive" [ref=e467] [cursor=pointer]:
+              - /url: "#/work"
+              - generic [ref=e468]:
+                - text: Back to work archive
+                - img [ref=e469]
+            - link "View resume" [ref=e471] [cursor=pointer]:
+              - /url: https://drive.google.com/file/d/1RJoTocjJjHskvaqAdWpVu4aGavceRWwi/view
+              - text: View resume
+              - img [ref=e472]
+  - contentinfo [ref=e475]:
+    - generic [ref=e476]:
+      - generic [ref=e477]:
+        - generic [ref=e478]:
+          - paragraph [ref=e479]: Available for product conversations
+          - heading "Let's build something clear, useful, and shippable." [level=2] [ref=e480]
+        - generic [ref=e481]:
+          - link "Start a conversation" [ref=e482] [cursor=pointer]:
+            - /url: mailto:niveditajurel@gmail.com
+            - img [ref=e483]
+            - text: Start a conversation
+          - link "View resume" [ref=e486] [cursor=pointer]:
+            - /url: https://drive.google.com/file/d/1RJoTocjJjHskvaqAdWpVu4aGavceRWwi/view
+            - text: View resume
+            - img [ref=e487]
+      - generic [ref=e490]:
+        - generic [ref=e491]:
+          - paragraph [ref=e492]: Nivedita
+          - paragraph [ref=e493]: AI-first Product Manager focused on clear product thinking, systems, and execution.
+        - generic [ref=e494]:
+          - link "Home" [ref=e495] [cursor=pointer]:
+            - /url: "#/"
+          - link "Work" [ref=e496] [cursor=pointer]:
+            - /url: "#/projects"
+          - link "Journey" [ref=e497] [cursor=pointer]:
+            - /url: "#/journey"
+          - link "Contact" [ref=e498] [cursor=pointer]:
+            - /url: "#/contact"
+            - generic [ref=e499]:
+              - text: Contact
+              - img [ref=e500]
+        - generic [ref=e502]:
+          - link "LinkedIn profile" [ref=e503] [cursor=pointer]:
+            - /url: https://www.linkedin.com/in/nivedita-niv/
+            - img [ref=e504]
+          - link "GitHub profile" [ref=e506] [cursor=pointer]:
+            - /url: https://github.com/niveditajurel
+            - img [ref=e507]
+          - link "X profile" [ref=e509] [cursor=pointer]:
+            - /url: https://x.com/nniv266
+            - img [ref=e510]
+          - link "Instagram profile" [ref=e512] [cursor=pointer]:
+            - /url: https://www.instagram.com/niv_yaps/
+            - img [ref=e513]
+      - generic [ref=e515]:
+        - paragraph [ref=e516]: © 2026 Nivedita. All rights reserved.
+        - paragraph [ref=e517]: Built for thoughtful product conversations and future teams.
+  - region "Notifications (F8)":
+    - list

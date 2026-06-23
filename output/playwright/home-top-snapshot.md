@@ -1,0 +1,59 @@
+- generic [ref=e3]:
+  - navigation [ref=e4]:
+    - generic [ref=e6]:
+      - link "Nivedita product manager" [ref=e8] [cursor=pointer]:
+        - /url: "#/"
+        - generic [ref=e9]
+      - generic [ref=e13]:
+        - link "Home" [ref=e14] [cursor=pointer]:
+          - /url: "#/"
+        - link "Work" [ref=e19] [cursor=pointer]:
+          - /url: "#/projects"
+        - link "Journey" [ref=e25] [cursor=pointer]:
+          - /url: "#/journey"
+      - generic [ref=e36]:
+        - link "LinkedIn profile" [ref=e37] [cursor=pointer]:
+          - /url: https://www.linkedin.com/in/nivedita-niv/
+        - link "GitHub profile" [ref=e40] [cursor=pointer]:
+          - /url: https://github.com/niveditajurel
+        - link "X profile" [ref=e43] [cursor=pointer]:
+          - /url: https://x.com/nniv266
+        - link "Instagram profile" [ref=e46] [cursor=pointer]:
+          - /url: https://www.instagram.com/niv_yaps/
+  - main [ref=e49]:
+    - generic [ref=e51]:
+      - generic [ref=e52]:
+        - img [ref=e54]
+        - generic [ref=e59]
+      - generic [ref=e89]:
+        - generic [ref=e90]
+        - generic [ref=e95]
+        - link "View more case studies" [ref=e158] [cursor=pointer]:
+          - /url: "#/projects"
+      - generic [ref=e163]:
+        - generic [ref=e165]
+        - generic [ref=e170]
+      - generic [ref=e250]:
+        - generic [ref=e252]
+        - generic [ref=e257]
+      - generic [ref=e349]:
+        - generic [ref=e351]
+        - generic [ref=e356]
+      - generic [ref=e385]:
+        - generic [ref=e387]
+        - generic [ref=e398]
+  - contentinfo [ref=e411]:
+    - generic [ref=e412]:
+      - generic [ref=e414]:
+        - generic [ref=e415]
+        - link "Contact" [ref=e419] [cursor=pointer]:
+          - /url: "#/contact"
+      - generic [ref=e423]:
+        - generic [ref=e424]
+        - generic [ref=e430]
+        - generic [ref=e448]
+      - generic [ref=e463]:
+        - paragraph [ref=e464]: © 2026 Nivedita. All rights reserved.
+        - paragraph [ref=e465]: Built for thoughtful product conversations and future teams.
+  - region "Notifications (F8)":
+    - list

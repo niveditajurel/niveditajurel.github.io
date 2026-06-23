@@ -1,10 +1,9 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
-import { BriefcaseBusiness, House, Menu, Waypoints, X } from "lucide-react";
+import { BriefcaseBusiness, FlaskConical, House, Menu, Waypoints, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { siteConfig } from "@/data/site";
-import { SlideTabs } from "@/components/ui/slide-tabs";
 import { cn } from "@/lib/utils";
 
 export function Navigation() {
@@ -17,6 +16,7 @@ export function Navigation() {
   const navIcons = {
     Home: House,
     Work: BriefcaseBusiness,
+    Fun: FlaskConical,
     Journey: Waypoints,
   } as const;
   const desktopTabs = navItems.map((item) => ({
@@ -57,30 +57,25 @@ export function Navigation() {
       <motion.nav
         initial={{ y: -100 }}
         animate={{ y: 0 }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
-        className={cn(
-          "fixed inset-x-0 top-0 z-50 border-b transition-all duration-500",
-          isClayNotionMode
-            ? "border-border/35 bg-[linear-gradient(180deg,rgba(244,235,220,0.76),rgba(240,230,214,0.68))] backdrop-blur-xl"
-            : isScrolled
-              ? "border-border/35 bg-[linear-gradient(180deg,rgba(243,233,218,0.74),rgba(238,227,210,0.66))] backdrop-blur-xl"
-              : "border-transparent bg-[linear-gradient(180deg,rgba(243,233,218,0.7),rgba(239,228,212,0.58))] backdrop-blur-xl",
-        )}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+        className="fixed inset-x-0 top-0 z-50 px-3 pt-3 sm:px-4"
       >
         <div
           className={cn(
-            "mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8",
-            isClayNotionMode ? "py-2" : "py-2",
+            "mx-auto w-full max-w-7xl rounded-2xl border px-3 shadow-[0_18px_60px_-48px_rgba(34,25,20,0.42),inset_0_1px_0_rgba(255,255,255,0.3)] backdrop-blur-[22px] saturate-[1.28] transition duration-300 sm:px-4",
+            isScrolled
+              ? "border-[#e0cdbd]/88 bg-[linear-gradient(180deg,rgba(255,250,244,0.76),rgba(244,233,221,0.56))]"
+              : "border-[#e4d3c2]/74 bg-[linear-gradient(180deg,rgba(255,250,244,0.66),rgba(244,233,221,0.42))]",
           )}
         >
-          <div className="flex min-h-[4.1rem] items-center justify-between gap-4 md:hidden">
+          <div className="flex min-h-[3.75rem] items-center justify-between gap-4 md:hidden">
             <Link href="/">
               <motion.div
                 className="flex cursor-pointer items-center space-x-2"
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
               >
-                <span className="font-display text-[1.95rem] font-bold tracking-[-0.04em] text-foreground">
+                <span className="font-display text-2xl font-semibold text-foreground">
                   Nivedita
                 </span>
               </motion.div>
@@ -89,32 +84,32 @@ export function Navigation() {
             <Button
               variant="ghost"
               size="icon"
-              className="rounded-full border border-border/50 bg-[#fbf4e9]/72 shadow-sm backdrop-blur-sm"
+              className="rounded-full border border-[#cdb7a3]/80 bg-[rgba(255,250,244,0.84)] text-[#2d2118] shadow-sm backdrop-blur-sm hover:bg-[rgba(255,250,244,0.96)]"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
               {isMobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </Button>
           </div>
 
-          <div className="hidden min-h-[4.15rem] md:grid md:grid-cols-[1fr_auto_1fr] md:items-center md:gap-6">
+          <div className="hidden min-h-[3.85rem] md:grid md:grid-cols-[1fr_auto_1fr] md:items-center md:gap-6">
             <div className="flex justify-start">
               <Link href="/">
                 <motion.div
                   className={cn(
-                    "flex cursor-pointer flex-col items-start justify-center gap-0 px-2 py-0.5",
+                    "flex cursor-pointer flex-col items-start justify-center gap-0 px-1 py-0.5",
                     isClayNotionMode && "pl-1",
                   )}
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
                   <span className={cn(
-                    "font-display text-[1.68rem] font-bold tracking-[-0.045em] text-foreground",
-                    isClayNotionMode && "font-sans text-[1.28rem] font-semibold tracking-[-0.04em]",
+                    "font-display text-2xl font-semibold text-foreground",
+                    isClayNotionMode && "font-display text-2xl font-semibold",
                   )}>
                     Nivedita
                   </span>
                   {isClayNotionMode ? (
-                    <span className="font-hand text-[0.92rem] leading-none text-[#a36b37]">
+                    <span className="font-hand text-base font-medium leading-none text-[#8b5431]">
                       product manager
                     </span>
                   ) : null}
@@ -123,51 +118,41 @@ export function Navigation() {
             </div>
 
             <div className="flex justify-center">
-              {isClayNotionMode ? (
-                <div className="flex items-center gap-1 rounded-full border border-border/50 bg-[#fbf4e9]/76 p-1 shadow-[0_14px_36px_-30px_rgba(48,30,10,0.14)] backdrop-blur-md">
-                  {desktopTabs.map((item) => {
-                    const isActive =
-                      !item.sectionId &&
-                      (location === item.href ||
-                        (item.href === "/" && location === "/") ||
-                        (item.href !== "/" && location.startsWith(item.href)));
-                    const Icon = item.icon;
+              <div className="flex items-center gap-1 rounded-full border border-white/45 bg-[linear-gradient(180deg,rgba(255,255,255,0.24),rgba(255,247,239,0.12))] p-1 shadow-[0_14px_42px_-30px_rgba(34,25,20,0.34),inset_0_1px_0_rgba(255,255,255,0.28)] backdrop-blur-[18px] saturate-[1.22]">
+                {desktopTabs.map((item) => {
+                  const isActive =
+                    !item.sectionId &&
+                    (location === item.href ||
+                      (item.href === "/" && location === "/") ||
+                      (item.href !== "/" && location.startsWith(item.href)));
+                  const Icon = item.icon;
 
-                    return (
-                      <Link key={item.name} href={item.href}>
-                        <motion.span
-                          className={cn(
-                            "inline-flex cursor-pointer items-center gap-2 rounded-full px-3.5 py-1.5 text-[0.95rem] font-medium text-muted-foreground transition-colors",
-                            isActive && "bg-[#1d1a15] text-[#fff9ef]",
-                            !isActive && "hover:bg-[#efe2d1] hover:text-foreground",
-                          )}
-                          onClick={() => handleNavClick(item.href, item.sectionId)}
-                          whileHover={{ y: -1 }}
-                          whileTap={{ scale: 0.98 }}
-                        >
-                          {Icon && <Icon className="h-4 w-4" />}
-                          {item.name}
-                        </motion.span>
-                      </Link>
-                    );
-                  })}
-                </div>
-              ) : (
-                <SlideTabs
-                  tabs={desktopTabs}
-                  activeHref={location}
-                  onNavigate={handleNavClick}
-                  className="shadow-[0_14px_40px_-30px_rgba(15,23,42,0.28)]"
-                />
-              )}
+                  return (
+                    <Link key={item.name} href={item.href}>
+                      <motion.span
+                        className={cn(
+                          "inline-flex cursor-pointer items-center gap-2 rounded-full px-3.5 py-1.5 text-sm font-semibold text-[#5f4a39] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-ring",
+                          isActive && "bg-foreground text-background",
+                          !isActive && "hover:bg-[rgba(255,248,239,0.46)] hover:text-[#241913]",
+                        )}
+                        onClick={() => handleNavClick(item.href, item.sectionId)}
+                        whileHover={{ y: -1 }}
+                        whileTap={{ scale: 0.98 }}
+                      >
+                        {Icon && <Icon className="h-4 w-4" />}
+                        {item.name}
+                      </motion.span>
+                    </Link>
+                  );
+                })}
+              </div>
             </div>
 
             <div className="flex justify-end">
               <div className={cn(
                 "flex items-center justify-end gap-1 rounded-full px-0.5 py-0.5",
-                isClayNotionMode && "rounded-[1.2rem]",
               )}>
-                <div className="flex items-center gap-1 rounded-full border border-border/50 bg-[#fbf4e9]/76 p-1 shadow-[0_14px_36px_-30px_rgba(48,30,10,0.14)] backdrop-blur-md">
+                <div className="flex items-center gap-1 rounded-full border border-white/45 bg-[linear-gradient(180deg,rgba(255,255,255,0.24),rgba(255,247,239,0.12))] p-1 shadow-[0_14px_42px_-30px_rgba(34,25,20,0.34),inset_0_1px_0_rgba(255,255,255,0.28)] backdrop-blur-[18px] saturate-[1.22]">
                   {socialLinks.map((social) => {
                     const Icon = social.icon;
 
@@ -179,8 +164,7 @@ export function Navigation() {
                         rel="noreferrer"
                         aria-label={social.label}
                         className={cn(
-                          "rounded-full p-1.5 text-muted-foreground transition-all duration-200 hover:-translate-y-0.5 hover:bg-muted/60 hover:text-foreground",
-                          isClayNotionMode && "hover:bg-[#efe2d1]",
+                          "rounded-full p-1.5 text-[#6a5443] transition-all duration-200 hover:-translate-y-0.5 hover:bg-[rgba(255,248,239,0.46)] hover:text-[#241913]",
                         )}
                       >
                         <Icon className="h-4 w-4" />
@@ -203,10 +187,7 @@ export function Navigation() {
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
             className={cn(
-              "fixed inset-x-4 top-24 z-40 rounded-2xl border p-4 shadow-2xl backdrop-blur-xl md:hidden",
-              isClayNotionMode
-                ? "border-border/50 bg-[#f7f0e5]/84"
-                : "border-border/35 bg-[#f7f0e5]/84",
+              "fixed inset-x-4 top-24 z-40 rounded-2xl border border-[#cdb8a5]/82 bg-[rgba(248,239,228,0.95)] p-4 shadow-2xl backdrop-blur-xl md:hidden",
             )}
           >
             <div className="flex flex-col space-y-2">
@@ -222,8 +203,8 @@ export function Navigation() {
                   <Link key={item.name} href={item.href}>
                     <motion.div
                       className={`flex items-center gap-3 rounded-xl px-4 py-3 text-base font-medium transition-colors ${isActive
-                          ? "bg-primary/10 text-primary"
-                          : "text-muted-foreground hover:bg-[#efe2d1] hover:text-foreground"
+                          ? "bg-foreground text-background"
+                          : "text-[#5f4a39] hover:bg-[#f2e7d9] hover:text-[#241913]"
                         }`}
                       onClick={() => handleNavClick(item.href, item.sectionId)}
                       whileTap={{ scale: 0.98 }}
@@ -235,7 +216,7 @@ export function Navigation() {
                 )
               })}
 
-              <div className="mt-2 flex justify-center gap-3 border-t border-border pt-4">
+              <div className="mt-2 flex justify-center gap-3 border-t border-[#d5c0ae] pt-4">
                 {socialLinks.map((social) => {
                   const Icon = social.icon;
 
@@ -246,7 +227,7 @@ export function Navigation() {
                       target="_blank"
                       rel="noreferrer"
                       aria-label={social.label}
-                      className="rounded-full border border-border/60 bg-[#fbf4e9]/78 p-3 text-muted-foreground transition-all duration-200 hover:border-primary/30 hover:text-primary"
+                      className="rounded-full border border-[#ccb7a3]/82 bg-[rgba(255,250,244,0.88)] p-3 text-[#5f4a39] transition-all duration-200 hover:border-[#b98c65] hover:text-[#241913]"
                     >
                       <Icon className="h-5 w-5" />
                     </a>

@@ -1,0 +1,821 @@
+- generic [ref=e3]:
+  - navigation [ref=e4]:
+    - generic [ref=e6]:
+      - link "Nivedita" [ref=e8] [cursor=pointer]:
+        - /url: "#/"
+        - generic [ref=e10]: Nivedita
+      - generic [ref=e12]:
+        - link "Home" [ref=e13] [cursor=pointer]:
+          - /url: "#/"
+          - generic [ref=e14]:
+            - img [ref=e15]
+            - text: Home
+        - link "Work" [ref=e18] [cursor=pointer]:
+          - /url: "#/projects"
+          - generic [ref=e19]:
+            - img [ref=e20]
+            - text: Work
+        - link "Journey" [ref=e24] [cursor=pointer]:
+          - /url: "#/journey"
+          - generic [ref=e25]:
+            - img [ref=e26]
+            - text: Journey
+      - generic [ref=e35]:
+        - link "LinkedIn profile" [ref=e36] [cursor=pointer]:
+          - /url: https://www.linkedin.com/in/nivedita-niv/
+          - img [ref=e37]
+        - link "GitHub profile" [ref=e39] [cursor=pointer]:
+          - /url: https://github.com/niveditajurel
+          - img [ref=e40]
+        - link "X profile" [ref=e42] [cursor=pointer]:
+          - /url: https://x.com/nniv266
+          - img [ref=e43]
+        - link "Instagram profile" [ref=e45] [cursor=pointer]:
+          - /url: https://www.instagram.com/niv_yaps/
+          - img [ref=e46]
+  - main [ref=e48]:
+    - generic [ref=e50]:
+      - generic [ref=e52]:
+        - generic [ref=e53]:
+          - generic [ref=e54]:
+            - generic [ref=e55]: Independent case study
+            - generic [ref=e56]: Driver safety
+            - generic [ref=e57]: Dispatch UX
+          - paragraph [ref=e58]: Independent case study based on public research, field observations, and product analysis. Not affiliated with Uber.
+          - generic [ref=e59]:
+            - heading "When Dispatch Competes With Navigation" [level=1] [ref=e60]:
+              - generic [ref=e61]: When Dispatch
+              - generic [ref=e62]: Competes With
+              - generic [ref=e63]: Navigation
+            - paragraph [ref=e64]: Incoming ride requests can interrupt turn-by-turn guidance during active trips. I explored how dispatch prompts can become more context-aware without hurting marketplace efficiency.
+          - generic [ref=e65]:
+            - button "See the moment" [ref=e66] [cursor=pointer]:
+              - text: See the moment
+              - img [ref=e67]
+            - button "See recommended MVP" [ref=e69] [cursor=pointer]:
+              - text: See recommended MVP
+              - img [ref=e70]
+          - generic [ref=e72]:
+            - generic [ref=e73]:
+              - paragraph [ref=e74]: Seen in
+              - paragraph [ref=e75]: US + India
+            - generic [ref=e76]:
+              - paragraph [ref=e77]: Users
+              - paragraph [ref=e78]: Drivers + riders
+            - generic [ref=e79]:
+              - paragraph [ref=e80]: Direction
+              - paragraph [ref=e81]: Context-aware dispatch
+        - generic [ref=e83]:
+          - generic [ref=e88]:
+            - generic [ref=e89]:
+              - generic [ref=e90]: Driver app
+              - generic [ref=e91]: Active trip
+            - generic [ref=e92]:
+              - img [ref=e94]:
+                - generic [ref=e103]: I-80 W
+                - generic [ref=e105]: Downtown
+                - generic [ref=e107]: Airport
+              - generic [ref=e109]:
+                - generic [ref=e110]:
+                  - paragraph [ref=e111]: Next maneuver
+                  - paragraph [ref=e112]: Take exit in 0.3 mi
+                  - paragraph [ref=e113]: I-80 West / Downtown
+                - img [ref=e115]
+              - generic [ref=e119]:
+                - generic [ref=e120]:
+                  - generic [ref=e121]:
+                    - paragraph [ref=e122]: New ride request
+                    - paragraph [ref=e123]: $18.50 | 7 min pickup
+                    - paragraph [ref=e124]: Downtown to Airport
+                  - img [ref=e126]
+                - generic [ref=e129]:
+                  - generic [ref=e130]: 1.8 mi away
+                  - generic [ref=e131]: •
+                  - generic [ref=e132]: Drop-off preview
+                  - generic [ref=e133]: •
+                  - generic [ref=e134]: 8 sec timer
+                - generic [ref=e135]:
+                  - button "Decline" [ref=e136] [cursor=pointer]
+                  - button "Accept" [ref=e137] [cursor=pointer]
+          - generic [ref=e138]:
+            - generic [ref=e139]:
+              - paragraph [ref=e140]: Current-state scenario
+              - generic [ref=e141]: First-view tension
+            - paragraph [ref=e142]: A rider is still in the vehicle. Near an exit, the next request can occupy the lower map space the driver still needs.
+          - generic [ref=e143]:
+            - generic [ref=e144]:
+              - paragraph [ref=e145]: Current task
+              - paragraph [ref=e146]: Lower map and next-turn context.
+            - generic [ref=e147]:
+              - paragraph [ref=e148]: Competing prompt
+              - paragraph [ref=e149]: Fare, pickup, destination, timer.
+            - generic [ref=e150]:
+              - paragraph [ref=e151]: Core tension
+              - paragraph [ref=e152]: One screen asks the driver to navigate and judge the next trip at once.
+      - generic [ref=e153]:
+        - complementary [ref=e154]:
+          - generic [ref=e156]:
+            - paragraph [ref=e157]: On this page
+            - generic [ref=e158]:
+              - button "Moment" [ref=e159] [cursor=pointer]:
+                - generic [ref=e160]: Moment
+                - img [ref=e161]
+              - button "Problem" [ref=e163] [cursor=pointer]:
+                - generic [ref=e164]: Problem
+                - img [ref=e165]
+              - button "Impact" [ref=e167] [cursor=pointer]:
+                - generic [ref=e168]: Impact
+                - img [ref=e169]
+              - button "Research" [ref=e171] [cursor=pointer]:
+                - generic [ref=e172]: Research
+                - img [ref=e173]
+              - button "Field notes" [ref=e175] [cursor=pointer]:
+                - generic [ref=e176]: Field notes
+                - img [ref=e177]
+              - button "Root Causes" [ref=e179] [cursor=pointer]:
+                - generic [ref=e180]: Root Causes
+                - img [ref=e181]
+              - button "Judgment" [ref=e183] [cursor=pointer]:
+                - generic [ref=e184]: Judgment
+                - img [ref=e185]
+              - button "Alternatives" [ref=e187] [cursor=pointer]:
+                - generic [ref=e188]: Alternatives
+                - img [ref=e189]
+              - button "MVP" [ref=e191] [cursor=pointer]:
+                - generic [ref=e192]: MVP
+                - img [ref=e193]
+              - button "Metrics" [ref=e195] [cursor=pointer]:
+                - generic [ref=e196]: Metrics
+                - img [ref=e197]
+              - button "PM Thinking" [ref=e199] [cursor=pointer]:
+                - generic [ref=e200]: PM Thinking
+                - img [ref=e201]
+              - button "Builder" [ref=e203] [cursor=pointer]:
+                - generic [ref=e204]: Builder
+                - img [ref=e205]
+              - button "Takeaway" [ref=e207] [cursor=pointer]:
+                - generic [ref=e208]: Takeaway
+                - img [ref=e209]
+        - main [ref=e211]:
+          - generic [ref=e212]:
+            - generic [ref=e213]:
+              - paragraph [ref=e214]: The Moment of Friction
+              - heading "The request can take over much of the lower screen right when navigation matters most." [level=2] [ref=e215]
+              - paragraph [ref=e216]: A rider is still in the vehicle. The driver is approaching an exit. A full request card can occupy roughly the lower third to half of the screen once fare, pickup, destination, and action details appear.
+            - generic [ref=e218]:
+              - generic [ref=e219]:
+                - generic [ref=e220]:
+                  - paragraph [ref=e221]: Active trip
+                  - paragraph [ref=e222]: Rider still in vehicle
+                  - paragraph [ref=e223]: The driver is still responsible for the current trip and the live route.
+                - generic [ref=e224]:
+                  - paragraph [ref=e225]: Maneuver
+                  - paragraph [ref=e226]: Exit is approaching
+                  - paragraph [ref=e227]: The driver still needs much of the lower map and maneuver context to plan the next move.
+                - generic [ref=e228]:
+                  - paragraph [ref=e229]: Interruption
+                  - paragraph [ref=e230]: Request overlaps guidance
+                  - paragraph [ref=e231]: Dispatch now pushes fare, pickup, destination, timer, and actions into the same constrained space.
+              - generic [ref=e232]:
+                - paragraph [ref=e233]: Why this moment matters
+                - paragraph [ref=e234]: The issue is not a thin overlay. A full request card can occupy much of the lower screen while the driver still needs map, lane, and maneuver context to stay visible.
+              - generic [ref=e235]:
+                - generic [ref=e236]:
+                  - paragraph [ref=e237]: Attention storyboard
+                  - paragraph [ref=e238]: same screen, two jobs
+                - generic [ref=e239]:
+                  - generic [ref=e240]:
+                    - generic [ref=e241]:
+                      - img [ref=e243]
+                      - generic [ref=e245]: "01"
+                    - paragraph [ref=e246]: Navigate
+                    - paragraph [ref=e247]: Track route, lane position, and the next turn.
+                  - generic [ref=e248]:
+                    - generic [ref=e249]:
+                      - img [ref=e251]
+                      - generic [ref=e254]: "02"
+                    - paragraph [ref=e255]: Request appears
+                    - paragraph [ref=e256]: A limited-time earning prompt enters the same screen.
+                  - generic [ref=e257]:
+                    - generic [ref=e258]:
+                      - img [ref=e260]
+                      - generic [ref=e272]: "03"
+                    - paragraph [ref=e273]: Attention splits
+                    - paragraph [ref=e274]: The driver scans both the map and the request.
+                  - generic [ref=e275]:
+                    - generic [ref=e276]:
+                      - img [ref=e278]
+                      - generic [ref=e280]: "04"
+                    - paragraph [ref=e281]: Route quality drops
+                    - paragraph [ref=e282]: Missed turns, late exits, or abrupt rerouting become more likely.
+          - generic [ref=e283]:
+            - generic [ref=e284]:
+              - paragraph [ref=e285]: Reframed Problem
+              - heading "This is an interruption-timing problem, not just a card-size problem." [level=2] [ref=e286]
+              - paragraph [ref=e287]: Back-to-back trips are valuable. The interruption timing needs more context.
+            - generic [ref=e289]:
+              - generic [ref=e290]:
+                - paragraph [ref=e291]: Product framing
+                - paragraph [ref=e292]: When is it safe and useful to interrupt a driver?
+              - generic [ref=e293]:
+                - generic [ref=e294]:
+                  - paragraph [ref=e295]: Back-to-back value
+                  - paragraph [ref=e296]: Back-to-back trips support driver earnings and marketplace efficiency.
+                - generic [ref=e297]:
+                  - paragraph [ref=e298]: Where the risk appears
+                  - paragraph [ref=e299]: The same request UI can become risky when it surfaces during a maneuver-critical moment.
+                - generic [ref=e300]:
+                  - paragraph [ref=e301]: Design principle
+                  - paragraph [ref=e302]: Navigation should stay primary while the vehicle is moving.
+                - generic [ref=e303]:
+                  - paragraph [ref=e304]: Direction
+                  - paragraph [ref=e305]: Change request presentation based on speed, maneuver risk, and driver state.
+          - generic [ref=e306]:
+            - generic [ref=e307]:
+              - paragraph [ref=e308]: Why It Matters
+              - heading "One prompt can affect safety, trust, and marketplace flow." [level=2] [ref=e309]
+            - generic [ref=e311]:
+              - generic [ref=e312]:
+                - paragraph [ref=e313]: Safety
+                - paragraph [ref=e314]: Visual distraction during high-attention driving moments.
+              - generic [ref=e315]:
+                - paragraph [ref=e316]: Driver experience
+                - paragraph [ref=e317]: Stress, annoyance, missed turns, and decision pressure.
+              - generic [ref=e318]:
+                - paragraph [ref=e319]: Rider experience
+                - paragraph [ref=e320]: Rerouting, longer ETA, and reduced trust.
+              - generic [ref=e321]:
+                - paragraph [ref=e322]: Marketplace
+                - paragraph [ref=e323]: Acceptance rate, request timeout, driver earnings, and rider wait time.
+          - generic [ref=e324]:
+            - generic [ref=e325]:
+              - paragraph [ref=e326]: Research Signal
+              - heading "The signal is consistent across product behavior, field observations, and safety guidance." [level=2] [ref=e327]
+              - paragraph [ref=e328]: Public forum evidence is treated as qualitative signal, not prevalence data.
+            - generic [ref=e330]:
+              - generic [ref=e331]:
+                - generic [ref=e332]:
+                  - generic [ref=e333]: Evidence type
+                  - generic [ref=e334]: What it supports
+                - generic [ref=e335]:
+                  - generic [ref=e336]: Field observations
+                  - generic [ref=e337]: US highway and India dense-city contexts show the same tension in different road conditions.
+                - generic [ref=e338]:
+                  - generic [ref=e339]: Official Uber docs
+                  - generic [ref=e340]: Back-to-back requests during active trips are intentional marketplace behavior.
+                - generic [ref=e341]:
+                  - generic [ref=e342]: Trip Radar precedent
+                  - generic [ref=e343]: Uber already uses speed-aware request presentation elsewhere in the driver ecosystem.
+                - generic [ref=e344]:
+                  - generic [ref=e345]: Driver complaints
+                  - generic [ref=e346]: Public forums show qualitative evidence of navigation obstruction during active trips.
+                - generic [ref=e347]:
+                  - generic [ref=e348]: NHTSA / DOT / VTTI / IIHS
+                  - generic [ref=e349]: Visual-manual distraction and eyes-off-road behavior can raise safety risk.
+                - generic [ref=e350]:
+                  - generic [ref=e351]: Google automotive UX
+                  - generic [ref=e352]: Driving-related information should stay primary and notifications should be reduced during maneuvers.
+              - group [ref=e353]:
+                - 'generic "Deep Dive: Research Notes and Citations" [ref=e354] [cursor=pointer]'
+          - generic [ref=e355]:
+            - generic [ref=e356]:
+              - paragraph [ref=e357]: User Research
+              - heading "Informal field notes show the same interruption pattern across different road contexts." [level=2] [ref=e358]
+              - paragraph [ref=e359]: These notes are based on informal driver conversations and field observations, not structured usability research.
+            - generic [ref=e361]:
+              - article [ref=e362]:
+                - generic [ref=e363]:
+                  - generic [ref=e364]:
+                    - paragraph [ref=e365]: "Uber Driver User Interviews - Informal Field Notes: United States"
+                    - generic [ref=e366]: Note 01
+                  - heading "United States" [level=3] [ref=e367]
+                - generic [ref=e368]:
+                  - generic [ref=e369]:
+                    - paragraph [ref=e370]: Context
+                    - paragraph [ref=e371]: Highway trips with exits and lane changes.
+                  - generic [ref=e372]:
+                    - paragraph [ref=e373]: Pain observed
+                    - paragraph [ref=e374]: Incoming requests can occupy much of the lower map and maneuver area during exits and lane changes.
+                  - generic [ref=e375]:
+                    - paragraph [ref=e376]: Behavior observed
+                    - paragraph [ref=e377]: Drivers either ignore the request or react quickly under timer pressure.
+                - generic [ref=e379]:
+                  - paragraph [ref=e380]: Key insight
+                  - paragraph [ref=e381]: The driver is making an economic decision while still managing speed, lane position, rider safety, and route execution.
+              - article [ref=e382]:
+                - generic [ref=e383]:
+                  - generic [ref=e384]:
+                    - paragraph [ref=e385]: "Uber Driver User Interviews - Informal Field Notes: India"
+                    - generic [ref=e386]: Note 02
+                  - heading "India" [level=3] [ref=e387]
+                - generic [ref=e388]:
+                  - generic [ref=e389]:
+                    - paragraph [ref=e390]: Context
+                    - paragraph [ref=e391]: Dense urban trips with narrow roads, flyovers, and frequent requests.
+                  - generic [ref=e392]:
+                    - paragraph [ref=e393]: Pain observed
+                    - paragraph [ref=e394]: Repeated popups make it harder to keep the map visible during complex city navigation.
+                  - generic [ref=e395]:
+                    - paragraph [ref=e396]: Behavior observed
+                    - paragraph [ref=e397]: Drivers may accept quickly, complain, or miss turns when requests repeat.
+                - generic [ref=e399]:
+                  - paragraph [ref=e400]: Key insight
+                  - paragraph [ref=e401]: In dense markets, the issue is the stack of high request frequency, tight roads, and time pressure.
+              - article [ref=e402]:
+                - generic [ref=e403]:
+                  - generic [ref=e404]:
+                    - paragraph [ref=e405]: Cross-Market Pattern
+                    - generic [ref=e406]: Note 03
+                  - heading "Cross-market pattern" [level=3] [ref=e407]
+                - generic [ref=e408]:
+                  - generic [ref=e409]:
+                    - paragraph [ref=e410]: Context
+                    - paragraph [ref=e411]: Synthesis across both observed markets.
+                  - generic [ref=e412]:
+                    - paragraph [ref=e413]: Pain observed
+                    - paragraph [ref=e414]: The same request UI can become risky when attention is already saturated.
+                  - generic [ref=e415]:
+                    - paragraph [ref=e416]: Behavior observed
+                    - paragraph [ref=e417]: Drivers either defer the request or respond quickly under pressure when navigation and dispatch overlap.
+                - generic [ref=e419]:
+                  - paragraph [ref=e420]: Key insight
+                  - paragraph [ref=e421]: The core question is when the system should ask for attention, and how much it should demand.
+          - generic [ref=e422]:
+            - generic [ref=e423]:
+              - paragraph [ref=e424]: Root Cause Analysis
+              - heading "Four product conditions create the risk." [level=2] [ref=e425]
+            - generic [ref=e427]:
+              - generic [ref=e428]:
+                - generic [ref=e429]:
+                  - paragraph [ref=e430]: Timing conflict
+                  - generic [ref=e431]: "01"
+                - paragraph [ref=e432]: Requests can arrive during exits, merges, turns, or dense intersections when route attention is highest.
+              - generic [ref=e433]:
+                - generic [ref=e434]:
+                  - paragraph [ref=e435]: Visual hierarchy conflict
+                  - generic [ref=e436]: "02"
+                - paragraph [ref=e437]: Navigation is primary, but the request card can become the dominant layer at the wrong moment.
+              - generic [ref=e438]:
+                - generic [ref=e439]:
+                  - paragraph [ref=e440]: Decision pressure
+                  - generic [ref=e441]: "03"
+                - paragraph [ref=e442]: Exclusive requests create timer pressure while the driver should still be focused on the current trip.
+              - generic [ref=e443]:
+                - generic [ref=e444]:
+                  - paragraph [ref=e445]: Market-density mismatch
+                  - generic [ref=e446]: "04"
+                - paragraph [ref=e447]: Highway and dense-city contexts create different risks, but the same request UI can treat them too similarly.
+          - generic [ref=e448]:
+            - generic [ref=e449]:
+              - paragraph [ref=e450]: What I Would Not Do
+              - heading "Some obvious fixes solve the wrong layer of the problem." [level=2] [ref=e451]
+            - generic [ref=e453]:
+              - generic [ref=e454]:
+                - paragraph [ref=e455]: Judgment 01
+                - paragraph [ref=e456]: I would not remove back-to-back requests because they support driver earnings and marketplace liquidity.
+              - generic [ref=e457]:
+                - paragraph [ref=e458]: Judgment 02
+                - paragraph [ref=e459]: I would not simply make the card smaller because the core issue is timing and attention demand.
+              - generic [ref=e460]:
+                - paragraph [ref=e461]: Judgment 03
+                - paragraph [ref=e462]: I would not rely only on a driver setting because safety-sensitive defaults should work without configuration.
+              - generic [ref=e463]:
+                - paragraph [ref=e464]: Judgment 04
+                - paragraph [ref=e465]: I would not use audio as the only solution because rider presence, noise, and language localization make it inconsistent.
+          - generic [ref=e466]:
+            - generic [ref=e467]:
+              - paragraph [ref=e468]: Solution Alternatives
+              - heading "Several tactics help, but one system direction stands out." [level=2] [ref=e469]
+              - paragraph [ref=e470]: The goal is not to remove requests. It is to change how they surface in risky moments.
+            - generic [ref=e472]:
+              - generic [ref=e473]:
+                - paragraph [ref=e475]: Maneuver Shield
+                - generic [ref=e477]:
+                  - generic: safe after turn
+                  - generic [ref=e481]: Request queued until after turn
+                - generic [ref=e482]:
+                  - generic [ref=e485]:
+                    - paragraph [ref=e486]: Best for
+                    - paragraph [ref=e487]: Exits, turns, merges, and roundabouts.
+                  - generic [ref=e490]:
+                    - paragraph [ref=e491]: Tradeoff
+                    - paragraph [ref=e492]: May delay requests by a few seconds.
+              - generic [ref=e493]:
+                - paragraph [ref=e495]: Compact Banner Mode
+                - generic [ref=e497]:
+                  - generic: thin while moving
+                  - generic [ref=e498]:
+                    - generic [ref=e501]: New request | minimal banner
+                    - generic [ref=e502]: More map stays visible
+                - generic [ref=e503]:
+                  - generic [ref=e506]:
+                    - paragraph [ref=e507]: Best for
+                    - paragraph [ref=e508]: Moving state with no immediate maneuver.
+                  - generic [ref=e511]:
+                    - paragraph [ref=e512]: Tradeoff
+                    - paragraph [ref=e513]: Shows less request detail.
+              - generic [ref=e514]:
+                - paragraph [ref=e516]: Audio-first Request
+                - generic [ref=e518]:
+                  - generic: audio carries detail
+                  - generic [ref=e519]:
+                    - img [ref=e523]
+                    - generic [ref=e527]: Audio summary playing
+                    - generic [ref=e528]: Visual demand reduced
+                - generic [ref=e529]:
+                  - generic [ref=e532]:
+                    - paragraph [ref=e533]: Best for
+                    - paragraph [ref=e534]: High-speed or straight-road contexts.
+                  - generic [ref=e537]:
+                    - paragraph [ref=e538]: Tradeoff
+                    - paragraph [ref=e539]: Awkward with a rider, noise, and localization.
+              - generic [ref=e540]:
+                - paragraph [ref=e542]: Timer Protection
+                - generic [ref=e544]:
+                  - generic: hold timer
+                  - generic [ref=e545]:
+                    - img [ref=e549]
+                    - generic [ref=e552]: Acceptance window paused
+                - generic [ref=e553]:
+                  - generic [ref=e556]:
+                    - paragraph [ref=e557]: Best for
+                    - paragraph [ref=e558]: Exclusive requests during risky moments.
+                  - generic [ref=e561]:
+                    - paragraph [ref=e562]: Tradeoff
+                    - paragraph [ref=e563]: Can affect marketplace timing.
+              - generic [ref=e564]:
+                - generic [ref=e565]:
+                  - paragraph [ref=e566]: Adaptive Request UI
+                  - generic [ref=e567]: Best overall
+                - generic [ref=e569]:
+                  - generic: state-based rules
+                  - generic [ref=e572]:
+                    - generic [ref=e573]: Stop
+                    - generic [ref=e574]: Slow
+                    - generic [ref=e575]: Fast
+                    - generic [ref=e576]: Turn
+                - generic [ref=e577]:
+                  - generic [ref=e580]:
+                    - paragraph [ref=e581]: Best for
+                    - paragraph [ref=e582]: Best overall system direction.
+                  - generic [ref=e585]:
+                    - paragraph [ref=e586]: Tradeoff
+                    - paragraph [ref=e587]: Adds more states to design, QA, and instrument.
+          - generic [ref=e588]:
+            - generic [ref=e589]:
+              - paragraph [ref=e590]: Recommended MVP
+              - 'heading "Recommended MVP: Maneuver-Aware Compact Request Mode" [level=2] [ref=e591]'
+              - paragraph [ref=e592]: The MVP should preserve back-to-back trips but change how requests appear based on driver state.
+            - generic [ref=e594]:
+              - generic [ref=e595]:
+                - generic [ref=e596]:
+                  - paragraph [ref=e597]: Visual policy sketch
+                  - paragraph [ref=e598]: request changes with context
+                - generic [ref=e599]:
+                  - generic [ref=e600]:
+                    - generic [ref=e601]:
+                      - img [ref=e603]
+                      - generic [ref=e605]: "01"
+                    - paragraph [ref=e606]: Stopped
+                    - paragraph [ref=e607]: Full card
+                  - generic [ref=e608]:
+                    - generic [ref=e609]:
+                      - img [ref=e611]
+                      - generic [ref=e614]: "02"
+                    - paragraph [ref=e615]: Slow
+                    - paragraph [ref=e616]: Compact card
+                  - generic [ref=e617]:
+                    - generic [ref=e618]:
+                      - img [ref=e620]
+                      - generic [ref=e621]: "03"
+                    - paragraph [ref=e622]: Fast
+                    - paragraph [ref=e623]: Audio + banner
+                  - generic [ref=e624]:
+                    - generic [ref=e625]:
+                      - img [ref=e627]
+                      - generic [ref=e630]: "04"
+                    - paragraph [ref=e631]: Turn
+                    - paragraph [ref=e632]: Queue + protect timer
+                  - generic [ref=e633]:
+                    - generic [ref=e634]:
+                      - img [ref=e636]
+                      - generic [ref=e640]: "05"
+                    - paragraph [ref=e641]: After
+                    - paragraph [ref=e642]: Restore full card
+              - generic [ref=e643]:
+                - generic [ref=e644]:
+                  - paragraph [ref=e645]: State model
+                  - generic [ref=e646]:
+                    - generic [ref=e647]:
+                      - paragraph [ref=e648]: Stopped
+                      - paragraph [ref=e649]: Full request card.
+                    - generic [ref=e650]:
+                      - paragraph [ref=e651]: Moving slowly
+                      - paragraph [ref=e652]: Compact request card.
+                    - generic [ref=e653]:
+                      - paragraph [ref=e654]: Moving fast
+                      - paragraph [ref=e655]: Audio summary plus thin banner.
+                    - generic [ref=e656]:
+                      - paragraph [ref=e657]: Critical maneuver approaching
+                      - paragraph [ref=e658]: Queue the full card and protect the timer.
+                    - generic [ref=e659]:
+                      - paragraph [ref=e660]: After the maneuver
+                      - paragraph [ref=e661]: Restore the full request UI.
+                - generic [ref=e662]:
+                  - paragraph [ref=e663]: Product-builder reasoning
+                  - paragraph [ref=e664]: I would start with a rule-based MVP instead of a heavy ML model because the first goal is to prove that presentation changes reduce route deviations near request events. Once the team validates the signal, the policy can evolve into a more personalized or predictive model.
+                  - generic [ref=e665]:
+                    - generic [ref=e666]:
+                      - paragraph [ref=e667]: What v1 proves
+                      - paragraph [ref=e668]: Whether timing-aware presentation can reduce route disruption without hurting matching efficiency.
+                    - generic [ref=e669]:
+                      - paragraph [ref=e670]: What comes later
+                      - paragraph [ref=e671]: Threshold tuning, market-specific policies, and more predictive or personalized logic.
+              - generic [ref=e672]:
+                - paragraph [ref=e673]: Before vs after
+                - generic [ref=e674]:
+                  - generic [ref=e675]:
+                    - paragraph [ref=e676]: Before
+                    - paragraph [ref=e677]: The same request UI appears regardless of driving context.
+                    - generic [ref=e680]:
+                      - generic [ref=e681]:
+                        - generic [ref=e682]: Driver app
+                        - generic [ref=e683]: Live trip
+                      - generic [ref=e684]:
+                        - img [ref=e686]:
+                          - generic [ref=e695]: I-80 W
+                          - generic [ref=e697]: Downtown
+                          - generic [ref=e699]: Airport
+                        - generic [ref=e701]:
+                          - generic [ref=e702]:
+                            - paragraph [ref=e703]: Next maneuver
+                            - paragraph [ref=e704]: Take exit in 0.3 mi
+                            - paragraph [ref=e705]: I-80 West / Downtown
+                          - img [ref=e707]
+                        - generic [ref=e711]:
+                          - generic [ref=e712]:
+                            - generic [ref=e713]:
+                              - paragraph [ref=e714]: New ride request
+                              - paragraph [ref=e715]: $18.50 | 7 min pickup
+                              - paragraph [ref=e716]: Downtown to Airport
+                            - img [ref=e718]
+                          - generic [ref=e721]:
+                            - generic [ref=e722]: 1.8 mi away
+                            - generic [ref=e723]: Drop-off preview
+                            - generic [ref=e724]: 8 sec timer
+                          - generic [ref=e725]:
+                            - button "Decline" [ref=e726] [cursor=pointer]
+                            - button "Accept" [ref=e727] [cursor=pointer]
+                      - paragraph [ref=e729]: Full request card can cover much of the lower screen
+                  - generic [ref=e730]:
+                    - paragraph [ref=e731]: After
+                    - paragraph [ref=e732]: The request adapts based on speed, maneuver risk, and interaction safety.
+                    - generic [ref=e735]:
+                      - generic [ref=e736]:
+                        - generic [ref=e737]: Driver app
+                        - generic [ref=e738]: Live trip
+                      - generic [ref=e739]:
+                        - img [ref=e741]:
+                          - generic [ref=e750]: I-80 W
+                          - generic [ref=e752]: Downtown
+                          - generic [ref=e754]: Airport
+                        - generic [ref=e756]:
+                          - generic [ref=e757]:
+                            - paragraph [ref=e758]: Next maneuver
+                            - paragraph [ref=e759]: Take exit in 0.3 mi
+                            - paragraph [ref=e760]: I-80 West / Downtown
+                          - img [ref=e762]
+                        - generic [ref=e767]:
+                          - img [ref=e769]
+                          - generic [ref=e771]:
+                            - paragraph [ref=e772]: Focus mode
+                            - paragraph [ref=e773]: Request queued until after turn
+                      - paragraph [ref=e775]: Request is minimized during the maneuver, then restored
+              - generic [ref=e776]:
+                - paragraph [ref=e777]: Assumptions and constraints
+                - generic [ref=e778]:
+                  - generic [ref=e779]: The platform still needs to preserve back-to-back matching efficiency.
+                  - generic [ref=e780]: Drivers need enough request detail to make an earning decision.
+                  - generic [ref=e781]: The system should avoid hiding requests so often that drivers lose trust.
+                  - generic [ref=e782]: Any timer pause must avoid creating unfair marketplace delays.
+                  - generic [ref=e783]: Thresholds should differ by market, road type, and driver state.
+          - generic [ref=e784]:
+            - generic [ref=e785]:
+              - paragraph [ref=e786]: Metrics and Experiment Plan
+              - heading "Validate whether safer presentation reduces route disruption near request events." [level=2] [ref=e787]
+            - generic [ref=e788]:
+              - generic [ref=e789]:
+                - generic [ref=e790]:
+                  - paragraph [ref=e791]: Primary success metric
+                  - paragraph [ref=e792]: Reduction in route deviations near request events.
+                  - paragraph [ref=e793]: Defined as a request event followed by a nearby maneuver, a route deviation, and a reroute.
+                - generic [ref=e794]:
+                  - generic [ref=e795]:
+                    - generic [ref=e796]:
+                      - img [ref=e798]
+                      - paragraph [ref=e801]: Safety proxies
+                    - generic [ref=e802]:
+                      - generic [ref=e803]: Missed turns after request display
+                      - generic [ref=e804]: Missed exits after request display
+                      - generic [ref=e805]: Hard braking after request display
+                      - generic [ref=e806]: Screen interaction time while moving
+                  - generic [ref=e807]:
+                    - generic [ref=e808]:
+                      - img [ref=e810]
+                      - paragraph [ref=e812]: Marketplace guardrails
+                    - generic [ref=e813]:
+                      - generic [ref=e814]: Acceptance rate
+                      - generic [ref=e815]: Request timeout rate
+                      - generic [ref=e816]: Back-to-back trip conversion
+                      - generic [ref=e817]: Driver earnings per active hour
+                      - generic [ref=e818]: Rider wait time
+                  - generic [ref=e819]:
+                    - generic [ref=e820]:
+                      - img [ref=e822]
+                      - paragraph [ref=e824]: Driver and rider experience
+                    - generic [ref=e825]:
+                      - generic [ref=e826]: Driver complaints about map obstruction
+                      - generic [ref=e827]: ETA accuracy
+                      - generic [ref=e828]: Reroute frequency
+                      - generic [ref=e829]: Trip duration variance
+              - generic [ref=e830]:
+                - generic [ref=e831]:
+                  - paragraph [ref=e832]: "Experiment 1: Maneuver Shield"
+                  - generic [ref=e833]:
+                    - generic [ref=e834]:
+                      - paragraph [ref=e835]: Control
+                      - paragraph [ref=e836]: Current full request card behavior.
+                    - generic [ref=e837]:
+                      - paragraph [ref=e838]: Variant
+                      - paragraph [ref=e839]: Suppress the full card during maneuver-critical windows and show a queued or compact state.
+                    - generic [ref=e840]:
+                      - paragraph [ref=e841]: Hypothesis
+                      - paragraph [ref=e842]: Suppressing full request cards during maneuver windows can reduce route deviations and missed turns without materially reducing acceptance rate.
+                  - generic [ref=e843]:
+                    - paragraph [ref=e844]: Key metrics
+                    - generic [ref=e845]:
+                      - generic [ref=e846]: Route deviations
+                      - generic [ref=e847]: Missed turns
+                      - generic [ref=e848]: Acceptance rate
+                      - generic [ref=e849]: Request timeout rate
+                - generic [ref=e850]:
+                  - paragraph [ref=e851]: "Experiment 2: Banner vs Full Card"
+                  - generic [ref=e852]:
+                    - generic [ref=e853]:
+                      - paragraph [ref=e854]: Control
+                      - paragraph [ref=e855]: Full bottom request card while the vehicle is moving.
+                    - generic [ref=e856]:
+                      - paragraph [ref=e857]: Variant
+                      - paragraph [ref=e858]: Thin banner while the vehicle is moving, preserving a larger map and navigation zone.
+                    - generic [ref=e859]:
+                      - paragraph [ref=e860]: Hypothesis
+                      - paragraph [ref=e861]: A banner can preserve request awareness while reducing navigation obstruction and interaction time.
+                  - generic [ref=e862]:
+                    - paragraph [ref=e863]: Key metrics
+                    - generic [ref=e864]:
+                      - generic [ref=e865]: Screen interaction time
+                      - generic [ref=e866]: Route deviations
+                      - generic [ref=e867]: Acceptance rate
+                      - generic [ref=e868]: Driver complaints
+                - generic [ref=e869]:
+                  - paragraph [ref=e870]: "Experiment 3: Timer Pause"
+                  - generic [ref=e871]:
+                    - generic [ref=e872]:
+                      - paragraph [ref=e873]: Control
+                      - paragraph [ref=e874]: Standard countdown timer for exclusive requests.
+                    - generic [ref=e875]:
+                      - paragraph [ref=e876]: Variant
+                      - paragraph [ref=e877]: Acceptance timer pauses or extends during maneuver-critical moments, then resumes after the maneuver window ends.
+                    - generic [ref=e878]:
+                      - paragraph [ref=e879]: Hypothesis
+                      - paragraph [ref=e880]: Timer extension can reduce unsafe quick taps and improve decision quality without meaningfully hurting marketplace speed.
+                  - generic [ref=e881]:
+                    - paragraph [ref=e882]: Key metrics
+                    - generic [ref=e883]:
+                      - generic [ref=e884]: Post-maneuver acceptance
+                      - generic [ref=e885]: Request timeout rate
+                      - generic [ref=e886]: Route deviations
+                      - generic [ref=e887]: Rider wait time
+          - generic [ref=e888]:
+            - generic [ref=e889]:
+              - paragraph [ref=e890]: PM Thinking
+              - heading "The right framing is interruption management, not cosmetic cleanup." [level=2] [ref=e891]
+              - paragraph [ref=e892]: This is a product policy problem before it is a visual design problem.
+            - generic [ref=e894]:
+              - generic [ref=e895]:
+                - paragraph [ref=e896]: Product framing
+                - paragraph [ref=e897]: Back-to-back requests are valuable. The better move is not to remove them, but to redesign when and how the product asks for attention.
+              - generic [ref=e898]:
+                - generic [ref=e899]:
+                  - paragraph [ref=e900]: Safety vs marketplace speed
+                  - paragraph [ref=e901]: A small matching delay is acceptable if it lowers unsafe interaction during route-critical moments.
+                - generic [ref=e902]:
+                  - paragraph [ref=e903]: Information richness vs glanceability
+                  - paragraph [ref=e904]: Show less while moving. Restore richer detail when the driver is stopped or clear of the maneuver.
+                - generic [ref=e905]:
+                  - paragraph [ref=e906]: Default safety vs driver control
+                  - paragraph [ref=e907]: A future Focus Mode can help, but safer interruption handling should come from defaults first.
+                - generic [ref=e908]:
+                  - paragraph [ref=e909]: Global consistency vs local tuning
+                  - paragraph [ref=e910]: Use one interaction model globally, then tune thresholds by market context.
+          - generic [ref=e911]:
+            - generic [ref=e912]:
+              - paragraph [ref=e913]: Product Builder Thinking
+              - heading "Roll it out in phases, then tune the policy." [level=2] [ref=e914]
+              - paragraph [ref=e915]: The first goal is not perfect intelligence. It is a reliable policy with measurable behavior change.
+            - generic [ref=e917]:
+              - generic [ref=e918]:
+                - generic [ref=e919]:
+                  - paragraph [ref=e920]: Phase 01
+                  - paragraph [ref=e921]: Instrument request display events near maneuver windows.
+                - generic [ref=e922]:
+                  - paragraph [ref=e923]: Phase 02
+                  - paragraph [ref=e924]: Test compact moving-state banner against the current full card.
+                - generic [ref=e925]:
+                  - paragraph [ref=e926]: Phase 03
+                  - paragraph [ref=e927]: Add maneuver shielding for high-risk moments.
+                - generic [ref=e928]:
+                  - paragraph [ref=e929]: Phase 04
+                  - paragraph [ref=e930]: Pause or extend the acceptance timer for exclusive requests during maneuver windows.
+                - generic [ref=e931]:
+                  - paragraph [ref=e932]: Phase 05
+                  - paragraph [ref=e933]: Tune thresholds by market, road type, and driver behavior.
+              - generic [ref=e934]:
+                - paragraph [ref=e935]: Small systems view
+                - generic [ref=e936]:
+                  - generic [ref=e937]:
+                    - generic [ref=e938]:
+                      - img [ref=e940]
+                      - paragraph [ref=e943]: State inputs
+                    - paragraph [ref=e944]: Speed, maneuver proximity, road type, and request urgency.
+                  - generic [ref=e945]:
+                    - generic [ref=e946]:
+                      - img [ref=e948]
+                      - paragraph [ref=e950]: Display policy
+                    - paragraph [ref=e951]: Choose full card, compact card, banner, audio summary, or queued state.
+                  - generic [ref=e952]:
+                    - generic [ref=e953]:
+                      - img [ref=e955]
+                      - paragraph [ref=e957]: Measurement
+                    - paragraph [ref=e958]: Track display mode, route deviation, interaction while moving, and marketplace impact.
+          - generic [ref=e959]:
+            - paragraph [ref=e960]: Final Takeaway
+            - generic [ref=e961]:
+              - paragraph [ref=e963]: Dispatch should adapt to the driver's attention state, not compete with it.
+              - paragraph [ref=e965]: The strongest driver experience is not the one that shows the most information fastest. It is the one that understands when the driver can safely process it.
+  - contentinfo [ref=e966]:
+    - generic [ref=e967]:
+      - generic [ref=e969]:
+        - generic [ref=e970]:
+          - paragraph [ref=e971]: good product work starts with sharper questions
+          - heading "Let's build something meaningful" [level=3] [ref=e972]
+          - paragraph [ref=e973]: AI-first product work, grounded in clarity, systems thinking, and execution.
+        - link "Contact" [ref=e974] [cursor=pointer]:
+          - /url: "#/contact"
+          - generic "Contact" [ref=e975]:
+            - text: Start a conversation
+            - img [ref=e976]
+      - generic [ref=e978]:
+        - generic [ref=e979]:
+          - generic [ref=e981]:
+            - generic [ref=e982]: Nivedita
+            - generic [ref=e983]: product manager
+          - paragraph [ref=e984]: AI-first Product Manager focused on clear product thinking, structured execution, and human-centered outcomes.
+        - generic [ref=e985]:
+          - heading "Quick Links" [level=3] [ref=e986]
+          - generic [ref=e987]:
+            - link "Home" [ref=e989] [cursor=pointer]:
+              - /url: "#/"
+              - generic [ref=e990]: Home
+            - link "Featured Work" [ref=e992] [cursor=pointer]:
+              - /url: "#/"
+              - generic [ref=e993]: Featured Work
+            - link "Case Studies + Builds" [ref=e995] [cursor=pointer]:
+              - /url: "#/"
+              - generic [ref=e996]: Case Studies + Builds
+            - link "What I’m Building With" [ref=e998] [cursor=pointer]:
+              - /url: "#/"
+              - generic [ref=e999]: What I’m Building With
+            - link "Journey" [ref=e1001] [cursor=pointer]:
+              - /url: "#/journey"
+              - generic [ref=e1002]: Journey
+        - generic [ref=e1003]:
+          - heading "Connect" [level=3] [ref=e1004]
+          - generic [ref=e1005]:
+            - link "LinkedIn profile" [ref=e1006] [cursor=pointer]:
+              - /url: https://www.linkedin.com/in/nivedita-niv/
+              - img [ref=e1007]
+            - link "GitHub profile" [ref=e1009] [cursor=pointer]:
+              - /url: https://github.com/niveditajurel
+              - img [ref=e1010]
+            - link "X profile" [ref=e1012] [cursor=pointer]:
+              - /url: https://x.com/nniv266
+              - img [ref=e1013]
+            - link "Instagram profile" [ref=e1015] [cursor=pointer]:
+              - /url: https://www.instagram.com/niv_yaps/
+              - img [ref=e1016]
+      - generic [ref=e1018]:
+        - paragraph [ref=e1019]: © 2026 Nivedita. All rights reserved.
+        - paragraph [ref=e1020]: Built for thoughtful product conversations and future teams.
+  - region "Notifications (F8)":
+    - list

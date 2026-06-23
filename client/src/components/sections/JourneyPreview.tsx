@@ -6,10 +6,10 @@ import { siteConfig } from "@/data/site";
 
 const journeyMoments = [
   {
-    period: "Early foundation",
-    title: "Entrepreneurship and community-building at VIT",
+    period: "Current chapter",
+    title: "AI-first product work with a systems mindset",
     description:
-      "Building startup-facing communities taught me how to create momentum, earn trust, and keep people moving toward a shared goal.",
+      "My current focus is on AI products, exploring and talking through almost everything AI-related, and building stronger foundations for decisions before and after launch.",
   },
   {
     period: "Cross-sector growth",
@@ -18,10 +18,10 @@ const journeyMoments = [
       "Work across health tech, edtech, fintech, and enterprise operations taught me how to translate between users, data, and delivery teams.",
   },
   {
-    period: "Current chapter",
-    title: "AI-first product work with a systems mindset",
+    period: "Early foundation",
+    title: "Entrepreneurship and community-building at VIT",
     description:
-      "My current focus is on AI products, operational clarity, and stronger foundations for decisions before and after launch.",
+      "Building startup-facing communities taught me how to create momentum, earn trust, and keep people moving toward a shared goal.",
   },
 ];
 
@@ -29,9 +29,9 @@ export const JourneyPreview = () => {
   const isClayNotionMode = siteConfig.experiments.clayNotionLanding;
 
   return (
-    <section id="journey-preview" className="bg-transparent px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
-      <div className="mx-auto max-w-7xl border-t border-border/70 pt-8">
-        <div className="mb-8 space-y-3">
+    <section id="journey-preview" className="bg-transparent px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+      <div className="mx-auto max-w-7xl border-t border-border/70 pt-6 lg:pt-7">
+        <div className="mb-6 space-y-3">
           <div className="space-y-3">
             <p className="text-sm font-semibold uppercase tracking-[0.22em] text-muted-foreground">
               Journey Preview
@@ -42,8 +42,9 @@ export const JourneyPreview = () => {
               </h2>
               <div className="max-w-[38rem] space-y-3 xl:text-right">
                 <p className="text-base leading-7 text-muted-foreground">
-                  The path runs through entrepreneurship communities, cross-sector roles, and a
-                  steady move toward product work that balances systems thinking with empathy.
+                  The path now starts with AI-first product work, broad exploration and
+                  conversation across almost anything AI-related, then traces back through the
+                  earlier chapters that shaped the lens underneath it.
                 </p>
                 <Link href="/journey">
                   <span className="inline-flex cursor-pointer items-center gap-2 text-sm font-semibold text-foreground transition-colors hover:text-primary xl:ml-auto">
@@ -56,7 +57,7 @@ export const JourneyPreview = () => {
           </div>
         </div>
 
-        <div className="grid gap-10 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:items-start">
+        <div className="grid gap-8 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:items-start">
           <div className="hidden lg:block" />
           <div className="grid gap-4">
             {journeyMoments.map((moment, index) => (

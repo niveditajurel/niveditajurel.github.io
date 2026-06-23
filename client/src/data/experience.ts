@@ -7,6 +7,7 @@ export interface ExperienceItem {
     achievements: string[];
     skills: string[];
     website: string | null;
+    cardHref?: string | null;
 }
 
 export interface EducationItem {
@@ -23,42 +24,45 @@ export const experiences: ExperienceItem[] = [
         company: "Anand PAG",
         role: "Product Consultant",
         duration: "Jan 2025 - Present",
-        location: "Dallas, TX",
-        description: "Leading business process optimization and digital transformation initiatives using SAP Signavio and BPMN 2.0 modeling.",
+        location: "United States",
+        description: "Led product delivery for an integration-heavy vendor-operations system replacing a legacy workflow for internal teams and external vendors.",
         achievements: [
-            "Mapped 30+ workflows across 4 departments into BPMN 2.0 models using SAP Signavio, reducing documentation gaps by 35%",
-            "Analyzed bottlenecks using Signavio Process Intelligence, reducing average cycle time by 18%",
-            "Delivered actionable insights that shaped the roadmap for digital transformation and automation opportunities",
+            "Reduced 3-5 day coordination loops to near real-time visibility by redesigning workflow logic and tightening cross-system sync",
+            "Improved background-job reliability from 95% to 100% and stabilized 200+ service-order bundles in 2-4 minutes",
+            "Used prototypes, QA structure, and launch-readiness gates to keep an integration-heavy rollout on track",
         ],
         skills: ["BPMN 2.0", "SAP Signavio", "Process Optimization", "Digital Transformation", "Data Analysis"],
         website: null,
+        cardHref: null,
     },
     {
         company: "Skingenius",
         role: "Product Manager",
         duration: "Aug 2024 - Dec 2024",
         location: "Boston, MA",
-        description: "Led end-to-end product development for a B2C skincare recommendation platform with AI-driven suggestions.",
+        description: "Led product work on an AI skincare recommendation experience focused on onboarding clarity, recommendation trust, and first-session value.",
         achievements: [
-            "Optimized onboarding flow and refined AI-driven suggestions, boosting engagement by 30% and quiz completion by 25%",
-            "Built and managed agile product roadmaps in Jira, streamlining release cycles and improving team delivery efficiency by 33%",
+            "Reduced onboarding friction and recommendation ambiguity, lifting engagement by 30% and quiz completion by 25%",
+            "Managed agile delivery in Jira, improving release efficiency by 33% and shortening iteration loops across the team",
         ],
         skills: ["Product Management", "AI/ML", "Agile", "Jira", "User Experience", "B2C"],
-        website: null,
+        website: "https://skingenius.io/",
+        cardHref: "https://skingenius.io/",
     },
     {
         company: "Nomad AI",
-        role: "Product Manager",
+        role: "Consultant Product Manager",
         duration: "May 2024 - Jul 2024",
         location: "Boston, MA",
-        description: "Developed pricing strategy and product requirements for a financial SaaS product for SMB valuation.",
+        description: "Consulted on pricing, analytics, and MVP launch structure for an AI valuation product in a trust-sensitive SMB market.",
         achievements: [
-            "Developed pricing strategy and PRD for financial SaaS product, leveraging RAG and Vercel analytics",
-            "Projected 42% lift in conversions and 28% increase in MRR through data-driven optimization",
-            "Defined product success metrics (AARRR, OMTM) and used Mixpanel, SQL, and Mage AI for retention optimization",
+            "Authored a pricing PRD across four monetization models after broker interviews and competitor benchmarking",
+            "Defined AARRR, Lean Analytics, and OMTM metrics while supporting ETL automation for more reliable valuation inputs",
+            "Modeled +42% conversion lift and +28% MRR upside as projected outcomes, separate from later post-launch growth",
         ],
         skills: ["SaaS", "Financial Tech", "Pricing Strategy", "Data Analytics", "SQL", "Mixpanel"],
         website: null,
+        cardHref: null,
     },
     {
         company: "Cognizant",
@@ -73,6 +77,7 @@ export const experiences: ExperienceItem[] = [
         ],
         skills: ["Business Analysis", "Agile", "ETL", "BI Tools", "Data Processing", "EdTech"],
         website: "https://cognizant.com",
+        cardHref: null,
     },
     {
         company: "Symbionic",
@@ -88,6 +93,7 @@ export const experiences: ExperienceItem[] = [
         ],
         skills: ["Health Tech", "Hardware Integration", "Market Research", "Cross-functional Leadership", "NPS Optimization"],
         website: null,
+        cardHref: null,
     },
     {
         company: "UNMITI",
@@ -102,6 +108,7 @@ export const experiences: ExperienceItem[] = [
         ],
         skills: ["Data Science", "Statistical Analysis", "Predictive Modeling", "Business Intelligence", "Analytics"],
         website: null,
+        cardHref: null,
     },
     {
         company: "Entrepreneurship Cell, VIT",
@@ -116,6 +123,7 @@ export const experiences: ExperienceItem[] = [
         ],
         skills: ["Strategic Partnerships", "Leadership", "Event Management", "Stakeholder Relations", "Entrepreneurship"],
         website: null,
+        cardHref: null,
     },
     {
         company: "LegalMind",
@@ -130,6 +138,7 @@ export const experiences: ExperienceItem[] = [
         ],
         skills: ["Product Marketing", "Strategic Thinking", "Business Analysis", "CRM", "Market Research"],
         website: null,
+        cardHref: null,
     },
     {
         company: "Web Development & Data Science",
@@ -144,6 +153,7 @@ export const experiences: ExperienceItem[] = [
         ],
         skills: ["Web Development", "HTML", "CSS", "Data Science", "Cross-functional Leadership"],
         website: null,
+        cardHref: null,
     },
 ];
 

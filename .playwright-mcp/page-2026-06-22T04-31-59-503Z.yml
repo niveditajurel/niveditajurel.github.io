@@ -1,0 +1,392 @@
+- generic [ref=e3]:
+  - navigation [ref=e4]:
+    - generic [ref=e6]:
+      - link "Nivedita" [ref=e8] [cursor=pointer]:
+        - /url: "#/"
+        - generic [ref=e10]: Nivedita
+      - generic [ref=e12]:
+        - link "Home" [ref=e13] [cursor=pointer]:
+          - /url: "#/"
+          - generic [ref=e14]:
+            - img [ref=e15]
+            - text: Home
+        - link "Work" [ref=e18] [cursor=pointer]:
+          - /url: "#/projects"
+          - generic [ref=e19]:
+            - img [ref=e20]
+            - text: Work
+        - link "Journey" [ref=e24] [cursor=pointer]:
+          - /url: "#/journey"
+          - generic [ref=e25]:
+            - img [ref=e26]
+            - text: Journey
+      - generic [ref=e35]:
+        - link "LinkedIn profile" [ref=e36] [cursor=pointer]:
+          - /url: https://www.linkedin.com/in/nivedita-niv/
+          - img [ref=e37]
+        - link "GitHub profile" [ref=e39] [cursor=pointer]:
+          - /url: https://github.com/niveditajurel
+          - img [ref=e40]
+        - link "X profile" [ref=e42] [cursor=pointer]:
+          - /url: https://x.com/nniv266
+          - img [ref=e43]
+        - link "Instagram profile" [ref=e45] [cursor=pointer]:
+          - /url: https://www.instagram.com/niv_yaps/
+          - img [ref=e46]
+  - main [ref=e48]:
+    - generic [ref=e52]:
+      - generic [ref=e54]:
+        - generic [ref=e55]:
+          - paragraph [ref=e56]: Journey
+          - heading "Read the path from today back to the start." [level=1] [ref=e57]
+          - paragraph [ref=e58]: A cross-sector path through software, analytics, community building, and product leadership that eventually sharpened into AI-first product work. This page is the through-line, not just a stack of roles.
+        - generic [ref=e59]:
+          - generic [ref=e60]:
+            - generic [ref=e61]:
+              - paragraph [ref=e62]: Where I am now
+              - paragraph [ref=e63]: Product Builder + Manager
+            - img [ref=e65]
+          - paragraph [ref=e67]: Customer-first systems thinking for messy, high-context product work. Read this page top to bottom to see how each layer of the journey led into the next one.
+          - generic [ref=e68]:
+            - generic [ref=e69]:
+              - generic [ref=e70]: "1"
+              - generic [ref=e72]: Now
+            - generic [ref=e73]:
+              - generic [ref=e74]: "2"
+              - generic [ref=e76]: PM stretch
+            - generic [ref=e77]:
+              - generic [ref=e78]: "3"
+              - generic [ref=e80]: Systems foundation
+            - generic [ref=e81]:
+              - generic [ref=e82]: "4"
+              - generic [ref=e84]: Early foundation
+      - generic [ref=e86]:
+        - complementary [ref=e87]:
+          - generic [ref=e89]:
+            - img [ref=e91]
+            - generic [ref=e95]:
+              - paragraph [ref=e96]: Journey spine
+              - paragraph [ref=e97]: Each chapter adds something, and the next chapter inherits it.
+        - generic [ref=e98]:
+          - generic [ref=e99]:
+            - article [ref=e100]:
+              - generic [ref=e101]:
+                - generic [ref=e102]:
+                  - generic [ref=e103]:
+                    - generic [ref=e104]: Current chapter
+                    - generic [ref=e105]: 2025 -> now
+                  - heading "AI-first product work grounded in calmer systems thinking." [level=2] [ref=e106]
+                  - paragraph [ref=e107]: The work now is about reading messy product situations quickly, getting to the signal, and turning uncertainty into scope teams can actually ship.
+                  - generic [ref=e108]:
+                    - generic [ref=e109]: Clarity under ambiguity
+                    - generic [ref=e110]: Stronger execution shape
+                    - generic [ref=e111]: More intentional product judgment
+                - generic [ref=e112]:
+                  - generic [ref=e113]:
+                    - paragraph [ref=e114]: Roles in this chapter
+                    - img [ref=e115]
+                  - generic [ref=e118]:
+                    - generic [ref=e119]:
+                      - paragraph [ref=e120]: Product Consultant
+                      - paragraph [ref=e121]: Anand PAG
+                      - paragraph [ref=e122]: Enterprise workflow platform delivery
+                    - generic [ref=e123]:
+                      - paragraph [ref=e124]: Independent product work
+                      - paragraph [ref=e125]: Case studies + self-initiated builds
+                      - paragraph [ref=e126]: Portfolio proof and AI-native product exploration
+            - generic [ref=e127]:
+              - img [ref=e129]
+              - generic [ref=e132]: That chapter only works because the earlier ones built the systems fluency, operator empathy, and research habit underneath it.
+          - generic [ref=e133]:
+            - article [ref=e134]:
+              - generic [ref=e135]:
+                - generic [ref=e136]:
+                  - generic [ref=e137]:
+                    - generic [ref=e138]: Product stretch
+                    - generic [ref=e139]: 2024 -> 2025
+                  - heading "Consumer AI and fintech work sharpened the PM lens." [level=2] [ref=e140]
+                  - paragraph [ref=e141]: This is where onboarding trust, recommendation quality, monetization, analytics, and launch tradeoffs became practical product decisions rather than abstract frameworks.
+                  - generic [ref=e142]:
+                    - generic [ref=e143]: Trust-sensitive product thinking
+                    - generic [ref=e144]: Growth + activation instincts
+                    - generic [ref=e145]: Founder-team decision support
+                - generic [ref=e146]:
+                  - generic [ref=e147]:
+                    - paragraph [ref=e148]: Roles in this chapter
+                    - img [ref=e149]
+                  - generic [ref=e152]:
+                    - generic [ref=e153]:
+                      - paragraph [ref=e154]: Product Manager
+                      - paragraph [ref=e155]: Skingenius
+                      - paragraph [ref=e156]: Onboarding clarity and AI recommendation trust
+                    - generic [ref=e157]:
+                      - paragraph [ref=e158]: Consultant Product Manager
+                      - paragraph [ref=e159]: Nomad AI
+                      - paragraph [ref=e160]: Pricing, analytics, and MVP structure
+                    - generic [ref=e161]:
+                      - paragraph [ref=e162]: Graduate school layer
+                      - paragraph [ref=e163]: Northeastern University
+                      - paragraph [ref=e164]: Engineering management + product framing
+            - generic [ref=e165]:
+              - img [ref=e167]
+              - generic [ref=e170]: Once the user and business tradeoffs got sharper, the next question became how to operate across more technical and operationally messy systems.
+          - generic [ref=e171]:
+            - article [ref=e172]:
+              - generic [ref=e173]:
+                - generic [ref=e174]:
+                  - generic [ref=e175]:
+                    - generic [ref=e176]: Systems foundation
+                    - generic [ref=e177]: 2020 -> 2024
+                  - heading "Software, analytics, and delivery roles built the systems backbone." [level=2] [ref=e178]
+                  - paragraph [ref=e179]: Work across data, health tech, and business analysis created the habit of translating between technical constraints, user context, and delivery reality.
+                  - generic [ref=e180]:
+                    - generic [ref=e181]: Technical fluency
+                    - generic [ref=e182]: Cross-functional translation
+                    - generic [ref=e183]: Operational reliability mindset
+                - generic [ref=e184]:
+                  - generic [ref=e185]:
+                    - paragraph [ref=e186]: Roles in this chapter
+                    - img [ref=e187]
+                  - generic [ref=e190]:
+                    - generic [ref=e191]:
+                      - paragraph [ref=e192]: Business Analyst
+                      - paragraph [ref=e193]: Cognizant
+                      - paragraph [ref=e194]: Agile backlog, data pipelines, and delivery cadence
+                    - generic [ref=e195]:
+                      - paragraph [ref=e196]: Product Manager
+                      - paragraph [ref=e197]: Symbionic
+                      - paragraph [ref=e198]: Roadmaps, validation, and collaboration around health tech
+                    - generic [ref=e199]:
+                      - paragraph [ref=e200]: Data Scientist
+                      - paragraph [ref=e201]: UNMITI
+                      - paragraph [ref=e202]: Analytics, modeling, and business insight work
+            - generic [ref=e203]:
+              - img [ref=e205]
+              - generic [ref=e208]: That translation layer made product management feel like the right long-term home, not just the next title.
+          - article [ref=e210]:
+            - generic [ref=e211]:
+              - generic [ref=e212]:
+                - generic [ref=e213]:
+                  - generic [ref=e214]: Early foundation
+                  - generic [ref=e215]: 2018 -> 2020
+                - heading "Community-building and software roots created the original momentum." [level=2] [ref=e216]
+                - paragraph [ref=e217]: The start of the journey combined engineering training, entrepreneurship communities, and early cross-functional work. That mix made product feel less like a role change and more like a natural through-line.
+                - generic [ref=e218]:
+                  - generic [ref=e219]: Community leadership
+                  - generic [ref=e220]: Builder energy
+                  - generic [ref=e221]: Early startup exposure
+              - generic [ref=e222]:
+                - generic [ref=e223]:
+                  - paragraph [ref=e224]: Roles in this chapter
+                  - img [ref=e225]
+                - generic [ref=e228]:
+                  - generic [ref=e229]:
+                    - paragraph [ref=e230]: Director of External Affairs
+                    - paragraph [ref=e231]: Entrepreneurship Cell, VIT
+                    - paragraph [ref=e232]: Partnerships, programming, and startup-facing community work
+                  - generic [ref=e233]:
+                    - paragraph [ref=e234]: Product Marketing Manager
+                    - paragraph [ref=e235]: LegalMind
+                    - paragraph [ref=e236]: Positioning and customer-facing product communication
+                  - generic [ref=e237]:
+                    - paragraph [ref=e238]: Intern
+                    - paragraph [ref=e239]: Web Development & Data Science
+                    - paragraph [ref=e240]: Hands-on project work across software and analytics
+      - generic [ref=e241]:
+        - generic [ref=e242]:
+          - generic [ref=e243]:
+            - paragraph [ref=e244]: Education anchors
+            - heading "Formal training that shaped the product path." [level=2] [ref=e245]
+          - paragraph [ref=e246]: The degrees matter less as isolated credentials and more as the places where the software, management, and entrepreneurship strands started to connect.
+        - generic [ref=e247]:
+          - article [ref=e248]:
+            - generic [ref=e249]:
+              - generic [ref=e250]:
+                - paragraph [ref=e251]: Sep 2022 - May 2024
+                - heading "Northeastern University" [level=3] [ref=e252]
+                - paragraph [ref=e253]: Master of Science in Engineering Management
+              - img [ref=e255]
+            - generic [ref=e258]:
+              - generic [ref=e259]:
+                - paragraph [ref=e260]: Activities and leadership
+                - generic [ref=e261]:
+                  - generic [ref=e262]: Techstars Boston '24 - Event Organizer
+                  - generic [ref=e263]: Women in Tech - Mentorship Coordinator
+                  - generic [ref=e264]: Startup Accelerator Program - Participant
+                  - generic [ref=e265]: Engineering Management Society - Member
+              - generic [ref=e266]:
+                - paragraph [ref=e267]: Coursework
+                - generic [ref=e268]:
+                  - generic [ref=e269]: Product Management
+                  - generic [ref=e270]: Engineering Management
+                  - generic [ref=e271]: Business Strategy
+                  - generic [ref=e272]: Data Analytics
+          - article [ref=e273]:
+            - generic [ref=e274]:
+              - generic [ref=e275]:
+                - paragraph [ref=e276]: 2018 - 2022
+                - heading "Vellore Institute of Technology" [level=3] [ref=e277]
+                - paragraph [ref=e278]: Master of Technology Integrated in Software Engineering
+              - img [ref=e280]
+            - generic [ref=e283]:
+              - generic [ref=e284]:
+                - paragraph [ref=e285]: Activities and leadership
+                - generic [ref=e286]:
+                  - generic [ref=e287]: Entrepreneurship Cell - Director of External Affairs
+                  - generic [ref=e288]: Technical Clubs - Active Member
+                  - generic [ref=e289]: Hackathons - Regular Participant
+              - generic [ref=e290]:
+                - paragraph [ref=e291]: Coursework
+                - generic [ref=e292]:
+                  - generic [ref=e293]: Software Engineering
+                  - generic [ref=e294]: Data Structures & Algorithms
+                  - generic [ref=e295]: Machine Learning
+                  - generic [ref=e296]: Database Management
+      - generic [ref=e297]:
+        - generic [ref=e298]:
+          - generic [ref=e299]:
+            - paragraph [ref=e300]: Experience list
+            - heading "Full role timeline, kept compact." [level=2] [ref=e301]
+          - paragraph [ref=e302]: The main story above shows the progression. This section keeps the complete role list available without turning the whole page back into a stack of oversized cards.
+        - generic [ref=e303]:
+          - article [ref=e304]:
+            - generic [ref=e306]:
+              - paragraph [ref=e307]: Product Consultant
+              - paragraph [ref=e308]: Anand PAG
+            - generic [ref=e309]:
+              - generic [ref=e310]: Jan 2025 - Present
+              - generic [ref=e311]: •
+              - generic [ref=e312]: Dallas, TX
+            - paragraph [ref=e313]: Led product delivery for an integration-heavy workflow platform replacing a legacy vendor-operations system for internal teams and external vendors.
+          - article [ref=e314]:
+            - generic [ref=e315]:
+              - generic [ref=e316]:
+                - paragraph [ref=e317]: Product Manager
+                - paragraph [ref=e318]: Skingenius
+              - link "Open Skingenius website" [ref=e319] [cursor=pointer]:
+                - /url: https://skingenius.io/
+                - img [ref=e320]
+            - generic [ref=e323]:
+              - generic [ref=e324]: Aug 2024 - Dec 2024
+              - generic [ref=e325]: •
+              - generic [ref=e326]: Boston, MA
+            - paragraph [ref=e327]: Led product work on an AI skincare recommendation experience focused on onboarding clarity, recommendation trust, and first-session value.
+          - article [ref=e328]:
+            - generic [ref=e330]:
+              - paragraph [ref=e331]: Consultant Product Manager
+              - paragraph [ref=e332]: Nomad AI
+            - generic [ref=e333]:
+              - generic [ref=e334]: May 2024 - Jul 2024
+              - generic [ref=e335]: •
+              - generic [ref=e336]: Boston, MA
+            - paragraph [ref=e337]: Consulted on pricing, analytics, and MVP launch structure for an AI valuation product in a trust-sensitive SMB market.
+          - article [ref=e338]:
+            - generic [ref=e340]:
+              - paragraph [ref=e341]: Business Analyst
+              - paragraph [ref=e342]: Cognizant
+            - generic [ref=e343]:
+              - generic [ref=e344]: Aug 2021 - Jul 2022
+              - generic [ref=e345]: •
+              - generic [ref=e346]: Remote
+            - paragraph [ref=e347]: Managed agile product backlog for EdTech product and engineered data preprocessing strategies.
+          - article [ref=e348]:
+            - generic [ref=e350]:
+              - paragraph [ref=e351]: Product Manager
+              - paragraph [ref=e352]: Symbionic
+            - generic [ref=e353]:
+              - generic [ref=e354]: Sep 2020 - Aug 2021
+              - generic [ref=e355]: •
+              - generic [ref=e356]: Remote
+            - paragraph [ref=e357]: Owned digital app for bionic arm technology, defining product roadmap and managing cross-functional collaboration.
+          - article [ref=e358]:
+            - generic [ref=e360]:
+              - paragraph [ref=e361]: Data Scientist
+              - paragraph [ref=e362]: UNMITI
+            - generic [ref=e363]:
+              - generic [ref=e364]: Jan 2020 - May 2020
+              - generic [ref=e365]: •
+              - generic [ref=e366]: Remote
+            - paragraph [ref=e367]: Applied data science and analytics to drive business insights and decision-making processes.
+          - article [ref=e368]:
+            - generic [ref=e370]:
+              - paragraph [ref=e371]: Director of External Affairs
+              - paragraph [ref=e372]: Entrepreneurship Cell, VIT
+            - generic [ref=e373]:
+              - generic [ref=e374]: "2020"
+              - generic [ref=e375]: •
+              - generic [ref=e376]: Vellore, India
+            - paragraph [ref=e377]: Led external partnerships and strategic initiatives for the university's entrepreneurship ecosystem.
+          - article [ref=e378]:
+            - generic [ref=e380]:
+              - paragraph [ref=e381]: Product Marketing Manager
+              - paragraph [ref=e382]: LegalMind
+            - generic [ref=e383]:
+              - generic [ref=e384]: Jul 2019 - Nov 2019
+              - generic [ref=e385]: •
+              - generic [ref=e386]: Remote
+            - paragraph [ref=e387]: Led product marketing strategies and customer relationship management for legal technology solutions.
+          - article [ref=e388]:
+            - generic [ref=e390]:
+              - paragraph [ref=e391]: Intern
+              - paragraph [ref=e392]: Web Development & Data Science
+            - generic [ref=e393]:
+              - generic [ref=e394]: May 2019 - Jul 2019
+              - generic [ref=e395]: •
+              - generic [ref=e396]: Remote
+            - paragraph [ref=e397]: Gained hands-on experience in web development and data science through cross-functional project work.
+  - contentinfo [ref=e398]:
+    - generic [ref=e399]:
+      - generic [ref=e401]:
+        - generic [ref=e402]:
+          - paragraph [ref=e403]: good product work starts with sharper questions
+          - heading "Let's build something meaningful" [level=3] [ref=e404]
+          - paragraph [ref=e405]: AI-first product work, grounded in clarity, systems thinking, and execution.
+        - link "Contact" [ref=e406] [cursor=pointer]:
+          - /url: "#/contact"
+          - generic "Contact" [ref=e407]:
+            - text: Start a conversation
+            - img [ref=e408]
+      - generic [ref=e410]:
+        - generic [ref=e411]:
+          - generic [ref=e413]:
+            - generic [ref=e414]: Nivedita
+            - generic [ref=e415]: product manager
+          - paragraph [ref=e416]: AI-first Product Manager focused on clear product thinking, structured execution, and human-centered outcomes.
+        - generic [ref=e417]:
+          - heading "Quick Links" [level=3] [ref=e418]
+          - generic [ref=e419]:
+            - link "Home" [ref=e421] [cursor=pointer]:
+              - /url: "#/"
+              - generic [ref=e422]: Home
+            - link "Featured Work" [ref=e424] [cursor=pointer]:
+              - /url: "#/"
+              - generic [ref=e425]: Featured Work
+            - link "Case Studies + Builds" [ref=e427] [cursor=pointer]:
+              - /url: "#/"
+              - generic [ref=e428]: Case Studies + Builds
+            - link "What I’m Building With" [ref=e430] [cursor=pointer]:
+              - /url: "#/"
+              - generic [ref=e431]: What I’m Building With
+            - link "Journey" [ref=e433] [cursor=pointer]:
+              - /url: "#/journey"
+              - generic [ref=e434]: Journey
+        - generic [ref=e435]:
+          - heading "Connect" [level=3] [ref=e436]
+          - generic [ref=e437]:
+            - link "LinkedIn profile" [ref=e438] [cursor=pointer]:
+              - /url: https://www.linkedin.com/in/nivedita-niv/
+              - img [ref=e439]
+            - link "GitHub profile" [ref=e441] [cursor=pointer]:
+              - /url: https://github.com/niveditajurel
+              - img [ref=e442]
+            - link "X profile" [ref=e444] [cursor=pointer]:
+              - /url: https://x.com/nniv266
+              - img [ref=e445]
+            - link "Instagram profile" [ref=e447] [cursor=pointer]:
+              - /url: https://www.instagram.com/niv_yaps/
+              - img [ref=e448]
+      - generic [ref=e450]:
+        - paragraph [ref=e451]: © 2026 Nivedita. All rights reserved.
+        - paragraph [ref=e452]: Built for thoughtful product conversations and future teams.
+  - region "Notifications (F8)":
+    - list

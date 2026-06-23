@@ -123,7 +123,7 @@ export function Footer() {
                 { name: "Journey", href: "/journey" },
               ].map((link, index) => (
                 <motion.div
-                  key={link.href}
+                  key={`${link.href}-${link.sectionId ?? "page"}`}
                   initial={{ opacity: 0, x: -10 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}

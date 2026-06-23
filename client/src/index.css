@@ -1,7 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600;6..72,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&display=swap');
 
 @tailwind base;
@@ -10,46 +9,41 @@
 
 @layer base {
   :root {
-    /* Light Mode: Crisp, Techy, Vibrant (Framer-style) */
-    --background: 210 20% 98%;
-    /* Soft off-white */
-    --foreground: 222 47% 11%;
-    /* Deep navy/gray */
+    --background: 39 42% 96%;
+    --foreground: 28 24% 12%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222 47% 11%;
+    --card: 42 46% 98%;
+    --card-foreground: 28 24% 12%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222 47% 11%;
+    --popover: 42 46% 98%;
+    --popover-foreground: 28 24% 12%;
 
-    --primary: 245 100% 60%;
-    /* Vibrant Blurple */
-    --primary-foreground: 0 0% 100%;
+    --primary: 150 20% 24%;
+    --primary-foreground: 45 52% 96%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222 47% 11%;
+    --secondary: 210 25% 90%;
+    --secondary-foreground: 28 24% 12%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 38 24% 88%;
+    --muted-foreground: 28 13% 39%;
 
-    --accent: 262 83% 58%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 20 62% 52%;
+    --accent-foreground: 45 52% 96%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --ring: 245 100% 60%;
+    --border: 34 24% 76%;
+    --input: 34 24% 76%;
+    --ring: 150 20% 24%;
 
-    --radius: 1rem;
-    /* Universally rounded corners for that Bento feel */
-
-    /* Custom Tech Accents */
-    --tech-blue: 217 91% 60%;
-    --tech-purple: 270 50% 40%;
-    --tech-peach: 12 100% 80%;
-    --tech-cyan: 190 100% 50%;
+    --radius: 0.875rem;
+    --portfolio-paper: #f6efe3;
+    --portfolio-cream: #fbf6ec;
+    --portfolio-ink: #221914;
+    --portfolio-pine: #24372c;
+    --portfolio-clay: #b7653f;
+    --portfolio-mist: #e7ede5;
   }
 
   .dark {
@@ -90,7 +84,9 @@
 
   body {
     @apply bg-background text-foreground font-sans antialiased;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Instrument Sans', sans-serif;
+    text-rendering: optimizeLegibility;
+    font-kerning: normal;
   }
 
   /* Tech Background Pattern */
@@ -101,15 +97,15 @@
   }
 
   .font-display {
-    font-family: 'Space Grotesk', sans-serif;
-    font-weight: 700;
-    letter-spacing: -0.02em;
+    font-family: 'Newsreader', serif;
+    font-weight: 600;
+    letter-spacing: 0;
   }
 
   .font-editorial {
     font-family: 'Newsreader', serif;
     font-weight: 500;
-    letter-spacing: -0.03em;
+    letter-spacing: 0;
     font-kerning: normal;
     text-rendering: optimizeLegibility;
   }
@@ -135,28 +131,28 @@
   }
 
   h1 {
-    font-weight: 800;
-    letter-spacing: -0.04em;
+    font-weight: 600;
+    letter-spacing: 0;
   }
 
   body[data-design-mode="clay-notion"] {
-    --background: 42 36% 96%;
-    --foreground: 28 18% 16%;
-    --card: 40 48% 98%;
-    --card-foreground: 28 18% 16%;
-    --popover: 40 48% 98%;
-    --popover-foreground: 28 18% 16%;
-    --primary: 28 78% 58%;
-    --primary-foreground: 48 55% 97%;
-    --secondary: 42 28% 92%;
-    --secondary-foreground: 28 18% 18%;
-    --muted: 40 28% 92%;
-    --muted-foreground: 26 12% 43%;
-    --accent: 138 32% 70%;
-    --accent-foreground: 28 18% 16%;
-    --border: 34 24% 82%;
-    --input: 34 24% 82%;
-    --ring: 28 78% 58%;
+    --background: 39 42% 96%;
+    --foreground: 28 24% 12%;
+    --card: 42 46% 98%;
+    --card-foreground: 28 24% 12%;
+    --popover: 42 46% 98%;
+    --popover-foreground: 28 24% 12%;
+    --primary: 150 20% 24%;
+    --primary-foreground: 45 52% 96%;
+    --secondary: 210 25% 90%;
+    --secondary-foreground: 28 24% 12%;
+    --muted: 38 24% 88%;
+    --muted-foreground: 28 13% 39%;
+    --accent: 20 62% 52%;
+    --accent-foreground: 45 52% 96%;
+    --border: 34 24% 76%;
+    --input: 34 24% 76%;
+    --ring: 150 20% 24%;
   }
 
   body[data-design-mode="clay-notion"] .font-display,
@@ -165,23 +161,63 @@
   body[data-design-mode="clay-notion"] h2 {
     font-family: 'Newsreader', serif;
     font-weight: 500;
-    letter-spacing: -0.03em;
+    letter-spacing: 0;
     font-kerning: normal;
     text-rendering: optimizeLegibility;
   }
 
   body[data-design-mode="clay-notion"] h1 {
-    letter-spacing: -0.045em;
+    letter-spacing: 0;
   }
 }
 
 @layer components {
+  .portfolio-section {
+    @apply px-4 py-16 sm:px-6 lg:px-8 lg:py-24;
+  }
+
+  .section-shell {
+    @apply mx-auto max-w-7xl;
+  }
+
+  .section-kicker {
+    @apply text-xs font-bold uppercase text-muted-foreground;
+    letter-spacing: 0.22em;
+  }
+
   .clay-section-heading {
-    @apply text-balance text-3xl font-semibold leading-[1.02] tracking-[-0.03em] md:text-4xl;
+    @apply text-balance font-display text-4xl font-semibold leading-[1.02] text-foreground md:text-5xl lg:text-6xl;
   }
 
   .clay-card-title {
-    @apply text-balance text-[1.28rem] font-semibold leading-[1.08] tracking-[-0.02em];
+    @apply text-balance font-display text-2xl font-semibold leading-[1.08] text-foreground;
+  }
+
+  .editorial-rule {
+    @apply border-t border-border/70 pt-6;
+  }
+
+  .premium-surface {
+    @apply border border-border/70 bg-card/88 shadow-[0_24px_70px_-52px_rgba(36,28,18,0.28)] backdrop-blur-md;
+  }
+
+  .ink-button {
+    @apply inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-foreground px-5 py-3 text-sm font-semibold text-background transition duration-200 hover:-translate-y-0.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background;
+  }
+
+  .paper-button {
+    @apply inline-flex min-h-11 items-center justify-center gap-2 rounded-full border border-border/80 bg-card/80 px-5 py-3 text-sm font-semibold text-foreground transition duration-200 hover:-translate-y-0.5 hover:border-primary/50 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background;
+  }
+
+  .ease-snappy {
+    transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  @media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+    .hover-cursor-target,
+    .hover-cursor-target * {
+      cursor: none !important;
+    }
   }
 
   .text-gradient {
@@ -206,7 +242,7 @@
   }
 
   .clay-notion-surface {
-    @apply border bg-background shadow-[0_16px_40px_-32px_rgba(37,26,12,0.25)] backdrop-blur-md;
+    @apply border bg-background shadow-[0_18px_48px_-38px_rgba(37,26,12,0.25)] backdrop-blur-md;
     border-color: hsl(var(--border) / 0.7);
     background-color: hsl(var(--background) / 0.78);
   }
@@ -218,7 +254,7 @@
   }
 
   .paper-panel {
-    @apply rounded-[1.65rem] border bg-background backdrop-blur-sm;
+    @apply rounded-2xl border bg-background backdrop-blur-sm;
     border-color: hsl(var(--border) / 0.72);
     background-color: hsl(var(--background) / 0.85);
     box-shadow: 0 18px 50px -42px rgba(81, 57, 24, 0.18);
@@ -226,6 +262,30 @@
 
   .ink-muted {
     color: hsl(var(--foreground) / 0.68);
+  }
+
+  .hero-noise {
+    background-image:
+      linear-gradient(90deg, rgba(255, 248, 239, 0.055) 1px, transparent 1px),
+      linear-gradient(180deg, rgba(255, 248, 239, 0.045) 1px, transparent 1px),
+      radial-gradient(circle at 20% 30%, rgba(255, 248, 239, 0.12) 0 1px, transparent 1.5px);
+    background-size: 68px 68px, 68px 68px, 18px 18px;
+    mix-blend-mode: screen;
+  }
+
+  .hero-workflow-shell {
+    border-radius: 1.85rem;
+    background:
+      linear-gradient(180deg, rgba(255, 248, 239, 0.1), rgba(255, 248, 239, 0.04)),
+      linear-gradient(140deg, rgba(255, 248, 239, 0.04), rgba(23, 18, 15, 0.16));
+  }
+
+  .hero-workflow-grid {
+    background-image:
+      linear-gradient(rgba(255, 248, 239, 0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 248, 239, 0.06) 1px, transparent 1px);
+    background-size: 44px 44px;
+    mask-image: radial-gradient(circle at center, black 48%, transparent 100%);
   }
 }
 
@@ -260,6 +320,27 @@
     }
   }
 
+  @keyframes hero-chip-drift {
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+    100% {
+      transform: translate3d(0, 0, 0);
+    }
+    50% {
+      transform: translate3d(0, -10px, 0);
+    }
+  }
+
+  @keyframes hero-orbit {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
   .animate-doodle-float {
     animation: doodle-float 8s ease-in-out infinite;
   }
@@ -273,5 +354,36 @@
     animation: spin-slow 40s linear infinite;
     transform-box: fill-box;
     transform-origin: center;
+  }
+
+  .hero-drift-chip {
+    animation: hero-chip-drift 8.2s cubic-bezier(0.25, 1, 0.5, 1) infinite;
+  }
+
+  .hero-orbit {
+    animation: hero-orbit 22s linear infinite;
+    transform-origin: center;
+  }
+
+  .animation-delay-0 {
+    animation-delay: 0ms;
+  }
+
+  .animation-delay-2000 {
+    animation-delay: 2000ms;
+  }
+
+  .animation-delay-4000 {
+    animation-delay: 4000ms;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero-drift-chip,
+    .hero-orbit,
+    .animate-doodle-float,
+    .animate-doodle-wiggle,
+    .animate-spin-slow {
+      animation: none !important;
+    }
   }
 }

@@ -1,359 +1,251 @@
-import { motion } from "framer-motion";
-import { Link } from "wouter";
-import { ArrowRight, ArrowUpRight, NotebookPen, Search } from "lucide-react";
+import { motion, useReducedMotion } from "framer-motion";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
 import { siteConfig } from "@/data/site";
-import { cn } from "@/lib/utils";
-import { DoodleArrow, DoodleSpark, DoodleUnderline } from "@/components/ui/doodle-accents";
+import { DoodleArrow, DoodleUnderline } from "@/components/ui/doodle-accents";
 
-const experienceSignals = [
-  "Startup PM",
-  "Product consultant",
-  "Enterprise systems",
+const experienceSummary = "Former SWE · Startups + enterprise PM";
+
+const snapshotSignals = [
+  {
+    eyebrow: "Systems",
+    title: "Untangle messy workflows",
+  },
+  {
+    eyebrow: "Execution",
+    title: "Scope what teams can ship",
+  },
+  {
+    eyebrow: "Customer lens",
+    title: "Catch friction before it scales",
+  },
 ];
 
-const productSignals = [
-  {
-    label: "Systems",
-    value: "Structure messy workflows",
-    icon: NotebookPen,
-    tone: "bg-[#e9ead6]",
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.08,
+    },
   },
-  {
-    label: "Execution",
-    value: "Ship with constraints",
-    icon: ArrowUpRight,
-    tone: "bg-[#f7dfcf]",
+};
+
+const revealVariants = {
+  hidden: { opacity: 0, y: 22 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.72, ease: [0.22, 1, 0.36, 1] },
   },
-  {
-    label: "Customer Lens",
-    value: "Find real friction",
-    icon: Search,
-    tone: "bg-[#f8e8bd]",
-  },
-];
+};
+
+function FloatingAiNote({ shouldReduceMotion }: { shouldReduceMotion: boolean }) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, x: -10, y: 10 }}
+      animate={
+        shouldReduceMotion
+          ? { opacity: 1, x: 0, y: 0 }
+          : { opacity: 1, x: 0, y: [0, -3, 0] }
+      }
+      transition={
+        shouldReduceMotion
+          ? { duration: 0.55, ease: [0.22, 1, 0.36, 1] }
+          : { duration: 6.4, repeat: Infinity, ease: "easeInOut" }
+      }
+      className="flex items-center gap-2 text-[#e0a770] [text-shadow:0_0_18px_rgba(224,167,112,0.16)]"
+    >
+      <DoodleArrow className="hidden h-4 w-[3.7rem] text-[#e0a770] sm:block" delay={0.18} />
+      <span className="font-hand text-[1.45rem] leading-none sm:text-[1.72rem]">AI-first</span>
+    </motion.div>
+  );
+}
+
+function WorkflowRail() {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 24 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.78, delay: 0.18, ease: [0.22, 1, 0.36, 1] }}
+      className="relative w-full max-w-[18.75rem] xl:mr-2"
+    >
+      <div className="relative overflow-hidden rounded-[1.7rem] border border-white/26 bg-[linear-gradient(180deg,rgba(255,255,255,0.16),rgba(245,227,210,0.12))] px-4 py-4 shadow-[0_30px_80px_-50px_rgba(24,17,12,0.42),inset_0_1px_0_rgba(255,255,255,0.34)] backdrop-blur-[28px] saturate-[1.28]">
+        <div className="pointer-events-none absolute inset-0 rounded-[inherit] bg-[linear-gradient(180deg,rgba(255,255,255,0.28),rgba(255,255,255,0.08)_34%,rgba(255,255,255,0.03)_70%,rgba(255,255,255,0.1)_100%)]" />
+        <div className="pointer-events-none absolute inset-x-5 top-2 h-10 rounded-full bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.24),transparent_72%)] blur-xl" />
+        <div className="pointer-events-none absolute inset-y-5 left-0 w-px bg-white/18" />
+        <div className="relative">
+          <p className="section-kicker text-[#8b5431]">Product snapshot</p>
+          <p className="mt-2 max-w-[14rem] text-[0.98rem] leading-7 text-[#2b1b12]">
+            Technical range. Product judgment. Calm execution.
+          </p>
+          <div className="mt-4 space-y-2.5">
+            {snapshotSignals.map((stage, index) => (
+              <motion.div
+                key={stage.title}
+                initial={{ opacity: 0, y: 14 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.22 + index * 0.08, ease: [0.22, 1, 0.36, 1] }}
+                className="rounded-[1rem] border border-white/18 bg-[linear-gradient(180deg,rgba(255,255,255,0.16),rgba(255,247,239,0.08))] px-3.5 py-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.18)] backdrop-blur-md"
+              >
+                <div className="min-w-0">
+                  <p className="section-kicker text-[#8b5431]">{stage.eyebrow}</p>
+                  <h2 className="mt-1.5 text-balance font-display text-[1.02rem] font-semibold leading-[1.18] text-[#22150d]">
+                    {stage.title}
+                  </h2>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </motion.div>
+  );
+}
+
+function MobilePortraitCard({ shouldReduceMotion }: { shouldReduceMotion: boolean }) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 22 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.72, delay: 0.16, ease: [0.22, 1, 0.36, 1] }}
+      className="relative overflow-hidden rounded-[2rem] border border-white/12 bg-[#f3e8dc] p-3 shadow-[0_34px_90px_-60px_rgba(0,0,0,0.78)] lg:hidden"
+    >
+      <motion.img
+        src="/hero-background-alt-3.png"
+        alt="Niv with product sketches around her"
+        animate={
+          shouldReduceMotion
+            ? { opacity: 1, scale: 1 }
+            : { opacity: 1, scale: [1, 1.01, 1] }
+        }
+        transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+        className="h-[26rem] w-full rounded-[1.45rem] object-contain object-center"
+      />
+      <div className="pointer-events-none absolute inset-3 rounded-[1.45rem] bg-[linear-gradient(180deg,rgba(7,6,6,0.06)_0%,rgba(7,6,6,0.1)_38%,rgba(7,6,6,0.26)_100%),linear-gradient(90deg,rgba(7,6,6,0.28)_0%,rgba(7,6,6,0.12)_56%,rgba(7,6,6,0.16)_100%)]" />
+
+      <div className="pointer-events-none absolute inset-x-6 bottom-7 flex flex-wrap gap-2">
+        <span className="rounded-full border border-[#2c211b]/12 bg-[#fff8ef]/82 px-3 py-1.5 text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-[#392b22] backdrop-blur-sm">
+          Customer-first
+        </span>
+        <span className="rounded-full border border-[#2c211b]/12 bg-[#fff8ef]/82 px-3 py-1.5 text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-[#392b22] backdrop-blur-sm">
+          Systems thinking
+        </span>
+        <span className="rounded-full border border-[#2c211b]/12 bg-[#fff8ef]/82 px-3 py-1.5 text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-[#392b22] backdrop-blur-sm">
+          Shippable scope
+        </span>
+      </div>
+    </motion.div>
+  );
+}
 
 export const Hero = () => {
-  const isClayNotionMode = siteConfig.experiments.clayNotionLanding;
+  const shouldReduceMotion = !!useReducedMotion();
+
   const scrollToFeaturedWork = () => {
     document.getElementById("featured-work")?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
   return (
-    <section
-      className={cn(
-        "relative isolate overflow-hidden bg-transparent px-0 pb-10 pt-2 sm:pt-3 lg:min-h-[calc(100svh-4.65rem)] lg:pb-10 lg:pt-3",
-        isClayNotionMode && "lg:min-h-[calc(100svh-4.65rem)]",
-      )}
-    >
-      <div className="pointer-events-none absolute inset-0 -z-10">
-        <div
-          className={cn(
-            "absolute inset-0 bg-[radial-gradient(circle_at_18%_10%,hsl(var(--primary)/0.055),transparent_28%),radial-gradient(circle_at_82%_12%,hsl(var(--accent)/0.045),transparent_22%),linear-gradient(to_bottom,hsl(var(--background)/0.82),hsl(var(--background)/0.26)_18rem,transparent)]",
-            isClayNotionMode &&
-              "bg-[radial-gradient(circle_at_14%_8%,hsl(var(--primary)/0.12),transparent_26%),radial-gradient(circle_at_84%_12%,hsl(var(--accent)/0.12),transparent_24%),linear-gradient(to_bottom,hsl(var(--background)/0.9),hsl(var(--background)/0.38)_16rem,transparent)]",
-          )}
+    <section className="relative isolate overflow-hidden bg-[#f3e8dc] text-[#fff8ef] lg:h-[min(43.5rem,calc(100svh-5.4rem))]">
+      <div className="absolute inset-0 overflow-hidden bg-[#f3e8dc]">
+        <motion.div
+          aria-hidden="true"
+          animate={
+            shouldReduceMotion
+              ? { opacity: 1, scale: 1 }
+              : { opacity: 1, scale: [1, 1.012, 1] }
+          }
+          transition={{ duration: 14, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute inset-0 hidden lg:block"
+          style={{
+            backgroundImage: "url('/hero-background-alt-3.png')",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "58% 47%",
+            backgroundSize: "104% auto",
+          }}
         />
-        <div className="absolute inset-x-0 top-0 h-px bg-border/60" />
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(5,4,4,0.82)_0%,rgba(5,4,4,0.74)_18%,rgba(8,7,7,0.61)_34%,rgba(8,7,7,0.48)_50%,rgba(8,7,7,0.36)_68%,rgba(8,7,7,0.26)_84%,rgba(8,7,7,0.2)_100%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_52%,rgba(0,0,0,0.23),transparent_34%),radial-gradient(circle_at_84%_24%,rgba(0,0,0,0.11),transparent_24%),linear-gradient(180deg,rgba(5,4,4,0.11)_0%,rgba(5,4,4,0.05)_28%,rgba(5,4,4,0.15)_100%)]" />
+        <div className="absolute inset-y-0 left-1/2 hidden w-[24rem] -translate-x-1/2 bg-[radial-gradient(circle_at_center,rgba(8,7,7,0.18)_0%,rgba(8,7,7,0.1)_46%,transparent_74%)] blur-[72px] lg:block" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_86%_18%,rgba(255,247,237,0.08),transparent_20%),radial-gradient(circle_at_16%_84%,rgba(115,140,111,0.03),transparent_18%)]" />
+        <div className="hero-noise absolute inset-0 opacity-[0.06]" />
       </div>
 
-      <div
-        className={cn(
-          "mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[minmax(0,0.92fr)_minmax(29rem,0.82fr)] lg:items-center lg:px-8 xl:gap-12",
-          isClayNotionMode && "lg:grid-cols-[minmax(0,0.92fr)_minmax(29rem,0.82fr)]",
-        )}
-      >
-        <motion.div
-          initial={{ opacity: 0, y: 22 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, ease: "easeOut" }}
-          className="relative max-w-[42rem] space-y-5"
-        >
-          <div className="relative flex flex-col items-start gap-2.5">
-            <div className="flex items-start gap-3 md:gap-4">
-              <motion.div
-                initial={isClayNotionMode ? { opacity: 0, y: 10 } : undefined}
-                animate={isClayNotionMode ? { opacity: 1, y: 0 } : undefined}
-                transition={isClayNotionMode ? { duration: 0.6, delay: 0.08, ease: "easeOut" } : undefined}
-                className={cn(
-                  "inline-flex items-center gap-2.5 rounded-full border border-border/60 bg-background/88 px-3 py-2 shadow-sm backdrop-blur",
-                  isClayNotionMode && "bg-[#dfe3cc]/85 px-3.5 py-2 shadow-[0_14px_32px_-24px_rgba(81,57,24,0.18)]",
-                )}
-              >
-                <span
-                  aria-hidden="true"
-                  className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-[#fff0d8] text-[1.28rem] leading-none shadow-[inset_0_1px_0_rgba(255,255,255,0.75)]"
-                >
-                  👋
+      <div className="section-shell relative z-10 px-4 pb-14 pt-24 sm:px-6 sm:pb-16 sm:pt-28 lg:px-8 lg:pb-6 lg:pt-8">
+        <div className="grid gap-10 lg:h-full lg:grid-cols-[minmax(0,33rem)_minmax(0,1fr)] lg:items-center xl:grid-cols-[minmax(0,34rem)_minmax(0,1fr)]">
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+            className="max-w-[31rem] xl:max-w-[32rem]"
+          >
+            <motion.div variants={revealVariants} className="flex flex-wrap items-center gap-3 sm:gap-4">
+              <div className="inline-flex items-center gap-3 rounded-full border border-white/18 bg-white/8 px-4 py-2.5 shadow-[0_20px_55px_-42px_rgba(0,0,0,0.72)] backdrop-blur-md">
+                <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[#fff8ef] text-sm font-bold text-[#221914]">
+                  N
                 </span>
-                <span className="font-sans text-[1.05rem] font-semibold tracking-[-0.03em] text-foreground sm:text-[1.16rem]">
-                  Hi, I&apos;m Niv
-                </span>
-              </motion.div>
+                <span className="text-sm font-semibold text-[#fff8ef]">Hi, I&apos;m Niv</span>
+              </div>
 
-              {isClayNotionMode ? (
-                <motion.div
-                  initial={{ opacity: 0, y: 8, rotate: -3 }}
-                  animate={{ opacity: 1, y: 0, rotate: -2 }}
-                  transition={{ duration: 0.58, delay: 0.18, ease: "easeOut" }}
-                  className="relative hidden pl-8 pt-3 md:block"
-                >
-                  <p className="font-hand text-[1.45rem] leading-none text-[#b87944]">AI-first</p>
-                  <DoodleArrow className="absolute -left-3 top-0 h-7 w-16 text-[#b87944]" delay={0.28} />
-                </motion.div>
-              ) : null}
-            </div>
+              <FloatingAiNote shouldReduceMotion={shouldReduceMotion} />
+            </motion.div>
 
-            <motion.div
-              initial={isClayNotionMode ? { opacity: 0, y: 8 } : undefined}
-              animate={isClayNotionMode ? { opacity: 1, y: 0 } : undefined}
-              transition={isClayNotionMode ? { duration: 0.58, delay: 0.14, ease: "easeOut" } : undefined}
-              className="ml-1 inline-flex items-center pt-1 text-[0.77rem] font-semibold uppercase tracking-[0.18em] text-[#6a5846] sm:text-[0.82rem]"
-            >
+            <motion.p variants={revealVariants} className="section-kicker mt-4 text-[#f3d3b5]">
               Product Builder + Manager
+            </motion.p>
+
+            <motion.div variants={revealVariants} className="mt-3">
+              <h1 className="max-w-[11.2ch] font-display text-[clamp(2.75rem,4.45vw,4.4rem)] font-semibold leading-[0.88] text-[#fff8ef] [text-shadow:0_10px_32px_rgba(0,0,0,0.22)]">
+                I bring clarity
+                <br />
+                to messy
+                <br />
+                product spaces.
+              </h1>
+              <DoodleUnderline className="mt-2 h-5 w-28 text-[#f1b47d] sm:w-34" delay={0.14} />
             </motion.div>
 
             <motion.p
-              initial={isClayNotionMode ? { opacity: 0, y: 10 } : undefined}
-              animate={isClayNotionMode ? { opacity: 1, y: 0 } : undefined}
-              transition={isClayNotionMode ? { duration: 0.58, delay: 0.18, ease: "easeOut" } : undefined}
-              style={{ color: "#1f1a14", WebkitTextFillColor: "#1f1a14" }}
-              className={cn(
-                "ml-1 max-w-[34rem] text-sm font-medium leading-6 sm:text-base",
-                isClayNotionMode && "text-[1rem] font-semibold leading-7",
-              )}
+              variants={revealVariants}
+              className="mt-3.5 max-w-[27rem] text-[0.92rem] leading-6 text-[#f8eadb]/82 sm:text-[0.96rem] sm:leading-7"
             >
-              Focused on product clarity, systems thinking, and execution
+              Former software engineer turned product manager, working across startups and enterprise
+              teams to turn unclear workflows into direction teams can build and ship.
             </motion.p>
-
-          </div>
-
-          <div className="space-y-4">
-            <motion.h1
-              initial={isClayNotionMode ? { opacity: 0, y: 18 } : undefined}
-              animate={isClayNotionMode ? { opacity: 1, y: 0 } : undefined}
-              transition={isClayNotionMode ? { duration: 0.72, delay: 0.14, ease: "easeOut" } : undefined}
-              className={cn(
-                "max-w-[16ch] text-balance text-[clamp(2.55rem,3.9vw,4.25rem)] font-semibold leading-[0.98] tracking-[-0.04em] text-foreground",
-                isClayNotionMode &&
-                  "max-w-[16ch] font-editorial text-[clamp(2.65rem,4vw,4.35rem)] leading-[0.98] tracking-[-0.045em]",
-              )}
-            >
-              I bring{" "}
-              <span className="relative inline-block italic text-foreground">clarity</span> to messy product{" "}
-              <span className="relative inline-block">
-                spaces
-                {isClayNotionMode ? (
-                  <DoodleUnderline className="absolute -bottom-3 left-0 h-5 w-[9.5rem] text-[#d38a47]" delay={0.26} />
-                ) : null}
-              </span>
-              .
-            </motion.h1>
 
             <motion.p
-              initial={isClayNotionMode ? { opacity: 0, y: 12 } : undefined}
-              animate={isClayNotionMode ? { opacity: 1, y: 0 } : undefined}
-              transition={isClayNotionMode ? { duration: 0.6, delay: 0.22, ease: "easeOut" } : undefined}
-              className={cn(
-                "max-w-[38rem] text-pretty text-base font-medium leading-7 text-foreground/80 sm:text-lg",
-                isClayNotionMode &&
-                  "max-w-[40rem] text-[1.12rem] leading-[1.7] tracking-[-0.015em] text-[hsl(var(--foreground)/0.82)]",
-              )}
+              variants={revealVariants}
+              className="mt-3 text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-[#f8eadb]/68"
             >
-              Former software engineer turned product manager. I&apos;ve worked with startups and
-              enterprise teams, shaping unclear workflows, legacy systems, and customer needs into
-              direction teams can build and ship.
+              {experienceSummary}
             </motion.p>
 
-            <motion.div
-              initial={isClayNotionMode ? { opacity: 0, y: 10 } : undefined}
-              animate={isClayNotionMode ? { opacity: 1, y: 0 } : undefined}
-              transition={isClayNotionMode ? { duration: 0.58, delay: 0.28, ease: "easeOut" } : undefined}
-              className="flex flex-wrap items-center gap-x-3 gap-y-2 text-[0.92rem] font-medium tracking-[-0.01em] text-[#5f5143]"
-            >
-              {experienceSignals.map((signal, index) => (
-                <div key={signal} className="inline-flex items-center gap-3">
-                  {index > 0 ? (
-                    <span aria-hidden="true" className="h-1 w-1 rounded-full bg-[#c98b57]" />
-                  ) : null}
-                  <span>{signal}</span>
-                </div>
-              ))}
-            </motion.div>
-
-          </div>
-
-          <div className="flex flex-wrap items-center gap-3 pt-1">
-            <button
-              type="button"
-              onClick={scrollToFeaturedWork}
-              className="appearance-none border-0 bg-transparent p-0"
-            >
-              <span
-                className={cn(
-                  "inline-flex cursor-pointer items-center gap-2 rounded-full bg-foreground px-5 py-3 text-sm font-semibold text-background transition-transform duration-200 hover:-translate-y-0.5",
-                  isClayNotionMode &&
-                    "bg-[#1f1a14] px-6 py-3.5 text-[#fff8ef] shadow-[0_16px_40px_-30px_rgba(31,26,20,0.5)] hover:-translate-y-1",
-                )}
+            <motion.div variants={revealVariants} className="mt-3.5 flex flex-wrap items-center gap-3">
+              <button
+                type="button"
+                onClick={scrollToFeaturedWork}
+                className="ink-button bg-[#fff4ea] text-[#221914] shadow-[0_16px_32px_-24px_rgba(0,0,0,0.7)] hover:bg-white"
               >
                 View Work
                 <ArrowRight className="h-4 w-4" />
-              </span>
-            </button>
-            <a
-              href={siteConfig.links.resume}
-              target="_blank"
-              rel="noreferrer"
-              className={cn(
-                "inline-flex items-center gap-2 rounded-full border border-border bg-background/88 px-5 py-3 text-sm font-semibold text-foreground backdrop-blur-sm transition-colors duration-200 hover:border-primary/40 hover:text-primary",
-                isClayNotionMode && "bg-[#fffaf1]/84 px-6 py-3.5 hover:bg-[#fff5e6]",
-              )}
-            >
-              View Resume
-              <ArrowUpRight className="h-4 w-4" />
-            </a>
-            <Link href="/journey">
-              <span
-                className={cn(
-                  "inline-flex cursor-pointer items-center gap-2 px-1 py-2 text-sm font-semibold text-[#57493b] transition-colors duration-200 hover:text-[#1f1a14]",
-                  isClayNotionMode && "hover:text-[#1f1a14]",
-                )}
+              </button>
+              <a
+                href={siteConfig.links.resume}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/6 px-5 py-3 text-sm font-semibold text-[#f5e1cf] shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] backdrop-blur-md transition-colors hover:border-white/32 hover:bg-white/10 hover:text-[#fff8ef]"
               >
-                Explore Journey
-                <ArrowRight className="h-4 w-4" />
-              </span>
-            </Link>
+                View Resume
+                <ArrowUpRight className="h-4 w-4" />
+              </a>
+            </motion.div>
+          </motion.div>
+
+          <div className="hidden h-full items-center justify-end pt-6 min-[1360px]:flex xl:pr-4 2xl:pr-8">
+            <WorkflowRail />
           </div>
 
-          {!isClayNotionMode ? (
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.58, delay: 0.28, ease: "easeOut" }}
-              className="flex flex-wrap items-center gap-x-3 gap-y-2 text-sm text-muted-foreground"
-            >
-              <span>0 to 1 product thinking</span>
-              <span className="h-1 w-1 rounded-full bg-border" />
-              <span>Research to roadmap</span>
-              <span className="h-1 w-1 rounded-full bg-border" />
-              <span>Cross-functional trust</span>
-            </motion.div>
-          ) : null}
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 28 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.08, ease: "easeOut" }}
-          className="relative mx-auto w-full max-w-[38rem] pt-2 lg:mx-0 lg:justify-self-end lg:pt-6"
-        >
-          <svg
-            aria-hidden="true"
-            viewBox="0 0 200 200"
-            className="pointer-events-none absolute -right-6 top-0 hidden h-[24rem] w-[24rem] text-[#c79a67]/45 lg:block"
-          >
-            <defs>
-              <radialGradient id="hero-ring" cx="50%" cy="50%" r="50%">
-                <stop offset="0%" stopColor="transparent" />
-                <stop offset="100%" stopColor="currentColor" />
-              </radialGradient>
-            </defs>
-            <circle
-              cx="100"
-              cy="100"
-              r="88"
-              fill="none"
-              stroke="url(#hero-ring)"
-              strokeWidth="0.8"
-              strokeDasharray="3 7"
-              className="animate-spin-slow"
-            />
-            <circle
-              cx="100"
-              cy="100"
-              r="70"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="0.6"
-              strokeDasharray="1.6 6"
-              opacity="0.55"
-              className="animate-spin-slow"
-              style={{ animationDuration: "54s", animationDirection: "reverse" }}
-            />
-          </svg>
-          <motion.div
-            animate={isClayNotionMode ? { y: [0, -8, 0] } : undefined}
-            transition={isClayNotionMode ? { duration: 9, repeat: Infinity, ease: "easeInOut" } : undefined}
-            className="absolute -right-6 top-6 h-28 w-28 rounded-full bg-primary/10 blur-3xl"
-          />
-          <motion.div
-            animate={isClayNotionMode ? { y: [0, 10, 0] } : undefined}
-            transition={isClayNotionMode ? { duration: 10, repeat: Infinity, ease: "easeInOut", delay: 0.6 } : undefined}
-            className="absolute -left-8 bottom-8 h-24 w-24 rounded-full bg-accent/10 blur-3xl"
-          />
-
-          <motion.div
-            whileHover={isClayNotionMode ? { y: -4, rotate: -0.4 } : undefined}
-            transition={isClayNotionMode ? { duration: 0.28, ease: "easeOut" } : undefined}
-            className={cn(
-              "relative overflow-hidden rounded-[2rem] border border-border/60 bg-card/90 p-4 shadow-[0_28px_100px_-65px_rgba(15,23,42,0.42)] backdrop-blur-md",
-              isClayNotionMode && "clay-notion-surface bg-[#fffaf4]/82 shadow-[0_28px_80px_-48px_rgba(85,60,26,0.2)]",
-            )}
-          >
-            <div className="relative z-10 grid gap-5">
-              <div className="flex flex-col justify-between gap-3 sm:flex-row sm:items-start">
-                <div>
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.26em] text-muted-foreground">
-                    Product Snapshot
-                  </p>
-                  <DoodleUnderline className="mt-1 h-3 w-16 text-[#6c7a50]" delay={0.2} />
-                  <p className="mt-2 max-w-[26rem] text-lg leading-7 tracking-[-0.025em] text-foreground">
-                    Technical range. Customer lens. Shipping calm.
-                  </p>
-                </div>
-                <span className="inline-flex w-fit shrink-0 items-center gap-2 rounded-full bg-[#f4dfcf] px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.22em] text-foreground">
-                  <span className="h-2 w-2 rounded-full bg-[#b86f3b]" />
-                  Open to product roles
-                </span>
-              </div>
-
-              <div className="grid gap-5">
-                <div className="relative flex h-[20.5rem] items-center justify-center overflow-hidden rounded-[1.45rem] border border-border/80 bg-[#f8f0e6] sm:h-[21.5rem] lg:h-[22rem]">
-                  <img
-                    src="/profile-product-doodles.png"
-                    alt="Portrait of Nivedita"
-                    className="h-full w-full object-cover object-center"
-                  />
-                  {isClayNotionMode ? (
-                    <DoodleSpark className="absolute right-5 top-5 h-8 w-8 text-[#1f1a14]" delay={0.28} />
-                  ) : null}
-                </div>
-              </div>
-
-              <div className="grid gap-2.5 border-t border-dashed border-border/80 pt-3 sm:grid-cols-3">
-                {productSignals.map((item) => {
-                  const Icon = item.icon;
-
-                  return (
-                    <div
-                      key={item.label}
-                      className={cn("rounded-[1rem] border border-border/60 px-3.5 py-2.5 backdrop-blur-sm", item.tone)}
-                    >
-                      <div className="mb-1.5 flex items-center gap-2 text-foreground">
-                        <Icon className="h-4 w-4 shrink-0" />
-                        <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-foreground/80">
-                          {item.label}
-                        </p>
-                      </div>
-                      <p className="mt-1.5 text-[0.8rem] leading-5 text-foreground">{item.value}</p>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-
-          </motion.div>
-        </motion.div>
-
+          <MobilePortraitCard shouldReduceMotion={shouldReduceMotion} />
+        </div>
       </div>
     </section>
   );

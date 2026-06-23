@@ -4,6 +4,15 @@ export interface ContentItem {
   format: string;
   description: string;
   href?: string;
+  platformLinks?: {
+    label: string;
+    href: string;
+  }[];
+  featuredPieces?: {
+    platform: string;
+    title: string;
+    href: string;
+  }[];
 }
 
 export const contentItems: ContentItem[] = [
@@ -28,6 +37,33 @@ export const contentItems: ContentItem[] = [
     title: "Writing Archive",
     format: "Blog + notes",
     description:
-      "A place for essays and older writing on systems, user needs, product clarity, and experiment-driven building.",
+      "Longer-form writing across Medium and Substack, including product breakdowns on UPI, Project Ara, and newer notes collected on Substack.",
+    platformLinks: [
+      {
+        label: "Medium",
+        href: "https://medium.com/@nivedita9826",
+      },
+      {
+        label: "Substack",
+        href: "https://nivedita9826.substack.com/",
+      },
+    ],
+    featuredPieces: [
+      {
+        platform: "Medium",
+        title: "UPI: Revolutionizing Digital Payments",
+        href: "https://medium.com/@nivedita9826/upi-revolutionizing-digital-payments-31593c7dc288",
+      },
+      {
+        platform: "Medium",
+        title: "Project Ara: Modular smartphone dreams and failure lessons",
+        href: "https://medium.com/@nivedita9826/googles-project-ara-the-ascent-and-collapse-of-modular-smartphone-dreams-112759dc882a",
+      },
+      {
+        platform: "Substack",
+        title: "Nivedita's Substack",
+        href: "https://nivedita9826.substack.com/",
+      },
+    ],
   },
 ];

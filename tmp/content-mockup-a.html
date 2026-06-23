@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Content Mockup A</title>
+    <style>
+      :root {
+        --bg: #f7f0e7;
+        --paper: rgba(255, 252, 247, 0.88);
+        --paper-strong: #fffaf4;
+        --ink: #201712;
+        --muted: #6d5b4c;
+        --line: rgba(132, 102, 75, 0.18);
+        --accent: #b46f3b;
+        --olive: #dce4cf;
+        --peach: #f4ddcb;
+      }
+
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: Georgia, "Times New Roman", serif;
+        color: var(--ink);
+        background:
+          linear-gradient(rgba(255,255,255,0.18), rgba(255,255,255,0.18)),
+          repeating-linear-gradient(
+            90deg,
+            rgba(186, 154, 123, 0.05) 0,
+            rgba(186, 154, 123, 0.05) 1px,
+            transparent 1px,
+            transparent 38px
+          ),
+          var(--bg);
+      }
+
+      .frame {
+        width: 1440px;
+        height: 960px;
+        margin: 0 auto;
+        padding: 52px 72px 56px;
+      }
+
+      .section {
+        border-top: 1px solid var(--line);
+        padding-top: 30px;
+      }
+
+      .top {
+        display: grid;
+        grid-template-columns: 1.05fr 0.95fr;
+        gap: 56px;
+        align-items: end;
+      }
+
+      .eyebrow {
+        font: 700 15px/1.2 ui-sans-serif, system-ui, -apple-system, sans-serif;
+        letter-spacing: 0.28em;
+        text-transform: uppercase;
+        color: #5f4a38;
+        margin-bottom: 14px;
+      }
+
+      h1 {
+        margin: 0;
+        max-width: 520px;
+        font-size: 72px;
+        line-height: 0.96;
+        letter-spacing: -0.05em;
+        font-weight: 500;
+      }
+
+      .support {
+        margin: 0 0 8px;
+        font: 400 20px/1.75 ui-sans-serif, system-ui, -apple-system, sans-serif;
+        color: var(--muted);
+      }
+
+      .cards {
+        margin-top: 34px;
+        display: grid;
+        grid-template-columns: 1.2fr 0.9fr 0.9fr;
+        gap: 18px;
+      }
+
+      .card {
+        border: 1px solid var(--line);
+        border-radius: 34px;
+        background: var(--paper);
+        box-shadow: 0 18px 44px -36px rgba(67, 44, 25, 0.24);
+        backdrop-filter: blur(10px);
+        overflow: hidden;
+      }
+
+      .feature-card {
+        min-height: 560px;
+        display: grid;
+        grid-template-rows: 1.12fr auto;
+      }
+
+      .feature-media {
+        padding: 22px;
+        background:
+          radial-gradient(circle at top right, rgba(228, 205, 179, 0.72), transparent 46%),
+          linear-gradient(180deg, #f3e8dc, #f8f1ea);
+        position: relative;
+      }
+
+      .reels-strip {
+        position: absolute;
+        inset: 22px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+      }
+
+      .reel {
+        border-radius: 28px;
+        border: 1px solid rgba(92, 69, 50, 0.14);
+        background:
+          linear-gradient(180deg, rgba(34,25,19,0.08), rgba(34,25,19,0.02)),
+          linear-gradient(180deg, #e7d7c7, #f5ece2 34%, #f0dfcf 100%);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .reel:nth-child(2) { transform: translateY(18px); }
+      .reel:nth-child(3) { transform: translateY(8px); }
+
+      .reel::before {
+        content: "";
+        position: absolute;
+        left: 14px;
+        right: 14px;
+        top: 18px;
+        height: 160px;
+        border-radius: 22px;
+        background: linear-gradient(180deg, rgba(255,255,255,0.24), rgba(34,25,19,0.1));
+      }
+
+      .reel::after {
+        content: "";
+        position: absolute;
+        left: 18px;
+        right: 18px;
+        bottom: 20px;
+        height: 86px;
+        border-radius: 18px;
+        background: rgba(255, 250, 244, 0.78);
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.4);
+      }
+
+      .play {
+        position: absolute;
+        top: 188px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 52px;
+        height: 52px;
+        border-radius: 999px;
+        background: rgba(255, 250, 244, 0.92);
+        border: 1px solid rgba(92, 69, 50, 0.12);
+      }
+
+      .play::before {
+        content: "";
+        position: absolute;
+        left: 20px;
+        top: 16px;
+        border-left: 15px solid #8f5636;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+      }
+
+      .label {
+        position: absolute;
+        left: 26px;
+        top: 24px;
+        padding: 10px 14px;
+        border-radius: 999px;
+        background: rgba(255, 250, 244, 0.84);
+        border: 1px solid rgba(92,69,50,0.12);
+        font: 700 12px/1 ui-sans-serif, system-ui, sans-serif;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: #6f4127;
+      }
+
+      .feature-body {
+        padding: 24px 26px 28px;
+      }
+
+      .format {
+        font: 700 12px/1.2 ui-sans-serif, system-ui, sans-serif;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: #8d684b;
+      }
+
+      .title {
+        margin: 14px 0 10px;
+        font-size: 42px;
+        line-height: 0.96;
+        letter-spacing: -0.04em;
+        font-weight: 500;
+      }
+
+      .desc {
+        margin: 0;
+        font: 400 18px/1.65 ui-sans-serif, system-ui, -apple-system, sans-serif;
+        color: var(--muted);
+      }
+
+      .actions {
+        margin-top: 18px;
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+
+      .pill {
+        padding: 10px 14px;
+        border-radius: 999px;
+        border: 1px solid rgba(143, 86, 54, 0.18);
+        background: rgba(255, 250, 244, 0.86);
+        font: 700 12px/1 ui-sans-serif, system-ui, sans-serif;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: #8f5636;
+      }
+
+      .side-card {
+        min-height: 560px;
+        padding: 24px 24px 26px;
+        display: grid;
+        grid-template-rows: auto auto 1fr auto;
+      }
+
+      .mini-preview {
+        margin-top: 20px;
+        border-radius: 24px;
+        padding: 16px;
+        background: rgba(255,255,255,0.58);
+        border: 1px solid rgba(92,69,50,0.08);
+      }
+
+      .linkedin-preview {
+        height: 240px;
+        background:
+          linear-gradient(180deg, #eef4ff, #f8fbff);
+      }
+
+      .linkedin-header {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .avatar {
+        width: 44px;
+        height: 44px;
+        border-radius: 999px;
+        background: #7da1eb;
+      }
+
+      .line {
+        height: 10px;
+        border-radius: 999px;
+        background: #dbe6ff;
+      }
+
+      .line.small { width: 120px; }
+      .line.tiny { width: 92px; margin-top: 8px; }
+      .line.wide { width: 100%; margin-top: 18px; background: #d4e2ff; }
+      .line.mid { width: 78%; margin-top: 10px; background: #e2ebff; }
+      .image-panel {
+        margin-top: 18px;
+        height: 92px;
+        border-radius: 18px;
+        background: linear-gradient(135deg, #d9e8ff, #edf5ff);
+      }
+
+      .archive-preview {
+        height: 240px;
+        background:
+          linear-gradient(180deg, #fff7ef, #fffdf9);
+      }
+
+      .archive-row {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 12px 0;
+      }
+
+      .square {
+        width: 44px;
+        height: 44px;
+        border-radius: 14px;
+        background: #f2dcc7;
+        display: grid;
+        place-items: center;
+        font: 700 12px/1 ui-sans-serif, system-ui, sans-serif;
+        color: #8f5636;
+        letter-spacing: 0.08em;
+      }
+
+      .row-stack {
+        flex: 1;
+      }
+
+      .row-label {
+        font: 700 12px/1.2 ui-sans-serif, system-ui, sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 0.16em;
+        color: #8f5636;
+      }
+
+      .row-line {
+        margin-top: 10px;
+        height: 10px;
+        width: 72%;
+        border-radius: 999px;
+        background: #ead8c5;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="frame">
+      <section class="section">
+        <div class="top">
+          <div>
+            <div class="eyebrow">Content</div>
+            <h1>Writing and content that show how I think.</h1>
+          </div>
+          <p class="support">
+            A curated preview of reels, public writing, and longer-form notes that show how I communicate product thinking in public.
+          </p>
+        </div>
+
+        <div class="cards">
+          <article class="card feature-card">
+            <div class="feature-media">
+              <div class="label">Instagram Reels</div>
+              <div class="reels-strip">
+                <div class="reel"><div class="play"></div></div>
+                <div class="reel"><div class="play"></div></div>
+                <div class="reel"><div class="play"></div></div>
+              </div>
+            </div>
+            <div class="feature-body">
+              <div class="format">Short-form content</div>
+              <div class="title">Instagram Notes</div>
+              <p class="desc">Visual product thinking on ambiguity, workflows, AI tools, and the patterns I keep noticing in the field.</p>
+              <div class="actions">
+                <div class="pill">Reels</div>
+                <div class="pill">Carousels</div>
+                <div class="pill">Open Instagram</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="card side-card">
+            <div class="format">Professional essays</div>
+            <div class="title" style="font-size:36px">LinkedIn Writing</div>
+            <div class="mini-preview linkedin-preview">
+              <div class="linkedin-header">
+                <div class="avatar"></div>
+                <div>
+                  <div class="line small"></div>
+                  <div class="line tiny"></div>
+                </div>
+              </div>
+              <div class="line wide"></div>
+              <div class="line mid"></div>
+              <div class="image-panel"></div>
+            </div>
+            <p class="desc">Posts on PM career moves, product judgment, and what it takes to move work forward in uncertain spaces.</p>
+          </article>
+
+          <article class="card side-card">
+            <div class="format">Blog + notes</div>
+            <div class="title" style="font-size:36px">Writing Archive</div>
+            <div class="mini-preview archive-preview">
+              <div class="archive-row">
+                <div class="square">ME</div>
+                <div class="row-stack">
+                  <div class="row-label">Medium</div>
+                  <div class="row-line"></div>
+                </div>
+              </div>
+              <div class="archive-row">
+                <div class="square">SU</div>
+                <div class="row-stack">
+                  <div class="row-label">Substack</div>
+                  <div class="row-line" style="width:62%"></div>
+                </div>
+              </div>
+              <div class="archive-row">
+                <div class="square">NO</div>
+                <div class="row-stack">
+                  <div class="row-label">Notes</div>
+                  <div class="row-line" style="width:52%"></div>
+                </div>
+              </div>
+            </div>
+            <p class="desc">Essays and older writing on systems, user needs, product clarity, and experiment-driven building.</p>
+          </article>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,132 @@
+- generic [ref=e3]:
+  - navigation [ref=e4]:
+    - generic [ref=e6]:
+      - link "Nivedita" [ref=e467] [cursor=pointer]:
+        - /url: "#/"
+        - generic [ref=e10]: Nivedita
+      - generic [ref=e13]:
+        - link "Home" [ref=e14] [cursor=pointer]:
+          - /url: "#/"
+          - generic [ref=e15]:
+            - img [ref=e16]
+            - text: Home
+        - link "Work" [ref=e19] [cursor=pointer]:
+          - /url: "#/projects"
+          - generic [ref=e20]:
+            - img [ref=e21]
+            - text: Work
+        - link "Journey" [ref=e25] [cursor=pointer]:
+          - /url: "#/journey"
+          - generic [ref=e26]:
+            - img [ref=e27]
+            - text: Journey
+      - generic [ref=e36]:
+        - link "LinkedIn profile" [ref=e37] [cursor=pointer]:
+          - /url: https://www.linkedin.com/in/nivedita-niv/
+          - img [ref=e38]
+        - link "GitHub profile" [ref=e40] [cursor=pointer]:
+          - /url: https://github.com/niveditajurel
+          - img [ref=e41]
+        - link "X profile" [ref=e43] [cursor=pointer]:
+          - /url: https://x.com/nniv266
+          - img [ref=e44]
+        - link "Instagram profile" [ref=e46] [cursor=pointer]:
+          - /url: https://www.instagram.com/niv_yaps/
+          - img [ref=e47]
+  - main [ref=e49]:
+    - main [ref=e632]:
+      - generic [ref=e633]:
+        - generic [ref=e634]:
+          - generic [ref=e635]:
+            - paragraph [ref=e636]: Content
+            - heading "Writing, notes, and public thinking." [level=1] [ref=e637]
+          - generic [ref=e638]:
+            - paragraph [ref=e639]: A curated view of how I communicate product ideas, make sense of ambiguity, and share what I am learning while building with AI.
+            - generic [ref=e640]:
+              - img [ref=e641]
+              - text: Selected thinking, not a full archive
+        - generic [ref=e643]:
+          - generic [ref=e645]:
+            - generic [ref=e646]:
+              - img [ref=e648]
+              - heading "Longer-form thinking" [level=2] [ref=e650]
+              - paragraph [ref=e651]: Essays and professional notes that show how I frame product judgment, ambiguity, and execution.
+            - generic [ref=e652]:
+              - article [ref=e653]:
+                - paragraph [ref=e654]: Professional essays
+                - generic [ref=e655]:
+                  - heading "LinkedIn Writing" [level=3] [ref=e656]
+                  - paragraph [ref=e657]: Longer-form posts on PM career moves, product judgment, and what it takes to move work forward in uncertain spaces.
+                - link "Open" [ref=e658] [cursor=pointer]:
+                  - /url: https://www.linkedin.com/in/nivedita-niv/
+                  - text: Open
+                  - img [ref=e659]
+              - article [ref=e662]:
+                - paragraph [ref=e663]: Blog + notes
+                - generic [ref=e664]:
+                  - heading "Writing Archive" [level=3] [ref=e665]
+                  - paragraph [ref=e666]: A place for essays and older writing on systems, user needs, product clarity, and experiment-driven building.
+                - generic [ref=e667]: Coming soon
+          - generic [ref=e669]:
+            - generic [ref=e670]:
+              - img [ref=e672]
+              - heading "Short-form observations" [level=2] [ref=e675]
+              - paragraph [ref=e676]: Public notes on product patterns, AI-first workflows, and the signals I keep noticing while building.
+            - article [ref=e678]:
+              - paragraph [ref=e679]: Short-form content
+              - generic [ref=e680]:
+                - heading "Instagram Notes" [level=3] [ref=e681]
+                - paragraph [ref=e682]: Visual reflections on product thinking, ambiguity, workflows, and building with AI.
+              - link "Open" [ref=e683] [cursor=pointer]:
+                - /url: https://www.instagram.com/niv_yaps/
+                - text: Open
+                - img [ref=e684]
+  - contentinfo [ref=e424]:
+    - generic [ref=e425]:
+      - generic [ref=e426]:
+        - generic [ref=e427]:
+          - paragraph [ref=e428]: Available for product conversations
+          - heading "Let's build something clear, useful, and shippable." [level=2] [ref=e429]
+        - generic [ref=e430]:
+          - link "Start a conversation" [ref=e431] [cursor=pointer]:
+            - /url: mailto:niveditajurel@gmail.com
+            - img [ref=e432]
+            - text: Start a conversation
+          - link "View resume" [ref=e435] [cursor=pointer]:
+            - /url: https://drive.google.com/file/d/1RJoTocjJjHskvaqAdWpVu4aGavceRWwi/view
+            - text: View resume
+            - img [ref=e436]
+      - generic [ref=e439]:
+        - generic [ref=e440]:
+          - paragraph [ref=e441]: Nivedita
+          - paragraph [ref=e442]: AI-first Product Manager focused on clear product thinking, systems, and execution.
+        - generic [ref=e443]:
+          - link "Home" [ref=e444] [cursor=pointer]:
+            - /url: "#/"
+          - link "Work" [ref=e445] [cursor=pointer]:
+            - /url: "#/projects"
+          - link "Journey" [ref=e446] [cursor=pointer]:
+            - /url: "#/journey"
+          - link "Contact" [ref=e447] [cursor=pointer]:
+            - /url: "#/contact"
+            - generic [ref=e448]:
+              - text: Contact
+              - img [ref=e449]
+        - generic [ref=e451]:
+          - link "LinkedIn profile" [ref=e452] [cursor=pointer]:
+            - /url: https://www.linkedin.com/in/nivedita-niv/
+            - img [ref=e453]
+          - link "GitHub profile" [ref=e455] [cursor=pointer]:
+            - /url: https://github.com/niveditajurel
+            - img [ref=e456]
+          - link "X profile" [ref=e458] [cursor=pointer]:
+            - /url: https://x.com/nniv266
+            - img [ref=e459]
+          - link "Instagram profile" [ref=e461] [cursor=pointer]:
+            - /url: https://www.instagram.com/niv_yaps/
+            - img [ref=e462]
+      - generic [ref=e464]:
+        - paragraph [ref=e465]: © 2026 Nivedita. All rights reserved.
+        - paragraph [ref=e466]: Built for thoughtful product conversations and future teams.
+  - region "Notifications (F8)":
+    - list

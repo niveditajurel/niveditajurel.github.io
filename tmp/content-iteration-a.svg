@@ -1,0 +1,133 @@
+<svg width="1440" height="960" viewBox="0 0 1440 960" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1440" height="960" fill="#F7F0E7"/>
+  <g opacity="0.35">
+    <path d="M72 52H1368" stroke="#D8C8B9"/>
+    <path d="M72 140H1368" stroke="#E9DED3"/>
+    <path d="M72 228H1368" stroke="#E9DED3"/>
+    <path d="M72 316H1368" stroke="#E9DED3"/>
+    <path d="M72 404H1368" stroke="#E9DED3"/>
+    <path d="M72 492H1368" stroke="#E9DED3"/>
+    <path d="M72 580H1368" stroke="#E9DED3"/>
+    <path d="M72 668H1368" stroke="#E9DED3"/>
+    <path d="M72 756H1368" stroke="#E9DED3"/>
+    <path d="M72 844H1368" stroke="#E9DED3"/>
+  </g>
+  <path d="M72 52H1368" stroke="#D6C6B7"/>
+  <text x="72" y="103" fill="#6A5546" font-size="16" font-family="Arial, sans-serif" font-weight="700" letter-spacing="5">CONTENT</text>
+  <text x="72" y="164" fill="#201712" font-size="72" font-family="Georgia, serif">Writing and</text>
+  <text x="72" y="230" fill="#201712" font-size="72" font-family="Georgia, serif">content that</text>
+  <text x="72" y="296" fill="#201712" font-size="72" font-family="Georgia, serif">show how I think.</text>
+  <text x="858" y="187" fill="#6D5B4C" font-size="21" font-family="Arial, sans-serif">A curated preview of reels, public writing, and longer-form</text>
+  <text x="858" y="223" fill="#6D5B4C" font-size="21" font-family="Arial, sans-serif">notes that show how I communicate product thinking in public.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="72" y="356" width="612" height="504" rx="34" fill="#FFF9F3" fill-opacity="0.92"/>
+    <rect x="702" y="356" width="313" height="504" rx="34" fill="#FFF9F3" fill-opacity="0.92"/>
+    <rect x="1033" y="356" width="335" height="504" rx="34" fill="#FFF9F3" fill-opacity="0.92"/>
+  </g>
+  <rect x="72.5" y="356.5" width="611" height="503" rx="33.5" stroke="#DDCCBC"/>
+  <rect x="702.5" y="356.5" width="312" height="503" rx="33.5" stroke="#DDCCBC"/>
+  <rect x="1033.5" y="356.5" width="334" height="503" rx="33.5" stroke="#DDCCBC"/>
+
+  <rect x="72" y="356" width="612" height="290" rx="34" fill="url(#featureGrad)"/>
+  <rect x="96" y="380" width="150" height="40" rx="20" fill="#FFF8F0" fill-opacity="0.86" stroke="#E5D4C5"/>
+  <text x="117" y="405" fill="#7E4E2F" font-size="13" font-family="Arial, sans-serif" font-weight="700" letter-spacing="2">INSTAGRAM REELS</text>
+
+  <g>
+    <rect x="98" y="432" width="156" height="184" rx="28" fill="url(#reel1)" stroke="#DCCBBB"/>
+    <rect x="266" y="450" width="156" height="184" rx="28" fill="url(#reel2)" stroke="#DCCBBB"/>
+    <rect x="434" y="440" width="156" height="184" rx="28" fill="url(#reel3)" stroke="#DCCBBB"/>
+    <rect x="114" y="542" width="124" height="56" rx="18" fill="#FFF9F2" fill-opacity="0.82"/>
+    <rect x="282" y="560" width="124" height="56" rx="18" fill="#FFF9F2" fill-opacity="0.82"/>
+    <rect x="450" y="550" width="124" height="56" rx="18" fill="#FFF9F2" fill-opacity="0.82"/>
+    <circle cx="176" cy="514" r="22" fill="#FFF9F3"/>
+    <path d="M171 503L186 514L171 525V503Z" fill="#A06440"/>
+    <circle cx="344" cy="532" r="22" fill="#FFF9F3"/>
+    <path d="M339 521L354 532L339 543V521Z" fill="#A06440"/>
+    <circle cx="512" cy="522" r="22" fill="#FFF9F3"/>
+    <path d="M507 511L522 522L507 533V511Z" fill="#A06440"/>
+  </g>
+
+  <text x="98" y="694" fill="#8D684B" font-size="13" font-family="Arial, sans-serif" font-weight="700" letter-spacing="2">SHORT-FORM CONTENT</text>
+  <text x="98" y="746" fill="#201712" font-size="44" font-family="Georgia, serif">Instagram Notes</text>
+  <text x="98" y="786" fill="#6D5B4C" font-size="20" font-family="Arial, sans-serif">Visual product thinking on ambiguity, workflows, AI tools,</text>
+  <text x="98" y="818" fill="#6D5B4C" font-size="20" font-family="Arial, sans-serif">and the patterns I keep noticing in the field.</text>
+  <g>
+    <rect x="98" y="838" width="100" height="34" rx="17" fill="#FFF7EF" stroke="#D9C8B8"/>
+    <rect x="208" y="838" width="114" height="34" rx="17" fill="#FFF7EF" stroke="#D9C8B8"/>
+    <rect x="332" y="838" width="148" height="34" rx="17" fill="#FFF7EF" stroke="#D9C8B8"/>
+    <text x="124" y="859" fill="#8F5636" font-size="12" font-family="Arial, sans-serif" font-weight="700" letter-spacing="1.8">REELS</text>
+    <text x="229" y="859" fill="#8F5636" font-size="12" font-family="Arial, sans-serif" font-weight="700" letter-spacing="1.8">CAROUSELS</text>
+    <text x="356" y="859" fill="#8F5636" font-size="12" font-family="Arial, sans-serif" font-weight="700" letter-spacing="1.8">OPEN INSTAGRAM</text>
+  </g>
+
+  <text x="728" y="390" fill="#8D684B" font-size="13" font-family="Arial, sans-serif" font-weight="700" letter-spacing="2">PROFESSIONAL ESSAYS</text>
+  <text x="728" y="442" fill="#201712" font-size="38" font-family="Georgia, serif">LinkedIn Writing</text>
+  <rect x="728" y="470" width="261" height="245" rx="24" fill="url(#linkedinBg)" stroke="#E3D5C8"/>
+  <circle cx="762" cy="506" r="22" fill="#7DA1EB"/>
+  <rect x="794" y="491" width="104" height="10" rx="5" fill="#DCE7FF"/>
+  <rect x="794" y="509" width="82" height="10" rx="5" fill="#E9F0FF"/>
+  <rect x="746" y="544" width="220" height="10" rx="5" fill="#D8E5FF"/>
+  <rect x="746" y="562" width="176" height="10" rx="5" fill="#E6EEFF"/>
+  <rect x="746" y="592" width="220" height="94" rx="18" fill="url(#linkedinPanel)"/>
+  <text x="728" y="760" fill="#6D5B4C" font-size="19" font-family="Arial, sans-serif">Posts on PM career moves, product judgment,</text>
+  <text x="728" y="791" fill="#6D5B4C" font-size="19" font-family="Arial, sans-serif">and what it takes to move work forward</text>
+  <text x="728" y="822" fill="#6D5B4C" font-size="19" font-family="Arial, sans-serif">in uncertain spaces.</text>
+
+  <text x="1059" y="390" fill="#8D684B" font-size="13" font-family="Arial, sans-serif" font-weight="700" letter-spacing="2">BLOG + NOTES</text>
+  <text x="1059" y="442" fill="#201712" font-size="38" font-family="Georgia, serif">Writing Archive</text>
+  <rect x="1059" y="472" width="283" height="245" rx="24" fill="#FFFDF9" stroke="#E3D5C8"/>
+  <g>
+    <rect x="1078" y="492" width="245" height="56" rx="18" fill="#FFF7EF"/>
+    <rect x="1092" y="500" width="40" height="40" rx="12" fill="#F2DCC7"/>
+    <text x="1102" y="525" fill="#8F5636" font-size="12" font-family="Arial, sans-serif" font-weight="700">ME</text>
+    <text x="1148" y="516" fill="#8F5636" font-size="12" font-family="Arial, sans-serif" font-weight="700" letter-spacing="1.8">MEDIUM</text>
+    <rect x="1148" y="526" width="130" height="10" rx="5" fill="#EAD8C5"/>
+  </g>
+  <g>
+    <rect x="1078" y="560" width="245" height="56" rx="18" fill="#FFF7EF"/>
+    <rect x="1092" y="568" width="40" height="40" rx="12" fill="#F4E4D2"/>
+    <text x="1102" y="593" fill="#8F5636" font-size="12" font-family="Arial, sans-serif" font-weight="700">SU</text>
+    <text x="1148" y="584" fill="#8F5636" font-size="12" font-family="Arial, sans-serif" font-weight="700" letter-spacing="1.8">SUBSTACK</text>
+    <rect x="1148" y="594" width="112" height="10" rx="5" fill="#EAD8C5"/>
+  </g>
+  <g>
+    <rect x="1078" y="628" width="245" height="56" rx="18" fill="#FFF7EF"/>
+    <rect x="1092" y="636" width="40" height="40" rx="12" fill="#F6EBE0"/>
+    <text x="1103" y="661" fill="#8F5636" font-size="12" font-family="Arial, sans-serif" font-weight="700">NO</text>
+    <text x="1148" y="652" fill="#8F5636" font-size="12" font-family="Arial, sans-serif" font-weight="700" letter-spacing="1.8">NOTES</text>
+    <rect x="1148" y="662" width="92" height="10" rx="5" fill="#EAD8C5"/>
+  </g>
+  <text x="1059" y="760" fill="#6D5B4C" font-size="19" font-family="Arial, sans-serif">Essays and older writing on systems, user needs,</text>
+  <text x="1059" y="791" fill="#6D5B4C" font-size="19" font-family="Arial, sans-serif">product clarity, and experiment-driven building.</text>
+
+  <defs>
+    <filter id="shadow" x="48" y="340" width="1344" height="552" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#432C19" flood-opacity="0.12"/>
+    </filter>
+    <linearGradient id="featureGrad" x1="378" y1="356" x2="378" y2="646" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F2E6DA"/>
+      <stop offset="1" stop-color="#F8F1E8"/>
+    </linearGradient>
+    <linearGradient id="reel1" x1="176" y1="432" x2="176" y2="616" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E4D5C7"/>
+      <stop offset="1" stop-color="#F6ECE2"/>
+    </linearGradient>
+    <linearGradient id="reel2" x1="344" y1="450" x2="344" y2="634" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E6D7C8"/>
+      <stop offset="1" stop-color="#F7EDE3"/>
+    </linearGradient>
+    <linearGradient id="reel3" x1="512" y1="440" x2="512" y2="624" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E9DACA"/>
+      <stop offset="1" stop-color="#F7EDE2"/>
+    </linearGradient>
+    <linearGradient id="linkedinBg" x1="858.5" y1="470" x2="858.5" y2="715" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EEF4FF"/>
+      <stop offset="1" stop-color="#F8FBFF"/>
+    </linearGradient>
+    <linearGradient id="linkedinPanel" x1="856" y1="592" x2="856" y2="686" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D9E8FF"/>
+      <stop offset="1" stop-color="#EDF5FF"/>
+    </linearGradient>
+  </defs>
+</svg>

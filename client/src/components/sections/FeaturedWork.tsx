@@ -8,6 +8,7 @@ import {
   EditorialThumbnailLink,
   ThumbnailPreviewMedia,
 } from "@/components/ui/editorial-thumbnail-link";
+import { AnimatedProjectThumbnail, type AnimatedThumbnailVariant } from "@/components/ui/AnimatedProjectThumbnail";
 
 const featuredProjectMeta: Record<
   string,
@@ -187,113 +188,81 @@ function FeaturedWorkTile({
       transition={{ duration: 0.55, delay: index * 0.08, ease: "easeOut" }}
       whileHover={{ y: -3 }}
       className={cn(
-        "group relative flex h-full min-h-[33.5rem] flex-col overflow-hidden rounded-[2rem] border border-border/70 bg-[#fffdf8]/90 shadow-[0_20px_60px_-44px_rgba(15,23,42,0.18)] backdrop-blur-sm transition-shadow duration-300 hover:shadow-[0_28px_70px_-42px_rgba(63,42,20,0.26)]",
+        "group relative flex h-full flex-col overflow-hidden rounded-[2rem] border border-border/70 bg-[#fffdf8]/90 shadow-[0_20px_60px_-44px_rgba(15,23,42,0.18)] backdrop-blur-sm transition-shadow duration-300 hover:shadow-[0_28px_70px_-42px_rgba(63,42,20,0.26)]",
         isClayNotionMode &&
           "shadow-[0_22px_56px_-40px_rgba(81,57,24,0.15)] hover:shadow-[0_30px_72px_-44px_rgba(81,57,24,0.22)]",
       )}
     >
+      {/* Thumbnail */}
       <EditorialThumbnailLink
         href={project.href}
         externalHref={project.externalHref}
         ctaLabel={ctaLabel}
         tone={mediaTone ?? "light"}
-        disableAmbientFloat={Boolean(mediaVideoSrc)}
+        disableAmbientFloat
         panelClassName={cn(
-          "relative min-h-[18.5rem] border-b border-border/55",
+          "relative min-h-[22rem] sm:min-h-[24rem]",
           mediaPanelClassName ?? "bg-[#f7efe4]",
         )}
       >
-        {mediaKind === "wordmark" ? (
-          <div className="relative flex h-full flex-col justify-between px-5 py-5 text-[#fff8ef] sm:px-6 sm:py-6">
-            {wordmarkEyebrow ? (
-              <span className="inline-flex w-fit rounded-full border border-white/12 bg-white/8 px-3 py-1 text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-white/78">
-                {wordmarkEyebrow}
-              </span>
-            ) : (
-              <span />
-            )}
-            <div className="space-y-3">
-              {wordmarkNote ? (
-                <p className="text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-white/54">
-                  {wordmarkNote}
-                </p>
-              ) : null}
-              <div className="max-w-[10ch] text-[3.2rem] font-semibold leading-[0.88] tracking-[-0.09em] text-white/94 sm:text-[3.8rem]">
-                {wordmark}
-              </div>
-            </div>
-            <div className="pointer-events-none absolute right-4 top-4 h-16 w-16 rounded-full border border-white/10" />
-            <div className="pointer-events-none absolute bottom-4 right-6 h-px w-24 bg-white/18" />
-          </div>
-        ) : resolvedMediaSrc ? (
-          <ThumbnailPreviewMedia
-            imageSrc={resolvedMediaSrc}
-            videoSrc={mediaVideoSrc}
-            alt={mediaAlt ?? project.title}
-            imageClassName={cn(
-              imageClassName,
-              "ease-snappy transition-transform duration-700 group-hover/thumbnail:scale-[1.04]",
-            )}
-            videoClassName={cn(
-              imageClassName,
-              "ease-snappy transition-transform duration-700 group-hover/thumbnail:scale-[1.04]",
-            )}
-          />
-        ) : (
-          <div className={cn("absolute inset-0 bg-gradient-to-br", project.theme.surface)}>
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_18%,rgba(255,255,255,0.3),transparent_28%),radial-gradient(circle_at_82%_16%,rgba(255,255,255,0.2),transparent_22%)]" />
-          </div>
-        )}
+        <AnimatedProjectThumbnail variant={project.id as AnimatedThumbnailVariant} motion="hover" />
       </EditorialThumbnailLink>
 
-      <div className="flex flex-1 flex-col justify-between gap-6 p-5 sm:p-6">
-        <div className="space-y-4">
-          <div className="flex flex-wrap items-center gap-2">
-            <span className="rounded-full border border-border/65 bg-white/70 px-3 py-1 text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-[#6b5645]">
-              {displayPeriod ?? project.period}
-            </span>
-            <span className="rounded-full border border-border/60 bg-[#fff6ea] px-3 py-1 text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-[#9a623c]">
-              {roleLabel}
-            </span>
-          </div>
+      {/* Card body */}
+      <div className="flex flex-1 flex-col gap-4 px-5 pb-5 pt-4 sm:px-6 sm:pb-6">
+
+        {/* Top row — role chip + period */}
+        <div className="flex items-center gap-2">
+          <span className="rounded-full bg-[#f3e8dd] px-2.5 py-0.5 text-[0.62rem] font-semibold uppercase tracking-[0.18em] text-[#9a623c]">
+            {roleLabel}
+          </span>
+          <span className="text-[0.68rem] text-[#b0998a]">{displayPeriod ?? project.period}</span>
+        </div>
+
+        {/* Title + description */}
+        <div className="flex-1 space-y-1.5">
           <h3
             className={cn(
-              "max-w-[14ch] text-balance text-[1.65rem] font-semibold leading-[1.08] tracking-[-0.03em] text-foreground sm:text-[1.78rem]",
-              isClayNotionMode && "font-editorial text-[1.82rem]",
+              "text-[1.55rem] font-semibold leading-[1.06] tracking-[-0.04em] text-[#1a1310]",
+              isClayNotionMode && "font-editorial",
             )}
           >
             {displayTitle ?? project.title}
           </h3>
-          <p className="max-w-[28ch] text-[0.94rem] leading-6 text-[#6d5b4c]">
-            {visualNote}
-          </p>
+          {visualNote ? (
+            <p className="line-clamp-2 text-[0.84rem] leading-[1.55] text-[#7a6450]">
+              {visualNote}
+            </p>
+          ) : null}
         </div>
 
-        <div className="flex flex-wrap items-center gap-3 pt-1">
-          {project.externalHref ? (
-            <a
-              href={project.externalHref}
-              target="_blank"
-              rel="noreferrer"
-              onClick={(event) => event.stopPropagation()}
-              className="inline-flex items-center gap-2 rounded-full border border-border/65 bg-[#fffaf2]/82 px-4 py-2.5 text-sm font-semibold text-foreground transition-colors hover:border-primary/35 hover:bg-[#fff4e2] hover:text-primary"
-            >
-              View product page
-              <ArrowUpRight className="h-4 w-4" />
-            </a>
-          ) : null}
-
-          {project.href ? (
-            <Link href={project.href}>
-              <span
+        {/* Bottom row — impact metric + CTAs */}
+        <div className="flex items-center justify-end gap-3 border-t border-[#ede0d0]/70 pt-4">
+          <div className="flex items-center gap-2">
+            {project.externalHref ? (
+              <a
+                href={project.externalHref}
+                target="_blank"
+                rel="noreferrer"
                 onClick={(event) => event.stopPropagation()}
-                className="inline-flex cursor-pointer items-center gap-2 rounded-full bg-[#1f1a14] px-4 py-2.5 text-sm font-semibold text-[#fff8ef] transition-transform hover:-translate-y-0.5"
+                className="inline-flex items-center gap-1 rounded-full border border-[#ddd0c0] bg-white/80 px-3 py-1.5 text-[0.72rem] font-semibold text-[#4a3728] transition-colors hover:border-[#c9a882] hover:text-[#7a4f2a]"
               >
-                View case study
-                <ArrowRight className="h-4 w-4" />
-              </span>
-            </Link>
-          ) : null}
+                Product
+                <ArrowUpRight className="h-3 w-3" />
+              </a>
+            ) : null}
+            {project.href ? (
+              <Link href={project.href}>
+                <span
+                  onClick={(event) => event.stopPropagation()}
+                  className="inline-flex cursor-pointer items-center gap-1 rounded-full bg-[#1f1a14] px-3 py-1.5 text-[0.72rem] font-semibold text-[#fff8ef] transition-transform hover:-translate-y-0.5"
+                >
+                  Case Study
+                  <ArrowRight className="h-3 w-3" />
+                </span>
+              </Link>
+            ) : null}
+          </div>
         </div>
       </div>
     </motion.article>

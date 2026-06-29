@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { BriefcaseBusiness } from "lucide-react";
+import { ArrowRight, BriefcaseBusiness } from "lucide-react";
+import { Link } from "wouter";
 import { cn } from "@/lib/utils";
 import { siteConfig } from "@/data/site";
 import { experiments } from "@/data/experiments";
@@ -7,6 +8,10 @@ import {
   EditorialThumbnailLink,
   ThumbnailPreviewMedia,
 } from "@/components/ui/editorial-thumbnail-link";
+import {
+  AnimatedProjectThumbnail,
+  type AnimatedThumbnailVariant,
+} from "@/components/ui/AnimatedProjectThumbnail";
 
 export const BuildExperimentsPreview = () => {
   const isClayNotionMode = siteConfig.experiments.clayNotionLanding;
@@ -64,13 +69,18 @@ export const BuildExperimentsPreview = () => {
                   href={experiment.href}
                   ctaLabel={experiment.id === "uber-case-study" ? "View case study" : "View build"}
                   tone={isDarkThumbnail ? "dark" : "light"}
-                  disableAmbientFloat={Boolean(experiment.thumbnail?.videoSrc)}
+                  disableAmbientFloat={Boolean(experiment.thumbnail?.videoSrc) || experiment.id === "learning-council" || experiment.id === "finwise" || experiment.id === "uber-case-study"}
                   panelClassName={cn(
-                    "relative min-h-[17rem] border-b border-[#d8c7b7]/72",
+                    "relative min-h-[22rem] border-b border-[#d8c7b7]/72",
                     experiment.thumbnail?.panelClassName ?? "bg-[#f2ebe2]",
                   )}
                 >
-                  {experiment.thumbnail ? (
+                  {(experiment.id === "learning-council" || experiment.id === "finwise" || experiment.id === "uber-case-study") ? (
+                    <AnimatedProjectThumbnail
+                      variant={experiment.id === "uber-case-study" ? "uber-driver-navigation" : experiment.id as AnimatedThumbnailVariant}
+                      motion="hover"
+                    />
+                  ) : experiment.thumbnail ? (
                     <ThumbnailPreviewMedia
                       imageSrc={experiment.thumbnail.src}
                       videoSrc={experiment.thumbnail.videoSrc}
@@ -109,47 +119,46 @@ export const BuildExperimentsPreview = () => {
                   )}
                 </EditorialThumbnailLink>
 
-                <div className="relative z-10 flex flex-1 flex-col p-6">
-                  <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-muted-foreground">
-                    {experiment.eyebrow}
-                  </p>
-                  <div className="mt-4 flex flex-wrap items-center justify-between gap-3">
-                    {experiment.company ? (
-                      <p className="text-sm font-medium uppercase tracking-[0.16em] text-foreground/62">
-                        {experiment.company}
-                      </p>
-                    ) : (
-                      <span />
-                    )}
+                <div className="relative z-10 flex flex-1 flex-col p-5 sm:p-6">
+                  {/* Eyebrow + category tag */}
+                  <div className="flex items-center gap-2">
+                    <p className="text-[0.66rem] font-semibold uppercase tracking-[0.18em] text-muted-foreground">
+                      {experiment.eyebrow}
+                    </p>
                     {experiment.tools?.[0] ? (
-                      <span className="rounded-full border border-[#e6d6c7] bg-white/84 px-3 py-1 text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-[#8f6c53]">
-                        {experiment.tools[0]}
-                      </span>
+                      <>
+                        <span className="text-[#c4b3a0]">·</span>
+                        <span className="text-[0.66rem] font-semibold uppercase tracking-[0.14em] text-[#9a7a62]">
+                          {experiment.tools[0]}
+                        </span>
+                      </>
                     ) : null}
                   </div>
+
+                  {/* Title + description */}
                   <h3
                     className={cn(
-                      "mt-4 text-balance text-[1.42rem] font-semibold leading-[1.02] tracking-[-0.03em] text-foreground",
-                      isClayNotionMode && "font-editorial text-[1.62rem]",
+                      "mt-2.5 text-balance text-[1.32rem] font-semibold leading-[1.06] tracking-[-0.03em] text-foreground",
+                      isClayNotionMode && "font-editorial text-[1.5rem]",
                     )}
                   >
                     {experiment.caseStudyTitle ?? experiment.title}
                   </h3>
                   {experiment.description ? (
-                    <p className="mt-3 max-w-[32ch] text-sm leading-6 text-muted-foreground">
+                    <p className="mt-2 line-clamp-2 text-[0.82rem] leading-[1.55] text-muted-foreground">
                       {experiment.description}
                     </p>
                   ) : null}
-                  {experiment.tools?.length ? (
-                    <div className="mt-auto flex flex-wrap gap-2 pt-5">
-                      {experiment.tools.map((tool) => (
-                        <span
-                          key={`${experiment.id}-${tool}`}
-                          className="rounded-full border border-[#e8dacc] bg-[#fff9f2] px-3 py-1 text-[0.68rem] font-semibold uppercase tracking-[0.12em] text-[#8f6c53]"
-                        >
-                          {tool}
+
+                  {/* CTAs */}
+                  {experiment.href ? (
+                    <div className="mt-auto flex items-center gap-2 border-t border-[#ede0d0]/70 pt-4">
+                      <Link href={experiment.href}>
+                        <span className="inline-flex cursor-pointer items-center gap-1 rounded-full bg-[#1f1a14] px-3 py-1.5 text-[0.72rem] font-semibold text-[#fff8ef] transition-transform hover:-translate-y-0.5">
+                          Case Study
+                          <ArrowRight className="h-3 w-3" />
                         </span>
-                      ))}
+                      </Link>
                     </div>
                   ) : null}
                 </div>

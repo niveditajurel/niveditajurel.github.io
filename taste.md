@@ -1,6 +1,6 @@
 # taste.md
 
-Last updated: 2026-06-21
+Last updated: 2026-06-28
 
 This is the living taste file for Nivedita. It should capture how she likes products, pages, and interfaces to feel and how she prefers things to be built.
 
@@ -32,6 +32,7 @@ Update rule: add only taste signals that are directly stated by Nivedita, visibl
 - Keep systems understandable, scannable, and trustworthy.
 - Show real proof, strong verbs, concrete logic, and measurable impact.
 - Match the proof artifact to the product: use screens for user-facing flows and diagrams, state models, or anonymized system views for workflow-heavy systems.
+- For proof surfaces, prefer custom project-specific visuals or motion over generic thumbnails when they make the product logic easier to scan.
 - Use tools and AI as working methods, not as decorative badges.
 - Prefer tight iteration, prototypes, and fast alignment over long abstract documentation.
 
@@ -59,6 +60,7 @@ Update rule: add only taste signals that are directly stated by Nivedita, visibl
 - Typography should feel intentional and visible, not generic or faint.
 - Restraint is preferred over noisy visual effects.
 - Subtle motion is good when it sharpens hierarchy or presence.
+- Motion should carry meaning: state change, workflow, sequence, comparison, or product behavior rather than ambient decoration alone.
 - Warm neutrals and soft accents fit better than harsh corporate palettes.
 - Small handmade or doodled details can work when they stay controlled.
 

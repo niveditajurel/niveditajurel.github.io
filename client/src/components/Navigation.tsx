@@ -71,13 +71,18 @@ export function Navigation() {
           <div className="flex min-h-[3.75rem] items-center justify-between gap-4 md:hidden">
             <Link href="/">
               <motion.div
-                className="flex cursor-pointer items-center space-x-2"
+                className="flex cursor-pointer flex-col items-start justify-center gap-0"
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
               >
                 <span className="font-display text-2xl font-semibold text-foreground">
                   Nivedita
                 </span>
+                {isClayNotionMode && (
+                  <span className="font-hand text-sm font-medium leading-none text-[#8b5431]">
+                    product manager
+                  </span>
+                )}
               </motion.div>
             </Link>
 

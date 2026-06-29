@@ -239,6 +239,7 @@ export default function Experience() {
                         chapter.tone,
                       )}
                     >
+                      <ChapterThumbnail id={chapter.id} reduced={Boolean(prefersReducedMotion)} />
                       <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_18rem] lg:items-start">
                         <div>
                           <div className="flex flex-wrap items-center gap-2">
@@ -460,5 +461,268 @@ export default function Experience() {
         </div>
       </div>
     </BackgroundComponents>
+  );
+}
+
+// ─── Chapter thumbnail animations ───────────────────────────────────────────
+
+function ChapterThumbnail({ id, reduced }: { id: string; reduced: boolean }) {
+  return (
+    <div className="-mx-6 -mt-6 sm:-mx-7 sm:-mt-7 mb-6 sm:mb-7 h-32 sm:h-40 overflow-hidden border-b border-[#d9c8b8]/40 relative">
+      {id === "current" && <CurrentViz reduced={reduced} />}
+      {id === "pm-sharpening" && <PMStretchViz reduced={reduced} />}
+      {id === "systems-and-analytics" && <SystemsViz reduced={reduced} />}
+      {id === "early-foundation" && <EarlyViz reduced={reduced} />}
+    </div>
+  );
+}
+
+/** Current chapter: 3-node product flow — Discover → Define → Ship */
+function CurrentViz({ reduced }: { reduced: boolean }) {
+  const nodes = [
+    { cx: 104, label: "Discover" },
+    { cx: 248, label: "Define" },
+    { cx: 392, label: "Ship" },
+  ];
+
+  return (
+    <svg viewBox="0 0 560 144" className="h-full w-full" aria-hidden="true">
+      <defs>
+        <pattern id="dots-c" x="0" y="0" width="28" height="28" patternUnits="userSpaceOnUse">
+          <circle cx="14" cy="14" r="1.2" fill="#b9653d" fillOpacity="0.14" />
+        </pattern>
+      </defs>
+      <rect width="560" height="144" fill="url(#dots-c)" />
+
+      {/* Connecting arrows */}
+      {[[104 + 28, 248 - 36], [248 + 36, 392 - 28]].map(([x1, x2], i) => (
+        <motion.path
+          key={i}
+          d={`M ${x1} 72 L ${x2} 72`}
+          stroke="#c9845a" strokeWidth="1.6" strokeDasharray="4 3" strokeLinecap="round" fill="none"
+          initial={{ pathLength: 0 }} whileInView={{ pathLength: 1 }} viewport={{ once: true }}
+          transition={{ delay: 0.35 + i * 0.45, duration: 0.3 }}
+        />
+      ))}
+
+      {/* Outer ring + inner circle per node */}
+      {nodes.map(({ cx }, i) => {
+        const r = i === 1 ? 36 : 28;
+        const ri = i === 1 ? 20 : 14;
+        return (
+          <g key={cx}>
+            <motion.circle cx={cx} cy={72} fill="#f3e0ce" stroke="#c9845a"
+              strokeWidth={i === 1 ? 2 : 1.5}
+              initial={{ r: 0 }} whileInView={{ r }} viewport={{ once: true }}
+              transition={{ delay: i * 0.4, duration: 0.4 }}
+            />
+            <motion.circle cx={cx} cy={72} fill={i === 1 ? "#edd3be" : "#f0d8c8"}
+              initial={{ r: 0 }} whileInView={{ r: ri }} viewport={{ once: true }}
+              transition={{ delay: i * 0.4 + 0.1, duration: 0.3 }}
+            />
+            {i === 1 && !reduced && (
+              <motion.circle cx={cx} cy={72} r={36} fill="none" stroke="#b9653d" strokeWidth="1.5"
+                animate={{ scale: [1, 1.38, 1], opacity: [0.55, 0, 0.55] }}
+                transition={{ duration: 2.8, repeat: Infinity }}
+                style={{ transformOrigin: `${cx}px 72px` }}
+              />
+            )}
+          </g>
+        );
+      })}
+
+      {/* Labels */}
+      {nodes.map(({ cx, label }, i) => (
+        <motion.g key={label}
+          initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}
+          transition={{ delay: 1.1 + i * 0.08 }}>
+          <text x={cx} y={i === 1 ? 122 : 115} textAnchor="middle"
+            fill="#9d6545" fontSize="9.5" fontWeight="600"
+            style={{ letterSpacing: "0.13em", textTransform: "uppercase" } as React.CSSProperties}>
+            {label}
+          </text>
+        </motion.g>
+      ))}
+
+      {/* Decorative floating dot */}
+      {!reduced && (
+        <motion.circle cx={472} cy={36} r={6} fill="#d89b75"
+          animate={{ y: [0, -11, 0], opacity: [0.65, 1, 0.65] }}
+          transition={{ duration: 4.2, repeat: Infinity, ease: "easeInOut" }}
+        />
+      )}
+    </svg>
+  );
+}
+
+/** PM stretch: rising bar chart with growth line */
+function PMStretchViz({ reduced }: { reduced: boolean }) {
+  const bars = [
+    { x: 74, h: 52 }, { x: 152, h: 66 }, { x: 230, h: 54 },
+    { x: 308, h: 80 }, { x: 386, h: 96 },
+  ];
+  const baseline = 108;
+
+  return (
+    <svg viewBox="0 0 500 128" className="h-full w-full" aria-hidden="true">
+      {/* Bars */}
+      {bars.map((bar, i) => (
+        <motion.rect
+          key={bar.x}
+          x={bar.x} width="44" rx="7"
+          fill="#edd5c4" stroke="#c9845a" strokeWidth="1.2"
+          initial={{ y: baseline, height: 0 }}
+          whileInView={{ y: baseline - bar.h, height: bar.h }}
+          viewport={{ once: true }}
+          transition={{ delay: i * 0.1, duration: 0.45, ease: "easeOut" }}
+        />
+      ))}
+
+      {/* Growth line */}
+      <motion.path
+        d={`M ${bars.map(b => `${b.x + 22},${baseline - b.h}`).join(" L ")}`}
+        fill="none" stroke="#b9653d" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"
+        initial={{ pathLength: 0 }} whileInView={{ pathLength: 1 }} viewport={{ once: true }}
+        transition={{ delay: 0.58, duration: 0.65 }}
+      />
+
+      {/* Data points on line */}
+      {bars.map((bar, i) => (
+        <motion.circle key={`dp-${bar.x}`}
+          cx={bar.x + 22} cy={baseline - bar.h} fill="#b9653d"
+          initial={{ r: 0 }} whileInView={{ r: 4.5 }} viewport={{ once: true }}
+          transition={{ delay: 0.58 + i * 0.1, duration: 0.25 }}
+        />
+      ))}
+
+      {/* Baseline */}
+      <line x1="54" y1={baseline} x2="446" y2={baseline} stroke="#dcc9b6" strokeWidth="1.4" />
+
+      {/* Up-arrow badge */}
+      {!reduced && (
+        <motion.g initial={{ opacity: 0, y: 6 }} whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }} transition={{ delay: 1.15 }}>
+          <circle cx="450" cy="30" r="16" fill="#f3e0ce" />
+          <path d="M450 38 L450 22 M444 28 L450 22 L456 28"
+            stroke="#b9653d" strokeWidth="2" strokeLinecap="round" fill="none" />
+        </motion.g>
+      )}
+    </svg>
+  );
+}
+
+/** Systems foundation: data pipeline with 4 connected nodes */
+function SystemsViz({ reduced }: { reduced: boolean }) {
+  const nodes = [
+    { x: 30, label: "Input" }, { x: 150, label: "Process" },
+    { x: 270, label: "Analyze" }, { x: 390, label: "Output" },
+  ];
+  const bw = 90, bh = 46, by = 48;
+  const midY = by + bh / 2;
+
+  return (
+    <svg viewBox="0 0 540 132" className="h-full w-full" aria-hidden="true">
+      {/* Connector paths */}
+      {[0, 1, 2].map(i => (
+        <motion.path
+          key={i}
+          d={`M ${nodes[i].x + bw} ${midY} L ${nodes[i + 1].x} ${midY}`}
+          stroke="#8ab584" strokeWidth="1.5" strokeDasharray="4 3" fill="none"
+          initial={{ pathLength: 0 }} whileInView={{ pathLength: 1 }} viewport={{ once: true }}
+          transition={{ delay: (i + 1) * 0.22, duration: 0.3 }}
+        />
+      ))}
+
+      {/* Node boxes */}
+      {nodes.map((node, i) => (
+        <motion.g key={node.x}
+          initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }} transition={{ delay: i * 0.18, duration: 0.35 }}>
+          <rect x={node.x} y={by} width={bw} height={bh} rx="10"
+            fill="#e5f0e2" stroke="#96c490" strokeWidth="1.2" />
+          <text x={node.x + bw / 2} y={by + bh / 2 + 4.5} textAnchor="middle"
+            fill="#3e6640" fontSize="9.5" fontWeight="700"
+            style={{ letterSpacing: "0.12em", textTransform: "uppercase" } as React.CSSProperties}>
+            {node.label}
+          </text>
+        </motion.g>
+      ))}
+
+      {/* Traveling dot (3 segments, staggered) */}
+      {!reduced && [0, 1, 2].map(i => (
+        <motion.circle key={`td-${i}`}
+          cy={midY} r={4.5} fill="#52754b"
+          style={{ x: nodes[i].x + bw }}
+          animate={{ x: [nodes[i].x + bw, nodes[i + 1].x - 2] }}
+          transition={{
+            duration: 0.7, repeat: Infinity, repeatDelay: 2.4,
+            delay: i * 0.65 + 0.5, ease: "easeInOut",
+          }}
+        />
+      ))}
+    </svg>
+  );
+}
+
+/** Early foundation: network graph expanding from center */
+function EarlyViz({ reduced }: { reduced: boolean }) {
+  const cx = 270, cy = 66, r = 52;
+  const angles = [0, 60, 120, 180, 240, 300].map(d => d * Math.PI / 180);
+  const outer = angles.map(a => ({ x: cx + r * Math.cos(a), y: cy + r * Math.sin(a) }));
+
+  return (
+    <svg viewBox="0 0 540 132" className="h-full w-full" aria-hidden="true">
+      {/* Spoke lines */}
+      {outer.map((pt, i) => (
+        <motion.path
+          key={i}
+          d={`M ${cx} ${cy} L ${pt.x} ${pt.y}`}
+          stroke="#c9b088" strokeWidth="1.5" fill="none"
+          initial={{ pathLength: 0 }} whileInView={{ pathLength: 1 }} viewport={{ once: true }}
+          transition={{ delay: 0.3 + i * 0.09, duration: 0.3 }}
+        />
+      ))}
+
+      {/* Outer nodes */}
+      {outer.map((pt, i) => (
+        <motion.circle key={`on-${i}`}
+          cx={pt.x} cy={pt.y} fill="#f0e2d0" stroke="#c9b088" strokeWidth="1.2"
+          initial={{ r: 0 }} whileInView={{ r: 10 }} viewport={{ once: true }}
+          transition={{ delay: 0.3 + i * 0.09, duration: 0.28 }}
+        />
+      ))}
+
+      {/* Center node */}
+      <motion.circle cx={cx} cy={cy} fill="#e8d4bf" stroke="#b9a080" strokeWidth="2"
+        initial={{ r: 0 }} whileInView={{ r: 20 }} viewport={{ once: true }}
+        transition={{ duration: 0.42 }}
+      />
+      <motion.circle cx={cx} cy={cy} fill="#d4be9e"
+        initial={{ r: 0 }} whileInView={{ r: 10 }} viewport={{ once: true }}
+        transition={{ delay: 0.12, duration: 0.3 }}
+      />
+
+      {/* Pulse ring */}
+      {!reduced && (
+        <motion.circle cx={cx} cy={cy} r={20} fill="none" stroke="#b9a080" strokeWidth="1.5"
+          animate={{ scale: [1, 1.9, 1], opacity: [0.55, 0, 0.55] }}
+          transition={{ duration: 3.2, repeat: Infinity }}
+          style={{ transformOrigin: `${cx}px ${cy}px` }}
+        />
+      )}
+
+      {/* Secondary ring of smaller dots */}
+      {[30, 150, 270].map((deg, i) => {
+        const a = deg * Math.PI / 180;
+        const r2 = 90;
+        return (
+          <motion.circle key={`sec-${i}`}
+            cx={cx + r2 * Math.cos(a)} cy={cy + r2 * Math.sin(a)} fill="#e0ccb5" stroke="#c9b088" strokeWidth="1"
+            initial={{ r: 0, opacity: 0 }} whileInView={{ r: 5, opacity: 0.7 }}
+            viewport={{ once: true }} transition={{ delay: 0.9 + i * 0.14, duration: 0.25 }}
+          />
+        );
+      })}
+    </svg>
   );
 }

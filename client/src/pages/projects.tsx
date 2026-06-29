@@ -17,6 +17,7 @@ import {
   EditorialThumbnailLink,
   ThumbnailPreviewMedia,
 } from "@/components/ui/editorial-thumbnail-link";
+import { AnimatedProjectThumbnail, type AnimatedThumbnailVariant } from "@/components/ui/AnimatedProjectThumbnail";
 import {
   DoodleArrow,
   DoodleSpark,
@@ -450,7 +451,7 @@ export default function Projects() {
                 />
                 <div className="mt-5 grid gap-4 sm:grid-cols-2 xl:grid-cols-4 xl:items-start">
                   {productBreakdowns.map((tile, index) => (
-                    <BreakdownCard key={tile.id} tile={tile} index={index} />
+                    <BreakdownCard key={tile.id} tile={tile} index={index} featured={tile.motif === "route"} />
                   ))}
                 </div>
               </section>
@@ -548,6 +549,10 @@ export default function Projects() {
                             {aisliResearch.shortTitle}
                           </h3>
                         </div>
+                      </div>
+
+                      <div className="relative mt-5 h-[14rem] overflow-hidden rounded-[1.2rem] sm:h-[18rem]">
+                        <AnimatedProjectThumbnail variant="aisli-research" motion="hover" />
                       </div>
 
                       <p className="mt-5 max-w-2xl text-[0.98rem] leading-7 text-[#6d5b4c]">
@@ -769,97 +774,45 @@ function FeaturedCaseStudyCard({
         externalHref={project.externalHref}
         ctaLabel={project.externalHref ? "View product page" : "View case study"}
         tone={isDarkPanel ? "dark" : "light"}
-        disableAmbientFloat={Boolean(previewVideoSrc)}
+        disableAmbientFloat
         panelClassName={cn(
-          "relative h-[14.25rem] border-b border-[#d9c8b8]/70 sm:h-[15.5rem]",
+          "relative h-[22rem] border-b border-[#d9c8b8]/70 sm:h-[26rem]",
           display?.mediaPanelClassName ?? "bg-[#f8efe4]",
         )}
       >
-        {imageSrc ? (
-          <ThumbnailPreviewMedia
-            imageSrc={imageSrc}
-            videoSrc={previewVideoSrc}
-            alt={project.title}
-            imageClassName={cn(
-              imageClassName,
-              "ease-snappy transition-transform duration-700 group-hover/thumbnail:scale-[1.04]",
-            )}
-            videoClassName={cn(
-              imageClassName,
-              "ease-snappy transition-transform duration-700 group-hover/thumbnail:scale-[1.04]",
-            )}
-          />
-        ) : (
-          <div className={cn("absolute inset-0 bg-gradient-to-br", project.theme.surface)} />
-        )}
+        <AnimatedProjectThumbnail variant={project.id as AnimatedThumbnailVariant} motion="hover" />
       </EditorialThumbnailLink>
 
-      <div className="flex flex-col justify-between gap-4 p-5 sm:p-6">
-        <div className="space-y-3.5">
-          <div className="flex flex-wrap items-center gap-2">
-            <span className="rounded-full border border-[#d8c6b5] bg-white/82 px-3 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-[#6d5b4c]">
-              {display?.pill ?? project.eyebrow}
-            </span>
-            <span className="rounded-full border border-[#ead8c5] bg-[#fff4e7] px-3 py-1 text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-[#b9653d]">
-              {project.period}
-            </span>
-          </div>
-
-          <div className="space-y-3">
-            <h3
-              className={cn(
-                "max-w-[12ch] text-balance text-[clamp(1.75rem,3vw,2.5rem)] font-semibold leading-[0.94] tracking-[-0.05em] text-[#221913]",
-                isClayNotionMode && "font-editorial",
-              )}
-            >
-              {display?.title ?? project.title}
-            </h3>
-            <p className="max-w-[29ch] text-sm leading-6 text-[#6d5b4c]">
-              {project.subtitle}
-            </p>
-          </div>
-
-          {project.metrics?.impact ? (
-            <span className="inline-flex rounded-full border border-[#e4d1bf] bg-[#fff8ef] px-3 py-1 text-[0.72rem] font-semibold text-[#8f5636]">
-              {project.metrics.impact}
-            </span>
-          ) : null}
+      <div className="flex items-center justify-between gap-3 p-4 sm:p-5">
+        <div className="flex items-center gap-2">
+          <span className="rounded-full border border-[#d8c6b5] bg-white/82 px-3 py-1 text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-[#6d5b4c]">
+            {display?.pill ?? project.eyebrow}
+          </span>
+          <span className="rounded-full border border-[#ead8c5] bg-[#fff4e7] px-3 py-1 text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-[#b9653d]">
+            {project.period}
+          </span>
         </div>
 
-        <div className="space-y-3.5">
-          <div className="flex flex-wrap gap-2">
-            {project.tags.slice(0, 2).map((tag) => (
-              <span
-                key={`${project.id}-${tag}`}
-                className="rounded-full border border-[#ddd0c1] bg-white/82 px-3 py-1 text-[0.68rem] font-medium text-[#6d5b4c]"
-              >
-                {tag}
+        <div className="flex items-center gap-2">
+          {project.externalHref ? (
+            <a
+              href={project.externalHref}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-1.5 rounded-full border border-[#d9c8b8] bg-white/82 px-3.5 py-2 text-[0.78rem] font-semibold text-[#241913] transition-colors duration-200 hover:border-[#b98c65]"
+            >
+              Website
+              <ArrowUpRight className="h-3.5 w-3.5" />
+            </a>
+          ) : null}
+          {project.href ? (
+            <Link href={project.href}>
+              <span className="inline-flex cursor-pointer items-center gap-1.5 rounded-full bg-[#1f1a14] px-3.5 py-2 text-[0.78rem] font-semibold text-[#fff8ef] transition-transform duration-200 hover:-translate-y-0.5">
+                Case study
+                <ArrowRight className="h-3.5 w-3.5" />
               </span>
-            ))}
-          </div>
-
-          <div className="flex flex-wrap items-center gap-3">
-            {project.externalHref ? (
-              <a
-                href={project.externalHref}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center gap-2 rounded-full border border-[#d9c8b8] bg-white/82 px-4 py-2.5 text-sm font-semibold text-[#241913] transition-colors duration-200 hover:border-[#b98c65] hover:text-[#8f5636]"
-              >
-                Visit website
-                <ArrowUpRight className="h-4 w-4" />
-              </a>
-            ) : null}
-
-            {project.href ? (
-              <Link href={project.href}>
-                <span className="inline-flex cursor-pointer items-center gap-2 rounded-full bg-[#1f1a14] px-4 py-2.5 text-sm font-semibold text-[#fff8ef] transition-transform duration-200 hover:-translate-y-0.5">
-                  Open case study
-                  <ArrowRight className="h-4 w-4" />
-                </span>
-              </Link>
-            ) : null}
-          </div>
+            </Link>
+          ) : null}
         </div>
       </div>
     </motion.article>
@@ -869,9 +822,11 @@ function FeaturedCaseStudyCard({
 function BreakdownCard({
   tile,
   index,
+  featured,
 }: {
   tile: BreakdownTile;
   index: number;
+  featured?: boolean;
 }) {
   const card = (
     <motion.article
@@ -881,7 +836,8 @@ function BreakdownCard({
       transition={{ duration: 0.5, delay: index * 0.05, ease: "easeOut" }}
       whileHover={{ y: -3 }}
       className={cn(
-        "group min-h-[16.5rem] overflow-hidden rounded-[1.7rem] border border-[#d9c8b8]/72 bg-gradient-to-br p-5 shadow-[0_18px_40px_-36px_rgba(63,42,20,0.25)]",
+        "group overflow-hidden rounded-[1.7rem] border border-[#d9c8b8]/72 bg-gradient-to-br p-5 shadow-[0_18px_40px_-36px_rgba(63,42,20,0.25)]",
+        featured ? "min-h-[20rem] sm:col-span-2" : "min-h-[16.5rem]",
         tile.toneClassName,
       )}
     >
@@ -926,26 +882,9 @@ function BreakdownPreview({ motif }: { motif: BreakdownTile["motif"] }) {
 
   if (motif === "route") {
     return (
-      <div className={frameClassName}>
-        <div className="rounded-[1rem] bg-[#18130f] p-3 text-[#fff7ef]">
-          <div className="flex items-center justify-between text-[0.62rem] font-semibold uppercase tracking-[0.18em] text-white/64">
-            <span>Dispatch</span>
-            <span>Navigation</span>
-          </div>
-          <svg viewBox="0 0 240 86" aria-hidden="true" className="mt-3 h-16 w-full">
-            <path
-              d="M12 65C52 65 58 24 94 24C129 24 132 63 170 63C198 63 208 42 228 18"
-              fill="none"
-              stroke="#f4d3b1"
-              strokeDasharray="5 6"
-              strokeLinecap="round"
-              strokeWidth="4"
-            />
-            <circle cx="94" cy="24" r="8" fill="#f5b276" />
-            <circle cx="170" cy="63" r="8" fill="#8dd0c5" />
-            <rect x="64" y="7" width="54" height="18" rx="9" fill="rgba(255,255,255,0.12)" />
-            <rect x="148" y="46" width="74" height="18" rx="9" fill="rgba(255,255,255,0.12)" />
-          </svg>
+      <div className="overflow-hidden rounded-[1.2rem]">
+        <div className="relative h-[14rem] overflow-hidden rounded-[1rem] sm:h-[16rem]">
+          <AnimatedProjectThumbnail variant="uber-driver-navigation" motion="hover" />
         </div>
       </div>
     );
@@ -956,15 +895,25 @@ function BreakdownPreview({ motif }: { motif: BreakdownTile["motif"] }) {
       <div className={frameClassName}>
         <div className="grid gap-2.5">
           {["Signal", "Workflow", "Incentive"].map((label, index) => (
-            <div key={label} className="flex items-center gap-2.5">
+            <motion.div key={label} className="flex items-center gap-2.5"
+              initial={{ opacity: 0, x: -8 }} whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }} transition={{ delay: index * 0.12, duration: 0.35 }}>
               <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#dce8d8] text-[0.72rem] font-semibold text-[#38533a]">
                 {index + 1}
               </span>
-              <div className="h-2 flex-1 rounded-full bg-[#dce8d8]" />
+              <div className="relative h-2 flex-1 overflow-hidden rounded-full bg-[#dce8d8]/50">
+                <motion.div
+                  className="absolute left-0 top-0 h-full rounded-full bg-[#dce8d8]"
+                  initial={{ width: "0%" }}
+                  whileInView={{ width: ["0%", "72%", "56%", "88%"][index + 1] }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.12 + 0.18, duration: 0.55, ease: "easeOut" }}
+                />
+              </div>
               <span className="text-[0.72rem] font-semibold uppercase tracking-[0.14em] text-[#4b5d4a]">
                 {label}
               </span>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
@@ -976,45 +925,58 @@ function BreakdownPreview({ motif }: { motif: BreakdownTile["motif"] }) {
       <div className={frameClassName}>
         <div className="space-y-2.5">
           {[0, 1, 2].map((row) => (
-            <div
+            <motion.div
               key={row}
               className={cn(
                 "rounded-[0.95rem] border border-[#d9c8b8] bg-white/82 px-3 py-2.5",
                 row === 1 && "ml-4",
                 row === 2 && "ml-8",
               )}
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: row * 0.1, duration: 0.35, ease: "easeOut" }}
             >
               <div className="flex items-center justify-between">
                 <div className="h-2.5 w-20 rounded-full bg-[#ead8c5]" />
                 <div className="h-2.5 w-10 rounded-full bg-[#f3e7d9]" />
               </div>
               <div className="mt-2 h-2 rounded-full bg-[#f6eee4]" />
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
     );
   }
 
+  // signal motif
+  const signalPoints = { xs: [14, 54, 94, 134, 174, 206], ys: [70, 52, 56, 24, 34, 12] };
   return (
     <div className={frameClassName}>
       <div className="rounded-[1rem] bg-[#fff8ef] p-3">
         <svg viewBox="0 0 220 86" aria-hidden="true" className="h-16 w-full">
-          <path
+          <motion.path
             d="M14 70L54 52L94 56L134 24L174 34L206 12"
             fill="none"
             stroke="#cb8656"
             strokeLinecap="round"
             strokeLinejoin="round"
             strokeWidth="5"
+            initial={{ pathLength: 0 }}
+            whileInView={{ pathLength: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.9, ease: "easeInOut" }}
           />
-          {[14, 54, 94, 134, 174, 206].map((point, index) => (
-            <circle
-              key={point}
-              cx={point}
-              cy={[70, 52, 56, 24, 34, 12][index]}
-              r="5.5"
+          {signalPoints.xs.map((x, index) => (
+            <motion.circle
+              key={x}
+              cx={x}
+              cy={signalPoints.ys[index]}
               fill={index === 3 ? "#1f1a14" : "#f0c5a4"}
+              initial={{ r: 0 }}
+              whileInView={{ r: 5.5 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 + index * 0.1, duration: 0.25 }}
             />
           ))}
         </svg>
@@ -1050,9 +1012,10 @@ function PersonalProjectCard({
         href={experiment.href}
         ctaLabel="View build"
         tone={isDarkThumbnail ? "dark" : "light"}
-        disableAmbientFloat={Boolean(experiment.thumbnail?.videoSrc)}
+        disableAmbientFloat
         panelClassName={cn(
           "border-b border-[#dccbbb]/72 bg-gradient-to-br",
+          (experiment.id === "learning-council" || experiment.id === "finwise") ? "min-h-[22rem]" : "min-h-[14rem]",
           display?.previewTone ?? "from-[#fff0e3] via-[#fff7f0] to-[#f5e4d2]",
         )}
       >
@@ -1119,6 +1082,15 @@ function PersonalProjectCard({
 }
 
 function PersonalProjectPreview({ experiment }: { experiment: ExperimentItem }) {
+  const animatedVariant =
+    experiment.id === "learning-council" ? "learning-council" :
+    experiment.id === "finwise" ? "finwise" :
+    null;
+
+  if (animatedVariant) {
+    return <AnimatedProjectThumbnail variant={animatedVariant} motion="hover" />;
+  }
+
   if (experiment.thumbnail) {
     return (
       <div className="overflow-hidden rounded-[1.2rem] border border-white/55 bg-white/70 shadow-[inset_0_1px_0_rgba(255,255,255,0.45)]">
@@ -1187,27 +1159,23 @@ function GithubBuildCard({
         tone={(build.imagePanelClassName ?? "").includes("#050709") ? "dark" : "light"}
         disableAmbientFloat={Boolean(build.videoSrc)}
         panelClassName={cn(
-          "border-b border-[#dccbbb]/72 bg-gradient-to-br p-4 sm:p-5",
-          build.imagePanelClassName ?? "from-[#f3ebdf] via-[#fbf7f2] to-[#ece0d1]",
+          "relative h-[18rem] border-b border-[#dccbbb]/72 sm:h-[20rem]",
+          build.imagePanelClassName ?? "bg-[#f3ebdf]",
         )}
       >
-        <div className="overflow-hidden rounded-[1.2rem] border border-white/55 bg-white/76 shadow-[inset_0_1px_0_rgba(255,255,255,0.45)]">
-          <div className="relative aspect-[16/10] overflow-hidden">
-            <ThumbnailPreviewMedia
-              imageSrc={build.image}
-              videoSrc={build.videoSrc}
-              alt={build.title}
-              imageClassName={cn(
-                "ease-snappy transition-transform duration-700 group-hover/thumbnail:scale-[1.04]",
-                build.imageClassName ?? "object-cover object-center",
-              )}
-              videoClassName={cn(
-                "ease-snappy transition-transform duration-700 group-hover/thumbnail:scale-[1.04]",
-                build.imageClassName ?? "object-cover object-center",
-              )}
-            />
-          </div>
-        </div>
+        <ThumbnailPreviewMedia
+          imageSrc={build.image}
+          videoSrc={build.videoSrc}
+          alt={build.title}
+          imageClassName={cn(
+            "ease-snappy transition-transform duration-700 group-hover/thumbnail:scale-[1.04]",
+            build.imageClassName ?? "object-cover object-center",
+          )}
+          videoClassName={cn(
+            "ease-snappy transition-transform duration-700 group-hover/thumbnail:scale-[1.04]",
+            build.imageClassName ?? "object-cover object-center",
+          )}
+        />
       </EditorialThumbnailLink>
 
       <div className="flex h-full flex-col p-6">

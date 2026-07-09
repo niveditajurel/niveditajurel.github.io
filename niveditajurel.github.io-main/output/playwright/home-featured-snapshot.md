@@ -1,0 +1,75 @@
+- generic [ref=e89]:
+  - generic [ref=e90]:
+    - paragraph [ref=e91]: Featured Work
+    - generic [ref=e92]:
+      - heading "Product work to open first." [level=2] [ref=e93]
+      - paragraph [ref=e94]: Start with the product itself, then open the case study for the product decisions, execution details, and role context behind it.
+  - generic [ref=e95]:
+    - article [ref=e96]:
+      - link "Open Anand PAG case study" [ref=e97] [cursor=pointer]:
+        - /url: "#/projects/anand-pag"
+        - generic "Open Anand PAG case study" [ref=e98]:
+          - generic [ref=e100]:
+            - generic [ref=e101]: Enterprise workflow platform
+            - generic [ref=e102]:
+              - paragraph [ref=e103]: Workflow platform
+              - generic [ref=e104]: Anand PAG
+      - generic [ref=e105]:
+        - generic [ref=e106]:
+          - generic [ref=e107]:
+            - generic [ref=e108]: 2025 - Present
+            - generic [ref=e109]: Builder PM
+          - heading "Anand PAG" [level=3] [ref=e110]
+          - paragraph [ref=e111]: Systems before screens
+        - link "View case study" [ref=e113] [cursor=pointer]:
+          - /url: "#/projects/anand-pag"
+          - generic [ref=e114]:
+            - text: View case study
+            - img [ref=e115]
+    - article [ref=e117]:
+      - link "Open Nomad AI website" [ref=e118] [cursor=pointer]:
+        - /url: https://usenomad.ai/
+        - img "Nomad AI dashboard preview" [ref=e120]
+      - generic [ref=e121]:
+        - generic [ref=e122]:
+          - generic [ref=e123]:
+            - generic [ref=e124]: May 2024 - Jul 2024
+            - generic [ref=e125]: Product Manager
+          - heading "Nomad AI" [level=3] [ref=e126]
+          - paragraph [ref=e127]: AI-native financial product
+        - generic [ref=e128]:
+          - link "View product page" [ref=e129] [cursor=pointer]:
+            - /url: https://usenomad.ai/
+            - text: View product page
+            - img [ref=e130]
+          - link "View case study" [ref=e133] [cursor=pointer]:
+            - /url: "#/projects/nomad-ai"
+            - generic [ref=e134]:
+              - text: View case study
+              - img [ref=e135]
+    - article [ref=e137]:
+      - link "Open Skingenius website" [ref=e138] [cursor=pointer]:
+        - /url: https://skingenius.io/
+        - img "Skingenius website preview" [ref=e140]
+      - generic [ref=e141]:
+        - generic [ref=e142]:
+          - generic [ref=e143]:
+            - generic [ref=e144]: Aug 2024 - Dec 2024
+            - generic [ref=e145]: Product Manager
+          - heading "Skingenius" [level=3] [ref=e146]
+          - paragraph [ref=e147]: AI recommendations + onboarding
+        - generic [ref=e148]:
+          - link "View product page" [ref=e149] [cursor=pointer]:
+            - /url: https://skingenius.io/
+            - text: View product page
+            - img [ref=e150]
+          - link "View case study" [ref=e153] [cursor=pointer]:
+            - /url: "#/projects/skingenius"
+            - generic [ref=e154]:
+              - text: View case study
+              - img [ref=e155]
+  - link "View more case studies" [ref=e158] [cursor=pointer]:
+    - /url: "#/projects"
+    - generic [ref=e159]:
+      - text: View more case studies
+      - img [ref=e160]

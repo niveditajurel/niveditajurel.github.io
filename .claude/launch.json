@@ -1,0 +1,19 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "portfolio-dev",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev"],
+      "port": 8080,
+      "cwd": "/Users/utandon/Documents/GitHub/niveditajurel.github.io/niveditajurel.github.io-main"
+    },
+    {
+      "name": "portfolio-dev-2",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev"],
+      "port": 8081,
+      "cwd": "/Users/utandon/Documents/GitHub/niveditajurel.github.io/niveditajurel.github.io-main"
+    }
+  ]
+}

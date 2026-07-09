@@ -1,0 +1,37 @@
+- generic [ref=e163]:
+  - generic [ref=e165]:
+    - paragraph [ref=e166]: Product Case Studies
+    - generic [ref=e167]:
+      - heading "Product case studies + self-initiated builds." [level=2] [ref=e168]
+      - paragraph [ref=e169]: Some come from formal company work. Others are personal products and active experiments I use to test workflows, portfolio builds, and AI-assisted directions.
+  - generic [ref=e170]:
+    - link [ref=e171] [cursor=pointer]:
+      - /url: "#/projects/uber-driver-navigation"
+      - article [ref=e173]:
+        - generic [ref=e183]: Uber
+        - generic [ref=e184]:
+          - paragraph [ref=e185]: Product case study
+          - generic [ref=e186]:
+            - paragraph [ref=e187]: Uber
+            - generic [ref=e188]: Open build
+          - heading "Dispatch without blocking navigation" [level=3] [ref=e189]
+    - link [ref=e190] [cursor=pointer]:
+      - /url: "#/projects/learning-council"
+      - article [ref=e192]:
+        - generic [ref=e202]: COUNCIL
+        - generic [ref=e203]:
+          - paragraph [ref=e204]: Self-initiated build
+          - generic [ref=e205]:
+            - paragraph [ref=e206]: Self-initiated
+            - generic [ref=e207]: Open build
+          - heading "Persistent multi-agent workspace" [level=3] [ref=e208]
+    - link [ref=e230] [cursor=pointer]:
+      - /url: "#/projects/finwise"
+      - article [ref=e232]:
+        - generic [ref=e242]: FINWISE
+        - generic [ref=e243]:
+          - paragraph [ref=e244]: Self-initiated build
+          - generic [ref=e245]:
+            - paragraph [ref=e246]: Self-initiated
+            - generic [ref=e247]: Open build
+          - heading "AI wealth-management associate" [level=3] [ref=e248]

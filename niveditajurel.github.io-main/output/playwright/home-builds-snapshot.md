@@ -1,0 +1,53 @@
+- generic [ref=e163]:
+  - generic [ref=e165]:
+    - paragraph [ref=e166]: Product Case Studies
+    - generic [ref=e167]:
+      - heading "Product case studies + self-initiated builds." [level=2] [ref=e168]
+      - paragraph [ref=e169]: Some come from formal company work. Others are personal products and active experiments I use to test workflows, product bets, and AI-assisted directions.
+  - generic [ref=e170]:
+    - link [ref=e171] [cursor=pointer]:
+      - /url: "#/projects/uber-driver-navigation"
+      - article [ref=e173]:
+        - generic [ref=e183]: Uber
+        - generic [ref=e184]:
+          - paragraph [ref=e185]: Product case study
+          - generic [ref=e186]:
+            - paragraph [ref=e187]: Uber
+            - generic [ref=e188]: Open build
+          - heading "Dispatch without blocking navigation" [level=3] [ref=e189]
+    - link [ref=e190] [cursor=pointer]:
+      - /url: "#/projects/learning-council"
+      - article [ref=e192]:
+        - generic [ref=e202]: COUNCIL
+        - generic [ref=e203]:
+          - paragraph [ref=e204]: Self-initiated build
+          - generic [ref=e205]:
+            - paragraph [ref=e206]: Self-initiated
+            - generic [ref=e207]: Open build
+          - heading "Persistent multi-agent workspace" [level=3] [ref=e208]
+    - article [ref=e209]:
+      - generic [ref=e211]:
+        - generic [ref=e212]:
+          - generic [ref=e213]: "01"
+          - generic [ref=e214]: Trust
+        - generic [ref=e216]:
+          - generic [ref=e217]: "02"
+          - generic [ref=e218]: Pricing
+        - generic [ref=e220]:
+          - generic [ref=e221]: "03"
+          - generic [ref=e222]: MVP
+      - generic [ref=e224]:
+        - paragraph [ref=e225]: Startup + consulting work
+        - heading "AI-native Product Bets" [level=3] [ref=e226]
+        - paragraph [ref=e227]: Problems around MVP framing, trust, pricing, onboarding, analytics, and turning unclear AI product ideas into something teams could ship.
+      - generic [ref=e229]: Product case studies
+    - link [ref=e230] [cursor=pointer]:
+      - /url: "#/projects/finwise"
+      - article [ref=e232]:
+        - generic [ref=e242]: FINWISE
+        - generic [ref=e243]:
+          - paragraph [ref=e244]: Self-initiated build
+          - generic [ref=e245]:
+            - paragraph [ref=e246]: Self-initiated
+            - generic [ref=e247]: Open build
+          - heading "AI wealth-management associate" [level=3] [ref=e248]

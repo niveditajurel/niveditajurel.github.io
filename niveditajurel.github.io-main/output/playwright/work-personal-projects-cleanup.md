@@ -1,0 +1,53 @@
+- generic [ref=e881]:
+  - generic [ref=e882]:
+    - heading "Personal projects" [level=2] [ref=e883]
+    - paragraph [ref=e884]: 2 active build streams
+  - generic [ref=e885]:
+    - link [ref=e886] [cursor=pointer]:
+      - /url: "#/projects/learning-council"
+      - article [ref=e888]:
+        - generic [ref=e890]:
+          - generic [ref=e891]: Learning Council
+          - generic [ref=e892]:
+            - generic [ref=e893]:
+              - generic [ref=e894]: "1"
+              - generic [ref=e896]: Memory
+            - generic [ref=e897]:
+              - generic [ref=e898]: "2"
+              - generic [ref=e900]: Critique
+            - generic [ref=e901]:
+              - generic [ref=e902]: "3"
+              - generic [ref=e904]: Plan
+            - generic [ref=e905]:
+              - generic [ref=e906]: "4"
+              - generic [ref=e908]: Build
+        - generic [ref=e909]:
+          - generic [ref=e910]:
+            - generic [ref=e911]:
+              - paragraph [ref=e912]: Self-initiated build
+              - heading "Learning Council" [level=3] [ref=e913]
+              - paragraph [ref=e914]: Self-initiated
+            - img [ref=e916]
+          - paragraph [ref=e918]: Persistent multi-agent workspace
+          - generic [ref=e920]:
+            - text: Open project
+            - img [ref=e921]
+    - link [ref=e923] [cursor=pointer]:
+      - /url: "#/projects/finwise"
+      - article [ref=e925]:
+        - generic [ref=e927]:
+          - generic [ref=e928]:
+            - generic [ref=e929]: Finwise
+            - generic [ref=e930]: Associate
+          - img [ref=e931]
+        - generic [ref=e935]:
+          - generic [ref=e936]:
+            - generic [ref=e937]:
+              - paragraph [ref=e938]: Self-initiated build
+              - heading "Finwise" [level=3] [ref=e939]
+              - paragraph [ref=e940]: Self-initiated
+            - img [ref=e942]
+          - paragraph [ref=e944]: AI wealth-management associate
+          - generic [ref=e946]:
+            - text: Open project
+            - img [ref=e947]

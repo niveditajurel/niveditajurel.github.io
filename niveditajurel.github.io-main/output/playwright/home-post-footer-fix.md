@@ -1,0 +1,22 @@
+- generic [ref=e3]:
+  - navigation [ref=e4]:
+    - generic [ref=e6]:
+      - link "Nivedita product manager" [ref=e8] [cursor=pointer]:
+        - /url: "#/"
+      - generic [ref=e13]
+      - generic [ref=e36]
+  - main [ref=e49]:
+    - generic [ref=e51]:
+      - generic [ref=e52]
+      - generic [ref=e89]
+      - generic [ref=e163]
+      - generic [ref=e250]
+      - generic [ref=e349]
+      - generic [ref=e385]
+  - contentinfo [ref=e411]:
+    - generic [ref=e412]:
+      - generic [ref=e414]
+      - generic [ref=e423]
+      - generic [ref=e463]
+  - region "Notifications (F8)":
+    - list

@@ -1,0 +1,386 @@
+- generic [ref=e3]:
+  - navigation [ref=e4]:
+    - generic [ref=e6]:
+      - link "Nivedita product manager" [ref=e8] [cursor=pointer]:
+        - /url: "#/"
+        - generic [ref=e9]:
+          - generic [ref=e10]: Nivedita
+          - generic [ref=e11]: product manager
+      - generic [ref=e13]:
+        - link "Home" [ref=e14] [cursor=pointer]:
+          - /url: "#/"
+          - generic [ref=e15]:
+            - img [ref=e16]
+            - text: Home
+        - link "Work" [ref=e19] [cursor=pointer]:
+          - /url: "#/projects"
+          - generic [ref=e20]:
+            - img [ref=e21]
+            - text: Work
+        - link "Journey" [ref=e25] [cursor=pointer]:
+          - /url: "#/journey"
+          - generic [ref=e26]:
+            - img [ref=e27]
+            - text: Journey
+      - generic [ref=e36]:
+        - link "LinkedIn profile" [ref=e37] [cursor=pointer]:
+          - /url: https://www.linkedin.com/in/nivedita-niv/
+          - img [ref=e38]
+        - link "GitHub profile" [ref=e40] [cursor=pointer]:
+          - /url: https://github.com/niveditajurel
+          - img [ref=e41]
+        - link "X profile" [ref=e43] [cursor=pointer]:
+          - /url: https://x.com/nniv266
+          - img [ref=e44]
+        - link "Instagram profile" [ref=e46] [cursor=pointer]:
+          - /url: https://www.instagram.com/niv_yaps/
+          - img [ref=e47]
+  - main [ref=e49]:
+    - generic [ref=e51]:
+      - generic [ref=e52]:
+        - img "Nivedita with product sketches around her" [ref=e54]
+        - generic [ref=e57]:
+          - generic [ref=e58]:
+            - generic [ref=e59]:
+              - generic [ref=e60]: "N"
+              - generic [ref=e61]: Hi, I'm Niv
+            - paragraph [ref=e62]: AI-first product builder + manager
+            - generic [ref=e63]:
+              - heading "I bring clarity to messy product spaces." [level=1] [ref=e64]
+              - img [ref=e65]
+            - paragraph [ref=e68]: Former software engineer turned product manager, working across startups and enterprise teams to turn unclear workflows into direction teams can build and ship.
+            - generic [ref=e69]:
+              - generic [ref=e70]: Former SWE
+              - generic [ref=e71]: Startups + enterprise
+            - generic [ref=e72]:
+              - button "View Work" [ref=e73] [cursor=pointer]:
+                - text: View Work
+                - img [ref=e74]
+              - link "View Resume" [ref=e76] [cursor=pointer]:
+                - /url: https://drive.google.com/file/d/1RJoTocjJjHskvaqAdWpVu4aGavceRWwi/view
+                - text: View Resume
+                - img [ref=e77]
+          - generic [ref=e81]:
+            - img
+            - generic [ref=e86]: customer needs
+            - generic [ref=e87]: ops handoffs
+            - generic [ref=e88]: legacy systems
+            - generic [ref=e89]: edge cases
+            - generic [ref=e93]:
+              - paragraph [ref=e94]: Decision layer
+              - heading "Product" [level=2] [ref=e95]
+              - heading "logic" [level=2] [ref=e96]
+              - paragraph [ref=e97]: turning ambiguity into decisions teams can ship
+            - generic [ref=e99]:
+              - generic [ref=e100]:
+                - paragraph [ref=e101]: Workflow map
+                - paragraph [ref=e102]: Structure first
+              - img [ref=e104]
+            - generic [ref=e109]:
+              - generic [ref=e110]:
+                - paragraph [ref=e111]: Prototype path
+                - paragraph [ref=e112]: Something real
+              - img [ref=e114]
+            - generic [ref=e125]:
+              - generic [ref=e126]:
+                - paragraph [ref=e127]: Ship plan
+                - paragraph [ref=e128]: Handoff ready
+              - img [ref=e130]
+            - generic:
+              - img
+              - generic: from mess to ship
+      - generic [ref=e134]:
+        - generic [ref=e135]:
+          - generic [ref=e136]:
+            - paragraph [ref=e137]: Featured Work
+            - heading "Product work to open first." [level=2] [ref=e138]
+          - paragraph [ref=e139]: Start with the product surface, then open the case study for decisions, tradeoffs, and execution detail.
+        - generic [ref=e140]:
+          - article [ref=e141]:
+            - generic [ref=e147]:
+              - paragraph [ref=e148]: Enterprise workflow platform
+              - generic [ref=e149]:
+                - generic [ref=e150]:
+                  - generic [ref=e151]: "1"
+                  - generic [ref=e152]: Order intake
+                - generic [ref=e153]:
+                  - generic [ref=e154]: "2"
+                  - generic [ref=e155]: Vendor handoff
+                - generic [ref=e156]:
+                  - generic [ref=e157]: "3"
+                  - generic [ref=e158]: Evidence check
+                - generic [ref=e159]:
+                  - generic [ref=e160]: "4"
+                  - generic [ref=e161]: Invoice ready
+            - generic [ref=e162]:
+              - generic [ref=e163]:
+                - generic [ref=e164]:
+                  - generic [ref=e165]: 2025 - Present
+                  - generic [ref=e167]: Builder PM
+                - heading "Anand PAG" [level=3] [ref=e168]
+              - link "View case study" [ref=e170] [cursor=pointer]:
+                - /url: "#/projects/anand-pag"
+                - generic [ref=e171]:
+                  - text: View case study
+                  - img [ref=e172]
+          - article [ref=e174]:
+            - generic [ref=e175]:
+              - img "Nomad AI" [ref=e176]
+              - paragraph [ref=e178]: AI fintech dashboard
+            - generic [ref=e179]:
+              - generic [ref=e180]:
+                - generic [ref=e181]:
+                  - generic [ref=e182]: May 2024 - Jul 2024
+                  - generic [ref=e184]: Product Manager
+                - heading "Nomad AI" [level=3] [ref=e185]
+              - link "View case study" [ref=e187] [cursor=pointer]:
+                - /url: "#/projects/nomad-ai"
+                - generic [ref=e188]:
+                  - text: View case study
+                  - img [ref=e189]
+          - article [ref=e191]:
+            - generic [ref=e192]:
+              - img "Skingenius" [ref=e193]
+              - paragraph [ref=e195]: AI consumer product
+            - generic [ref=e196]:
+              - generic [ref=e197]:
+                - generic [ref=e198]:
+                  - generic [ref=e199]: Aug 2024 - Dec 2024
+                  - generic [ref=e201]: Product Manager
+                - heading "Skingenius" [level=3] [ref=e202]
+              - link "View case study" [ref=e204] [cursor=pointer]:
+                - /url: "#/projects/skingenius"
+                - generic [ref=e205]:
+                  - text: View case study
+                  - img [ref=e206]
+        - link "View more case studies" [ref=e209] [cursor=pointer]:
+          - /url: "#/projects"
+          - generic [ref=e210]:
+            - text: View more case studies
+            - img [ref=e211]
+      - generic [ref=e214]:
+        - generic [ref=e215]:
+          - generic [ref=e216]:
+            - paragraph [ref=e217]: Product Case Studies
+            - heading "Case studies and self-initiated builds." [level=2] [ref=e218]
+          - paragraph [ref=e219]: "Formal company work sits next to personal products and active experiments. The through line is the same: pressure-test product bets before they become expensive."
+        - generic [ref=e220]:
+          - link [ref=e221] [cursor=pointer]:
+            - /url: "#/projects/uber-driver-navigation"
+            - article [ref=e222]:
+              - generic [ref=e229]: Uber
+              - generic [ref=e230]:
+                - generic [ref=e231]:
+                  - paragraph [ref=e232]: Product case study
+                  - generic [ref=e233]: Marketplace
+                  - generic [ref=e234]: Operations
+                - heading "Dispatch without blocking navigation" [level=3] [ref=e235]
+                - generic [ref=e236]:
+                  - text: Open case study
+                  - img [ref=e237]
+          - generic [ref=e239]:
+            - article [ref=e240]:
+              - generic [ref=e241]:
+                - img [ref=e243]
+                - paragraph [ref=e247]: Startup + consulting work
+              - heading "AI-native Product Bets" [level=3] [ref=e248]
+              - paragraph [ref=e249]: Problems around MVP framing, trust, pricing, onboarding, analytics, and turning unclear AI product ideas into something teams could ship.
+              - generic [ref=e250]:
+                - generic [ref=e251]: Product case studies
+                - generic [ref=e252]: MVP framing
+                - generic [ref=e253]: Onboarding
+                - generic [ref=e254]: Pricing
+                - generic [ref=e255]: Analytics
+            - article [ref=e256]:
+              - generic [ref=e257]:
+                - img [ref=e259]
+                - paragraph [ref=e261]: Self-initiated builds
+              - heading "Personal Products + Experiments" [level=3] [ref=e262]
+              - paragraph [ref=e263]: Products and AI-assisted tools I build to test workflows, support product decisions, and explore new interaction patterns on my own.
+              - generic [ref=e264]:
+                - generic [ref=e265]: Active builds
+                - generic [ref=e266]: Agents
+                - generic [ref=e267]: Prototypes
+                - generic [ref=e268]: Tooling
+                - generic [ref=e269]: Recommendations
+      - generic [ref=e271]:
+        - generic [ref=e272]:
+          - generic [ref=e273]:
+            - paragraph [ref=e274]: How I Build With AI
+            - heading "My AI-first product builder stack." [level=2] [ref=e275]
+          - paragraph [ref=e276]: I do not just use AI tools. I build workflows around them to think, prototype, automate, ship, and learn faster.
+        - generic [ref=e278]:
+          - article [ref=e279]:
+            - generic [ref=e280]:
+              - generic [ref=e281]: "01"
+              - img [ref=e283]
+            - paragraph [ref=e295]: Think
+            - heading "Thinking + Product Strategy" [level=3] [ref=e296]
+            - paragraph [ref=e297]: I break ambiguous product problems into user needs, workflows, edge cases, and measurable outcomes.
+            - generic [ref=e298]:
+              - generic [ref=e299]: ChatGPT
+              - generic [ref=e300]: Claude
+              - generic [ref=e301]: Perplexity
+              - generic [ref=e302]: Notion
+              - generic [ref=e303]: Workflow maps
+          - article [ref=e304]:
+            - generic [ref=e305]:
+              - generic [ref=e306]: "02"
+              - img [ref=e308]
+            - paragraph [ref=e311]: Prototype
+            - heading "Prototyping + Design" [level=3] [ref=e312]
+            - paragraph [ref=e313]: I move from idea to clickable or coded prototype quickly so stakeholders can react to something real.
+            - generic [ref=e314]:
+              - generic [ref=e315]: Figma
+              - generic [ref=e316]: v0
+              - generic [ref=e317]: Lovable
+              - generic [ref=e318]: Replit
+              - generic [ref=e319]: Cursor
+          - article [ref=e320]:
+            - generic [ref=e321]:
+              - generic [ref=e322]: "03"
+              - img [ref=e324]
+            - paragraph [ref=e327]: Automate
+            - heading "Agentic Building + Automation" [level=3] [ref=e328]
+            - paragraph [ref=e329]: I create reusable agent workflows to automate synthesis, documentation, test cases, and iteration loops.
+            - generic [ref=e330]:
+              - generic [ref=e331]: Codex
+              - generic [ref=e332]: Claude Code
+              - generic [ref=e333]: MCPs
+              - generic [ref=e334]: Subagents
+              - generic [ref=e335]: n8n
+          - article [ref=e336]:
+            - generic [ref=e337]:
+              - generic [ref=e338]: "04"
+              - img [ref=e340]
+            - paragraph [ref=e345]: Ship
+            - heading "Product Delivery + Execution" [level=3] [ref=e346]
+            - paragraph [ref=e347]: I turn product ideas into user stories, specs, acceptance criteria, UAT plans, and launch-ready workflows.
+            - generic [ref=e348]:
+              - generic [ref=e349]: Jira
+              - generic [ref=e350]: User stories
+              - generic [ref=e351]: Acceptance criteria
+              - generic [ref=e352]: UAT
+              - generic [ref=e353]: Release readiness
+          - article [ref=e354]:
+            - generic [ref=e355]:
+              - generic [ref=e356]: "05"
+              - img [ref=e358]
+            - paragraph [ref=e360]: Learn
+            - heading "Data + Feedback + Iteration" [level=3] [ref=e361]
+            - paragraph [ref=e362]: I use product data, user feedback, and operational signals to decide what is working and what to improve next.
+            - generic [ref=e363]:
+              - generic [ref=e364]: Mixpanel
+              - generic [ref=e365]: GA4
+              - generic [ref=e366]: SQL
+              - generic [ref=e367]: Hotjar
+              - generic [ref=e368]: User feedback
+      - generic [ref=e370]:
+        - generic [ref=e371]:
+          - generic [ref=e372]:
+            - paragraph [ref=e373]: Content
+            - heading "Writing that shows how I think." [level=2] [ref=e374]
+          - paragraph [ref=e375]: A curated preview of product notes, public writing, and social posts around ambiguity, workflows, AI, and execution.
+        - generic [ref=e376]:
+          - article [ref=e377]:
+            - paragraph [ref=e378]: Short-form content
+            - generic [ref=e379]:
+              - heading "Instagram Notes" [level=3] [ref=e380]
+              - paragraph [ref=e381]: Visual reflections on product thinking, ambiguity, workflows, and building with AI.
+            - link "Open link" [ref=e382] [cursor=pointer]:
+              - /url: https://www.instagram.com/niv_yaps/
+              - text: Open link
+              - img [ref=e383]
+          - article [ref=e386]:
+            - paragraph [ref=e387]: Professional essays
+            - generic [ref=e388]:
+              - heading "LinkedIn Writing" [level=3] [ref=e389]
+              - paragraph [ref=e390]: Longer-form posts on PM career moves, product judgment, and what it takes to move work forward in uncertain spaces.
+            - link "Open link" [ref=e391] [cursor=pointer]:
+              - /url: https://www.linkedin.com/in/nivedita-niv/
+              - text: Open link
+              - img [ref=e392]
+          - article [ref=e395]:
+            - paragraph [ref=e396]: Blog + notes
+            - generic [ref=e397]:
+              - heading "Writing Archive" [level=3] [ref=e398]
+              - paragraph [ref=e399]: A place for essays and older writing on systems, user needs, product clarity, and experiment-driven building.
+            - link "Open link" [ref=e400] [cursor=pointer]:
+              - /url: https://www.instagram.com/niv_yaps/
+              - text: Open link
+              - img [ref=e401]
+      - generic [ref=e406]:
+        - generic [ref=e407]:
+          - paragraph [ref=e408]: Journey Preview
+          - heading "How the product lens got sharper." [level=2] [ref=e409]
+          - paragraph [ref=e410]: The through-line is technical fluency, customer empathy, and comfort with ambiguity.
+          - link "Read the full journey" [ref=e411] [cursor=pointer]:
+            - /url: "#/journey"
+            - generic [ref=e412]:
+              - text: Read the full journey
+              - img [ref=e413]
+        - generic [ref=e417]:
+          - article [ref=e418]:
+            - generic [ref=e419]: "1"
+            - paragraph [ref=e420]: Early foundation
+            - heading "Entrepreneurship and community-building at VIT" [level=3] [ref=e421]
+            - paragraph [ref=e422]: Built momentum with startup-facing communities and learned how trust moves teams forward.
+          - article [ref=e423]:
+            - generic [ref=e424]: "2"
+            - paragraph [ref=e425]: Cross-sector growth
+            - heading "Software, analytics, consulting, and product roles" [level=3] [ref=e426]
+            - paragraph [ref=e427]: Moved across health tech, edtech, fintech, and enterprise operations while translating between users, data, and delivery teams.
+          - article [ref=e428]:
+            - generic [ref=e429]: "3"
+            - paragraph [ref=e430]: Current chapter
+            - heading "AI-first product work with a systems mindset" [level=3] [ref=e431]
+            - paragraph [ref=e432]: Focused on AI products, operational clarity, and stronger foundations for product decisions before and after launch.
+  - contentinfo [ref=e433]:
+    - generic [ref=e434]:
+      - generic [ref=e435]:
+        - generic [ref=e436]:
+          - paragraph [ref=e437]: Available for product conversations
+          - heading "Let's build something clear, useful, and shippable." [level=2] [ref=e438]
+        - generic [ref=e439]:
+          - link "Start a conversation" [ref=e440] [cursor=pointer]:
+            - /url: mailto:niveditajurel@gmail.com
+            - img [ref=e441]
+            - text: Start a conversation
+          - link "View resume" [ref=e444] [cursor=pointer]:
+            - /url: https://drive.google.com/file/d/1RJoTocjJjHskvaqAdWpVu4aGavceRWwi/view
+            - text: View resume
+            - img [ref=e445]
+      - generic [ref=e448]:
+        - generic [ref=e449]:
+          - paragraph [ref=e450]: Nivedita
+          - paragraph [ref=e451]: AI-first Product Manager focused on clear product thinking, systems, and execution.
+        - generic [ref=e452]:
+          - link "Home" [ref=e453] [cursor=pointer]:
+            - /url: "#/"
+          - link "Work" [ref=e454] [cursor=pointer]:
+            - /url: "#/projects"
+          - link "Journey" [ref=e455] [cursor=pointer]:
+            - /url: "#/journey"
+          - link "Contact" [ref=e456] [cursor=pointer]:
+            - /url: "#/contact"
+            - generic [ref=e457]:
+              - text: Contact
+              - img [ref=e458]
+        - generic [ref=e460]:
+          - link "LinkedIn profile" [ref=e461] [cursor=pointer]:
+            - /url: https://www.linkedin.com/in/nivedita-niv/
+            - img [ref=e462]
+          - link "GitHub profile" [ref=e464] [cursor=pointer]:
+            - /url: https://github.com/niveditajurel
+            - img [ref=e465]
+          - link "X profile" [ref=e467] [cursor=pointer]:
+            - /url: https://x.com/nniv266
+            - img [ref=e468]
+          - link "Instagram profile" [ref=e470] [cursor=pointer]:
+            - /url: https://www.instagram.com/niv_yaps/
+            - img [ref=e471]
+      - generic [ref=e473]:
+        - paragraph [ref=e474]: © 2026 Nivedita. All rights reserved.
+        - paragraph [ref=e475]: Built for thoughtful product conversations and future teams.
+  - region "Notifications (F8)":
+    - list

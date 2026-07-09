@@ -1,0 +1,22 @@
+- generic [ref=e4039] [box=153,1773,1280,719]:
+  - generic [ref=e4041] [box=153,1806,1280,110]:
+    - paragraph [ref=e4042] [box=153,1806,1280,20]: Product Case Studies
+    - generic [ref=e4043] [box=153,1838,1280,78]:
+      - heading "Product case studies + self-initiated builds." [level=2] [ref=e4044] [box=153,1838,416,78]
+      - paragraph [ref=e4045] [box=793,1860,640,56]: Some come from formal company work. Others are personal products and active experiments I use to test workflows, portfolio builds, and AI-assisted directions.
+  - generic [ref=e4046] [box=153,1948,1280,543]:
+    - link [ref=e4047] [cursor=pointer] [box=153,1948,416,543]:
+      - /url: "#/projects/uber-driver-navigation"
+      - article [ref=e4049] [box=153,1966,416,519]:
+        - img [ref=e4052] [box=149,1965,422,264]
+        - generic [ref=e4053] [box=178,2247,366,213]
+    - link [ref=e4063] [cursor=pointer] [box=585,1948,416,543]:
+      - /url: "#/projects/learning-council"
+      - article [ref=e4065] [box=585,1966,416,543]:
+        - img [ref=e4068] [box=569,1957,447,279]
+        - generic [ref=e4069] [box=610,2247,366,237]
+    - link [ref=e4079] [cursor=pointer] [box=1017,1948,416,543]:
+      - /url: "#/projects/finwise"
+      - article [ref=e4081] [box=1017,1966,416,543]:
+        - img [ref=e4084] [box=1001,1957,447,279]
+        - generic [ref=e4085] [box=1042,2247,366,237]

@@ -1,0 +1,56 @@
+[
+  {
+    "i": 0,
+    "id": "",
+    "className": "mx-auto max-w-7xl border-b border-border/65 pb-10 lg:pb-12",
+    "text": "Back to workFinwiseSelf-initiated buildFinwise: an AI wealth-management associate for clearer financial decisions.Finwis"
+  },
+  {
+    "i": 1,
+    "id": "context",
+    "className": "grid gap-6 lg:grid-cols-2",
+    "text": "ContextThe product idea starts with a decision problem, not a dashboard problem.Finwise is based on a simple belief: peo"
+  },
+  {
+    "i": 2,
+    "id": "",
+    "className": "grid gap-6 lg:grid-cols-2",
+    "text": "Product problemFinancial decisions are fragmented across savings, investing, debt, retirement, and short-term tradeoffs."
+  },
+  {
+    "i": 3,
+    "id": "",
+    "className": "space-y-6",
+    "text": "Concept visualA quick visual read of what Finwise would actually help a user do.Instead of a generic finance dashboard, "
+  },
+  {
+    "i": 4,
+    "id": "pillars",
+    "className": "space-y-6",
+    "text": "Product PillarsThe MVP should feel like guided decision support, not just financial reporting.If I built the first usabl"
+  },
+  {
+    "i": 5,
+    "id": "system",
+    "className": "space-y-6",
+    "text": "How It Is BuiltThe interesting part is how advice, logic, and trust fit together.For a product like this, the build is n"
+  },
+  {
+    "i": 6,
+    "id": "judgment",
+    "className": "space-y-6",
+    "text": "PM JudgmentThe critical choices are about trust, scope, and what not to automate too early.A finance product can feel he"
+  },
+  {
+    "i": 7,
+    "id": "",
+    "className": "grid gap-6 lg:grid-cols-2",
+    "text": "What I would test firstWhether users respond better to an associate framing than to a generic financial dashboard.Which "
+  },
+  {
+    "i": 8,
+    "id": "",
+    "className": "rounded-[2.2rem] border border-[#d6ddd0] bg-white/82 px-5 py-6 sm:px-6 lg:px-7",
+    "text": "Closing TakeawayFinwise is less about building another finance dashboard and more about building a product people can tr"
+  }
+]

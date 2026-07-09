@@ -1,0 +1,286 @@
+- generic [ref=e3]:
+  - navigation [ref=e4]:
+    - generic [ref=e6]:
+      - link "Nivedita" [ref=e8] [cursor=pointer]:
+        - /url: "#/"
+        - generic [ref=e10]: Nivedita
+      - generic [ref=e12]:
+        - link "Home" [ref=e13] [cursor=pointer]:
+          - /url: "#/"
+          - generic [ref=e14]:
+            - img [ref=e15]
+            - text: Home
+        - link "Work" [ref=e18] [cursor=pointer]:
+          - /url: "#/projects"
+          - generic [ref=e19]:
+            - img [ref=e20]
+            - text: Work
+        - link "Journey" [ref=e24] [cursor=pointer]:
+          - /url: "#/journey"
+          - generic [ref=e25]:
+            - img [ref=e26]
+            - text: Journey
+      - generic [ref=e35]:
+        - link "LinkedIn profile" [ref=e36] [cursor=pointer]:
+          - /url: https://www.linkedin.com/in/nivedita-niv/
+          - img [ref=e37]
+        - link "GitHub profile" [ref=e39] [cursor=pointer]:
+          - /url: https://github.com/niveditajurel
+          - img [ref=e40]
+        - link "X profile" [ref=e42] [cursor=pointer]:
+          - /url: https://x.com/nniv266
+          - img [ref=e43]
+        - link "Instagram profile" [ref=e45] [cursor=pointer]:
+          - /url: https://www.instagram.com/niv_yaps/
+          - img [ref=e46]
+  - main [ref=e48]:
+    - generic [ref=e51]:
+      - generic [ref=e53]:
+        - generic [ref=e54]:
+          - generic [ref=e55]:
+            - link "Back to work" [ref=e56] [cursor=pointer]:
+              - /url: "#/work"
+              - generic [ref=e57]:
+                - img [ref=e58]
+                - text: Back to work
+            - generic [ref=e61]: Nomad AI
+          - generic [ref=e62]:
+            - paragraph [ref=e63]: AI fintech case study
+            - heading "Pricing and launch strategy for an AI valuation product in a trust-sensitive market." [level=1] [ref=e64]
+            - paragraph [ref=e65]: I worked as a consultant product manager on a founder-led SMB valuation platform, shaping pricing, analytics, and MVP decisions so the product could earn trust before it tried to scale monetization.
+          - generic [ref=e66]:
+            - paragraph [ref=e67]: TL;DR
+            - paragraph [ref=e68]: My scope was not the later user growth alone. I owned the product foundation around pricing, analytics, ETL reliability, and launch sequencing so the team had a more credible way to test monetization and learn from real usage.
+          - generic [ref=e69]:
+            - button "Context" [ref=e70] [cursor=pointer]
+            - button "Scope" [ref=e71] [cursor=pointer]
+            - button "Judgment" [ref=e72] [cursor=pointer]
+            - button "Results" [ref=e73] [cursor=pointer]
+        - complementary [ref=e74]:
+          - img "Nomad AI dashboard showing valuation analytics, company financials, and transaction monitoring." [ref=e76]
+          - generic [ref=e77]:
+            - generic [ref=e78]:
+              - paragraph [ref=e79]: Role
+              - paragraph [ref=e80]: Consultant Product Manager
+            - generic [ref=e81]:
+              - paragraph [ref=e82]: Team
+              - paragraph [ref=e83]: Founder-led team of 4 across product and engineering
+            - generic [ref=e84]:
+              - paragraph [ref=e85]: Product
+              - paragraph [ref=e86]: AI-powered SMB valuation and exit-planning platform
+            - generic [ref=e87]:
+              - paragraph [ref=e88]: Scope
+              - paragraph [ref=e89]: Pricing, analytics, ETL reliability, and MVP launch structure
+          - generic [ref=e90]:
+            - generic [ref=e91]:
+              - paragraph [ref=e92]: Users after launch
+              - paragraph [ref=e93]: "608"
+              - paragraph [ref=e94]: Platform later reached by Nov 2024
+            - generic [ref=e95]:
+              - paragraph [ref=e96]: User growth
+              - paragraph [ref=e97]: +865%
+              - paragraph [ref=e98]: 63 to 608 after the launch phase
+            - generic [ref=e99]:
+              - paragraph [ref=e100]: Projected conversion lift
+              - paragraph [ref=e101]: +42%
+              - paragraph [ref=e102]: From pricing and packaging work
+            - generic [ref=e103]:
+              - paragraph [ref=e104]: Projected MRR uplift
+              - paragraph [ref=e105]: +28%
+              - paragraph [ref=e106]: From monetization model changes
+      - generic [ref=e107]:
+        - generic [ref=e108]:
+          - generic [ref=e110]:
+            - paragraph [ref=e111]: Context
+            - heading "This product sat at the intersection of speed, trust, and founder-stage commercialization." [level=2] [ref=e112]
+            - paragraph [ref=e113]: Nomad AI set out to make small-business valuation and exit planning more accessible. The challenge was not only to produce a faster output. It was to create a product that users could trust enough to take seriously in a financial decision context.
+          - generic [ref=e114]:
+            - paragraph [ref=e115]: Why the market was hard
+            - list [ref=e116]:
+              - listitem [ref=e117]:
+                - generic [ref=e119]: Small-business owners needed faster, more affordable valuations than broker-led processes could typically provide.
+              - listitem [ref=e120]:
+                - generic [ref=e122]: Trust mattered as much as speed because valuation is a high-stakes, financial decision surface.
+              - listitem [ref=e123]:
+                - generic [ref=e125]: The product had to prove credibility before monetization could work.
+        - generic [ref=e126]:
+          - generic [ref=e127]:
+            - paragraph [ref=e128]: Product problem
+            - list [ref=e129]:
+              - listitem [ref=e130]:
+                - generic [ref=e132]: Manual broker reports were expensive and slow for owners who wanted an early valuation signal.
+              - listitem [ref=e133]:
+                - generic [ref=e135]: The product needed a monetization model that felt credible enough for a trust-sensitive category.
+              - listitem [ref=e136]:
+                - generic [ref=e138]: Launch decisions had to balance user confidence, pricing clarity, and the analytics needed to learn quickly.
+          - generic [ref=e139]:
+            - paragraph [ref=e140]: Recruiter signal
+            - paragraph [ref=e141]: "This case study shows commercial product judgment: how to structure pricing, analytics, and launch sequencing when the product category is trust-sensitive and the team is lean."
+        - generic [ref=e142]:
+          - generic [ref=e143]:
+            - paragraph [ref=e144]: What I Owned
+            - heading "I focused on the product decisions that made the launch testable and commercially coherent." [level=2] [ref=e145]
+            - paragraph [ref=e146]: "My contribution was not one feature. It was the operating frame for how the team would learn: who to price for, what to measure, how to sequence the MVP, and how to make valuation data flow more reliably."
+          - generic [ref=e147]:
+            - generic [ref=e148]:
+              - img [ref=e150]
+              - heading "Pricing and packaging" [level=3] [ref=e153]
+              - paragraph [ref=e154]: Authored a pricing PRD spanning four monetization models and mapped which offers best matched early user trust and willingness to pay.
+            - generic [ref=e155]:
+              - img [ref=e157]
+              - heading "Research and positioning" [level=3] [ref=e160]
+              - paragraph [ref=e161]: Interviewed eight broker and advisor personas, benchmarked six competitors, and translated those findings into a tighter product and GTM story.
+            - generic [ref=e162]:
+              - img [ref=e164]
+              - heading "Analytics and ETL foundation" [level=3] [ref=e169]
+              - paragraph [ref=e170]: Defined AARRR, Lean Analytics, and OMTM metrics, then supported Mage AI-based ETL automation to strengthen the reliability of valuation inputs.
+            - generic [ref=e171]:
+              - img [ref=e173]
+              - heading "Launch sequencing" [level=3] [ref=e177]
+              - paragraph [ref=e178]: Created a Jira roadmap and clarified sprint priorities so the team could sequence pricing, analytics, and MVP delivery with less noise.
+        - generic [ref=e179]:
+          - generic [ref=e180]:
+            - paragraph [ref=e181]: Builder Moves
+            - heading "I treated the commercial model and data reliability as product work." [level=2] [ref=e182]
+            - paragraph [ref=e183]: That meant contributing to the economic framing of the product, while also tightening the instrumentation and data flows that the valuation experience depended on.
+          - generic [ref=e184]:
+            - generic [ref=e185]:
+              - img [ref=e187]
+              - heading "ROI and pricing model" [level=3] [ref=e190]
+              - paragraph [ref=e191]: Built an ROI model that helped compare monetization approaches and gave the team a more defensible basis for pricing conversations.
+            - generic [ref=e192]:
+              - img [ref=e194]
+              - heading "ETL support for accounting data" [level=3] [ref=e206]
+              - paragraph [ref=e207]: Integrated Mage AI workflows to automate accounting-data ingestion from systems like Xero and QuickBooks, improving the operational path into valuation logic.
+        - generic [ref=e208]:
+          - generic [ref=e209]:
+            - paragraph [ref=e210]: PM Judgment
+            - heading "The important decisions were about credibility, not just speed." [level=2] [ref=e211]
+            - paragraph [ref=e212]: The product had to avoid looking like a shortcut pretending to be a financial tool. That shaped how I approached pricing, measurement, and the difference between projected upside and validated signals.
+          - generic [ref=e213]:
+            - generic [ref=e214]:
+              - heading "Trust before monetization depth" [level=3] [ref=e215]
+              - paragraph [ref=e216]: The product could not rely on pricing cleverness alone. The first job was to make the valuation experience feel legible and credible enough that users would engage seriously.
+            - generic [ref=e217]:
+              - heading "Measure before you scale" [level=3] [ref=e218]
+              - paragraph [ref=e219]: I treated analytics as core product infrastructure, not a reporting layer. Without funnels and leading indicators, the team would not know whether pricing, onboarding, or trust was the blocker.
+            - generic [ref=e220]:
+              - heading "Keep projections separate from proof" [level=3] [ref=e221]
+              - paragraph [ref=e222]: I explicitly separated projected commercial upside from validated usage signals so the story stayed honest about what was measured during my window and what was modeled for later phases.
+        - generic [ref=e223]:
+          - generic [ref=e224]:
+            - paragraph [ref=e225]: Results
+            - heading "The strongest outcome was a clearer launch and learning system." [level=2] [ref=e226]
+            - paragraph [ref=e227]: I separate what was measured from what was projected. That keeps the case study honest and makes the PM contribution easier to evaluate.
+          - generic [ref=e228]:
+            - generic [ref=e229]:
+              - generic [ref=e230]:
+                - img [ref=e231]
+                - heading "Measured and observed" [level=3] [ref=e235]
+              - list [ref=e236]:
+                - listitem [ref=e237]:
+                  - generic [ref=e239]: The platform later reached 608 users and roughly +865% growth from its earlier baseline.
+                - listitem [ref=e240]:
+                  - generic [ref=e242]: The pricing and analytics foundation was in place before launch, giving the team a clearer way to evaluate conversion and monetization experiments.
+                - listitem [ref=e243]:
+                  - generic [ref=e245]: Roadmap restructuring supported faster iteration and a cleaner launch path for the MVP.
+            - generic [ref=e246]:
+              - generic [ref=e247]:
+                - img [ref=e248]
+                - heading "Projected commercial impact" [level=3] [ref=e250]
+              - list [ref=e251]:
+                - listitem [ref=e252]:
+                  - generic [ref=e254]: +42% projected free-to-paid conversion lift from pricing strategy changes.
+                - listitem [ref=e255]:
+                  - generic [ref=e257]: +28% projected MRR uplift from revised packaging and monetization structure.
+                - listitem [ref=e258]:
+                  - generic [ref=e260]: 13:1 modeled benefit-to-cost ratio in the ROI analysis.
+          - generic [ref=e261]: "Important note: the later 608-user growth happened after my consulting window. I include it as context for the product’s subsequent trajectory, while the pricing, analytics, and launch-structure work described here reflects my direct scope."
+        - generic [ref=e262]:
+          - generic [ref=e263]:
+            - generic [ref=e264]:
+              - img [ref=e265]
+              - heading "What I learned" [level=3] [ref=e268]
+            - list [ref=e269]:
+              - listitem [ref=e270]:
+                - generic [ref=e272]: In financial products, trust-building work and monetization work are inseparable.
+              - listitem [ref=e273]:
+                - generic [ref=e275]: Pricing is a product decision, not only a finance decision, because it shapes perceived credibility and user commitment.
+              - listitem [ref=e276]:
+                - generic [ref=e278]: For founder-led teams, the most valuable PM contribution is often sharper sequencing, clearer tradeoffs, and a cleaner measurement model.
+          - generic [ref=e279]:
+            - generic [ref=e280]:
+              - img [ref=e281]
+              - heading "What I would do next" [level=3] [ref=e283]
+            - list [ref=e284]:
+              - listitem [ref=e285]:
+                - generic [ref=e287]: Validate which valuation output and explanation layers actually increase trust before asking for payment.
+              - listitem [ref=e288]:
+                - generic [ref=e290]: Tune pricing and packaging with observed conversion behavior instead of relying only on modeled elasticity.
+              - listitem [ref=e291]:
+                - generic [ref=e293]: Expand the analytics model to track confidence signals, not just acquisition and conversion.
+        - generic [ref=e294]:
+          - generic [ref=e295]:
+            - generic [ref=e296]:
+              - paragraph [ref=e297]: Closing Takeaway
+              - heading "The work was not only about making valuation faster. It was about making the product believable enough to earn the next step." [level=2] [ref=e298]
+            - paragraph [ref=e299]: "This case study shows how I think in ambiguous early-stage environments: sharpen the business model, make the product measurable, and separate optimistic projections from what the team has actually validated."
+          - generic [ref=e300]:
+            - link "Back to work archive" [ref=e301] [cursor=pointer]:
+              - /url: "#/work"
+              - generic [ref=e302]:
+                - text: Back to work archive
+                - img [ref=e303]
+            - link "View resume" [ref=e305] [cursor=pointer]:
+              - /url: https://drive.google.com/file/d/1RJoTocjJjHskvaqAdWpVu4aGavceRWwi/view
+              - text: View resume
+              - img [ref=e306]
+  - contentinfo [ref=e309]:
+    - generic [ref=e310]:
+      - generic [ref=e311]:
+        - generic [ref=e312]:
+          - paragraph [ref=e313]: Available for product conversations
+          - heading "Let's build something clear, useful, and shippable." [level=2] [ref=e314]
+        - generic [ref=e315]:
+          - link "Start a conversation" [ref=e316] [cursor=pointer]:
+            - /url: mailto:niveditajurel@gmail.com
+            - img [ref=e317]
+            - text: Start a conversation
+          - link "View resume" [ref=e320] [cursor=pointer]:
+            - /url: https://drive.google.com/file/d/1RJoTocjJjHskvaqAdWpVu4aGavceRWwi/view
+            - text: View resume
+            - img [ref=e321]
+      - generic [ref=e324]:
+        - generic [ref=e325]:
+          - paragraph [ref=e326]: Nivedita
+          - paragraph [ref=e327]: AI-first Product Manager focused on clear product thinking, systems, and execution.
+        - generic [ref=e328]:
+          - link "Home" [ref=e329] [cursor=pointer]:
+            - /url: "#/"
+          - link "Work" [ref=e330] [cursor=pointer]:
+            - /url: "#/projects"
+          - link "Journey" [ref=e331] [cursor=pointer]:
+            - /url: "#/journey"
+          - link "Contact" [ref=e332] [cursor=pointer]:
+            - /url: "#/contact"
+            - generic [ref=e333]:
+              - text: Contact
+              - img [ref=e334]
+        - generic [ref=e336]:
+          - link "LinkedIn profile" [ref=e337] [cursor=pointer]:
+            - /url: https://www.linkedin.com/in/nivedita-niv/
+            - img [ref=e338]
+          - link "GitHub profile" [ref=e340] [cursor=pointer]:
+            - /url: https://github.com/niveditajurel
+            - img [ref=e341]
+          - link "X profile" [ref=e343] [cursor=pointer]:
+            - /url: https://x.com/nniv266
+            - img [ref=e344]
+          - link "Instagram profile" [ref=e346] [cursor=pointer]:
+            - /url: https://www.instagram.com/niv_yaps/
+            - img [ref=e347]
+      - generic [ref=e349]:
+        - paragraph [ref=e350]: © 2026 Nivedita. All rights reserved.
+        - paragraph [ref=e351]: Built for thoughtful product conversations and future teams.
+  - region "Notifications (F8)":
+    - list

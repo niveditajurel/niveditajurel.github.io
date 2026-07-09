@@ -1,0 +1,84 @@
+- generic [ref=e3] [box=0,0,1585,12997]:
+  - navigation [ref=e4] [box=0,0,1585,76]:
+    - generic [ref=e6] [box=170,13,1246,62]:
+      - link "Nivedita" [ref=e8] [cursor=pointer] [box=170,26,96,36]:
+        - /url: "#/"
+        - generic [ref=e10] [box=174,28,88,32]: Nivedita
+      - generic [ref=e12] [box=642,23,302,42]:
+        - link "Home" [ref=e13] [cursor=pointer] [box=647,28,92,32]:
+          - /url: "#/"
+          - generic [ref=e14] [box=647,28,92,32]
+        - link "Work" [ref=e18] [cursor=pointer] [box=742,28,88,32]:
+          - /url: "#/projects"
+          - generic [ref=e19] [box=742,28,88,32]
+        - link "Journey" [ref=e24] [cursor=pointer] [box=834,28,104,32]:
+          - /url: "#/journey"
+          - generic [ref=e25] [box=834,28,104,32]
+      - generic [ref=e35] [box=1280,25,134,38]:
+        - link "LinkedIn profile" [ref=e36] [cursor=pointer] [box=1285,30,28,28]:
+          - /url: https://www.linkedin.com/in/nivedita-niv/
+          - img [ref=e37] [box=1291,36,16,16]
+        - link "GitHub profile" [ref=e39] [cursor=pointer] [box=1317,30,28,28]:
+          - /url: https://github.com/niveditajurel
+          - img [ref=e40] [box=1323,36,16,16]
+        - link "X profile" [ref=e42] [cursor=pointer] [box=1349,30,28,28]:
+          - /url: https://x.com/nniv266
+          - img [ref=e43] [box=1355,36,16,16]
+        - link "Instagram profile" [ref=e45] [cursor=pointer] [box=1381,30,28,28]:
+          - /url: https://www.instagram.com/niv_yaps/
+          - img [ref=e46] [box=1387,36,16,16]
+  - main [ref=e48] [box=0,0,1585,12356]:
+    - generic [ref=e50] [box=25,74,1536,12281]:
+      - generic [ref=e52] [box=98,143,1390,620]:
+        - generic [ref=e53] [box=98,143,624,481]:
+          - generic [ref=e54] [box=98,143,624,31]
+          - paragraph [ref=e58] [box=98,188,464,48]: Independent case study based on public research, field observations, and product analysis. Not affiliated with Uber.
+          - generic [ref=e59] [box=98,250,624,255]
+          - generic [ref=e65] [box=98,519,624,46]
+          - generic [ref=e72] [box=98,579,624,46]
+        - generic [ref=e83] [box=779,168,684,570]:
+          - generic [ref=e88] [box=788,177,330,552]
+          - generic [ref=e138] [box=1207,168,256,149]
+          - generic [ref=e143] [box=1207,337,256,401]
+      - generic [ref=e153] [box=57,832,1472,11427]:
+        - complementary [ref=e154] [box=57,832,248,655]:
+          - generic [ref=e156] [box=57,832,248,655]
+        - main [ref=e211] [box=337,832,1192,11427]:
+          - generic [ref=e212] [box=337,832,1192,873]
+          - generic [ref=e283] [box=337,1755,1192,655]
+          - generic [ref=e306] [box=337,2442,1192,378]
+          - generic [ref=e324] [box=337,2852,1192,795]
+          - generic [ref=e355] [box=337,3678,1192,1048]
+          - generic [ref=e422] [box=337,4759,1192,526]
+          - generic [ref=e448] [box=337,5317,1192,476]
+          - generic [ref=e466] [box=337,5825,1192,1099]
+          - generic [ref=e588] [box=337,6956,1192,2109]
+          - generic [ref=e784] [box=337,9098,1192,1314]
+          - generic [ref=e888] [box=337,10444,1192,622]
+          - generic [ref=e911] [box=337,11097,1192,757]
+          - generic [ref=e959] [box=337,11886,1192,391]
+  - contentinfo [ref=e966] [box=0,12356,1585,642]:
+    - generic [ref=e967] [box=153,12357,1280,641]:
+      - generic [ref=e969] [box=226,12466,1134,138]:
+        - generic [ref=e970] [box=226,12466,631,138]:
+          - paragraph [ref=e971] [box=226,12466,631,22]: good product work starts with sharper questions
+          - heading "Let's build something meaningful" [level=3] [ref=e972] [box=226,12495,631,72]
+          - paragraph [ref=e973] [box=226,12575,631,28]: AI-first product work, grounded in clarity, systems thinking, and execution.
+        - link "Contact" [ref=e974] [cursor=pointer] [box=1132,12508,227,52]:
+          - /url: "#/contact"
+          - generic "Contact" [ref=e975] [box=1132,12508,227,52]
+      - generic [ref=e978] [box=185,12692,1216,192]:
+        - generic [ref=e979] [box=185,12692,379,192]:
+          - generic [ref=e981] [box=185,12692,99,45]
+          - paragraph [ref=e984] [box=185,12753,320,68]: AI-first Product Manager focused on clear product thinking, structured execution, and human-centered outcomes.
+        - generic [ref=e985] [box=603,12692,379,192]:
+          - heading "Quick Links" [level=3] [ref=e986] [box=603,12692,379,28]
+          - generic [ref=e987] [box=603,12736,379,148]
+        - generic [ref=e1003] [box=1022,12692,379,192]:
+          - heading "Connect" [level=3] [ref=e1004] [box=1022,12692,379,28]
+          - generic [ref=e1005] [box=1022,12736,379,40]
+      - generic [ref=e1018] [box=185,12896,1216,53]:
+        - paragraph [ref=e1019] [box=185,12929,229,20]: © 2026 Nivedita. All rights reserved.
+        - paragraph [ref=e1020] [box=1017,12929,383,20]: Built for thoughtful product conversations and future teams.
+  - region "Notifications (F8)" [box=0,12997,1585,0]:
+    - list [box=1165,1368,420,32]

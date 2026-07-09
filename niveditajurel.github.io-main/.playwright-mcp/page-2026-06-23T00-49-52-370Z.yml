@@ -1,0 +1,343 @@
+- generic [ref=e3]:
+  - navigation [ref=e4]:
+    - generic [ref=e6]:
+      - link "Nivedita" [ref=e8] [cursor=pointer]:
+        - /url: "#/"
+        - generic [ref=e10]: Nivedita
+      - generic [ref=e12]:
+        - link "Home" [ref=e13] [cursor=pointer]:
+          - /url: "#/"
+          - generic [ref=e14]:
+            - img [ref=e15]
+            - text: Home
+        - link "Work" [ref=e18] [cursor=pointer]:
+          - /url: "#/projects"
+          - generic [ref=e19]:
+            - img [ref=e20]
+            - text: Work
+        - link "Journey" [ref=e24] [cursor=pointer]:
+          - /url: "#/journey"
+          - generic [ref=e25]:
+            - img [ref=e26]
+            - text: Journey
+      - generic [ref=e35]:
+        - link "LinkedIn profile" [ref=e36] [cursor=pointer]:
+          - /url: https://www.linkedin.com/in/nivedita-niv/
+          - img [ref=e37]
+        - link "GitHub profile" [ref=e39] [cursor=pointer]:
+          - /url: https://github.com/niveditajurel
+          - img [ref=e40]
+        - link "X profile" [ref=e42] [cursor=pointer]:
+          - /url: https://x.com/nniv266
+          - img [ref=e43]
+        - link "Instagram profile" [ref=e45] [cursor=pointer]:
+          - /url: https://www.instagram.com/niv_yaps/
+          - img [ref=e46]
+  - main [ref=e48]:
+    - generic [ref=e1374]:
+      - generic [ref=e1376]:
+        - generic [ref=e1377]:
+          - generic [ref=e1378]:
+            - link "Back to work" [ref=e1379] [cursor=pointer]:
+              - /url: "#/work"
+              - generic [ref=e1380]:
+                - img [ref=e1381]
+                - text: Back to work
+            - generic [ref=e1384]: Finwise
+          - generic [ref=e1385]:
+            - paragraph [ref=e1386]: Self-initiated build
+            - 'heading "Finwise: an AI wealth-management associate for clearer financial decisions." [level=1] [ref=e1387]'
+            - paragraph [ref=e1388]: Finwise is a future financial product I am shaping as a self-initiated build. The idea is to help people move from scattered money information to clear next actions, with a product that feels more like a thoughtful associate than a generic dashboard.
+          - generic [ref=e1389]:
+            - paragraph [ref=e1390]: Why this page exists
+            - paragraph [ref=e1391]: "This is not a launched case study with outcome metrics yet. It is a product-builder page: the problem framing, the trust model, the MVP scope, and the system thinking I would use to turn the idea into a real product."
+          - generic [ref=e1392]:
+            - button "Context" [ref=e1393] [cursor=pointer]
+            - button "Pillars" [ref=e1394] [cursor=pointer]
+            - button "System" [ref=e1395] [cursor=pointer]
+            - button "Judgment" [ref=e1396] [cursor=pointer]
+        - complementary [ref=e1397]:
+          - generic [ref=e1400]:
+            - generic [ref=e1401]:
+              - generic [ref=e1402]:
+                - paragraph [ref=e1403]: Finwise associate
+                - heading "Your next best money move, with reasoning." [level=3] [ref=e1404]
+              - img [ref=e1406]
+            - generic [ref=e1409]:
+              - generic [ref=e1410]:
+                - paragraph [ref=e1411]: Goal
+                - paragraph [ref=e1412]: Build a stable plan across savings, debt, retirement, and near-term tradeoffs.
+              - generic [ref=e1413]:
+                - paragraph [ref=e1414]: Output
+                - paragraph [ref=e1415]: Action queue, scenario comparison, and explanation of why each recommendation fits.
+            - generic [ref=e1416]:
+              - generic [ref=e1417]:
+                - paragraph [ref=e1418]: Product frame
+                - paragraph [ref=e1419]: Conceptual MVP
+              - generic [ref=e1420]:
+                - generic [ref=e1421]:
+                  - img [ref=e1422]
+                  - generic [ref=e1426]: Goals
+                - generic [ref=e1427]:
+                  - img [ref=e1428]
+                  - generic [ref=e1440]: Planning logic
+                - generic [ref=e1441]:
+                  - img [ref=e1442]
+                  - generic [ref=e1445]: Action plan
+              - generic [ref=e1446]:
+                - generic [ref=e1447]:
+                  - img [ref=e1448]
+                  - generic [ref=e1452]: Tradeoff view
+                - generic [ref=e1453]:
+                  - img [ref=e1454]
+                  - generic [ref=e1457]: Trust + guardrails
+          - generic [ref=e1458]:
+            - generic [ref=e1459]:
+              - paragraph [ref=e1460]: Type
+              - paragraph [ref=e1461]: Self-initiated product build
+            - generic [ref=e1462]:
+              - paragraph [ref=e1463]: Product
+              - paragraph [ref=e1464]: AI-assisted wealth-management associate
+            - generic [ref=e1465]:
+              - paragraph [ref=e1466]: Stage
+              - paragraph [ref=e1467]: Concept + MVP framing
+            - generic [ref=e1468]:
+              - paragraph [ref=e1469]: Focus
+              - paragraph [ref=e1470]: Trust, decision clarity, and explainable next actions
+      - generic [ref=e1471]:
+        - generic [ref=e1472]:
+          - generic [ref=e1474]:
+            - paragraph [ref=e1475]: Context
+            - heading "The product idea starts with a decision problem, not a dashboard problem." [level=2] [ref=e1476]
+            - paragraph [ref=e1477]: "Finwise is based on a simple belief: people do not just need financial visibility. They need help turning context into an understandable next step."
+          - generic [ref=e1478]:
+            - paragraph [ref=e1479]: Why this idea is interesting
+            - list [ref=e1480]:
+              - listitem [ref=e1481]:
+                - generic [ref=e1483]: Many people can see their money, but they still do not know what to do next.
+              - listitem [ref=e1484]:
+                - generic [ref=e1486]: Traditional wealth guidance is often too high-touch, too expensive, or too delayed for everyday decisions.
+              - listitem [ref=e1487]:
+                - generic [ref=e1489]: Most finance tools optimize dashboards and tracking, not confidence, tradeoffs, or follow-through.
+        - generic [ref=e1490]:
+          - generic [ref=e1491]:
+            - paragraph [ref=e1492]: Product problem
+            - list [ref=e1493]:
+              - listitem [ref=e1494]:
+                - generic [ref=e1496]: Financial decisions are fragmented across savings, investing, debt, retirement, and short-term tradeoffs.
+              - listitem [ref=e1497]:
+                - generic [ref=e1499]: Users get generic advice, but not enough context on why a recommendation fits their situation.
+              - listitem [ref=e1500]:
+                - generic [ref=e1502]: Trust breaks quickly when a product sounds authoritative without showing reasoning or guardrails.
+              - listitem [ref=e1503]:
+                - generic [ref=e1505]: Even motivated users struggle to convert goals into a clear action plan they can actually maintain.
+          - generic [ref=e1506]:
+            - paragraph [ref=e1507]: Builder signal
+            - generic [ref=e1508]:
+              - paragraph [ref=e1509]: "This is the kind of build I use to pressure-test product judgment: what is the user decision problem, what is the trust risk, and what is the smallest version worth building first?"
+              - paragraph [ref=e1510]: "It also reflects how I think as a builder: product direction, interaction model, system logic, and MVP scope should all get shaped together."
+        - generic [ref=e1511]:
+          - generic [ref=e1512]:
+            - paragraph [ref=e1513]: Concept visual
+            - heading "A quick visual read of what Finwise would actually help a user do." [level=2] [ref=e1514]
+            - paragraph [ref=e1515]: Instead of a generic finance dashboard, the product should help a user understand their position, compare choices, and leave with one clear next move.
+          - generic [ref=e1516]:
+            - generic [ref=e1517]:
+              - paragraph [ref=e1518]: Low-fi product wireframe
+              - generic [ref=e1520]:
+                - generic [ref=e1521]:
+                  - generic [ref=e1522]:
+                    - paragraph [ref=e1523]: Finwise associate
+                    - heading "You can invest more, but pay debt first this month." [level=3] [ref=e1524]
+                  - img [ref=e1526]
+                - generic [ref=e1529]:
+                  - paragraph [ref=e1530]: Why this is first
+                  - paragraph [ref=e1531]: Interest drag is higher than the gain from increasing investment contributions right now.
+                - generic [ref=e1532]:
+                  - generic [ref=e1533]:
+                    - paragraph [ref=e1534]: Option A
+                    - paragraph [ref=e1535]: Pay debt faster
+                    - paragraph [ref=e1536]: Short-term priority
+                  - generic [ref=e1537]:
+                    - paragraph [ref=e1538]: Option B
+                    - paragraph [ref=e1539]: Increase investment
+                    - paragraph [ref=e1540]: Lower near-term impact
+                - generic [ref=e1541]:
+                  - paragraph [ref=e1542]: Next actions
+                  - generic [ref=e1543]:
+                    - generic [ref=e1544]: Shift $250 toward debt repayment
+                    - generic [ref=e1546]: Recheck contribution mix next month
+            - generic [ref=e1548]:
+              - generic [ref=e1549]:
+                - paragraph [ref=e1550]: Product flow
+                - generic [ref=e1551]:
+                  - generic [ref=e1552]:
+                    - generic [ref=e1553]: "1"
+                    - paragraph [ref=e1554]: Bring account context, goals, debt, and recurring commitments into one planning surface.
+                  - generic [ref=e1555]:
+                    - generic [ref=e1556]: "2"
+                    - paragraph [ref=e1557]: Rank the next best move based on tradeoffs, not generic personal-finance advice.
+                  - generic [ref=e1558]:
+                    - generic [ref=e1559]: "3"
+                    - paragraph [ref=e1560]: Explain the recommendation clearly enough that the user knows why it fits.
+                  - generic [ref=e1561]:
+                    - generic [ref=e1562]: "4"
+                    - paragraph [ref=e1563]: Turn the plan into a short action queue the user can actually follow through on.
+              - generic [ref=e1564]:
+                - paragraph [ref=e1565]: What makes it different
+                - paragraph [ref=e1566]: The visual center of gravity is the decision and the explanation, not charts for their own sake. That is the key difference between a planning associate and a passive dashboard.
+        - generic [ref=e1567]:
+          - generic [ref=e1568]:
+            - paragraph [ref=e1569]: Product Pillars
+            - heading "The MVP should feel like guided decision support, not just financial reporting." [level=2] [ref=e1570]
+            - paragraph [ref=e1571]: If I built the first usable version, these are the pillars I would prioritize before layering in broader personalization or automation.
+          - generic [ref=e1572]:
+            - generic [ref=e1573]:
+              - img [ref=e1575]
+              - heading "Financial snapshot" [level=3] [ref=e1577]
+              - paragraph [ref=e1578]: Bring goals, balances, obligations, and recurring commitments into one place so the product starts from real context instead of generic assumptions.
+            - generic [ref=e1579]:
+              - img [ref=e1581]
+              - heading "Associate-style guidance" [level=3] [ref=e1584]
+              - paragraph [ref=e1585]: Position the product like a wealth-management associate that explains options, surfaces tradeoffs, and recommends the next best move in plain language.
+            - generic [ref=e1586]:
+              - img [ref=e1588]
+              - heading "Scenario planning" [level=3] [ref=e1592]
+              - paragraph [ref=e1593]: Let users compare choices such as saving faster, paying debt, or adjusting contributions before acting, rather than forcing one fixed recommendation.
+            - generic [ref=e1594]:
+              - img [ref=e1596]
+              - heading "Action queue" [level=3] [ref=e1599]
+              - paragraph [ref=e1600]: Translate strategy into follow-through with a concrete list of next steps, reminders, and check-ins so the product helps users act, not only observe.
+        - generic [ref=e1601]:
+          - generic [ref=e1602]:
+            - paragraph [ref=e1603]: How It Is Built
+            - heading "The interesting part is how advice, logic, and trust fit together." [level=2] [ref=e1604]
+            - paragraph [ref=e1605]: For a product like this, the build is not only interface design. It is the system that connects user context, planning logic, explainability, and follow-through.
+          - generic [ref=e1606]:
+            - generic [ref=e1608]:
+              - img [ref=e1610]
+              - generic [ref=e1617]:
+                - heading "User context layer" [level=3] [ref=e1618]
+                - paragraph [ref=e1619]: Profile, financial goals, current balances, obligations, and planning priorities.
+            - generic [ref=e1621]:
+              - img [ref=e1623]
+              - generic [ref=e1630]:
+                - heading "Planning logic layer" [level=3] [ref=e1631]
+                - paragraph [ref=e1632]: Rules and recommendation logic that turn raw context into ranked financial actions and tradeoffs.
+            - generic [ref=e1634]:
+              - img [ref=e1636]
+              - generic [ref=e1643]:
+                - heading "Trust and explanation layer" [level=3] [ref=e1644]
+                - paragraph [ref=e1645]: Reasoning, assumptions, guardrails, and confidence language so the product never feels like a black box.
+            - generic [ref=e1647]:
+              - img [ref=e1649]
+              - generic [ref=e1656]:
+                - heading "Follow-through layer" [level=3] [ref=e1657]
+                - paragraph [ref=e1658]: Action plans, reminders, plan updates, and progress review so guidance does not end at the recommendation.
+        - generic [ref=e1659]:
+          - generic [ref=e1660]:
+            - paragraph [ref=e1661]: PM Judgment
+            - heading "The critical choices are about trust, scope, and what not to automate too early." [level=2] [ref=e1662]
+            - paragraph [ref=e1663]: A finance product can feel helpful very quickly or untrustworthy very quickly. The product judgment here is mostly about that line.
+          - generic [ref=e1664]:
+            - generic [ref=e1665]:
+              - heading "Clarity before automation" [level=3] [ref=e1666]
+              - paragraph [ref=e1667]: The first version should make decisions easier to understand before it tries to become fully autonomous or deeply personalized.
+            - generic [ref=e1668]:
+              - heading "Explainability is core UX" [level=3] [ref=e1669]
+              - paragraph [ref=e1670]: A financial product should not only say what to do. It should show why that suggestion is being made, what assumptions it depends on, and what tradeoff it creates.
+            - generic [ref=e1671]:
+              - heading "Trust beats feature count" [level=3] [ref=e1672]
+              - paragraph [ref=e1673]: I would rather ship a narrower product that gives legible recommendations than a broader platform that tries to do everything and feels hard to trust.
+        - generic [ref=e1674]:
+          - generic [ref=e1675]:
+            - generic [ref=e1676]:
+              - img [ref=e1677]
+              - heading "What I would test first" [level=3] [ref=e1679]
+            - list [ref=e1680]:
+              - listitem [ref=e1681]:
+                - generic [ref=e1683]: Whether users respond better to an associate framing than to a generic financial dashboard.
+              - listitem [ref=e1684]:
+                - generic [ref=e1686]: "Which recommendation outputs feel most useful: action list, scenario comparison, or plan summary."
+              - listitem [ref=e1687]:
+                - generic [ref=e1689]: How much automation users want before they prefer a human review or confirmation step.
+              - listitem [ref=e1690]:
+                - generic [ref=e1692]: What kinds of disclosures and explanation patterns make the product feel credible without becoming overwhelming.
+          - generic [ref=e1693]:
+            - generic [ref=e1694]:
+              - img [ref=e1695]
+              - heading "Why it belongs in the portfolio" [level=3] [ref=e1698]
+            - paragraph [ref=e1699]: This page shows how I think when there is no company brief to inherit. I still start with the user problem, the trust challenge, the smallest meaningful MVP, and the system needed to make the product behave coherently.
+            - paragraph [ref=e1700]: That is useful signal for recruiters and product leaders because it shows product judgment before there is a big team, a polished interface, or post-launch data.
+        - generic [ref=e1701]:
+          - generic [ref=e1702]:
+            - generic [ref=e1703]:
+              - paragraph [ref=e1704]: Closing Takeaway
+              - heading "Finwise is less about building another finance dashboard and more about building a product people can trust to think with." [level=2] [ref=e1705]
+            - paragraph [ref=e1706]: "This is the kind of self-initiated build I want in the portfolio because it shows product-builder thinking clearly: identify the decision friction, make the guidance legible, and design the system so the product earns confidence before it asks for deeper user reliance."
+          - generic [ref=e1707]:
+            - link "Back to work archive" [ref=e1708] [cursor=pointer]:
+              - /url: "#/work"
+              - generic [ref=e1709]:
+                - text: Back to work archive
+                - img [ref=e1710]
+            - link "View resume" [ref=e1712] [cursor=pointer]:
+              - /url: https://drive.google.com/file/d/1RJoTocjJjHskvaqAdWpVu4aGavceRWwi/view
+              - text: View resume
+              - img [ref=e1713]
+  - contentinfo [ref=e966]:
+    - generic [ref=e967]:
+      - generic [ref=e969]:
+        - generic [ref=e970]:
+          - paragraph [ref=e971]: good product work starts with sharper questions
+          - heading "Let's build something meaningful" [level=3] [ref=e972]
+          - paragraph [ref=e973]: AI-first product work, grounded in clarity, systems thinking, and execution.
+        - link "Contact" [ref=e974] [cursor=pointer]:
+          - /url: "#/contact"
+          - generic "Contact" [ref=e975]:
+            - text: Start a conversation
+            - img [ref=e976]
+      - generic [ref=e978]:
+        - generic [ref=e979]:
+          - generic [ref=e981]:
+            - generic [ref=e982]: Nivedita
+            - generic [ref=e983]: product manager
+          - paragraph [ref=e984]: AI-first Product Manager focused on clear product thinking, structured execution, and human-centered outcomes.
+        - generic [ref=e985]:
+          - heading "Quick Links" [level=3] [ref=e986]
+          - generic [ref=e987]:
+            - link "Home" [ref=e989] [cursor=pointer]:
+              - /url: "#/"
+              - generic [ref=e990]: Home
+            - link "Featured Work" [ref=e992] [cursor=pointer]:
+              - /url: "#/"
+              - generic [ref=e993]: Featured Work
+            - link "Case Studies + Builds" [ref=e995] [cursor=pointer]:
+              - /url: "#/"
+              - generic [ref=e996]: Case Studies + Builds
+            - link "What I’m Building With" [ref=e998] [cursor=pointer]:
+              - /url: "#/"
+              - generic [ref=e999]: What I’m Building With
+            - link "Journey" [ref=e1001] [cursor=pointer]:
+              - /url: "#/journey"
+              - generic [ref=e1002]: Journey
+        - generic [ref=e1003]:
+          - heading "Connect" [level=3] [ref=e1004]
+          - generic [ref=e1005]:
+            - link "LinkedIn profile" [ref=e1006] [cursor=pointer]:
+              - /url: https://www.linkedin.com/in/nivedita-niv/
+              - img [ref=e1007]
+            - link "GitHub profile" [ref=e1009] [cursor=pointer]:
+              - /url: https://github.com/niveditajurel
+              - img [ref=e1010]
+            - link "X profile" [ref=e1012] [cursor=pointer]:
+              - /url: https://x.com/nniv266
+              - img [ref=e1013]
+            - link "Instagram profile" [ref=e1015] [cursor=pointer]:
+              - /url: https://www.instagram.com/niv_yaps/
+              - img [ref=e1016]
+      - generic [ref=e1018]:
+        - paragraph [ref=e1019]: © 2026 Nivedita. All rights reserved.
+        - paragraph [ref=e1020]: Built for thoughtful product conversations and future teams.
+  - region "Notifications (F8)":
+    - list

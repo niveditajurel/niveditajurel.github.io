@@ -1,0 +1,86 @@
+[
+  {
+    "i": 0,
+    "id": "",
+    "className": "rounded-[2.6rem] border border-white/12 bg-[#12100e] px-6 py-7 text-[#f4eee7] shadow-[0_42px_120px_-56px_rgba(17,14,11,0.78)] lg:px-10 lg:py-9",
+    "text": "Independent case studyDriver safetyDispatch UXIndependent case study based on public research, field observations, and product analysis. Not"
+  },
+  {
+    "i": 1,
+    "id": "friction",
+    "className": "scroll-mt-32 rounded-[2.3rem] border border-[#d8cbb7] bg-[#f6f0e7]/94 px-5 py-6 shadow-[0_24px_50px_-42px_rgba(75,54,27,0.14)] backdrop-blur-sm sm:px-6 lg:px-8 lg:scroll-mt-36 lg:py-7",
+    "text": "The Moment of FrictionThe request can take over much of the lower screen right when navigation matters most.A rider is still in the vehicle."
+  },
+  {
+    "i": 2,
+    "id": "problem",
+    "className": "scroll-mt-32 rounded-[2.3rem] border border-[#d8cbb7] bg-[#f6f0e7]/94 px-5 py-6 shadow-[0_24px_50px_-42px_rgba(75,54,27,0.14)] backdrop-blur-sm sm:px-6 lg:px-8 lg:scroll-mt-36 lg:py-7",
+    "text": "Reframed ProblemThis is an interruption-timing problem, not just a card-size problem.Back-to-back trips are valuable. The interruption timin"
+  },
+  {
+    "i": 3,
+    "id": "impact",
+    "className": "scroll-mt-32 rounded-[2.3rem] border border-[#d8cbb7] bg-[#f6f0e7]/94 px-5 py-6 shadow-[0_24px_50px_-42px_rgba(75,54,27,0.14)] backdrop-blur-sm sm:px-6 lg:px-8 lg:scroll-mt-36 lg:py-7",
+    "text": "Why It MattersOne prompt can affect safety, trust, and marketplace flow.SafetyVisual distraction during high-attention driving moments.Drive"
+  },
+  {
+    "i": 4,
+    "id": "research",
+    "className": "scroll-mt-32 rounded-[2.3rem] border border-[#d8cbb7] bg-[#f6f0e7]/94 px-5 py-6 shadow-[0_24px_50px_-42px_rgba(75,54,27,0.14)] backdrop-blur-sm sm:px-6 lg:px-8 lg:scroll-mt-36 lg:py-7",
+    "text": "Research SignalThe signal is consistent across product behavior, field observations, and safety guidance.Public forum evidence is treated as"
+  },
+  {
+    "i": 5,
+    "id": "field-notes",
+    "className": "scroll-mt-32 rounded-[2.3rem] border border-[#d8cbb7] bg-[#f6f0e7]/94 px-5 py-6 shadow-[0_24px_50px_-42px_rgba(75,54,27,0.14)] backdrop-blur-sm sm:px-6 lg:px-8 lg:scroll-mt-36 lg:py-7",
+    "text": "User ResearchInformal field notes show the same interruption pattern across different road contexts.These notes are based on informal driver"
+  },
+  {
+    "i": 6,
+    "id": "root-causes",
+    "className": "scroll-mt-32 rounded-[2.3rem] border border-[#d8cbb7] bg-[#f6f0e7]/94 px-5 py-6 shadow-[0_24px_50px_-42px_rgba(75,54,27,0.14)] backdrop-blur-sm sm:px-6 lg:px-8 lg:scroll-mt-36 lg:py-7",
+    "text": "Root Cause AnalysisFour product conditions create the risk.Timing conflict01Requests can arrive during exits, merges, turns, or dense inters"
+  },
+  {
+    "i": 7,
+    "id": "judgment",
+    "className": "scroll-mt-32 rounded-[2.3rem] border border-[#d8cbb7] bg-[#f6f0e7]/94 px-5 py-6 shadow-[0_24px_50px_-42px_rgba(75,54,27,0.14)] backdrop-blur-sm sm:px-6 lg:px-8 lg:scroll-mt-36 lg:py-7",
+    "text": "What I Would Not DoSome obvious fixes solve the wrong layer of the problem.Judgment 01I would not remove back-to-back requests because they "
+  },
+  {
+    "i": 8,
+    "id": "alternatives",
+    "className": "scroll-mt-32 rounded-[2.3rem] border border-[#d8cbb7] bg-[#f6f0e7]/94 px-5 py-6 shadow-[0_24px_50px_-42px_rgba(75,54,27,0.14)] backdrop-blur-sm sm:px-6 lg:px-8 lg:scroll-mt-36 lg:py-7",
+    "text": "Solution AlternativesSeveral tactics help, but one system direction stands out.The goal is not to remove requests. It is to change how they "
+  },
+  {
+    "i": 9,
+    "id": "mvp",
+    "className": "scroll-mt-32 rounded-[2.3rem] border border-[#d8cbb7] bg-[#f6f0e7]/94 px-5 py-6 shadow-[0_24px_50px_-42px_rgba(75,54,27,0.14)] backdrop-blur-sm sm:px-6 lg:px-8 lg:scroll-mt-36 lg:py-7",
+    "text": "Recommended MVPRecommended MVP: Maneuver-Aware Compact Request ModeThe MVP should preserve back-to-back trips but change how requests appear"
+  },
+  {
+    "i": 10,
+    "id": "metrics",
+    "className": "scroll-mt-32 rounded-[2.3rem] border border-[#d8cbb7] bg-[#f6f0e7]/94 px-5 py-6 shadow-[0_24px_50px_-42px_rgba(75,54,27,0.14)] backdrop-blur-sm sm:px-6 lg:px-8 lg:scroll-mt-36 lg:py-7",
+    "text": "Metrics and Experiment PlanValidate whether safer presentation reduces route disruption near request events.Primary success metricReduction "
+  },
+  {
+    "i": 11,
+    "id": "thinking",
+    "className": "scroll-mt-32 rounded-[2.3rem] border border-[#d8cbb7] bg-[#f6f0e7]/94 px-5 py-6 shadow-[0_24px_50px_-42px_rgba(75,54,27,0.14)] backdrop-blur-sm sm:px-6 lg:px-8 lg:scroll-mt-36 lg:py-7",
+    "text": "PM ThinkingThe right framing is interruption management, not cosmetic cleanup.This is a product policy problem before it is a visual design "
+  },
+  {
+    "i": 12,
+    "id": "builder",
+    "className": "scroll-mt-32 rounded-[2.3rem] border border-[#d8cbb7] bg-[#f6f0e7]/94 px-5 py-6 shadow-[0_24px_50px_-42px_rgba(75,54,27,0.14)] backdrop-blur-sm sm:px-6 lg:px-8 lg:scroll-mt-36 lg:py-7",
+    "text": "Product Builder ThinkingRoll it out in phases, then tune the policy.The first goal is not perfect intelligence. It is a reliable policy with"
+  },
+  {
+    "i": 13,
+    "id": "takeaway",
+    "className": "scroll-mt-32 rounded-[2.4rem] border border-[#1d1813] bg-[#171310] px-6 py-8 text-[#f6eee2] shadow-[0_28px_90px_-52px_rgba(13,11,8,0.84)] lg:px-8 lg:scroll-mt-36",
+    "text": "Final TakeawayDispatch should adapt to the driver's attention state, not compete with it.The strongest driver experience is not the one that"
+  }
+]

@@ -1,0 +1,343 @@
+- generic [ref=e3]:
+  - navigation [ref=e4]:
+    - generic [ref=e6]:
+      - link "Nivedita" [ref=e8] [cursor=pointer]:
+        - /url: "#/"
+        - generic [ref=e10]: Nivedita
+      - generic [ref=e12]:
+        - link "Home" [ref=e13] [cursor=pointer]:
+          - /url: "#/"
+          - generic [ref=e14]:
+            - img [ref=e15]
+            - text: Home
+        - link "Work" [ref=e18] [cursor=pointer]:
+          - /url: "#/projects"
+          - generic [ref=e19]:
+            - img [ref=e20]
+            - text: Work
+        - link "Journey" [ref=e24] [cursor=pointer]:
+          - /url: "#/journey"
+          - generic [ref=e25]:
+            - img [ref=e26]
+            - text: Journey
+      - generic [ref=e35]:
+        - link "LinkedIn profile" [ref=e36] [cursor=pointer]:
+          - /url: https://www.linkedin.com/in/nivedita-niv/
+          - img [ref=e37]
+        - link "GitHub profile" [ref=e39] [cursor=pointer]:
+          - /url: https://github.com/niveditajurel
+          - img [ref=e40]
+        - link "X profile" [ref=e42] [cursor=pointer]:
+          - /url: https://x.com/nniv266
+          - img [ref=e43]
+        - link "Instagram profile" [ref=e45] [cursor=pointer]:
+          - /url: https://www.instagram.com/niv_yaps/
+          - img [ref=e46]
+  - main [ref=e48]:
+    - generic [ref=e53]:
+      - generic [ref=e54]:
+        - generic [ref=e55]:
+          - paragraph [ref=e56]: Journey
+          - heading "From software systems to product clarity." [level=1] [ref=e57]
+        - generic [ref=e58]:
+          - paragraph [ref=e59]: "A cross-sector path through software, data, startups, enterprise workflows, and AI-first product work. The pattern is consistent: make ambiguous systems easier to understand, align, and ship."
+          - generic [ref=e60]:
+            - img [ref=e61]
+            - text: 2019 - now
+      - generic [ref=e63]:
+        - generic [ref=e64]:
+          - paragraph [ref=e65]: Experience
+          - heading "The work behind the positioning." [level=2] [ref=e66]
+        - generic [ref=e67]:
+          - article [ref=e68]:
+            - generic [ref=e69]:
+              - paragraph [ref=e70]: Jan 2025 - Present
+              - generic [ref=e71]:
+                - img [ref=e72]
+                - text: Dallas, TX
+            - generic [ref=e75]:
+              - generic [ref=e76]:
+                - generic [ref=e77]:
+                  - heading "Product Consultant" [level=3] [ref=e78]
+                  - paragraph [ref=e79]: Anand PAG
+                - paragraph [ref=e80]: Leading business process optimization and digital transformation initiatives using SAP Signavio and BPMN 2.0 modeling.
+                - list [ref=e81]:
+                  - listitem [ref=e82]:
+                    - generic [ref=e84]: Mapped 30+ workflows across 4 departments into BPMN 2.0 models using SAP Signavio, reducing documentation gaps by 35%
+                  - listitem [ref=e85]:
+                    - generic [ref=e87]: Analyzed bottlenecks using Signavio Process Intelligence, reducing average cycle time by 18%
+              - generic [ref=e88]:
+                - generic [ref=e89]: BPMN 2.0
+                - generic [ref=e90]: SAP Signavio
+                - generic [ref=e91]: Process Optimization
+                - generic [ref=e92]: Digital Transformation
+                - generic [ref=e93]: Data Analysis
+          - article [ref=e94]:
+            - generic [ref=e95]:
+              - paragraph [ref=e96]: Aug 2024 - Dec 2024
+              - generic [ref=e97]:
+                - img [ref=e98]
+                - text: Boston, MA
+            - generic [ref=e101]:
+              - generic [ref=e102]:
+                - generic [ref=e103]:
+                  - heading "Product Manager" [level=3] [ref=e104]
+                  - paragraph [ref=e105]: Skingenius
+                - paragraph [ref=e106]: Led end-to-end product development for a B2C skincare recommendation platform with AI-driven suggestions.
+                - list [ref=e107]:
+                  - listitem [ref=e108]:
+                    - generic [ref=e110]: Optimized onboarding flow and refined AI-driven suggestions, boosting engagement by 30% and quiz completion by 25%
+                  - listitem [ref=e111]:
+                    - generic [ref=e113]: Built and managed agile product roadmaps in Jira, streamlining release cycles and improving team delivery efficiency by 33%
+              - generic [ref=e114]:
+                - generic [ref=e115]: Product Management
+                - generic [ref=e116]: AI/ML
+                - generic [ref=e117]: Agile
+                - generic [ref=e118]: Jira
+                - generic [ref=e119]: User Experience
+          - article [ref=e120]:
+            - generic [ref=e121]:
+              - paragraph [ref=e122]: May 2024 - Jul 2024
+              - generic [ref=e123]:
+                - img [ref=e124]
+                - text: Boston, MA
+            - generic [ref=e127]:
+              - generic [ref=e128]:
+                - generic [ref=e129]:
+                  - heading "Product Manager" [level=3] [ref=e130]
+                  - paragraph [ref=e131]: Nomad AI
+                - paragraph [ref=e132]: Developed pricing strategy and product requirements for a financial SaaS product for SMB valuation.
+                - list [ref=e133]:
+                  - listitem [ref=e134]:
+                    - generic [ref=e136]: Developed pricing strategy and PRD for financial SaaS product, leveraging RAG and Vercel analytics
+                  - listitem [ref=e137]:
+                    - generic [ref=e139]: Projected 42% lift in conversions and 28% increase in MRR through data-driven optimization
+              - generic [ref=e140]:
+                - generic [ref=e141]: SaaS
+                - generic [ref=e142]: Financial Tech
+                - generic [ref=e143]: Pricing Strategy
+                - generic [ref=e144]: Data Analytics
+                - generic [ref=e145]: SQL
+          - article [ref=e146]:
+            - generic [ref=e147]:
+              - paragraph [ref=e148]: Aug 2021 - Jul 2022
+              - generic [ref=e149]:
+                - img [ref=e150]
+                - text: Remote
+            - generic [ref=e153]:
+              - generic [ref=e154]:
+                - generic [ref=e155]:
+                  - heading "Business Analyst" [level=3] [ref=e156]
+                  - link "Cognizant" [ref=e157] [cursor=pointer]:
+                    - /url: https://cognizant.com
+                    - text: Cognizant
+                    - img [ref=e158]
+                - paragraph [ref=e161]: Managed agile product backlog for EdTech product and engineered data preprocessing strategies.
+                - list [ref=e162]:
+                  - listitem [ref=e163]:
+                    - generic [ref=e165]: Managed agile product backlog for EdTech product, resulting in 33% increase in user satisfaction and 10% reduction in time-to-market
+                  - listitem [ref=e166]:
+                    - generic [ref=e168]: Engineered data preprocessing strategies, reducing data processing time by 18% and decreasing data errors by 20%
+              - generic [ref=e169]:
+                - generic [ref=e170]: Business Analysis
+                - generic [ref=e171]: Agile
+                - generic [ref=e172]: ETL
+                - generic [ref=e173]: BI Tools
+                - generic [ref=e174]: Data Processing
+          - article [ref=e175]:
+            - generic [ref=e176]:
+              - paragraph [ref=e177]: Sep 2020 - Aug 2021
+              - generic [ref=e178]:
+                - img [ref=e179]
+                - text: Remote
+            - generic [ref=e182]:
+              - generic [ref=e183]:
+                - generic [ref=e184]:
+                  - heading "Product Manager" [level=3] [ref=e185]
+                  - paragraph [ref=e186]: Symbionic
+                - paragraph [ref=e187]: Owned digital app for bionic arm technology, defining product roadmap and managing cross-functional collaboration.
+                - list [ref=e188]:
+                  - listitem [ref=e189]:
+                    - generic [ref=e191]: Owned digital app for bionic arm, defining product roadmap and developing PRDs, optimizing release cycles and performance
+                  - listitem [ref=e192]:
+                    - generic [ref=e194]: Managed cross-functional stakeholder collaboration (Biomechanical, Software, Design teams), improving product quality and increasing user satisfaction by 19%
+              - generic [ref=e195]:
+                - generic [ref=e196]: Health Tech
+                - generic [ref=e197]: Hardware Integration
+                - generic [ref=e198]: Market Research
+                - generic [ref=e199]: Cross-functional Leadership
+                - generic [ref=e200]: NPS Optimization
+          - article [ref=e201]:
+            - generic [ref=e202]:
+              - paragraph [ref=e203]: Jan 2020 - May 2020
+              - generic [ref=e204]:
+                - img [ref=e205]
+                - text: Remote
+            - generic [ref=e208]:
+              - generic [ref=e209]:
+                - generic [ref=e210]:
+                  - heading "Data Scientist" [level=3] [ref=e211]
+                  - paragraph [ref=e212]: UNMITI
+                - paragraph [ref=e213]: Applied data science and analytics to drive business insights and decision-making processes.
+                - list [ref=e214]:
+                  - listitem [ref=e215]:
+                    - generic [ref=e217]: Developed data models and analytics solutions to support business objectives
+                  - listitem [ref=e218]:
+                    - generic [ref=e220]: Conducted statistical analysis and created predictive models for business optimization
+              - generic [ref=e221]:
+                - generic [ref=e222]: Data Science
+                - generic [ref=e223]: Statistical Analysis
+                - generic [ref=e224]: Predictive Modeling
+                - generic [ref=e225]: Business Intelligence
+                - generic [ref=e226]: Analytics
+          - article [ref=e227]:
+            - generic [ref=e228]:
+              - paragraph [ref=e229]: "2020"
+              - generic [ref=e230]:
+                - img [ref=e231]
+                - text: Vellore, India
+            - generic [ref=e234]:
+              - generic [ref=e235]:
+                - generic [ref=e236]:
+                  - heading "Director of External Affairs" [level=3] [ref=e237]
+                  - paragraph [ref=e238]: Entrepreneurship Cell, VIT
+                - paragraph [ref=e239]: Led external partnerships and strategic initiatives for the university's entrepreneurship ecosystem.
+                - list [ref=e240]:
+                  - listitem [ref=e241]:
+                    - generic [ref=e243]: Managed external partnerships and stakeholder relationships for entrepreneurship initiatives
+                  - listitem [ref=e244]:
+                    - generic [ref=e246]: Organized events and programs to foster entrepreneurial culture among students
+              - generic [ref=e247]:
+                - generic [ref=e248]: Strategic Partnerships
+                - generic [ref=e249]: Leadership
+                - generic [ref=e250]: Event Management
+                - generic [ref=e251]: Stakeholder Relations
+                - generic [ref=e252]: Entrepreneurship
+          - article [ref=e253]:
+            - generic [ref=e254]:
+              - paragraph [ref=e255]: Jul 2019 - Nov 2019
+              - generic [ref=e256]:
+                - img [ref=e257]
+                - text: Remote
+            - generic [ref=e260]:
+              - generic [ref=e261]:
+                - generic [ref=e262]:
+                  - heading "Product Marketing Manager" [level=3] [ref=e263]
+                  - paragraph [ref=e264]: LegalMind
+                - paragraph [ref=e265]: Led product marketing strategies and customer relationship management for legal technology solutions.
+                - list [ref=e266]:
+                  - listitem [ref=e267]:
+                    - generic [ref=e269]: Developed strategic marketing campaigns and go-to-market strategies
+                  - listitem [ref=e270]:
+                    - generic [ref=e272]: Managed customer relationships and implemented CRM systems for improved client engagement
+              - generic [ref=e273]:
+                - generic [ref=e274]: Product Marketing
+                - generic [ref=e275]: Strategic Thinking
+                - generic [ref=e276]: Business Analysis
+                - generic [ref=e277]: CRM
+                - generic [ref=e278]: Market Research
+          - article [ref=e279]:
+            - generic [ref=e280]:
+              - paragraph [ref=e281]: May 2019 - Jul 2019
+              - generic [ref=e282]:
+                - img [ref=e283]
+                - text: Remote
+            - generic [ref=e286]:
+              - generic [ref=e287]:
+                - generic [ref=e288]:
+                  - heading "Intern" [level=3] [ref=e289]
+                  - paragraph [ref=e290]: Web Development & Data Science
+                - paragraph [ref=e291]: Gained hands-on experience in web development and data science through cross-functional project work.
+                - list [ref=e292]:
+                  - listitem [ref=e293]:
+                    - generic [ref=e295]: Developed web applications using HTML, CSS, and modern web technologies
+                  - listitem [ref=e296]:
+                    - generic [ref=e298]: Applied data science techniques to analyze and visualize business data
+              - generic [ref=e299]:
+                - generic [ref=e300]: Web Development
+                - generic [ref=e301]: HTML
+                - generic [ref=e302]: CSS
+                - generic [ref=e303]: Data Science
+                - generic [ref=e304]: Cross-functional Leadership
+      - generic [ref=e305]:
+        - generic [ref=e306]:
+          - generic [ref=e307]:
+            - paragraph [ref=e308]: Education
+            - heading "Technical roots, product lens." [level=2] [ref=e309]
+          - paragraph [ref=e310]: Formal engineering management and software engineering training still shape how I think about systems, implementation details, and cross-functional delivery.
+        - generic [ref=e311]:
+          - article [ref=e312]:
+            - generic [ref=e313]:
+              - img [ref=e315]
+              - paragraph [ref=e318]: Sep 2022 - May 2024
+            - heading "Northeastern University" [level=3] [ref=e319]
+            - paragraph [ref=e320]: Master of Science in Engineering Management
+            - paragraph [ref=e321]: "GPA: 3.8/4.0"
+            - generic [ref=e322]:
+              - generic [ref=e323]: Product Management
+              - generic [ref=e324]: Engineering Management
+              - generic [ref=e325]: Business Strategy
+              - generic [ref=e326]: Data Analytics
+              - generic [ref=e327]: Project Management
+          - article [ref=e328]:
+            - generic [ref=e329]:
+              - img [ref=e331]
+              - paragraph [ref=e334]: 2018 - 2022
+            - heading "Vellore Institute of Technology" [level=3] [ref=e335]
+            - paragraph [ref=e336]: Master of Technology Integrated in Software Engineering
+            - paragraph [ref=e337]: "GPA: 3.8/4.0"
+            - generic [ref=e338]:
+              - generic [ref=e339]: Software Engineering
+              - generic [ref=e340]: Data Structures & Algorithms
+              - generic [ref=e341]: Machine Learning
+              - generic [ref=e342]: Database Management
+              - generic [ref=e343]: Web Development
+  - contentinfo [ref=e344]:
+    - generic [ref=e345]:
+      - generic [ref=e346]:
+        - generic [ref=e347]:
+          - paragraph [ref=e348]: Available for product conversations
+          - heading "Let's build something clear, useful, and shippable." [level=2] [ref=e349]
+        - generic [ref=e350]:
+          - link "Start a conversation" [ref=e351] [cursor=pointer]:
+            - /url: mailto:niveditajurel@gmail.com
+            - img [ref=e352]
+            - text: Start a conversation
+          - link "View resume" [ref=e355] [cursor=pointer]:
+            - /url: https://drive.google.com/file/d/1RJoTocjJjHskvaqAdWpVu4aGavceRWwi/view
+            - text: View resume
+            - img [ref=e356]
+      - generic [ref=e359]:
+        - generic [ref=e360]:
+          - paragraph [ref=e361]: Nivedita
+          - paragraph [ref=e362]: AI-first Product Manager focused on clear product thinking, systems, and execution.
+        - generic [ref=e363]:
+          - link "Home" [ref=e364] [cursor=pointer]:
+            - /url: "#/"
+          - link "Work" [ref=e365] [cursor=pointer]:
+            - /url: "#/projects"
+          - link "Journey" [ref=e366] [cursor=pointer]:
+            - /url: "#/journey"
+          - link "Contact" [ref=e367] [cursor=pointer]:
+            - /url: "#/contact"
+            - generic [ref=e368]:
+              - text: Contact
+              - img [ref=e369]
+        - generic [ref=e371]:
+          - link "LinkedIn profile" [ref=e372] [cursor=pointer]:
+            - /url: https://www.linkedin.com/in/nivedita-niv/
+            - img [ref=e373]
+          - link "GitHub profile" [ref=e375] [cursor=pointer]:
+            - /url: https://github.com/niveditajurel
+            - img [ref=e376]
+          - link "X profile" [ref=e378] [cursor=pointer]:
+            - /url: https://x.com/nniv266
+            - img [ref=e379]
+          - link "Instagram profile" [ref=e381] [cursor=pointer]:
+            - /url: https://www.instagram.com/niv_yaps/
+            - img [ref=e382]
+      - generic [ref=e384]:
+        - paragraph [ref=e385]: © 2026 Nivedita. All rights reserved.
+        - paragraph [ref=e386]: Built for thoughtful product conversations and future teams.
+  - region "Notifications (F8)":
+    - list

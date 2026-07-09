@@ -1,0 +1,25 @@
+- generic [ref=e385]:
+  - generic [ref=e387]:
+    - paragraph [ref=e388]: Journey Preview
+    - generic [ref=e389]:
+      - heading "How the product lens got sharper over time." [level=2] [ref=e390]
+      - generic [ref=e391]:
+        - paragraph [ref=e392]: The path runs through entrepreneurship communities, cross-sector roles, and a steady move toward product work that balances systems thinking with empathy.
+        - link "Read the full journey" [ref=e393] [cursor=pointer]:
+          - /url: "#/journey"
+          - generic [ref=e394]:
+            - text: Read the full journey
+            - img [ref=e395]
+  - generic [ref=e398]:
+    - article [ref=e399]:
+      - generic [ref=e400]: Early foundation
+      - heading "Entrepreneurship and community-building at VIT" [level=3] [ref=e401]
+      - paragraph [ref=e402]: Building startup-facing communities taught me how to create momentum, earn trust, and keep people moving toward a shared goal.
+    - article [ref=e403]:
+      - generic [ref=e404]: Cross-sector growth
+      - heading "From software and analytics into product roles" [level=3] [ref=e405]
+      - paragraph [ref=e406]: Work across health tech, edtech, fintech, and enterprise operations taught me how to translate between users, data, and delivery teams.
+    - article [ref=e407]:
+      - generic [ref=e408]: Current chapter
+      - heading "AI-first product work with a systems mindset" [level=3] [ref=e409]
+      - paragraph [ref=e410]: My current focus is on AI products, operational clarity, and stronger foundations for decisions before and after launch.

@@ -1,0 +1,378 @@
+- generic [ref=e3]:
+  - navigation [ref=e4]:
+    - generic [ref=e6]:
+      - link "Nivedita" [ref=e8] [cursor=pointer]:
+        - /url: "#/"
+        - generic [ref=e10]: Nivedita
+      - generic [ref=e12]:
+        - link "Home" [ref=e13] [cursor=pointer]:
+          - /url: "#/"
+          - generic [ref=e14]:
+            - img [ref=e15]
+            - text: Home
+        - link "Work" [ref=e18] [cursor=pointer]:
+          - /url: "#/projects"
+          - generic [ref=e19]:
+            - img [ref=e20]
+            - text: Work
+        - link "Journey" [ref=e24] [cursor=pointer]:
+          - /url: "#/journey"
+          - generic [ref=e25]:
+            - img [ref=e26]
+            - text: Journey
+      - generic [ref=e35]:
+        - link "LinkedIn profile" [ref=e36] [cursor=pointer]:
+          - /url: https://www.linkedin.com/in/nivedita-niv/
+          - img [ref=e37]
+        - link "GitHub profile" [ref=e39] [cursor=pointer]:
+          - /url: https://github.com/niveditajurel
+          - img [ref=e40]
+        - link "X profile" [ref=e42] [cursor=pointer]:
+          - /url: https://x.com/nniv266
+          - img [ref=e43]
+        - link "Instagram profile" [ref=e45] [cursor=pointer]:
+          - /url: https://www.instagram.com/niv_yaps/
+          - img [ref=e46]
+  - main [ref=e48]:
+    - generic [ref=e53]:
+      - main [ref=e54]:
+        - generic [ref=e55]:
+          - generic [ref=e56]:
+            - generic [ref=e57]:
+              - paragraph [ref=e58]: Work
+              - generic [ref=e59]:
+                - heading "Solving meaningful problems at scale." [level=1] [ref=e60]:
+                  - generic [ref=e61]: Solving meaningful
+                  - generic [ref=e62]: problems at
+                  - generic [ref=e63]: scale.
+                - img [ref=e64]
+              - paragraph [ref=e67]: A selection of case studies, product thinking, and work in progress.
+            - generic [ref=e69]:
+              - img [ref=e72]
+              - generic:
+                - img
+              - generic:
+                - img
+          - generic [ref=e79]:
+            - button "Featured case studies" [ref=e80] [cursor=pointer]
+            - button "Product breakdowns" [ref=e81] [cursor=pointer]
+            - button "Personal projects" [ref=e82] [cursor=pointer]
+            - button "Writing" [ref=e83] [cursor=pointer]
+            - button "Research" [ref=e84] [cursor=pointer]
+        - generic [ref=e85]:
+          - generic [ref=e86]:
+            - heading "Featured case studies" [level=2] [ref=e87]
+            - paragraph [ref=e88]: 3 live case studies
+          - generic [ref=e89]:
+            - link [ref=e90] [cursor=pointer]:
+              - /url: "#/projects/anand-pag"
+              - article [ref=e91]:
+                - img "Anand PAG / Cintas FNA" [ref=e93]
+                - generic [ref=e95]:
+                  - generic [ref=e96]:
+                    - generic [ref=e97]: Delivery • Enterprise
+                    - generic [ref=e98]: 95% -> 100% job success
+                  - generic [ref=e99]:
+                    - generic [ref=e100]:
+                      - heading "Anand PAG" [level=3] [ref=e101]
+                      - paragraph [ref=e102]: Integration-heavy cloud workflow platform for vendor operations
+                    - generic [ref=e103]:
+                      - generic [ref=e104]:
+                        - generic [ref=e105]: Enterprise
+                        - generic [ref=e106]: Workflow Platform
+                      - img [ref=e108]
+            - link [ref=e110] [cursor=pointer]:
+              - /url: "#/projects/skingenius"
+              - article [ref=e111]:
+                - img "Skingenius" [ref=e113]
+                - generic [ref=e115]:
+                  - generic [ref=e116]:
+                    - generic [ref=e117]: Growth • Consumer AI
+                    - generic [ref=e118]: 33% faster release cycles
+                  - generic [ref=e119]:
+                    - generic [ref=e120]:
+                      - heading "Skingenius" [level=3] [ref=e121]
+                      - paragraph [ref=e122]: AI-Powered Personalized Skincare Platform
+                    - generic [ref=e123]:
+                      - generic [ref=e124]:
+                        - generic [ref=e125]: AI
+                        - generic [ref=e126]: E-commerce
+                      - img [ref=e128]
+            - link [ref=e130] [cursor=pointer]:
+              - /url: "#/projects/nomad-ai"
+              - article [ref=e131]:
+                - img "Nomad AI" [ref=e133]
+                - generic [ref=e135]:
+                  - generic [ref=e136]:
+                    - generic [ref=e137]: AI • B2B SaaS
+                    - generic [ref=e138]: +42% conversion lift projected
+                  - generic [ref=e139]:
+                    - generic [ref=e140]:
+                      - heading "Nomad AI" [level=3] [ref=e141]
+                      - paragraph [ref=e142]: AI-powered SMB Valuation & Exit-Planning Platform
+                    - generic [ref=e143]:
+                      - generic [ref=e144]:
+                        - generic [ref=e145]: AI
+                        - generic [ref=e146]: FinTech
+                      - img [ref=e148]
+        - generic [ref=e150]:
+          - generic [ref=e151]:
+            - heading "Product breakdowns" [level=2] [ref=e152]
+            - paragraph [ref=e153]: 1 live, more being added
+          - generic [ref=e154]:
+            - link [ref=e155] [cursor=pointer]:
+              - /url: "#/projects/uber-driver-navigation"
+              - article [ref=e156]:
+                - img [ref=e157]
+                - generic [ref=e160]:
+                  - generic [ref=e161]:
+                    - generic [ref=e162]:
+                      - paragraph [ref=e163]: Live breakdown
+                      - heading "Uber" [level=3] [ref=e164]
+                    - generic [ref=e165]: Marketplace UX
+                  - generic [ref=e166]:
+                    - paragraph [ref=e167]: Dispatch versus navigation, framed as a safety and marketplace systems problem.
+                    - img [ref=e170]
+            - article [ref=e172]:
+              - generic [ref=e176]:
+                - generic [ref=e177]:
+                  - generic [ref=e178]:
+                    - paragraph [ref=e179]: In progress
+                    - heading "Marketplace patterns" [level=3] [ref=e180]
+                  - generic [ref=e181]: Archive building
+                - generic [ref=e182]:
+                  - paragraph [ref=e183]: Operator-facing product reads where incentives, workflows, and UX all collide.
+                  - img [ref=e186]
+            - article [ref=e188]:
+              - generic [ref=e193]:
+                - generic [ref=e194]:
+                  - generic [ref=e195]:
+                    - paragraph [ref=e196]: In progress
+                    - heading "AI product trust" [level=3] [ref=e197]
+                  - generic [ref=e198]: Queued next
+                - generic [ref=e199]:
+                  - paragraph [ref=e200]: Breakdowns focused on framing, trust, onboarding, and whether the AI value actually lands.
+                  - img [ref=e203]
+            - article [ref=e205]:
+              - img [ref=e206]
+              - generic [ref=e209]:
+                - generic [ref=e210]:
+                  - generic [ref=e211]:
+                    - paragraph [ref=e212]: In progress
+                    - heading "Growth loops" [level=3] [ref=e213]
+                  - generic [ref=e214]: Work in progress
+                - generic [ref=e215]:
+                  - paragraph [ref=e216]: A working set of product reads around activation, repeat behavior, and what compounds post-onboarding.
+                  - img [ref=e219]
+        - generic [ref=e221]:
+          - generic [ref=e222]:
+            - heading "Personal projects" [level=2] [ref=e223]
+            - paragraph [ref=e224]: 2 active build streams
+          - generic [ref=e225]:
+            - article [ref=e226]:
+              - generic [ref=e228]:
+                - generic [ref=e229]:
+                  - generic [ref=e230]:
+                    - paragraph [ref=e231]: Startup + consulting work
+                    - heading "AI-native Product Bets" [level=3] [ref=e232]
+                  - img [ref=e234]
+                - paragraph [ref=e236]: Problems around MVP framing, trust, pricing, onboarding, analytics, and turning unclear AI product ideas into something teams could ship.
+                - generic [ref=e237]:
+                  - generic [ref=e238]: Product case studies
+                  - generic [ref=e239]: MVP framing
+                  - generic [ref=e240]: Onboarding
+                  - generic [ref=e241]: Pricing
+                  - generic [ref=e242]: Analytics
+            - article [ref=e243]:
+              - generic [ref=e245]:
+                - generic [ref=e246]:
+                  - generic [ref=e247]:
+                    - paragraph [ref=e248]: Self-initiated builds
+                    - heading "Personal Products + Experiments" [level=3] [ref=e249]
+                  - img [ref=e251]
+                - paragraph [ref=e253]: Products and AI-assisted tools I build to test workflows, support product decisions, and explore new interaction patterns on my own.
+                - generic [ref=e254]:
+                  - generic [ref=e255]: Active builds
+                  - generic [ref=e256]: Agents
+                  - generic [ref=e257]: Prototypes
+                  - generic [ref=e258]: Tooling
+                  - generic [ref=e259]: Recommendations
+        - generic [ref=e260]:
+          - generic [ref=e261]:
+            - heading "Writing and content" [level=2] [ref=e262]
+            - paragraph [ref=e263]: LinkedIn, archive, and short-form notes
+          - generic [ref=e264]:
+            - link [ref=e265] [cursor=pointer]:
+              - /url: https://www.linkedin.com/in/nivedita-niv/
+              - article [ref=e266]:
+                - generic [ref=e267]:
+                  - generic [ref=e268]:
+                    - generic [ref=e269]:
+                      - paragraph [ref=e270]: Professional essays
+                      - heading "LinkedIn Writing" [level=3] [ref=e271]
+                    - img [ref=e273]
+                  - paragraph [ref=e275]: Longer-form posts on PM career moves, product judgment, and what it takes to move work forward in uncertain spaces.
+                - generic [ref=e277]:
+                  - text: Open
+                  - img [ref=e278]
+            - link [ref=e281] [cursor=pointer]:
+              - /url: "#/content"
+              - article [ref=e282]:
+                - generic [ref=e283]:
+                  - generic [ref=e284]:
+                    - generic [ref=e285]:
+                      - paragraph [ref=e286]: Blog + notes
+                      - heading "Writing Archive" [level=3] [ref=e287]
+                    - img [ref=e289]
+                  - paragraph [ref=e291]: A place for essays and older writing on systems, user needs, product clarity, and experiment-driven building.
+                - generic [ref=e293]:
+                  - text: Open
+                  - img [ref=e294]
+            - link [ref=e296] [cursor=pointer]:
+              - /url: https://www.instagram.com/niv_yaps/
+              - article [ref=e297]:
+                - generic [ref=e298]:
+                  - generic [ref=e299]:
+                    - generic [ref=e300]:
+                      - paragraph [ref=e301]: Short-form content
+                      - heading "Instagram Notes" [level=3] [ref=e302]
+                    - img [ref=e304]
+                  - paragraph [ref=e306]: Visual reflections on product thinking, ambiguity, workflows, and building with AI.
+                - generic [ref=e308]:
+                  - text: Open
+                  - img [ref=e309]
+        - generic [ref=e312]:
+          - generic [ref=e313]:
+            - heading "Research" [level=2] [ref=e314]
+            - paragraph [ref=e315]: Space ready for published work
+          - generic [ref=e316]:
+            - article [ref=e317]:
+              - generic [ref=e319]:
+                - generic [ref=e320]:
+                  - img [ref=e322]
+                  - generic [ref=e325]:
+                    - paragraph [ref=e326]: Published paper
+                    - heading "Research slot built for a flagship paper." [level=3] [ref=e327]
+                - paragraph [ref=e328]: This section is ready for the paper title, venue, year, one-line summary, and direct link. I kept the structure in place without adding an unverified citation from outside the repo.
+                - generic [ref=e329]:
+                  - generic [ref=e330]: Research paper
+                  - generic [ref=e331]: Summary
+                  - generic [ref=e332]: Direct link
+            - generic [ref=e333]:
+              - article [ref=e334]:
+                - paragraph [ref=e335]: What fits here
+                - paragraph [ref=e336]: One flagship paper, a short product-facing takeaway, and supporting context on why the work matters.
+              - article [ref=e337]:
+                - paragraph [ref=e338]: Adjacent proof
+                - paragraph [ref=e339]: Until the paper details are added, the strongest nearby signal is the public writing archive and the shipped case studies above.
+                - link "Open content archive" [ref=e340] [cursor=pointer]:
+                  - /url: "#/content"
+                  - generic [ref=e341]:
+                    - text: Open content archive
+                    - img [ref=e342]
+      - complementary [ref=e344]:
+        - generic [ref=e345]:
+          - generic [ref=e346]:
+            - generic [ref=e347]:
+              - img [ref=e349]
+              - heading "Research" [level=3] [ref=e352]
+            - paragraph [ref=e354]: A published paper will sit here once the final citation copy and paper link are added.
+            - button "Go to research" [ref=e355] [cursor=pointer]:
+              - text: Go to research
+              - img [ref=e356]
+          - generic [ref=e358]:
+            - generic [ref=e359]:
+              - img [ref=e361]
+              - heading "Selected writing" [level=3] [ref=e364]
+            - generic [ref=e366]:
+              - link "LinkedIn Writing" [ref=e367] [cursor=pointer]:
+                - /url: https://www.linkedin.com/in/nivedita-niv/
+                - generic [ref=e368]: LinkedIn Writing
+                - img [ref=e369]
+              - link "Writing Archive" [ref=e372] [cursor=pointer]:
+                - /url: "#/content"
+                - generic [ref=e373]:
+                  - generic [ref=e374]: Writing Archive
+                  - img [ref=e375]
+              - link "Instagram Notes" [ref=e377] [cursor=pointer]:
+                - /url: https://www.instagram.com/niv_yaps/
+                - generic [ref=e378]: Instagram Notes
+                - img [ref=e379]
+            - link "View all writing" [ref=e382] [cursor=pointer]:
+              - /url: "#/content"
+              - generic [ref=e383]:
+                - text: View all writing
+                - img [ref=e384]
+          - generic [ref=e386]:
+            - generic [ref=e387]:
+              - img [ref=e389]
+              - heading "Community & leadership" [level=3] [ref=e393]
+            - generic [ref=e395]:
+              - generic [ref=e396]:
+                - paragraph [ref=e397]: Director of External Affairs
+                - paragraph [ref=e398]: Entrepreneurship Cell, VIT
+                - paragraph [ref=e399]: "2020"
+              - generic [ref=e400]:
+                - paragraph [ref=e401]: Techstars Boston '24 - Event Organizer
+                - paragraph [ref=e402]: Northeastern University
+                - paragraph [ref=e403]: Community programming
+              - generic [ref=e404]:
+                - paragraph [ref=e405]: Women in Tech - Mentorship Coordinator
+                - paragraph [ref=e406]: Northeastern University
+                - paragraph [ref=e407]: Mentorship and leadership
+  - contentinfo [ref=e408]:
+    - generic [ref=e409]:
+      - generic [ref=e411]:
+        - generic [ref=e412]:
+          - paragraph [ref=e413]: good product work starts with sharper questions
+          - heading "Let's build something meaningful" [level=3] [ref=e414]
+          - paragraph [ref=e415]: AI-first product work, grounded in clarity, systems thinking, and execution.
+        - link "Contact" [ref=e416] [cursor=pointer]:
+          - /url: "#/contact"
+          - generic "Contact" [ref=e417]:
+            - text: Start a conversation
+            - img [ref=e418]
+      - generic [ref=e420]:
+        - generic [ref=e421]:
+          - generic [ref=e423]:
+            - generic [ref=e424]: Nivedita
+            - generic [ref=e425]: product manager
+          - paragraph [ref=e426]: AI-first Product Manager focused on clear product thinking, structured execution, and human-centered outcomes.
+        - generic [ref=e427]:
+          - heading "Quick Links" [level=3] [ref=e428]
+          - generic [ref=e429]:
+            - link "Home" [ref=e431] [cursor=pointer]:
+              - /url: "#/"
+              - generic [ref=e432]: Home
+            - link "Featured Work" [ref=e434] [cursor=pointer]:
+              - /url: "#/"
+              - generic [ref=e435]: Featured Work
+            - link "Case Studies + Builds" [ref=e437] [cursor=pointer]:
+              - /url: "#/"
+              - generic [ref=e438]: Case Studies + Builds
+            - link "What I’m Building With" [ref=e440] [cursor=pointer]:
+              - /url: "#/"
+              - generic [ref=e441]: What I’m Building With
+            - link "Journey" [ref=e443] [cursor=pointer]:
+              - /url: "#/journey"
+              - generic [ref=e444]: Journey
+        - generic [ref=e445]:
+          - heading "Connect" [level=3] [ref=e446]
+          - generic [ref=e447]:
+            - link "LinkedIn profile" [ref=e448] [cursor=pointer]:
+              - /url: https://www.linkedin.com/in/nivedita-niv/
+              - img [ref=e449]
+            - link "GitHub profile" [ref=e451] [cursor=pointer]:
+              - /url: https://github.com/niveditajurel
+              - img [ref=e452]
+            - link "X profile" [ref=e454] [cursor=pointer]:
+              - /url: https://x.com/nniv266
+              - img [ref=e455]
+            - link "Instagram profile" [ref=e457] [cursor=pointer]:
+              - /url: https://www.instagram.com/niv_yaps/
+              - img [ref=e458]
+      - generic [ref=e460]:
+        - paragraph [ref=e461]: © 2026 Nivedita. All rights reserved.
+        - paragraph [ref=e462]: Built for thoughtful product conversations and future teams.
+  - region "Notifications (F8)":
+    - list

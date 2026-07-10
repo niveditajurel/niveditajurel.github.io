@@ -1,42 +1,64 @@
 /**
- * Tiny pixel-art bot that walks along a section divider line.
- * Two-frame leg cycle (steps animation), walks the full line, flips, walks back.
+ * Tiny pixel-art bot that crawls along a section divider line.
+ * Rounded robot head (side ear-nubs, twin antenna stems, green square eyes)
+ * with two little legs — two-frame crawl cycle, walks the full line, flips, walks back.
+ * Optional `emote` pops a little idea-bulb / coding-monitor / hearts above its head.
  * Parent container must be `relative`; the bot stands on the top border.
  * Hidden entirely under prefers-reduced-motion (see index.css `.bp-walker`).
  */
 
+const COLS = 11;
+
 const FRAME_A = [
-  "...X...",
-  ".XXXXX.",
-  ".XeXeX.",
-  ".XXXXX.",
-  "..XXX..",
-  "..L.L..",
-  "..L..L.",
+  "...N...N...",
+  "...N...N...",
+  "..NNNNNNN..",
+  "..NBBBBBN..",
+  "EENFGFGFNEE",
+  "..NFFFFFN..",
+  "..NBBBBBN..",
+  "..NNNNNNN..",
+  "...L...L...",
+  "...L...L...",
 ];
 
 const FRAME_B = [
-  "...X...",
-  ".XXXXX.",
-  ".XeXeX.",
-  ".XXXXX.",
-  "..XXX..",
-  "..L.L..",
-  ".L..L..",
+  "...N...N...",
+  "...N...N...",
+  "..NNNNNNN..",
+  "..NBBBBBN..",
+  "EENFGFGFNEE",
+  "..NFFFFFN..",
+  "..NBBBBBN..",
+  "..NNNNNNN..",
+  "...L...L...",
+  "....L.L....",
 ];
 
 const CELL_COLORS: Record<string, string> = {
-  X: "var(--bp-cobalt)",
-  e: "#fff8ef",
-  L: "#16181d",
+  N: "#26407a",
+  B: "#5b8ce0",
+  F: "#d7e8fb",
+  G: "#7fe0b0",
+  E: "#26407a",
+  L: "#26407a",
 };
+
+const IDEA_ROWS = [".YYY.", "YYYYY", "YYYYY", ".YYY.", "..S.."];
+const IDEA_COLORS: Record<string, string> = { Y: "#ffd23f", S: "#8a8a8a" };
+
+const CODING_ROWS = ["MMMMM", "M...M", "M.G.M", "M...M", ".MMM."];
+const CODING_COLORS: Record<string, string> = { M: "#2c3550", G: "#38e07b" };
+
+const HEART_ROWS = [".H.H.", "HHHHH", "HHHHH", ".HHH.", "..H.."];
+const HEART_COLORS: Record<string, string> = { H: "#ef5d6b" };
 
 function BotFrame({ rows, cell, className = "" }: { rows: string[]; cell: number; className?: string }) {
   return (
     <span
       className={`col-start-1 row-start-1 grid ${className}`}
       style={{
-        gridTemplateColumns: `repeat(7, ${cell}px)`,
+        gridTemplateColumns: `repeat(${COLS}, ${cell}px)`,
         gridTemplateRows: `repeat(${rows.length}, ${cell}px)`,
       }}
     >
@@ -49,20 +71,63 @@ function BotFrame({ rows, cell, className = "" }: { rows: string[]; cell: number
   );
 }
 
-export function PixelWalker({
-  duration = 52,
-  delay = 0,
-  size = 14,
+function EmoteGlyph({
+  rows,
+  colors,
+  cell,
+  blinkChar,
 }: {
-  /** seconds for a full there-and-back walk */
+  rows: string[];
+  colors: Record<string, string>;
+  cell: number;
+  blinkChar?: string;
+}) {
+  return (
+    <span
+      className="grid"
+      style={{
+        gridTemplateColumns: `repeat(${rows[0].length}, ${cell}px)`,
+        gridTemplateRows: `repeat(${rows.length}, ${cell}px)`,
+      }}
+    >
+      {rows.flatMap((row, r) =>
+        row.split("").map((c, i) => (
+          <span
+            key={`${r}-${i}`}
+            className={c === blinkChar ? "bp-cursor-blink" : undefined}
+            style={{ background: colors[c] ?? "transparent" }}
+          />
+        )),
+      )}
+    </span>
+  );
+}
+
+export function PixelWalker({
+  duration = 78,
+  delay = 0,
+  size = 36,
+  bulb = false,
+  coding = false,
+  hearts = false,
+}: {
+  /** seconds for a full there-and-back crawl */
   duration?: number;
-  /** seconds before the walk starts */
+  /** seconds before the crawl starts */
   delay?: number;
   /** bot width in px */
   size?: number;
+  /** glowing idea-bulb, fixed above its head */
+  bulb?: boolean;
+  /** coding monitor with blinking cursor, fixed above its head */
+  coding?: boolean;
+  /** two hearts popping above its head, one on each side */
+  hearts?: boolean;
 }) {
-  const cell = size / 7;
-  const height = cell * 7;
+  const cell = size / COLS;
+  const height = cell * FRAME_A.length;
+  const emoteCell = cell * 0.85;
+  const emoteTop = -(emoteCell * 5 + 4);
 
   return (
     <span
@@ -84,6 +149,29 @@ export function PixelWalker({
         <BotFrame rows={FRAME_A} cell={cell} className="bp-walker-frame-a" />
         <BotFrame rows={FRAME_B} cell={cell} className="bp-walker-frame-b" />
       </span>
+
+      {bulb ? (
+        <span className="bp-emote bp-emote-idea" style={{ top: emoteTop, left: "50%" }}>
+          <EmoteGlyph rows={IDEA_ROWS} colors={IDEA_COLORS} cell={emoteCell} />
+        </span>
+      ) : null}
+
+      {coding ? (
+        <span className="bp-emote bp-emote-coding" style={{ top: emoteTop, left: "50%" }}>
+          <EmoteGlyph rows={CODING_ROWS} colors={CODING_COLORS} cell={emoteCell} blinkChar="G" />
+        </span>
+      ) : null}
+
+      {hearts ? (
+        <>
+          <span className="bp-emote bp-emote-heart-a" style={{ top: emoteTop, left: "30%" }}>
+            <EmoteGlyph rows={HEART_ROWS} colors={HEART_COLORS} cell={emoteCell} />
+          </span>
+          <span className="bp-emote bp-emote-heart-b" style={{ top: emoteTop, left: "70%" }}>
+            <EmoteGlyph rows={HEART_ROWS} colors={HEART_COLORS} cell={emoteCell} />
+          </span>
+        </>
+      ) : null}
     </span>
   );
 }

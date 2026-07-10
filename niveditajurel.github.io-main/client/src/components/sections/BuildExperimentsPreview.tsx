@@ -24,7 +24,7 @@ export const BuildExperimentsPreview = () => {
       className="bg-transparent px-4 py-12 sm:px-6 lg:px-8 lg:py-14"
     >
       <div className="relative mx-auto max-w-7xl border-t border-[var(--bp-hairline)] pt-6 lg:pt-7">
-        <PixelWalker duration={56} delay={3} />
+        <PixelWalker duration={84} delay={3} bulb />
         <div className="mb-6 space-y-3">
           <div className="space-y-3">
             <p className="font-mono text-[0.7rem] uppercase tracking-[0.24em] text-[var(--bp-ink-muted)]">

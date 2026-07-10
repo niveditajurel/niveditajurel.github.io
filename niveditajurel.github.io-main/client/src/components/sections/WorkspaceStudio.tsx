@@ -98,7 +98,7 @@ export const WorkspaceStudio = () => {
   return (
     <section id="studio" className="bg-transparent px-4 py-12 sm:px-6 lg:px-8 lg:py-14">
       <div className="relative mx-auto max-w-7xl border-t border-[var(--bp-hairline)] pt-6 lg:pt-7">
-        <PixelWalker duration={58} delay={4} />
+        <PixelWalker duration={87} delay={4} hearts />
         <div className="mb-6 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
           <div className="space-y-3">
             <PixelArtTrio names={["heart", "robot", "flask"]} className="mb-1" />

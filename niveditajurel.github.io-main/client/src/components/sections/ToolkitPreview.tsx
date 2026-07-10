@@ -11,7 +11,7 @@ export const ToolkitPreview = () => {
   return (
     <section id="toolkit" className="bg-transparent px-4 py-10 sm:px-6 lg:px-8 lg:py-12">
       <div className="relative mx-auto max-w-7xl border-t border-[var(--bp-hairline)] pt-6 lg:pt-7">
-        <PixelWalker duration={52} delay={7} />
+        <PixelWalker duration={78} delay={7} coding />
 
         {/* Header — compact two-col */}
         <div className="mb-6 flex flex-col gap-2 sm:flex-row sm:items-baseline sm:justify-between lg:mb-7">

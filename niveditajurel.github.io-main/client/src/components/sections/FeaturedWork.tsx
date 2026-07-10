@@ -81,7 +81,7 @@ export const FeaturedWork = () => {
   return (
     <section id="featured-work" className="bg-transparent px-4 pb-12 sm:px-6 lg:px-8 lg:pb-16">
       <div className="relative mx-auto max-w-7xl border-t border-[var(--bp-hairline)] pt-6 lg:pt-7">
-        <PixelWalker duration={48} />
+        <PixelWalker duration={72} />
         <div className="mb-6 space-y-3 lg:mb-8">
           <PixelArtTrio names={["briefcase", "chart", "globe"]} className="mb-1" />
           <p className="font-mono text-[0.7rem] uppercase tracking-[0.24em] text-[var(--bp-ink-muted)]">

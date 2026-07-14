@@ -5,7 +5,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { useToast } from "@/hooks/use-toast";
 import { Mail, Linkedin, Github, Twitter, Send, MapPin, Calendar } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -13,8 +12,8 @@ const contactMethods = [
   {
     icon: Mail,
     label: "Email",
-    value: "nivedita@email.com",
-    href: "mailto:nivedita@email.com",
+    value: "nivedita9826@gmail.com",
+    href: "mailto:nivedita9826@gmail.com",
     description: "Best for project inquiries and collaboration",
   },
   {
@@ -34,8 +33,8 @@ const contactMethods = [
   {
     icon: Twitter,
     label: "Twitter/X",
-    value: "@nniv266",
-    href: "https://x.com/nniv266",
+    value: "@niviintech",
+    href: "https://x.com/niviintech",
     description: "Product thoughts and industry insights",
   },
 ];
@@ -44,7 +43,7 @@ export default function Contact() {
   const heroRef = useScrollAnimation();
   const formRef = useScrollAnimation();
   const methodsRef = useScrollAnimation();
-  const { toast } = useToast();
+  const [submitted, setSubmitted] = useState(false);
 
   const [formData, setFormData] = useState({
     name: "",
@@ -70,13 +69,10 @@ export default function Contact() {
     // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 1000));
 
-    toast({
-      title: "Message sent!",
-      description: "Thanks for reaching out. I'll get back to you within 24 hours.",
-    });
-
+    setSubmitted(true);
     setFormData({ name: "", email: "", subject: "", message: "" });
     setIsSubmitting(false);
+    setTimeout(() => setSubmitted(false), 4000);
   };
 
   const handleScheduleMeeting = () => {
@@ -89,7 +85,7 @@ export default function Contact() {
   return (
     <div className="min-h-screen pt-16 page-transition">
       {/* Hero Section */}
-      <motion.section 
+      <motion.section
         className="py-20 bg-gradient-to-br from-background via-primary/5 to-background"
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
@@ -100,7 +96,7 @@ export default function Contact() {
             ref={heroRef.ref as React.RefObject<HTMLDivElement>}
             className={`text-center fade-in ${heroRef.isVisible ? "visible" : ""}`}
           >
-            <motion.h1 
+            <motion.h1
               className="font-display text-4xl md:text-6xl font-bold text-foreground mb-6"
               initial={{ opacity: 0, y: 20 }}
               animate={heroRef.isVisible ? { opacity: 1, y: 0 } : {}}
@@ -109,13 +105,13 @@ export default function Contact() {
               Let's{" "}
               <span className="text-gradient">Connect</span>
             </motion.h1>
-            <motion.p 
+            <motion.p
               className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8"
               initial={{ opacity: 0, y: 20 }}
               animate={heroRef.isVisible ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              I'm always excited to discuss product opportunities, collaborate on interesting projects, 
+              I'm always excited to discuss product opportunities, collaborate on interesting projects,
               or just chat about the future of technology and design.
             </motion.p>
           </div>
@@ -147,9 +143,8 @@ export default function Contact() {
                 transition={{ delay: index * 0.1, duration: 0.6 }}
               >
                 <Card
-                  className={`group cursor-glow hover-glow border-border/50 bg-card/50 backdrop-blur-sm transition-all duration-300 card-hover ${
-                    methodsRef.isVisible ? "visible" : ""
-                  }`}
+                  className={`group cursor-glow hover-glow border-border/50 bg-card/50 backdrop-blur-sm transition-all duration-300 card-hover ${methodsRef.isVisible ? "visible" : ""
+                    }`}
                 >
                   <CardContent className="p-6 text-center">
                     <motion.a
@@ -160,7 +155,7 @@ export default function Contact() {
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
                     >
-                      <motion.div 
+                      <motion.div
                         className="w-12 h-12 mx-auto mb-4 bg-primary/10 rounded-lg flex items-center justify-center group-hover:bg-primary/20 transition-colors"
                         whileHover={{ rotate: 5, scale: 1.1 }}
                       >
@@ -185,7 +180,7 @@ export default function Contact() {
       </section>
 
       {/* Location Section */}
-      <motion.section 
+      <motion.section
         className="py-20 bg-background"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -193,12 +188,12 @@ export default function Contact() {
         transition={{ duration: 0.6 }}
       >
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div 
+          <motion.div
             className="flex items-center justify-center space-x-2 text-muted-foreground"
             whileHover={{ scale: 1.05 }}
           >
             <MapPin className="h-5 w-5" />
-            <span className="text-lg">Currently in Dallas, TX, USA</span>
+            <span className="text-lg">Currently in United States</span>
           </motion.div>
           <p className="text-muted-foreground mt-2">
             Open to relocation

@@ -3,7 +3,6 @@ import fs from "fs";
 import path from "path";
 import { createServer as createViteServer, createLogger } from "vite";
 import { type Server } from "http";
-import viteConfig from "../vite.config";
 import { nanoid } from "nanoid";
 
 const viteLogger = createLogger();
@@ -20,15 +19,17 @@ export function log(message: string, source = "express") {
 }
 
 export async function setupVite(app: Express, server: Server) {
+  const projectRoot = path.resolve(import.meta.dirname, "..");
+  const clientRoot = path.resolve(projectRoot, "client");
+  const configFile = path.resolve(projectRoot, "vite.config.ts");
+
   const serverOptions = {
     middlewareMode: true,
     hmr: { server },
-    allowedHosts: true,
+    allowedHosts: true as any,
   };
 
   const vite = await createViteServer({
-    ...viteConfig,
-    configFile: false,
     customLogger: {
       ...viteLogger,
       error: (msg, options) => {
@@ -38,6 +39,13 @@ export async function setupVite(app: Express, server: Server) {
     },
     server: serverOptions,
     appType: "custom",
+    configFile,
+    root: clientRoot,
+    resolve: {
+      alias: {
+        "@": path.resolve(clientRoot, "src"),
+      },
+    },
   });
 
   app.use(vite.middlewares);
@@ -45,12 +53,7 @@ export async function setupVite(app: Express, server: Server) {
     const url = req.originalUrl;
 
     try {
-      const clientTemplate = path.resolve(
-        import.meta.dirname,
-        "..",
-        "client",
-        "index.html",
-      );
+      const clientTemplate = path.resolve(clientRoot, "index.html");
 
       // always reload the index.html file from disk incase it changes
       let template = await fs.promises.readFile(clientTemplate, "utf-8");

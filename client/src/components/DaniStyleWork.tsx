@@ -23,12 +23,12 @@ export function DaniStyleWork() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {teasersData.map((project) => (
             <DaniStyleProjectCard
-                key={project.id}
+              key={project.id}
               project={project}
               slides={projectSlides[project.id as keyof typeof projectSlides] || []}
               isOpen={hoveredId === project.id}
-                onMouseEnter={() => setHoveredId(project.id)}
-                onMouseLeave={() => setHoveredId(null)}
+              onMouseEnter={() => setHoveredId(project.id)}
+              onMouseLeave={() => setHoveredId(null)}
             />
           ))}
         </div>

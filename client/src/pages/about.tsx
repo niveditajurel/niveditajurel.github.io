@@ -14,14 +14,14 @@ const HeroIllustration = () => (
     <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-flair/20 rounded-full blur-3xl"></div>
     <div className="relative bg-card/50 backdrop-blur-sm rounded-full p-8 border border-border/50">
       <motion.div
-        animate={{ 
+        animate={{
           y: [0, -10, 0],
           rotate: [0, 5, -5, 0]
         }}
-        transition={{ 
-          duration: 6, 
-          repeat: Infinity, 
-          ease: "easeInOut" 
+        transition={{
+          duration: 6,
+          repeat: Infinity,
+          ease: "easeInOut"
         }}
         className="flex items-center justify-center h-full"
       >
@@ -53,15 +53,15 @@ const TimelineIllustration = ({ step, index }: { step: any; index: number }) => 
       className="relative bg-card/50 backdrop-blur-sm rounded-2xl p-6 border border-border/50 h-full flex items-center justify-center"
     >
       <motion.div
-        animate={{ 
+        animate={{
           y: [0, -5, 0],
           rotate: [0, 2, -2, 0]
         }}
-        transition={{ 
-          duration: 4, 
-          repeat: Infinity, 
+        transition={{
+          duration: 4,
+          repeat: Infinity,
           delay: index * 0.5,
-          ease: "easeInOut" 
+          ease: "easeInOut"
         }}
       >
         <step.icon className={`w-8 h-8 ${step.color}`} />
@@ -83,15 +83,15 @@ const ValueIllustration = ({ value, index }: { value: any; index: number }) => (
       className="relative bg-card/50 backdrop-blur-sm rounded-xl p-4 border border-border/50 h-full flex items-center justify-center"
     >
       <motion.div
-        animate={{ 
+        animate={{
           scale: [1, 1.1, 1],
           rotate: [0, 5, -5, 0]
         }}
-        transition={{ 
-          duration: 3, 
-          repeat: Infinity, 
+        transition={{
+          duration: 3,
+          repeat: Infinity,
           delay: index * 0.3,
-          ease: "easeInOut" 
+          ease: "easeInOut"
         }}
       >
         <value.icon className={`w-6 h-6 ${value.color}`} />
@@ -113,15 +113,15 @@ const InterestIllustration = ({ interest, index }: { interest: any; index: numbe
       className="relative bg-card/50 backdrop-blur-sm rounded-full p-4 border border-border/50 h-full flex items-center justify-center"
     >
       <motion.div
-        animate={{ 
+        animate={{
           y: [0, -3, 0],
           rotate: [0, 3, -3, 0]
         }}
-        transition={{ 
-          duration: 4, 
-          repeat: Infinity, 
+        transition={{
+          duration: 4,
+          repeat: Infinity,
           delay: index * 0.5,
-          ease: "easeInOut" 
+          ease: "easeInOut"
         }}
       >
         <interest.icon className={`w-5 h-5 ${interest.color}`} />
@@ -139,11 +139,11 @@ const QuoteIllustration = () => (
   >
     <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-flair/20 rounded-full blur-3xl"></div>
     <motion.div
-      animate={{ 
+      animate={{
         rotate: [0, 360],
         scale: [1, 1.1, 1]
       }}
-      transition={{ 
+      transition={{
         rotate: { duration: 20, repeat: Infinity, ease: "linear" },
         scale: { duration: 4, repeat: Infinity, ease: "easeInOut" }
       }}
@@ -201,33 +201,33 @@ const About = () => {
     }
   ];
 
-const values = [
-  {
-    icon: Heart,
+  const values = [
+    {
+      icon: Heart,
       title: "User-First",
       description: "Every roadmap starts with listening, not features.",
-    color: "text-red-500",
+      color: "text-red-500",
       metaphor: "Like a detective, I listen for clues in user feedback"
-  },
-  {
-    icon: Target,
+    },
+    {
+      icon: Target,
       title: "Human-Centred Simplicity",
       description: "Turn complexity into clarity people enjoy.",
-    color: "text-blue-500",
+      color: "text-blue-500",
       metaphor: "Like a translator, I make complex things feel simple"
     },
     {
       icon: Zap,
       title: "Resource-Aware Experimentation",
       description: "Bias for action while respecting constraints.",
-    color: "text-yellow-500",
+      color: "text-yellow-500",
       metaphor: "Like a chef, I work with what I have to create something amazing"
-  },
-  {
-    icon: Users,
+    },
+    {
+      icon: Users,
       title: "Curiosity for Emerging Tech",
       description: "I explore AI tools daily and adopt only what serves users.",
-    color: "text-green-500",
+      color: "text-green-500",
       metaphor: "Like a scientist, I experiment but only use what works"
     }
   ];
@@ -256,24 +256,24 @@ const values = [
   return (
     <div ref={containerRef} className="min-h-screen pt-16 relative overflow-hidden">
       {/* Animated Background */}
-      <motion.div 
+      <motion.div
         className="absolute inset-0 bg-gradient-to-br from-background via-accent/5 to-flair/5"
         style={{ y: backgroundY }}
       />
-      
-      <motion.main 
+
+      <motion.main
         className="relative px-6 lg:px-0 container mx-auto py-24 space-y-40 text-ink dark:text-base"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
       >
         {/* Hero - Personal Introduction */}
-        <motion.section 
-            ref={heroRef.ref}
-            className={`max-w-5xl mx-auto text-center ${heroRef.isVisible ? "visible" : ""}`}
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: 'easeOut' }}
+        <motion.section
+          ref={heroRef.ref}
+          className={`max-w-5xl mx-auto text-center ${heroRef.isVisible ? "visible" : ""}`}
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: 'easeOut' }}
         >
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -282,20 +282,33 @@ const values = [
             className="mb-12"
           >
             <motion.div
-              animate={{ rotate: 360 }}
-              transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-              className="w-16 h-16 mx-auto mb-8 bg-gradient-to-r from-accent to-flair rounded-full flex items-center justify-center"
+              initial={{ scale: 0, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="relative w-40 h-40 mx-auto mb-8"
             >
-              <Sparkles className="w-8 h-8 text-white" />
+              <div className="absolute inset-0 rounded-full bg-gradient-to-r from-accent to-flair blur-lg opacity-50 animate-pulse"></div>
+              <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-background shadow-xl">
+                <img src="/me1.PNG" alt="Nivedita" className="w-full h-full object-cover" />
+              </div>
+
+              {/* Floating Sparkle Badge */}
+              <motion.div
+                animate={{ rotate: 360 }}
+                transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
+                className="absolute -bottom-2 -right-2 w-12 h-12 bg-card rounded-full flex items-center justify-center shadow-lg border border-border/50"
+              >
+                <Sparkles className="w-6 h-6 text-accent" />
+              </motion.div>
             </motion.div>
-            
+
             <h1 className="text-6xl lg:text-8xl font-bold mb-8">
               <span className="bg-gradient-to-r from-ink via-accent to-flair bg-clip-text text-transparent dark:from-base">
                 Hey, I'm Nivedita
               </span>
             </h1>
           </motion.div>
-          
+
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={heroRef.isVisible ? { opacity: 1, y: 0 } : {}}
@@ -303,11 +316,11 @@ const values = [
             className="max-w-4xl mx-auto"
           >
             <p className="text-2xl lg:text-3xl leading-relaxed mb-8">
-              I used to write code that made machines happy. 
+              I used to write code that made machines happy.
               <br />
               Now I write stories that make <span className="font-bold text-accent">people's lives better</span>.
             </p>
-            
+
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={heroRef.isVisible ? { opacity: 1, scale: 1 } : {}}
@@ -323,11 +336,11 @@ const values = [
         </motion.section>
 
         {/* Story Journey - Visual Timeline */}
-        <motion.section 
+        <motion.section
           ref={journeyRef.ref}
           className={`max-w-6xl mx-auto ${journeyRef.isVisible ? "visible" : ""}`}
         >
-          <motion.h2 
+          <motion.h2
             className="text-4xl lg:text-5xl font-bold mb-16 text-center text-gradient"
             initial={{ opacity: 0, y: 30 }}
             animate={journeyRef.isVisible ? { opacity: 1, y: 0 } : {}}
@@ -335,11 +348,11 @@ const values = [
           >
             How I Became a Storyteller
           </motion.h2>
-          
+
           <div className="relative">
             {/* Timeline Line */}
             <div className="absolute left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-accent via-flair to-accent transform -translate-x-1/2 rounded-full"></div>
-            
+
             <div className="space-y-20">
               {storySteps.map((step, index) => (
                 <motion.div
@@ -353,7 +366,7 @@ const values = [
                   <div className="relative z-10 w-12 h-12 bg-accent rounded-full border-4 border-background shadow-lg flex items-center justify-center">
                     <step.icon className="w-6 h-6 text-white" />
                   </div>
-                  
+
                   {/* Content Card */}
                   <motion.div
                     className={`flex-1 ${index % 2 === 0 ? 'ml-8' : 'mr-8'}`}
@@ -369,10 +382,10 @@ const values = [
                           </h3>
                           <p className="text-lg text-muted-foreground group-hover:text-foreground transition-colors duration-300">
                             {step.description}
-              </p>
-            </div>
-          </div>
-        </div>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
                   </motion.div>
                 </motion.div>
               ))}
@@ -381,11 +394,11 @@ const values = [
         </motion.section>
 
         {/* What Drives Me - Interactive Metaphors */}
-        <motion.section 
+        <motion.section
           ref={drivesRef.ref}
           className={`${drivesRef.isVisible ? "visible" : ""}`}
         >
-          <motion.h2 
+          <motion.h2
             className="text-4xl lg:text-5xl font-bold mb-16 text-center text-gradient"
             initial={{ opacity: 0, y: 30 }}
             animate={drivesRef.isVisible ? { opacity: 1, y: 0 } : {}}
@@ -393,7 +406,7 @@ const values = [
           >
             My Product Philosophy
           </motion.h2>
-          
+
           <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {values.map((value, index) => (
               <motion.div
@@ -405,20 +418,20 @@ const values = [
                 className="group relative overflow-hidden rounded-2xl bg-card/50 backdrop-blur-sm border border-border/50 p-6 cursor-pointer"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-accent/5 to-flair/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                
+
                 <div className="relative z-10">
                   <ValueIllustration value={value} index={index} />
                   <h3 className="text-2xl font-bold mb-4 group-hover:text-accent transition-colors duration-300">
-                        {value.title}
-                      </h3>
+                    {value.title}
+                  </h3>
                   <p className="text-lg text-muted-foreground mb-4 group-hover:text-foreground transition-colors duration-300">
-                        {value.description}
-                      </p>
+                    {value.description}
+                  </p>
                   <p className="text-sm text-accent font-medium italic">
                     {value.metaphor}
-                      </p>
-                    </div>
-                
+                  </p>
+                </div>
+
 
               </motion.div>
             ))}
@@ -426,11 +439,11 @@ const values = [
         </motion.section>
 
         {/* Outside the Backlog - Personal Interests */}
-        <motion.section 
+        <motion.section
           ref={outsideRef.ref}
           className={`max-w-5xl mx-auto ${outsideRef.isVisible ? "visible" : ""}`}
         >
-          <motion.h2 
+          <motion.h2
             className="text-4xl lg:text-5xl font-bold mb-16 text-center text-gradient"
             initial={{ opacity: 0, y: 30 }}
             animate={outsideRef.isVisible ? { opacity: 1, y: 0 } : {}}
@@ -438,7 +451,7 @@ const values = [
           >
             When I'm Not Building Products
           </motion.h2>
-          
+
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={outsideRef.isVisible ? { opacity: 1, y: 0 } : {}}
@@ -448,7 +461,7 @@ const values = [
             <div className="grid md:grid-cols-3 gap-8">
               {interests.map((interest, index) => (
                 <motion.div
-                key={index}
+                  key={index}
                   initial={{ opacity: 0, y: 30 }}
                   animate={outsideRef.isVisible ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -458,22 +471,22 @@ const values = [
                   <InterestIllustration interest={interest} index={index} />
                   <h3 className="text-xl font-bold mb-3 group-hover:text-accent transition-colors duration-300">
                     {interest.title}
-                </h3>
+                  </h3>
                   <p className="text-muted-foreground group-hover:text-foreground transition-colors duration-300">
                     {interest.description}
                   </p>
                 </motion.div>
-                  ))}
-                </div>
+              ))}
+            </div>
           </motion.div>
         </motion.section>
 
         {/* Inspiration - Enhanced Quotes */}
-        <motion.section 
+        <motion.section
           ref={inspirationRef.ref}
           className={`relative max-w-5xl mx-auto ${inspirationRef.isVisible ? "visible" : ""}`}
         >
-          <motion.h2 
+          <motion.h2
             className="text-4xl lg:text-5xl font-bold mb-16 text-center text-gradient"
             initial={{ opacity: 0, y: 30 }}
             animate={inspirationRef.isVisible ? { opacity: 1, y: 0 } : {}}
@@ -481,7 +494,7 @@ const values = [
           >
             Words That Shape My Thinking
           </motion.h2>
-          
+
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={inspirationRef.isVisible ? { opacity: 1, scale: 1 } : {}}
@@ -505,7 +518,7 @@ const values = [
                   </p>
                   <p className="text-center text-muted-foreground mt-4 text-lg">— Naval Ravikant</p>
                 </motion.div>
-                
+
                 <motion.div
                   initial={{ opacity: 0, x: 50 }}
                   animate={inspirationRef.isVisible ? { opacity: 1, x: 0 } : {}}
@@ -520,12 +533,12 @@ const values = [
                   <p className="text-center text-muted-foreground mt-4 text-lg">— Charlie Munger</p>
                 </motion.div>
               </div>
-          </div>
+            </div>
           </motion.div>
         </motion.section>
 
         {/* CTA - Personal Invitation */}
-        <motion.section 
+        <motion.section
           ref={ctaRef.ref}
           className={`max-w-3xl mx-auto text-center ${ctaRef.isVisible ? "visible" : ""}`}
         >
@@ -537,7 +550,7 @@ const values = [
           >
             <div className="absolute inset-0 bg-gradient-to-r from-accent/5 to-flair/5 rounded-3xl blur-3xl"></div>
             <div className="relative bg-card/50 backdrop-blur-sm border border-border/50 rounded-3xl p-8 lg:p-12">
-              <motion.h2 
+              <motion.h2
                 className="text-3xl lg:text-4xl font-bold mb-6 text-gradient"
                 initial={{ opacity: 0, y: 20 }}
                 animate={ctaRef.isVisible ? { opacity: 1, y: 0 } : {}}
@@ -545,8 +558,8 @@ const values = [
               >
                 Ready to Build Something Amazing?
               </motion.h2>
-              
-              <motion.p 
+
+              <motion.p
                 className="text-xl mb-8 text-muted-foreground"
                 initial={{ opacity: 0, y: 20 }}
                 animate={ctaRef.isVisible ? { opacity: 1, y: 0 } : {}}
@@ -554,41 +567,41 @@ const values = [
               >
                 I'm always excited to connect with fellow product enthusiasts and explore new opportunities.
               </motion.p>
-              
-              <motion.div 
+
+              <motion.div
                 className="flex flex-col sm:flex-row gap-6 justify-center"
                 initial={{ opacity: 0, y: 20 }}
                 animate={ctaRef.isVisible ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: 0.6 }}
               >
-                <motion.a 
-                  href="https://drive.google.com/file/d/1RJoTocjJjHskvaqAdWpVu4aGavceRWwi/view" 
-                  className="btn-primary group relative overflow-hidden focus:outline-none focus-visible:ring-2 focus-visible:ring-accent bg-black text-white hover:bg-neutral-900" 
-                  whileHover={{ scale: 1.05 }} 
-                  whileTap={{ scale: 0.95 }} 
-                  target="_blank" rel="noopener noreferrer" 
-                  aria-label="Download my resume PDF" 
+                <motion.a
+                  href="https://drive.google.com/file/d/1fp0U0Oz0YUZwfNRGqBSR6vwijg5j4hLv/view?usp=sharing"
+                  className="btn-primary group relative overflow-hidden focus:outline-none focus-visible:ring-2 focus-visible:ring-accent bg-black text-white hover:bg-neutral-900"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  target="_blank" rel="noopener noreferrer"
+                  aria-label="Download my resume PDF"
                   tabIndex={0}
                 >
                   <span className="relative z-10">Download My Resume</span>
                   <div className="absolute inset-0 bg-gradient-to-r from-accent to-flair opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </motion.a>
-                
-                <motion.a 
-                  href="https://linkedin.com/in/nivedita-niv" 
-                  target="_blank" 
-                  rel="noreferrer" 
-                  className="btn-secondary group relative overflow-hidden focus:outline-none focus-visible:ring-2 focus-visible:ring-accent bg-black text-white hover:bg-neutral-900" 
-                  whileHover={{ scale: 1.05 }} 
-                  whileTap={{ scale: 0.95 }} 
-                  aria-label="Connect with me on LinkedIn" 
+
+                <motion.a
+                  href="https://linkedin.com/in/nivedita-niv"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="btn-secondary group relative overflow-hidden focus:outline-none focus-visible:ring-2 focus-visible:ring-accent bg-black text-white hover:bg-neutral-900"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  aria-label="Connect with me on LinkedIn"
                   tabIndex={0}
                 >
                   <span className="relative z-10">Let's Connect</span>
                   <div className="absolute inset-0 bg-gradient-to-r from-muted to-accent/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </motion.a>
               </motion.div>
-        </div>
+            </div>
           </motion.div>
         </motion.section>
       </motion.main>

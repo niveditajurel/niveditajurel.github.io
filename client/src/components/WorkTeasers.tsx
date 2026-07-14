@@ -46,13 +46,13 @@ export function WorkTeasers() {
           viewport={{ once: true, amount: 0.3 }}
           className="text-center mb-16"
         >
-          <motion.h2 
+          <motion.h2
             variants={itemVariants}
             className="text-3xl lg:text-4xl font-semibold mb-4 text-ink dark:text-base"
           >
             Tiny fraction of my work
           </motion.h2>
-          <motion.p 
+          <motion.p
             variants={itemVariants}
             className="text-lg text-muted-foreground max-w-2xl mx-auto"
           >
@@ -68,7 +68,18 @@ export function WorkTeasers() {
           className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto"
         >
           {teasersData.map((project) => (
-            <ProjectCard key={project.id} project={project} variants={itemVariants} />
+            <ProjectCard
+              key={project.id}
+              project={{
+                id: project.id,
+                title: project.title,
+                tags: project.tags.join(', '),
+                thumb: project.image || '',
+                summary: project.description,
+                href: project.href || '#'
+              }}
+              variants={itemVariants}
+            />
           ))}
         </motion.div>
 

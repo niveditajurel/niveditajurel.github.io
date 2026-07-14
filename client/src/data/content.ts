@@ -37,7 +37,7 @@ export const contentItems: ContentItem[] = [
     title: "Writing Archive",
     format: "Blog + notes",
     description:
-      "Longer-form writing across Medium and Substack, including product breakdowns on UPI, Project Ara, and newer notes collected on Substack.",
+      "Longer-form writing across Medium and Substack, including product breakdowns, startup notes, and newer essays collected on Substack.",
     platformLinks: [
       {
         label: "Medium",
@@ -50,19 +50,14 @@ export const contentItems: ContentItem[] = [
     ],
     featuredPieces: [
       {
-        platform: "Medium",
-        title: "UPI: Revolutionizing Digital Payments",
-        href: "https://medium.com/@nivedita9826/upi-revolutionizing-digital-payments-31593c7dc288",
-      },
-      {
-        platform: "Medium",
-        title: "Project Ara: Modular smartphone dreams and failure lessons",
-        href: "https://medium.com/@nivedita9826/googles-project-ara-the-ascent-and-collapse-of-modular-smartphone-dreams-112759dc882a",
+        platform: "Substack",
+        title: "Every company needs a brain",
+        href: "https://open.substack.com/pub/nivedita9826/p/every-company-needs-a-brain?r=1r314t&utm_campaign=post&utm_medium=web",
       },
       {
         platform: "Substack",
-        title: "Nivedita's Substack",
-        href: "https://nivedita9826.substack.com/",
+        title: "Are we just patterns learning patterns?",
+        href: "https://open.substack.com/pub/nivedita9826/p/are-we-just-patterns-learning-patterns?r=1r314t&utm_campaign=post&utm_medium=web",
       },
     ],
   },

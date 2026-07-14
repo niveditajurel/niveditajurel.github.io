@@ -28,14 +28,6 @@ export const funMediaItems: FunMediaItem[] = [
     href: "https://www.linkedin.com/in/nivedita-niv/",
   },
   {
-    id: "medium-upi",
-    source: "Medium",
-    title: "UPI: Revolutionizing Digital Payments",
-    description:
-      "A product breakdown on why UPI worked: simplicity, interoperability, and mass adoption at scale.",
-    href: "https://medium.com/@nivedita9826/upi-revolutionizing-digital-payments-31593c7dc288",
-  },
-  {
     id: "substack-home",
     source: "Substack",
     title: "Nivedita's Substack",

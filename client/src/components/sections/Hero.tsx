@@ -35,41 +35,49 @@ const heroPrinciples: Array<{
 
 const heroPixelMarks = {
   systems: [
-    "....BB.....",
-    "...BBBB....",
-    ".....P.....",
-    ".....P.....",
-    ".GGPPPPPOO.",
-    ".GG..P..OO.",
-    ".....P.....",
-    "...YYYY....",
-    "....YY.....",
+    ".....BBB.....",
+    "....BWWWB....",
+    ".....BBB.....",
+    "......K......",
+    "..GG..P..OO..",
+    ".GGG.PPP.OOO.",
+    "..GG..P..OO..",
+    "......K......",
+    ".....YYY.....",
+    "....YYYYY....",
+    ".....YYY.....",
   ],
   execution: [
-    ".....B.....",
-    "....BBB....",
-    "...BWWWB...",
-    "...BWNWB...",
-    "...BWWWB...",
-    "..ORBBBRO..",
-    ".OO.RRR.OO.",
-    "...R.R.....",
-    "..Y...Y....",
+    "......B......",
+    ".....BBB.....",
+    "....BWWWB....",
+    "...BBWNWBB...",
+    "...BWWWWWB...",
+    "..OBBBBBBBO..",
+    ".OORRRRRROO.",
+    "...RRR.RRR...",
+    "....RYRYR....",
+    "...YY...YY...",
+    "..Y.......Y..",
   ],
   customer: [
-    "..OOOOOOO..",
-    ".OPPPPPPPO.",
-    "OPP.MMM.PPO",
-    "OP.MWWWM.PO",
-    "OPP.MMM.PPO",
-    ".OPPPPPPPO.",
-    "..OOOOO....",
-    "...OO......",
+    "....OOOOO....",
+    "..OOPPPPPPOO.",
+    ".OPPWWWWWPPPO",
+    "OPPWWMMMWWPPO",
+    "OPPWWMNMWWPPO",
+    "OPPWWMMMWWPPO",
+    ".OPPWWWWWPPPO",
+    "..OOPPPPPPOO.",
+    "....OOOOO....",
+    "......O......",
+    ".......OO....",
   ],
 } as const;
 
 const heroPixelColors: Record<string, string> = {
   N: "#14213d",
+  K: "#14213d",
   B: "#2479bd",
   G: "#52a66f",
   P: "#ffd06a",
@@ -191,7 +199,7 @@ export const Hero = () => {
               className="hero-pixel-float inline-flex items-center gap-3.5"
               style={{ animationDelay: principle.delay }}
             >
-              <HeroPrincipleMark mark={principle.mark} size={38} />
+              <HeroPrincipleMark mark={principle.mark} size={48} />
               <span className="font-mono text-[0.78rem] font-extrabold uppercase tracking-[0.12em] text-[#211b16] xl:text-[0.84rem]">
                 {principle.label}
               </span>
@@ -226,7 +234,7 @@ export const Hero = () => {
                 key={principle.label}
                 className="flex min-w-0 items-center justify-start gap-1.5"
               >
-                <HeroPrincipleMark mark={principle.mark} size={22} />
+                <HeroPrincipleMark mark={principle.mark} size={27} />
                 <span className="min-w-0 max-w-full break-words font-mono text-[0.58rem] font-extrabold uppercase leading-[1.05] tracking-[0.035em] text-[#211b16] sm:text-[0.69rem]">
                   {principle.label}
                 </span>

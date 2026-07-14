@@ -204,7 +204,6 @@ export default function Fun() {
   const reducedMotion = Boolean(useReducedMotion());
   const instagramFeature = funMediaItems.find((item) => item.id === "instagram-ai-learning-stack");
   const linkedinFeature = funMediaItems.find((item) => item.id === "linkedin-public-trail");
-  const mediumFeature = funMediaItems.find((item) => item.id === "medium-upi");
   const substackFeature = funMediaItems.find((item) => item.id === "substack-home");
   const reelItems = funMediaItems.filter((item) => item.source === "Instagram");
   const buildQuests = experiments.filter((item) => ["learning-council", "finwise"].includes(item.id));
@@ -214,7 +213,6 @@ export default function Fun() {
 
   const surpriseDeck: SurpriseItem[] = [
     ...(instagramFeature ? [{ id: instagramFeature.id, trail: "watch" as TrailId, title: instagramFeature.title, href: instagramFeature.href }] : []),
-    ...(mediumFeature ? [{ id: mediumFeature.id, trail: "read" as TrailId, title: mediumFeature.title, href: mediumFeature.href }] : []),
     ...(substackFeature ? [{ id: substackFeature.id, trail: "read" as TrailId, title: substackFeature.title, href: substackFeature.href }] : []),
     { id: "github-builds", trail: "build", title: "The builds and experiments on GitHub", href: siteConfig.links.github },
     { id: "offline-field-notes", trail: "offline", title: "Real rooms, whiteboards, and community", href: "#in-the-wild", targetId: "in-the-wild" },
@@ -225,7 +223,7 @@ export default function Fun() {
     window.scrollTo({ top: 0, behavior: "auto" });
   }, []);
 
-  if (!instagramFeature || !linkedinFeature || !mediumFeature || !substackFeature) {
+  if (!instagramFeature || !linkedinFeature || !substackFeature) {
     return null;
   }
 
@@ -421,8 +419,7 @@ export default function Fun() {
                   <ArrowUpRight className="h-6 w-6 shrink-0 text-[#315d9f] transition-transform duration-200 group-hover:translate-x-1 group-hover:-translate-y-1" />
                 </div>
               </motion.a>
-              <div className="grid gap-3 sm:grid-cols-2 lg:col-span-5 lg:grid-cols-1 xl:grid-cols-2">
-                <ReadingCard item={mediumFeature} onOpen={() => markTrail("read")} />
+              <div className="grid gap-3 sm:grid-cols-2 lg:col-span-5 lg:grid-cols-1">
                 <ReadingCard item={substackFeature} onOpen={() => markTrail("read")} />
               </div>
             </div>

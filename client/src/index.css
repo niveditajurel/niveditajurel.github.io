@@ -569,38 +569,37 @@
   }
 
   @keyframes hero-pixel-float {
-    0%,
-    100% {
-      transform: translate3d(0, 0, 0);
-    }
-    50% {
-      transform: translate3d(0, -3px, 0);
-    }
+    0%, 100% { transform: translate3d(0, 0, 0) rotate(0deg); }
+    28% { transform: translate3d(5px, -5px, 0) rotate(0.45deg); }
+    58% { transform: translate3d(-4px, -9px, 0) rotate(-0.35deg); }
+    82% { transform: translate3d(3px, -3px, 0) rotate(0.2deg); }
   }
 
   .hero-pixel-float {
-    animation: hero-pixel-float 8.5s cubic-bezier(0.25, 1, 0.5, 1) infinite;
+    animation: hero-pixel-float 9.5s cubic-bezier(0.25, 1, 0.5, 1) infinite;
     will-change: transform;
   }
 
   @keyframes hero-system-signal {
-    0%, 38%, 100% { opacity: 1; }
-    44%, 55% { opacity: 0.25; }
+    0%, 34%, 100% { opacity: 1; transform: scale(1); }
+    40%, 50% { opacity: 0.35; transform: scale(0.85); }
+    58% { opacity: 1; transform: scale(1.12); }
   }
 
   @keyframes hero-execution-launch {
-    0%, 68%, 100% { transform: translate3d(0, 0, 0); }
-    74%, 88% { transform: translate3d(0, -2px, 0); }
+    0%, 58%, 100% { transform: translate3d(0, 0, 0); }
+    66%, 78% { transform: translate3d(0, -4px, 0); }
+    84% { transform: translate3d(0, 1px, 0); }
   }
 
   @keyframes hero-execution-flame {
-    0%, 62%, 100% { opacity: 0.42; }
-    68%, 88% { opacity: 1; }
+    0%, 56%, 100% { opacity: 0.42; transform: translate3d(0, 0, 0); }
+    64%, 82% { opacity: 1; transform: translate3d(0, 2px, 0); }
   }
 
   @keyframes hero-customer-signal {
-    0%, 56%, 100% { transform: scale(1); }
-    62%, 78% { transform: scale(1.08); }
+    0%, 52%, 100% { opacity: 1; transform: scale(1); }
+    58%, 74% { opacity: 0.72; transform: scale(1.14); }
   }
 
   .hero-principle-mark {
@@ -612,6 +611,12 @@
     animation: hero-system-signal 3.2s steps(2, end) infinite;
   }
 
+  .hero-principle-mark--systems [data-pixel-cell="G"],
+  .hero-principle-mark--systems [data-pixel-cell="O"],
+  .hero-principle-mark--systems [data-pixel-cell="Y"] {
+    animation: hero-system-signal 4.6s steps(2, end) infinite;
+  }
+
   .hero-principle-mark--execution {
     animation: hero-execution-launch 4.2s steps(2, end) infinite;
   }
@@ -620,8 +625,18 @@
     animation: hero-execution-flame 4.2s steps(2, end) infinite;
   }
 
+  .hero-principle-mark--execution [data-pixel-cell="R"] {
+    animation: hero-execution-flame 4.2s steps(2, end) infinite reverse;
+  }
+
   .hero-principle-mark--customer [data-pixel-cell="M"] {
     animation: hero-customer-signal 3.8s steps(2, end) infinite;
+    transform-origin: center;
+  }
+
+  .hero-principle-mark--customer [data-pixel-cell="W"],
+  .hero-principle-mark--customer [data-pixel-cell="P"] {
+    animation: hero-customer-signal 5.2s steps(2, end) infinite;
     transform-origin: center;
   }
 

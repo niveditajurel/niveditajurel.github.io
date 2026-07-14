@@ -88,7 +88,7 @@ function ReelCard({
       transition={{ duration: 0.22, ease: [0.22, 1, 0.36, 1] }}
       className={cn(
         "group/thumbnail hover-cursor-target relative block overflow-hidden border border-[#d7ba95] bg-[#fff4df] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#f45117] focus-visible:ring-offset-4",
-        featured ? "min-h-[31rem] lg:min-h-[38rem]" : "min-h-[23rem] lg:min-h-[31rem]",
+        featured ? "min-h-[24rem] lg:min-h-[29rem]" : "min-h-[18rem] lg:min-h-[23rem]",
       )}
     >
       <img
@@ -100,11 +100,11 @@ function ReelCard({
       <div className="absolute left-4 top-4">
         <SourceBadge source={item.source} />
       </div>
-      <div className="absolute inset-x-0 bottom-0 p-5 text-[#fff8e8] sm:p-6">
-        <p className="mb-3 font-mono text-[0.62rem] font-bold uppercase tracking-[0.16em] text-[#ffd06a]">
+      <div className="absolute inset-x-0 bottom-0 p-4 text-[#fff8e8] sm:p-5">
+        <p className="mb-2 font-mono text-[0.58rem] font-bold uppercase tracking-[0.16em] text-[#ffd06a]">
           Press play ↗
         </p>
-        <h3 className={cn("max-w-[16ch] font-fraunces font-normal leading-[0.98] tracking-[-0.02em]", featured ? "text-[2.2rem] sm:text-[2.7rem]" : "text-[1.7rem] lg:text-[1.95rem]")}>
+        <h3 className={cn("max-w-[16ch] font-fraunces font-normal leading-[0.98] tracking-[-0.02em]", featured ? "text-[1.85rem] sm:text-[2.2rem]" : "text-[1.45rem] lg:text-[1.65rem]")}>
           {item.title}
         </h3>
       </div>
@@ -126,7 +126,7 @@ function ReadingCard({ item, onOpen }: { item: FunMediaItem; onOpen: () => void 
       whileHover={{ y: -3 }}
       transition={{ duration: 0.22, ease: [0.22, 1, 0.36, 1] }}
       className={cn(
-        "group flex min-h-[18rem] flex-col justify-between border p-6 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#f45117]",
+        "group flex min-h-[14rem] flex-col justify-between border p-5 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#f45117]",
         isMedium ? "border-[#1f1b17] bg-[#211f1a] text-[#fff8e8]" : "border-[#e8a577] bg-[#ff681f] text-[#27180f]",
       )}
     >
@@ -135,14 +135,14 @@ function ReadingCard({ item, onOpen }: { item: FunMediaItem; onOpen: () => void 
           {isMedium ? <BsMedium className="h-8 w-8" /> : <BsSubstack className="h-7 w-7" />}
           <ArrowUpRight className="h-5 w-5 transition-transform duration-200 group-hover:translate-x-1 group-hover:-translate-y-1" />
         </div>
-        <p className="mt-8 font-mono text-[0.65rem] font-bold uppercase tracking-[0.16em] opacity-70">
+        <p className="mt-5 font-mono text-[0.62rem] font-bold uppercase tracking-[0.16em] opacity-70">
           {isMedium ? "Product essay" : "Notes in progress"}
         </p>
-        <h3 className="mt-3 max-w-[14ch] font-fraunces text-[clamp(1.9rem,2.5vw,2.65rem)] font-normal leading-[0.98] tracking-[-0.02em]">
+        <h3 className="mt-2 max-w-[14ch] font-fraunces text-[clamp(1.55rem,2vw,2.1rem)] font-normal leading-[0.98] tracking-[-0.02em]">
           {item.title}
         </h3>
       </div>
-      <p className="mt-7 max-w-[34rem] text-sm font-medium leading-6 opacity-80">{item.description}</p>
+      <p className="mt-4 max-w-[34rem] text-[0.82rem] font-medium leading-5 opacity-80">{item.description}</p>
     </motion.a>
   );
 }
@@ -172,25 +172,25 @@ function BuildQuest({
         transition={{ duration: 0.22, ease: [0.22, 1, 0.36, 1] }}
         className="grid overflow-hidden border border-[#cdb994] bg-[#fff8e8] lg:grid-cols-[minmax(0,1.1fr)_minmax(18rem,0.7fr)]"
       >
-        <div className={cn("relative min-h-[22rem] overflow-hidden border-b border-[#cdb994] lg:min-h-[27rem] lg:border-b-0 lg:border-r", tone)}>
+        <div className={cn("relative min-h-[17rem] overflow-hidden border-b border-[#cdb994] lg:min-h-[20rem] lg:border-b-0 lg:border-r", tone)}>
           <AnimatedProjectThumbnail variant={variant} motion="hover" />
           <div className="absolute left-4 top-4 border border-[#2a241d]/20 bg-[#fff8e8]/90 px-3 py-2 font-mono text-[0.62rem] font-bold uppercase tracking-[0.14em] text-[#2a241d]">
             Quest 0{index + 1}
           </div>
         </div>
-        <div className="flex flex-col justify-between p-6 sm:p-8">
+        <div className="flex flex-col justify-between p-5 sm:p-6">
           <div>
             <div className="flex items-center gap-2 font-mono text-[0.64rem] font-bold uppercase tracking-[0.14em] text-[#4f7658]">
               <span className="h-2 w-2 bg-[#52a66f]" /> Playable build
             </div>
-            <h3 className="mt-5 font-fraunces text-[clamp(2.4rem,4vw,4rem)] font-normal leading-[0.9] tracking-[-0.035em] text-[#211b16]">
+            <h3 className="mt-4 font-fraunces text-[clamp(2rem,3vw,3rem)] font-normal leading-[0.92] tracking-[-0.035em] text-[#211b16]">
               {item.title}
             </h3>
-            <p className="mt-5 max-w-[29rem] text-[0.98rem] leading-7 text-[#655344]">
+            <p className="mt-3 max-w-[29rem] text-[0.9rem] leading-6 text-[#655344]">
               {item.description ?? item.caseStudyTitle}
             </p>
           </div>
-          <div className="mt-8 flex items-center justify-between border-t border-[#d9c8aa] pt-4 font-mono text-[0.68rem] font-bold uppercase tracking-[0.13em] text-[#9e431d]">
+          <div className="mt-5 flex items-center justify-between border-t border-[#d9c8aa] pt-3 font-mono text-[0.64rem] font-bold uppercase tracking-[0.13em] text-[#9e431d]">
             Open quest
             <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover/thumbnail:translate-x-1" />
           </div>
@@ -295,7 +295,7 @@ export default function Fun() {
               initial={reducedMotion ? false : { opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.68, delay: 0.08, ease: [0.22, 1, 0.36, 1] }}
-              className="border border-[#cdb58a] bg-[#fffaf0] shadow-[12px_12px_0_#f6c765]"
+              className="border border-[#cdb58a] bg-[#fffaf0] shadow-[8px_8px_0_#f6c765]"
             >
               <div className="flex items-center justify-between border-b border-[#d8c08f] px-5 py-4">
                 <p className="font-mono text-[0.66rem] font-bold uppercase tracking-[0.16em] text-[#564437]">Pick a trail</p>
@@ -311,7 +311,7 @@ export default function Fun() {
                       onClick={() => visitTrail(trail)}
                       aria-pressed={activeTrail === trail.id}
                       className={cn(
-                        "group relative min-h-28 border-[#d8c08f] p-4 text-left transition-colors focus:outline-none focus-visible:z-10 focus-visible:ring-2 focus-visible:ring-[#f45117]",
+                        "group relative min-h-24 border-[#d8c08f] p-3.5 text-left transition-colors focus:outline-none focus-visible:z-10 focus-visible:ring-2 focus-visible:ring-[#f45117]",
                         index % 2 === 0 && "border-r",
                         index < 2 && "border-b",
                         activeTrail === trail.id ? "bg-[#ffe5b8]" : "hover:bg-[#fff1d7]",
@@ -321,7 +321,7 @@ export default function Fun() {
                         <PixelIcon name={trail.icon} size={25} color={trail.color} className="transition-transform duration-200 group-hover:-translate-y-1" />
                         {visited ? <Check className="h-4 w-4 text-[#4f8f63]" /> : <span className="font-mono text-[0.56rem] text-[#a68668]">0{index + 1}</span>}
                       </div>
-                      <p className="mt-4 text-[0.95rem] font-bold text-[#2a211a]">{trail.label}</p>
+                      <p className="mt-3 text-[0.9rem] font-bold text-[#2a211a]">{trail.label}</p>
                       <p className="mt-1 text-xs leading-5 text-[#78604c]">{trail.note}</p>
                     </button>
                   );
@@ -372,19 +372,19 @@ export default function Fun() {
           </div>
         </section>
 
-        <section id="trail-watch" className="scroll-mt-20 border-b border-[#d8c08f] bg-[#fffaf0] px-5 py-16 sm:px-8 lg:py-24">
+        <section id="trail-watch" className="scroll-mt-20 border-b border-[#d8c08f] bg-[#fffaf0] px-5 py-12 sm:px-8 lg:py-16">
           <div className="mx-auto max-w-7xl">
-            <div className="mb-8 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+            <div className="mb-6 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
               <div>
                 <p className="font-mono text-[0.66rem] font-bold uppercase tracking-[0.18em] text-[#ad4a22]">01 · Watch</p>
-                <h2 className="mt-3 font-fraunces text-[clamp(2.7rem,5vw,5rem)] font-normal leading-[0.92] tracking-[-0.04em] text-[#211b16]">Watch the ideas move.</h2>
+                <h2 className="mt-3 font-fraunces text-[clamp(2.35rem,4vw,4rem)] font-normal leading-[0.92] tracking-[-0.04em] text-[#211b16]">Watch the ideas move.</h2>
               </div>
               <p className="max-w-[33rem] text-sm leading-6 text-[#6b5848] lg:text-right">{trailCopy.watch}</p>
             </div>
 
-            <div className="grid gap-4 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1.5fr)]">
+            <div className="grid gap-3 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.55fr)]">
               <ReelCard item={reelItems[0]} featured onOpen={() => markTrail("watch")} />
-              <div className="grid gap-4 sm:grid-cols-3">
+              <div className="grid gap-3 sm:grid-cols-3">
                 {reelItems.slice(1, 4).map((item) => (
                   <ReelCard key={item.id} item={item} onOpen={() => markTrail("watch")} />
                 ))}
@@ -393,17 +393,17 @@ export default function Fun() {
           </div>
         </section>
 
-        <section id="trail-read" className="scroll-mt-20 border-b border-[#d8c08f] bg-[#eef4ff] px-5 py-16 sm:px-8 lg:py-24">
+        <section id="trail-read" className="scroll-mt-20 border-b border-[#d8c08f] bg-[#eef4ff] px-5 py-12 sm:px-8 lg:py-16">
           <div className="mx-auto max-w-7xl">
-            <div className="mb-8 grid gap-4 lg:grid-cols-[minmax(0,1fr)_minmax(20rem,0.7fr)] lg:items-end">
+            <div className="mb-6 grid gap-4 lg:grid-cols-[minmax(0,1fr)_minmax(20rem,0.7fr)] lg:items-end">
               <div>
                 <p className="font-mono text-[0.66rem] font-bold uppercase tracking-[0.18em] text-[#315d9f]">02 · Read</p>
-                <h2 className="mt-3 font-fraunces text-[clamp(2.7rem,5vw,5rem)] font-normal leading-[0.92] tracking-[-0.04em] text-[#19263a]">Longer thoughts live here.</h2>
+                <h2 className="mt-3 font-fraunces text-[clamp(2.35rem,4vw,4rem)] font-normal leading-[0.92] tracking-[-0.04em] text-[#19263a]">Longer thoughts live here.</h2>
               </div>
               <p className="max-w-[34rem] text-sm leading-6 text-[#52647b] lg:justify-self-end lg:text-right">{trailCopy.read}</p>
             </div>
 
-            <div className="grid gap-4 lg:grid-cols-12">
+            <div className="grid gap-3 lg:grid-cols-12">
               <motion.a
                 href={linkedinFeature.href}
                 target="_blank"
@@ -412,16 +412,16 @@ export default function Fun() {
                 whileHover={{ y: -3 }}
                 className="group relative overflow-hidden border border-[#aac5e8] bg-white lg:col-span-7 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#2479bd]"
               >
-                <img src="/linkedin-profile-header.png" alt="Nivedita's LinkedIn profile and writing trail" className="aspect-[2/1] w-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.02]" />
-                <div className="flex items-center justify-between gap-5 border-t border-[#c8d9ef] p-5">
+                <img src="/linkedin-profile-header.png" alt="Nivedita's LinkedIn profile and writing trail" className="aspect-[2.35/1] w-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.02]" />
+                <div className="flex items-center justify-between gap-5 border-t border-[#c8d9ef] p-4">
                   <div>
                     <SourceBadge source="LinkedIn" />
-                    <h3 className="mt-3 max-w-[18ch] font-fraunces text-[clamp(2rem,3vw,3.1rem)] font-normal leading-[0.96] tracking-[-0.025em] text-[#19263a]">Career moves, startup stories, public proof.</h3>
+                    <h3 className="mt-2 max-w-[18ch] font-fraunces text-[clamp(1.7rem,2.5vw,2.45rem)] font-normal leading-[0.96] tracking-[-0.025em] text-[#19263a]">Career moves, startup stories, public proof.</h3>
                   </div>
                   <ArrowUpRight className="h-6 w-6 shrink-0 text-[#315d9f] transition-transform duration-200 group-hover:translate-x-1 group-hover:-translate-y-1" />
                 </div>
               </motion.a>
-              <div className="grid gap-4 sm:grid-cols-2 lg:col-span-5 lg:grid-cols-1 xl:grid-cols-2">
+              <div className="grid gap-3 sm:grid-cols-2 lg:col-span-5 lg:grid-cols-1 xl:grid-cols-2">
                 <ReadingCard item={mediumFeature} onOpen={() => markTrail("read")} />
                 <ReadingCard item={substackFeature} onOpen={() => markTrail("read")} />
               </div>
@@ -429,16 +429,16 @@ export default function Fun() {
           </div>
         </section>
 
-        <section id="trail-build" className="scroll-mt-20 border-b border-[#d8c08f] bg-[#f5efdf] px-5 py-16 sm:px-8 lg:py-24">
+        <section id="trail-build" className="scroll-mt-20 border-b border-[#d8c08f] bg-[#f5efdf] px-5 py-12 sm:px-8 lg:py-16">
           <div className="mx-auto max-w-7xl">
-            <div className="mb-8 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+            <div className="mb-6 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
               <div>
                 <p className="font-mono text-[0.66rem] font-bold uppercase tracking-[0.18em] text-[#4f7658]">03 · Build</p>
-                <h2 className="mt-3 font-fraunces text-[clamp(2.7rem,5vw,5rem)] font-normal leading-[0.92] tracking-[-0.04em] text-[#20261f]">Things I built for the plot.</h2>
+                <h2 className="mt-3 font-fraunces text-[clamp(2.35rem,4vw,4rem)] font-normal leading-[0.92] tracking-[-0.04em] text-[#20261f]">Things I built for the plot.</h2>
               </div>
               <p className="max-w-[34rem] text-sm leading-6 text-[#596657] lg:text-right">{trailCopy.build}</p>
             </div>
-            <div className="space-y-5">
+            <div className="space-y-4">
               {buildQuests.map((item, index) => (
                 <BuildQuest key={item.id} item={item} index={index} onOpen={() => markTrail("build")} />
               ))}
@@ -451,7 +451,7 @@ export default function Fun() {
         </div>
 
         <section className="mx-auto mt-10 max-w-7xl px-5 sm:px-8">
-          <div className="relative overflow-hidden border border-[#271f18] bg-[#211f1a] px-6 py-10 text-[#fff8e8] sm:px-10 lg:px-12">
+          <div className="relative overflow-hidden border border-[#271f18] bg-[#211f1a] px-6 py-8 text-[#fff8e8] sm:px-8 lg:px-10">
             <div aria-hidden="true" className="absolute right-0 top-0 grid grid-cols-4">
               <span className="h-4 w-8 bg-[#f45117]" />
               <span className="h-4 w-8 bg-[#ff8105]" />

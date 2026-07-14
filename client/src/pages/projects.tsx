@@ -18,11 +18,7 @@ import {
   ThumbnailPreviewMedia,
 } from "@/components/ui/editorial-thumbnail-link";
 import { AnimatedProjectThumbnail, type AnimatedThumbnailVariant } from "@/components/ui/AnimatedProjectThumbnail";
-import {
-  DoodleArrow,
-  DoodleSpark,
-  DoodleUnderline,
-} from "@/components/ui/doodle-accents";
+import { DoodleUnderline } from "@/components/ui/doodle-accents";
 import { cn } from "@/lib/utils";
 import { contentItems, type ContentItem } from "@/data/content";
 import { experiences } from "@/data/experience";
@@ -317,59 +313,36 @@ export default function Projects() {
             <span className="col-span-3 h-4 bg-[#ffd06a]" />
           </div>
           <div>
-            <main className="mx-auto min-w-0 max-w-[1280px] p-5 pt-16 sm:p-8 sm:pt-20 lg:px-12 lg:pb-20 lg:pt-24">
-              <section className="border-b border-[#d8c08f] pb-10 sm:pb-12">
-                <div className="grid gap-8 lg:grid-cols-[minmax(0,1.26fr)_minmax(13rem,0.48fr)] lg:items-center">
-                  <motion.div
-                    initial={{ opacity: 0, y: prefersReducedMotion ? 0 : 18 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.65, ease: "easeOut" }}
-                    className="space-y-5"
-                  >
+            <main className="mx-auto min-w-0 max-w-[1280px] p-5 pt-12 sm:p-8 sm:pt-14 lg:px-12 lg:pb-20 lg:pt-16">
+              <section className="border-b border-[#d8c08f] pb-7 sm:pb-9">
+                <motion.div
+                  initial={{ opacity: 0, y: prefersReducedMotion ? 0 : 14 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, ease: "easeOut" }}
+                  className="grid gap-5 lg:grid-cols-[minmax(0,0.9fr)_minmax(22rem,0.7fr)] lg:items-end lg:gap-12"
+                >
+                  <div>
                     <p className="section-kicker text-[#b9653d]">Work</p>
-                    <div className="relative max-w-[20ch]">
+                    <div className="relative mt-3 max-w-[20ch]">
                       <h1
                         className={cn(
-                          "max-w-[20ch] text-[clamp(2.4rem,3.5vw,3.8rem)] font-normal leading-[1.02] tracking-[-0.015em] text-[#221913]",
+                          "max-w-[20ch] text-[clamp(2.25rem,3.2vw,3.5rem)] font-normal leading-[0.98] tracking-[-0.015em] text-[#221913]",
                           isClayNotionMode && "font-editorial",
                         )}
                       >
                         <span className="block sm:whitespace-nowrap">Solving meaningful</span>
                         <span className="block sm:whitespace-nowrap">problems at scale.</span>
                       </h1>
-                      <DoodleUnderline className="mt-4 h-auto w-[10rem] text-[#d79b77]/85" />
+                      <DoodleUnderline className="mt-2 h-auto w-[8rem] text-[#d79b77]/85" />
                     </div>
-                    <p className="max-w-2xl text-[1.02rem] leading-7 text-[#6d5b4c] sm:text-lg">
+                  </div>
+                  <p className="max-w-[38rem] text-[1rem] leading-7 text-[#6d5b4c] lg:justify-self-end lg:text-right">
                       A selection of case studies, product thinking, and work in
                       progress.
-                    </p>
-                  </motion.div>
+                  </p>
+                </motion.div>
 
-                  <motion.div
-                    initial={{ opacity: 0, x: prefersReducedMotion ? 0 : 12 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.7, delay: 0.08, ease: "easeOut" }}
-                    className="relative"
-                  >
-                    <div className="relative overflow-hidden border border-[#d8c08f] bg-[#fff4dc] px-3 py-4 sm:px-5">
-                      <div aria-hidden="true" className="absolute right-0 top-0 grid grid-cols-4">
-                        <span className="h-3 w-6 bg-[#211f1a]" />
-                        <span className="h-3 w-6 bg-[#f45117]" />
-                        <span className="h-3 w-6 bg-[#ffb021]" />
-                        <span className="h-3 w-6 bg-[#df5279]" />
-                      </div>
-                      <WorkLandscapeSketch reducedMotion={Boolean(prefersReducedMotion)} />
-                      <div className="pointer-events-none absolute -bottom-1 left-0 hidden text-[#d68b63] sm:block">
-                        <DoodleArrow className="h-auto w-24" delay={0.15} />
-                      </div>
-                      <div className="pointer-events-none absolute right-1 top-2 text-[#d6a07f]">
-                        <DoodleSpark className="h-10 w-10" delay={0.22} />
-                      </div>
-                    </div>
-                  </motion.div>
-                </div>
-
-                <div className="mt-8 flex overflow-x-auto border-y border-[#d8c08f] bg-[#fff8e8] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+                <div className="mt-6 flex overflow-x-auto border-y border-[#d8c08f] bg-[#fff8e8] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
                   {sectionTabs.map((section) => {
                     const isActive = activeSection === section.id;
 
@@ -395,7 +368,7 @@ export default function Projects() {
 
               <section
                 id="featured-case-studies"
-                className="scroll-mt-28 pt-12 sm:pt-16"
+                className="scroll-mt-28 pt-9 sm:pt-11"
               >
                 <SectionHeader
                   title="Featured case studies"
@@ -1480,104 +1453,5 @@ function RailPanel({
         </button>
       ) : null}
     </section>
-  );
-}
-
-function WorkLandscapeSketch({
-  reducedMotion,
-}: {
-  reducedMotion: boolean;
-}) {
-  return (
-    <div className="relative h-[7rem] sm:h-[13rem] lg:h-[18rem]">
-      <motion.div
-        className="absolute right-[20%] top-[14%] h-5 w-5 rounded-full bg-[#d6794e] shadow-[0_0_30px_rgba(214,121,78,0.22)] sm:h-7 sm:w-7"
-        animate={
-          reducedMotion
-            ? undefined
-            : {
-                y: [0, -5, 0],
-                x: [0, 2, 0],
-              }
-        }
-        transition={{
-          duration: 5.5,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
-      />
-
-      <motion.svg
-        viewBox="0 0 560 320"
-        fill="none"
-        aria-hidden="true"
-        className="absolute inset-0 h-full w-full text-[#baaf9f]"
-        initial={{ opacity: 0, y: reducedMotion ? 0 : 12 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-40px" }}
-        transition={{ duration: 0.7, ease: "easeOut" }}
-      >
-        <motion.path
-          d="M48 212C82 196 104 182 142 154C175 130 193 98 224 86C260 73 275 114 304 138C326 156 353 169 390 175C423 180 454 171 512 144"
-          stroke="currentColor"
-          strokeWidth="2.2"
-          strokeLinecap="round"
-          initial={{ pathLength: 0 }}
-          whileInView={{ pathLength: 1 }}
-          viewport={{ once: true, margin: "-40px" }}
-          transition={{ duration: 1.05, ease: "easeInOut" }}
-        />
-        <motion.path
-          d="M74 212C111 190 148 146 172 126C198 104 215 86 236 92C263 100 284 142 312 166C338 188 365 195 402 197C432 199 462 191 507 167"
-          stroke="currentColor"
-          strokeWidth="2.2"
-          strokeLinecap="round"
-          initial={{ pathLength: 0 }}
-          whileInView={{ pathLength: 1 }}
-          viewport={{ once: true, margin: "-40px" }}
-          transition={{ duration: 1.2, delay: 0.08, ease: "easeInOut" }}
-        />
-        <motion.path
-          d="M138 214C168 167 194 128 225 100C238 88 252 82 264 90C284 104 287 144 315 176"
-          stroke="currentColor"
-          strokeWidth="1.8"
-          strokeLinecap="round"
-          initial={{ pathLength: 0 }}
-          whileInView={{ pathLength: 1 }}
-          viewport={{ once: true, margin: "-40px" }}
-          transition={{ duration: 0.85, delay: 0.18, ease: "easeInOut" }}
-        />
-        <motion.path
-          d="M252 206C275 175 302 127 337 93C355 76 372 76 389 93C415 120 417 169 452 188"
-          stroke="currentColor"
-          strokeWidth="1.8"
-          strokeLinecap="round"
-          initial={{ pathLength: 0 }}
-          whileInView={{ pathLength: 1 }}
-          viewport={{ once: true, margin: "-40px" }}
-          transition={{ duration: 0.92, delay: 0.24, ease: "easeInOut" }}
-        />
-        <motion.path
-          d="M100 250C142 241 185 247 222 241C256 236 284 220 312 214C346 207 382 214 442 234"
-          stroke="currentColor"
-          strokeWidth="1.7"
-          strokeLinecap="round"
-          initial={{ pathLength: 0 }}
-          whileInView={{ pathLength: 1 }}
-          viewport={{ once: true, margin: "-40px" }}
-          transition={{ duration: 0.88, delay: 0.28, ease: "easeInOut" }}
-        />
-        <motion.path
-          d="M168 241C190 229 212 222 244 218C277 214 300 220 329 236"
-          stroke="currentColor"
-          strokeWidth="1.45"
-          strokeLinecap="round"
-          initial={{ pathLength: 0 }}
-          whileInView={{ pathLength: 1 }}
-          viewport={{ once: true, margin: "-40px" }}
-          transition={{ duration: 0.7, delay: 0.36, ease: "easeInOut" }}
-        />
-      </motion.svg>
-    </div>
   );
 }

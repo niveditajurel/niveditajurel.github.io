@@ -12,23 +12,26 @@ import {
   Users2,
 } from "lucide-react";
 import { BsMedium, BsSubstack } from "react-icons/bs";
+import {
+  RecentExperienceCard,
+  recentExperienceEntries,
+} from "@/components/RecentExperienceCard";
 import { BackgroundComponents } from "@/components/ui/background-components";
 import {
   EditorialThumbnailLink,
   ThumbnailPreviewMedia,
 } from "@/components/ui/editorial-thumbnail-link";
-import { AnimatedProjectThumbnail, type AnimatedThumbnailVariant } from "@/components/ui/AnimatedProjectThumbnail";
+import { AnimatedProjectThumbnail } from "@/components/ui/AnimatedProjectThumbnail";
 import { DoodleUnderline } from "@/components/ui/doodle-accents";
 import { cn } from "@/lib/utils";
 import { contentItems, type ContentItem } from "@/data/content";
 import { experiences } from "@/data/experience";
 import { experiments, type ExperimentItem } from "@/data/experiments";
-import { projects, type ProjectData } from "@/data/projects";
 import { aisliResearch } from "@/data/research";
 import { siteConfig } from "@/data/site";
 
 const sectionTabs = [
-  { id: "featured-case-studies", label: "Featured case studies" },
+  { id: "featured-case-studies", label: "Recent product experience" },
   { id: "product-breakdowns", label: "Product breakdowns" },
   { id: "personal-projects", label: "Personal projects" },
   { id: "github-builds", label: "GitHub builds" },
@@ -38,48 +41,10 @@ const sectionTabs = [
 
 type SectionId = (typeof sectionTabs)[number]["id"];
 
-const featuredCaseStudyIds = ["anand-pag", "skingenius", "nomad-ai"] as const;
 const personalProjectIds = [
   "learning-council",
   "finwise",
 ] as const;
-
-const caseStudyDisplay: Record<
-  string,
-  {
-    title?: string;
-    image?: string;
-    videoSrc?: string;
-    pill: string;
-    imageClassName?: string;
-    mediaPanelClassName?: string;
-  }
-> = {
-  "anand-pag": {
-    title: "Anand PAG",
-    image: "/anand-workflow-system-map.png",
-    videoSrc: "/thumbnail-previews/anand-workflow-system-map-preview.mp4",
-    pill: "Delivery • Enterprise",
-    imageClassName: "h-full w-full object-contain p-4 sm:p-5",
-    mediaPanelClassName: "bg-white",
-  },
-  skingenius: {
-    title: "Skingenius",
-    image: "/teasers/skingenius1.jpg",
-    videoSrc: "/thumbnail-previews/skingenius-preview.mp4",
-    pill: "Growth • Consumer AI",
-    imageClassName: "h-full w-full object-contain p-4 sm:p-5",
-    mediaPanelClassName: "bg-[#ef9b52]",
-  },
-  "nomad-ai": {
-    title: "Nomad AI",
-    image: "/nomad-ai-dashboard.png",
-    videoSrc: "/thumbnail-previews/nomad-ai-dashboard-preview.mp4",
-    pill: "AI • B2B SaaS",
-    imageClassName: "h-full w-full object-contain p-3 sm:p-4",
-    mediaPanelClassName: "bg-[#050709]",
-  },
-};
 
 type BreakdownTile = {
   id: string;
@@ -194,12 +159,6 @@ const writingDisplay: Record<
   },
 };
 
-function pickProjects(ids: readonly string[]) {
-  return ids
-    .map((id) => projects.find((project) => project.id === id))
-    .filter((project): project is ProjectData => Boolean(project));
-}
-
 function pickExperiments(ids: readonly string[]) {
   return ids
     .map((id) => experiments.find((experiment) => experiment.id === id))
@@ -215,7 +174,6 @@ function pickContent(ids: readonly string[]) {
 export default function Projects() {
   const isClayNotionMode = siteConfig.experiments.clayNotionLanding;
   const prefersReducedMotion = useReducedMotion();
-  const featuredCaseStudies = pickProjects(featuredCaseStudyIds);
   const personalProjects = pickExperiments(personalProjectIds);
   const writingItems = pickContent([
     "linkedin-writing",
@@ -371,17 +329,16 @@ export default function Projects() {
                 className="scroll-mt-28 pt-9 sm:pt-11"
               >
                 <SectionHeader
-                  title="Featured case studies"
-                  meta="3 live case studies"
+                  title="Recent product experience"
+                  meta="3 recent roles"
                   isClayNotionMode={isClayNotionMode}
                 />
                 <div className="mt-5 grid gap-4 xl:grid-cols-3">
-                  {featuredCaseStudies.map((project, index) => (
-                    <FeaturedCaseStudyCard
-                      key={project.id}
-                      project={project}
+                  {recentExperienceEntries.map((entry, index) => (
+                    <RecentExperienceCard
+                      key={entry.project.id}
+                      entry={entry}
                       index={index}
-                      isClayNotionMode={isClayNotionMode}
                     />
                   ))}
                 </div>
@@ -658,94 +615,6 @@ function SectionHeader({
       </h2>
       <p className="text-sm font-semibold text-[#b9653d]">{meta}</p>
     </div>
-  );
-}
-
-function FeaturedCaseStudyCard({
-  project,
-  index,
-  isClayNotionMode,
-}: {
-  project: ProjectData;
-  index: number;
-  isClayNotionMode: boolean;
-}) {
-  const display = caseStudyDisplay[project.id];
-  const imageSrc = display?.image ?? project.image;
-  const previewVideoSrc = display?.videoSrc;
-  const imageClassName =
-    display?.imageClassName ??
-    (project.imageMode === "contain"
-      ? "h-full w-full object-contain p-8"
-      : "h-full w-full object-cover object-center");
-  const isDarkPanel = (display?.mediaPanelClassName ?? "").includes("#050709");
-
-  return (
-    <motion.article
-      initial={{ opacity: 0, y: 22 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-80px" }}
-      transition={{ duration: 0.55, delay: index * 0.06, ease: "easeOut" }}
-      whileHover={{ y: -4 }}
-      className="group flex h-full flex-col"
-    >
-      <EditorialThumbnailLink
-        href={project.href}
-        externalHref={project.externalHref}
-        ctaLabel={project.externalHref ? "View product page" : "View case study"}
-        tone={isDarkPanel ? "dark" : "light"}
-        disableAmbientFloat
-        panelClassName={cn(
-          "relative h-[22rem] overflow-hidden border border-[#d8c08f] sm:h-[26rem]",
-          display?.mediaPanelClassName ?? "bg-[#f8efe4]",
-        )}
-      >
-        {project.id === "skingenius" && previewVideoSrc ? (
-          <ThumbnailPreviewMedia
-            imageSrc={imageSrc}
-            videoSrc={previewVideoSrc}
-            alt={project.title}
-            imageClassName={imageClassName}
-            videoClassName={imageClassName}
-          />
-        ) : (
-          <AnimatedProjectThumbnail variant={project.id as AnimatedThumbnailVariant} motion="hover" />
-        )}
-      </EditorialThumbnailLink>
-
-      <div className="flex flex-1 flex-col justify-between gap-3 pt-4">
-        <div className="flex flex-wrap items-center gap-2">
-          <span className="whitespace-nowrap rounded-full border border-[#d8c6b5] bg-white/82 px-3 py-1 text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-[#6d5b4c]">
-            {display?.pill ?? project.eyebrow}
-          </span>
-          <span className="whitespace-nowrap rounded-full border border-[#ead8c5] bg-[#fff4e7] px-3 py-1 text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-[#b9653d]">
-            {project.period}
-          </span>
-        </div>
-
-        <div className="flex flex-wrap items-center justify-end gap-2">
-          {project.externalHref ? (
-            <a
-              href={project.externalHref}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-1.5 whitespace-nowrap rounded-full border border-[#d9c8b8] bg-white/82 px-3.5 py-2 text-[0.78rem] font-semibold text-[#241913] transition-colors duration-200 hover:border-[#b98c65]"
-            >
-              Website
-              <ArrowUpRight className="h-3.5 w-3.5" />
-            </a>
-          ) : null}
-          {project.href ? (
-            <Link href={project.href}>
-              <span className="inline-flex cursor-pointer items-center gap-1.5 whitespace-nowrap rounded-full bg-[#1f1a14] px-3.5 py-2 text-[0.78rem] font-semibold text-[#fff8ef] transition-transform duration-200 hover:-translate-y-0.5">
-                Case study
-                <ArrowRight className="h-3.5 w-3.5" />
-              </span>
-            </Link>
-          ) : null}
-        </div>
-      </div>
-    </motion.article>
   );
 }
 

@@ -16,19 +16,19 @@ const heroPrinciples: Array<{
   {
     label: "Systems",
     mark: "systems",
-    position: "left-[58%] top-[22%]",
+    position: "left-[58%] top-[21%] xl:left-[58%]",
     delay: "-1.1s",
   },
   {
     label: "Execution",
     mark: "execution",
-    position: "right-[3%] top-[34%]",
+    position: "right-[5%] top-[34%] 2xl:right-[4%]",
     delay: "-3.6s",
   },
   {
     label: "Customer Lens",
     mark: "customer",
-    position: "right-[3%] top-[55%]",
+    position: "right-[5%] top-[55%] 2xl:right-[4%]",
     delay: "-5.4s",
   },
 ];
@@ -139,14 +139,14 @@ export const Hero = () => {
   };
 
   return (
-    <section className="relative isolate overflow-hidden bg-[var(--bp-paper)]">
+    <section className="relative isolate overflow-hidden bg-[var(--bp-paper)] lg:min-h-[min(820px,calc(100svh-4rem))] xl:min-h-[min(900px,calc(100svh-4rem))]">
       <HeroPixelAccent reduceMotion={reduceMotion} />
 
       {/* Portrait — full-bleed background */}
       <motion.img
         src="/hero-portrait.jpg"
         alt="Nivedita, product manager and builder, in front of a whiteboard of hand-drawn product doodles"
-        className="absolute inset-0 h-full w-full object-cover object-[70%_2%] lg:object-[82%_6%]"
+        className="absolute inset-0 h-full w-full object-cover object-[58%_0%] sm:object-[66%_0%] lg:object-[76%_4%] xl:object-[82%_5%]"
         style={{ transformOrigin: "80% 30%" }}
         initial={reduceMotion ? { opacity: 1, scale: 1.02 } : { opacity: 0, scale: 1.055 }}
         animate={{ opacity: 1, scale: 1.02 }}
@@ -191,8 +191,8 @@ export const Hero = () => {
               className="hero-pixel-float inline-flex items-center gap-3.5"
               style={{ animationDelay: principle.delay }}
             >
-              <HeroPrincipleMark mark={principle.mark} size={42} />
-              <span className="font-mono text-[0.88rem] font-extrabold uppercase tracking-[0.13em] text-[#211b16]">
+              <HeroPrincipleMark mark={principle.mark} size={38} />
+              <span className="font-mono text-[0.78rem] font-extrabold uppercase tracking-[0.12em] text-[#211b16] xl:text-[0.84rem]">
                 {principle.label}
               </span>
             </span>
@@ -201,9 +201,9 @@ export const Hero = () => {
       </ul>
 
       {/* Content */}
-      <div className="relative z-20 mx-auto flex min-h-[calc(100svh-4rem)] max-w-7xl items-end px-5 pb-24 sm:px-6 lg:items-center lg:px-16 lg:pb-0">
+      <div className="relative z-20 mx-auto flex min-h-[calc(100svh-4rem)] w-full max-w-[1540px] items-start px-5 pb-12 pt-40 sm:items-center sm:px-7 sm:pb-20 sm:pt-24 lg:min-h-[min(820px,calc(100svh-4rem))] lg:px-12 lg:pb-8 lg:pt-12 xl:min-h-[min(900px,calc(100svh-4rem))] xl:px-16 2xl:px-20">
         <motion.div
-          className="flex w-full max-w-[600px] flex-col gap-5 lg:gap-6"
+          className="flex min-w-0 w-[calc(100vw-2.5rem)] max-w-[calc(100vw-2.5rem)] flex-col gap-4 overflow-hidden sm:w-full sm:max-w-[38rem] sm:gap-5 lg:max-w-[31rem] lg:gap-5 xl:max-w-[35rem]"
           variants={reduceMotion ? undefined : container}
           initial={reduceMotion ? undefined : "hidden"}
           animate={reduceMotion ? undefined : "show"}
@@ -211,7 +211,7 @@ export const Hero = () => {
           {/* Eyebrow */}
           <motion.p
             variants={reduceMotion ? undefined : item}
-            className="font-mono text-[0.9rem] font-bold uppercase tracking-[0.18em] text-[#2f2922] sm:text-[1rem]"
+            className="max-w-full font-mono text-[0.9rem] font-bold uppercase tracking-[0.18em] text-[#2f2922] sm:text-[1rem]"
           >
             <span>Nivedita — PM + Builder</span>
           </motion.p>
@@ -219,15 +219,15 @@ export const Hero = () => {
           <motion.ul
             variants={reduceMotion ? undefined : item}
             aria-label="Product principles"
-            className="grid grid-cols-3 gap-2 sm:max-w-[31rem] lg:hidden"
+            className="grid w-full max-w-full grid-cols-2 gap-x-4 gap-y-2 overflow-hidden sm:max-w-[31rem] sm:grid-cols-3 lg:hidden"
           >
             {heroPrinciples.map((principle) => (
               <li
                 key={principle.label}
-                className="flex min-w-0 items-center justify-start gap-2"
+                className="flex min-w-0 items-center justify-start gap-1.5"
               >
-                <HeroPrincipleMark mark={principle.mark} size={27} />
-                <span className="font-mono text-[0.62rem] font-extrabold uppercase leading-tight tracking-[0.045em] text-[#211b16] sm:text-[0.69rem]">
+                <HeroPrincipleMark mark={principle.mark} size={22} />
+                <span className="min-w-0 max-w-full break-words font-mono text-[0.58rem] font-extrabold uppercase leading-[1.05] tracking-[0.035em] text-[#211b16] sm:text-[0.69rem]">
                   {principle.label}
                 </span>
               </li>
@@ -237,8 +237,8 @@ export const Hero = () => {
           {/* Headline */}
           <motion.h1
             variants={reduceMotion ? undefined : item}
-            className="font-fraunces m-0 font-normal leading-[1.02] text-[#211b16]"
-            style={{ fontSize: "clamp(2.9rem, 5.6vw, 4.75rem)", textWrap: "pretty" }}
+            className="font-fraunces m-0 max-w-full font-normal leading-[1.02] text-[#211b16]"
+            style={{ fontSize: "clamp(2.65rem, 4.6vw, 4.35rem)", textWrap: "pretty" }}
           >
             I bring clarity<br />
             to <span className="font-semibold italic text-[#e34312]">messy</span><br />
@@ -248,7 +248,8 @@ export const Hero = () => {
           {/* Subhead */}
           <motion.p
             variants={reduceMotion ? undefined : item}
-            className="m-0 max-w-[430px] text-[1.05rem] font-medium leading-[1.6] text-[#4d4339] sm:text-[1.125rem]"
+            className="m-0 w-full max-w-[20.5rem] text-[0.98rem] font-medium leading-[1.55] text-[#4d4339] sm:max-w-[420px] sm:text-[1.08rem]"
+            style={{ overflowWrap: "break-word", whiteSpace: "normal" }}
           >
             Former software engineer turned product manager, working across startups and enterprise
             teams to turn unclear workflows into direction teams can build and ship.
@@ -256,7 +257,7 @@ export const Hero = () => {
 
           <motion.p
             variants={reduceMotion ? undefined : item}
-            className="font-mono m-0 text-[0.78rem] font-bold uppercase tracking-[0.22em] text-[#3b332b]"
+            className="font-mono m-0 hidden text-[0.78rem] font-bold uppercase tracking-[0.22em] text-[#3b332b] sm:block"
           >
             Former SWE · Startups + Enterprise PM
           </motion.p>

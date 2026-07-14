@@ -46,7 +46,7 @@ export default function Home() {
       className="min-h-screen bg-[var(--bp-paper)]"
       contentClassName="relative"
     >
-      <div className="mx-auto max-w-[1480px] border-x border-b border-[var(--bp-hairline)] bg-[var(--bp-paper)]">
+      <div className="mx-auto w-full max-w-[1720px] border-x border-b border-[var(--bp-hairline)] bg-[var(--bp-paper)]">
         <Hero />
         <FeaturedWork />
         <BuildExperimentsPreview />

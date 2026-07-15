@@ -22,7 +22,7 @@ export const contentItems: ContentItem[] = [
     format: "Short-form content",
     description:
       "Visual reflections on product thinking, ambiguity, workflows, and building with AI.",
-    href: "https://www.instagram.com/niv_yaps/",
+    href: "https://www.instagram.com/niv.in.tech/",
   },
   {
     id: "linkedin-writing",

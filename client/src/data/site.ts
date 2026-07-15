@@ -26,7 +26,7 @@ export const siteConfig = {
         linkedin: "https://www.linkedin.com/in/nivedita-niv/",
         twitter: "https://x.com/niviintech",
         email: "mailto:nivedita9826@gmail.com",
-        instagram: "https://www.instagram.com/niv_yaps/",
+        instagram: "https://www.instagram.com/niv.in.tech/",
         resume: "https://drive.google.com/file/d/1fp0U0Oz0YUZwfNRGqBSR6vwijg5j4hLv/view?usp=sharing",
     },
     nav: [
@@ -60,7 +60,7 @@ export const siteConfig = {
         },
         {
             name: "Instagram",
-            href: "https://www.instagram.com/niv_yaps/",
+            href: "https://www.instagram.com/niv.in.tech/",
             icon: FaInstagram,
             label: "Instagram profile"
         },

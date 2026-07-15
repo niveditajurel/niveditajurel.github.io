@@ -15,7 +15,7 @@ export const funMediaItems: FunMediaItem[] = [
     title: "How I keep up with AI, tech, and product",
     description:
       "A reel on the tools, notes, and learning stack I keep returning to as a product builder.",
-    href: "https://www.instagram.com/niv_yaps/",
+    href: "https://www.instagram.com/niv.in.tech/",
     imageSrc: "/instagram-cover-7.png",
     imageAlt: "Instagram reel cover about keeping up with AI, tech, and product as a product builder.",
   },
@@ -41,7 +41,7 @@ export const funMediaItems: FunMediaItem[] = [
     title: "Software fundamentals matter more with AI",
     description:
       "A reel on why clearer thinking and stronger fundamentals become more important, not less, in AI-heavy product work.",
-    href: "https://www.instagram.com/niv_yaps/",
+    href: "https://www.instagram.com/niv.in.tech/",
     imageSrc: "/instagram-cover-8.png",
     imageAlt: "Instagram reel cover about software fundamentals mattering more with AI.",
   },
@@ -51,7 +51,7 @@ export const funMediaItems: FunMediaItem[] = [
     title: "Why 'make this look better' is a weak AI prompt",
     description:
       "A short take on prompt quality, design critique, and how vague requests produce weak outcomes.",
-    href: "https://www.instagram.com/niv_yaps/",
+    href: "https://www.instagram.com/niv.in.tech/",
     imageSrc: "/instagram-cover-2.png",
     imageAlt: "Instagram reel cover about the prompt make this look better being a weak AI prompt.",
   },
@@ -61,7 +61,7 @@ export const funMediaItems: FunMediaItem[] = [
     title: "Builder notes from Tony Fadell",
     description:
       "A visual note on taste, product judgment, and why you cannot outsource the hard part of building.",
-    href: "https://www.instagram.com/niv_yaps/",
+    href: "https://www.instagram.com/niv.in.tech/",
     imageSrc: "/instagram-cover-3.png",
     imageAlt: "Instagram reel cover about builder notes from Tony Fadell.",
   },

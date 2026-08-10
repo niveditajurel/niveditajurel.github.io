@@ -264,27 +264,27 @@ export default function Projects() {
       contentClassName="relative"
     >
       <div className="pb-20 lg:pb-28">
-        <div className="relative mx-auto max-w-[1480px] border-x border-b border-[#d8c08f] bg-[#fffaf0]">
+        <div className="relative mx-auto max-w-[1480px] overflow-hidden border-x border-b border-[#d8c08f] bg-[#fffaf0]">
           <div aria-hidden="true" className="absolute left-0 top-0 z-10 grid grid-cols-3 grid-rows-2">
             <span className="h-4 w-6 bg-[#f45117]" />
             <span className="h-4 w-6 bg-[#ff8105]" />
             <span className="col-span-3 h-4 bg-[#ffd06a]" />
           </div>
           <div>
-            <main className="mx-auto min-w-0 max-w-[1280px] p-5 pt-12 sm:p-8 sm:pt-14 lg:px-12 lg:pb-20 lg:pt-16">
+            <main className="mx-auto min-w-0 max-w-[1280px] p-5 pt-10 sm:p-8 sm:pt-14 lg:px-12 lg:pb-20 lg:pt-16">
               <section className="border-b border-[#d8c08f] pb-7 sm:pb-9">
                 <motion.div
                   initial={{ opacity: 0, y: prefersReducedMotion ? 0 : 14 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, ease: "easeOut" }}
-                  className="grid gap-5 lg:grid-cols-[minmax(0,0.9fr)_minmax(22rem,0.7fr)] lg:items-end lg:gap-12"
+                  className="grid min-w-0 gap-5 lg:grid-cols-[minmax(0,0.9fr)_minmax(22rem,0.7fr)] lg:items-end lg:gap-12"
                 >
                   <div>
                     <p className="section-kicker text-[#b9653d]">Work</p>
-                    <div className="relative mt-3 max-w-[20ch]">
+                    <div className="relative mt-3 max-w-[18ch] sm:max-w-[20ch]">
                       <h1
                         className={cn(
-                          "max-w-[20ch] text-[clamp(2.25rem,3.2vw,3.5rem)] font-normal leading-[0.98] tracking-[-0.015em] text-[#221913]",
+                          "max-w-[18ch] text-[clamp(2.05rem,10vw,3.5rem)] font-normal leading-[1] tracking-[-0.01em] text-[#221913] sm:max-w-[20ch] sm:leading-[0.98] sm:tracking-[-0.015em]",
                           isClayNotionMode && "font-editorial",
                         )}
                       >
@@ -294,13 +294,13 @@ export default function Projects() {
                       <DoodleUnderline className="mt-2 h-auto w-[8rem] text-[#d79b77]/85" />
                     </div>
                   </div>
-                  <p className="max-w-[38rem] text-[1rem] leading-7 text-[#6d5b4c] lg:justify-self-end lg:text-right">
+                  <p className="max-w-[22rem] overflow-hidden text-[0.95rem] leading-7 text-[#6d5b4c] lg:max-w-[38rem] lg:justify-self-end lg:text-right">
                       A selection of case studies, product thinking, and work in
                       progress.
                   </p>
                 </motion.div>
 
-                <div className="mt-6 flex overflow-x-auto border-y border-[#d8c08f] bg-[#fff8e8] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+                <div className="-mx-5 mt-6 flex overflow-x-auto border-y border-[#d8c08f] bg-[#fff8e8] px-5 [scrollbar-width:none] after:block after:w-5 after:shrink-0 after:content-[''] sm:mx-0 sm:px-0 sm:after:hidden [&::-webkit-scrollbar]:hidden">
                   {sectionTabs.map((section) => {
                     const isActive = activeSection === section.id;
 
@@ -311,7 +311,7 @@ export default function Projects() {
                         onClick={() => scrollToSection(section.id)}
                         aria-current={isActive ? "true" : undefined}
                         className={cn(
-                          "inline-flex min-h-12 items-center whitespace-nowrap border-r border-[#d8c08f] px-4 py-3 font-mono text-[0.66rem] font-bold uppercase tracking-[0.1em] transition-colors duration-200 sm:px-5",
+                          "inline-flex min-h-12 shrink-0 items-center whitespace-nowrap border-r border-[#d8c08f] px-3.5 py-3 font-mono text-[0.62rem] font-bold uppercase tracking-[0.08em] transition-colors duration-200 sm:px-5 sm:text-[0.66rem] sm:tracking-[0.1em]",
                           isActive
                             ? "bg-[#211f1a] text-[#fff8e8]"
                             : "bg-[#fff8e8] text-[#6a5545] hover:bg-[#ffe8c2] hover:text-[#241913]",

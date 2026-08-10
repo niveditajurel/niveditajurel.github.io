@@ -36,11 +36,6 @@ export function Navigation() {
     }
   };
 
-  const isActive = (href: string) =>
-    location === href ||
-    (href === "/" && location === "/") ||
-    (href !== "/" && location.startsWith(href));
-
   return (
     <>
       <nav
@@ -65,18 +60,9 @@ export function Navigation() {
               <Link key={item.name} href={item.href}>
                 <span
                   onClick={() => handleNavClick(item.href, item.sectionId)}
-                  className={cn(
-                    "inline-flex cursor-pointer items-center gap-2 border-b-2 py-1 font-mono text-[0.8rem] font-medium transition-colors duration-150",
-                    isActive(item.href)
-                      ? "border-[var(--bp-cobalt)] text-[var(--bp-ink)]"
-                      : "border-transparent text-[var(--bp-ink-muted)] hover:text-[var(--bp-ink)]",
-                  )}
+                  className="inline-flex cursor-pointer items-center gap-2 border-b-2 border-transparent py-1 font-mono text-[0.8rem] font-medium text-[#f45117]"
                 >
-                  <PixelIcon
-                    name={navIcons[item.name] ?? "spark"}
-                    size={13}
-                    color={isActive(item.href) ? "var(--bp-cobalt)" : "currentColor"}
-                  />
+                  <PixelIcon name={navIcons[item.name] ?? "spark"} size={13} color="#f45117" />
                   {item.name}
                 </span>
               </Link>
@@ -135,19 +121,16 @@ export function Navigation() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -12 }}
             transition={{ duration: 0.18 }}
-            className="fixed inset-x-0 top-16 z-40 border-b border-[var(--bp-hairline)] bg-[var(--bp-surface)] shadow-[0_12px_24px_-12px_rgba(31,31,31,0.12)] md:hidden"
+            className="fixed inset-x-0 top-16 z-40 border-b border-[#d8c08f] bg-[#fffaf0] shadow-[0_12px_24px_-12px_rgba(31,31,31,0.12)] md:hidden"
           >
             <div className="mx-auto flex max-w-7xl flex-col px-4 py-3 sm:px-6">
               {navItems.map((item) => (
                 <Link key={item.name} href={item.href}>
                   <span
                     onClick={() => handleNavClick(item.href, item.sectionId)}
-                    className={cn(
-                      "flex cursor-pointer items-center gap-3 border-b border-[var(--bp-hairline)] py-3.5 text-base font-medium",
-                      isActive(item.href) ? "text-[var(--bp-cobalt)]" : "text-[var(--bp-ink)]",
-                    )}
+                    className="flex cursor-pointer items-center gap-3 border-b border-[#e1cda3] py-3.5 text-base font-semibold text-[#f45117]"
                   >
-                    <PixelIcon name={navIcons[item.name] ?? "spark"} size={15} color="currentColor" />
+                    <PixelIcon name={navIcons[item.name] ?? "spark"} size={15} color="#f45117" />
                     {item.name}
                   </span>
                 </Link>
@@ -157,7 +140,7 @@ export function Navigation() {
                   <a
                     href={siteConfig.links.email}
                     aria-label="Email Nivedita"
-                    className="text-[var(--bp-ink-muted)]"
+                    className="text-[#6d665b] transition-colors hover:text-[#211f1a]"
                   >
                     <Mail className="h-5 w-5" />
                   </a>
@@ -170,7 +153,7 @@ export function Navigation() {
                         target="_blank"
                         rel="noreferrer"
                         aria-label={social.label}
-                        className="text-[var(--bp-ink-muted)]"
+                        className="text-[#6d665b] transition-colors hover:text-[#211f1a]"
                       >
                         <Icon className="h-5 w-5" />
                       </a>

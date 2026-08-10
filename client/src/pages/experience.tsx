@@ -132,21 +132,21 @@ function JourneyHero({ reduced }: { reduced: boolean }) {
           initial={reduced ? false : { opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.72, ease: storyEase }}
-          className="flex flex-col justify-center px-6 pb-12 pt-24 sm:px-10 lg:px-16 lg:py-20"
+          className="flex flex-col justify-center px-6 pb-8 pt-16 sm:px-10 sm:pb-12 sm:pt-24 lg:px-16 lg:py-20"
         >
           <p className="font-mono text-[0.68rem] font-bold uppercase tracking-[0.22em] text-[#b84b22]">
             My route · told backwards
           </p>
-          <h1 className="mt-5 max-w-[15ch] font-fraunces text-[clamp(3.15rem,5vw,5.4rem)] leading-[0.88] tracking-[-0.055em] text-[#211b16]">
+          <h1 className="mt-4 max-w-[15ch] font-fraunces text-[clamp(2.55rem,12vw,5.4rem)] leading-[0.9] tracking-[-0.045em] text-[#211b16] sm:mt-5 sm:leading-[0.88] sm:tracking-[-0.055em]">
             <span className="block whitespace-nowrap">Let me tell you</span>
             <span className="block whitespace-nowrap">how I got here.</span>
           </h1>
-          <p className="mt-7 max-w-[39rem] text-[1.05rem] font-medium leading-7 text-[#5b4939] sm:text-[1.16rem] sm:leading-8">
+          <p className="mt-5 max-w-[39rem] text-[0.98rem] font-medium leading-7 text-[#5b4939] sm:mt-7 sm:text-[1.16rem] sm:leading-8">
             I started in software, found product through startup communities, and kept choosing work where people, systems, and ambiguity meet. The longer version is below. We’re walking backward.
           </p>
           <a
             href="#journey-trail"
-            className="mt-9 inline-flex w-fit items-center gap-3 border-b border-[#b84b22] pb-2 font-mono text-[0.72rem] font-bold uppercase tracking-[0.16em] text-[#9f3d18] transition-colors hover:text-[#d04a15]"
+            className="mt-6 inline-flex min-h-11 w-fit items-center gap-3 border-b border-[#b84b22] pb-2 font-mono text-[0.72rem] font-bold uppercase tracking-[0.16em] text-[#9f3d18] transition-colors hover:text-[#d04a15] sm:mt-9"
           >
             Start with now <ArrowDown className="h-4 w-4" />
           </a>
@@ -161,13 +161,13 @@ function JourneyHero({ reduced }: { reduced: boolean }) {
           <img
             src="/pixel-portrait.png"
             alt="Pixel portrait of Nivedita surrounded by product-building doodles"
-            className="aspect-[5/4] w-full object-cover object-top"
+            className="aspect-[16/10] w-full object-cover object-top sm:aspect-[5/4]"
           />
-          <figcaption className="flex items-end justify-between gap-5 border-t border-[#d9bd88] bg-[#fff0d6] px-5 py-4 text-[#2d241b]">
-            <p className="max-w-[18ch] font-fraunces text-[clamp(1.25rem,2vw,1.8rem)] leading-[0.96] tracking-[-0.035em]">
+          <figcaption className="flex items-end justify-between gap-4 border-t border-[#d9bd88] bg-[#fff0d6] px-4 py-3 text-[#2d241b] sm:gap-5 sm:px-5 sm:py-4">
+            <p className="max-w-[18ch] font-fraunces text-[clamp(1.05rem,5vw,1.8rem)] leading-[0.98] tracking-[-0.025em] sm:leading-[0.96] sm:tracking-[-0.035em]">
               The route was never linear. The through-line was.
             </p>
-            <span className="font-mono text-[0.56rem] font-bold uppercase tracking-[0.16em] text-[#a74923]">
+            <span className="max-w-[10ch] font-mono text-[0.5rem] font-bold uppercase tracking-[0.12em] text-[#a74923] sm:max-w-none sm:text-[0.56rem] sm:tracking-[0.16em]">
               Product · systems · builder
             </span>
           </figcaption>

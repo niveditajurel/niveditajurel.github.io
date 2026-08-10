@@ -154,7 +154,7 @@ export const Hero = () => {
       <motion.img
         src="/hero-portrait.jpg"
         alt="Nivedita, product manager and builder, in front of a whiteboard of hand-drawn product doodles"
-        className="absolute inset-0 h-full w-full object-cover object-[58%_0%] sm:object-[66%_0%] lg:object-[76%_4%] xl:object-[82%_5%]"
+        className="absolute inset-0 hidden h-full w-full object-cover sm:block sm:object-[66%_0%] lg:object-[76%_4%] xl:object-[82%_5%]"
         style={{ transformOrigin: "80% 30%" }}
         initial={reduceMotion ? { opacity: 1, scale: 1.02 } : { opacity: 0, scale: 1.055 }}
         animate={{ opacity: 1, scale: 1.02 }}
@@ -164,10 +164,10 @@ export const Hero = () => {
       {/* Legibility wash — vertical (mobile), horizontal-left (desktop) */}
       <div
         aria-hidden="true"
-        className="absolute inset-0 lg:hidden"
+        className="absolute inset-0 hidden sm:block lg:hidden"
         style={{
           background:
-            "linear-gradient(0deg, rgba(255,249,233,0.995) 0%, rgba(255,249,233,0.985) 58%, rgba(255,249,233,0.88) 73%, rgba(255,249,233,0.42) 90%, rgba(255,249,233,0) 100%)",
+            "radial-gradient(circle at 18% 36%, rgba(255,249,233,0.98) 0%, rgba(255,249,233,0.94) 42%, rgba(255,249,233,0.54) 67%, rgba(255,249,233,0) 82%), linear-gradient(90deg, rgba(255,249,233,0.98) 0%, rgba(255,249,233,0.92) 48%, rgba(255,249,233,0.5) 78%, rgba(255,249,233,0.14) 100%), linear-gradient(0deg, rgba(255,249,233,0.78) 0%, rgba(255,249,233,0.28) 34%, rgba(255,249,233,0) 66%)",
         }}
       />
       <div
@@ -209,9 +209,9 @@ export const Hero = () => {
       </ul>
 
       {/* Content */}
-      <div className="relative z-20 mx-auto flex min-h-[calc(100svh-4rem)] w-full max-w-[1540px] items-start px-5 pb-12 pt-40 sm:items-center sm:px-7 sm:pb-20 sm:pt-24 lg:min-h-[min(820px,calc(100svh-4rem))] lg:px-12 lg:pb-8 lg:pt-12 xl:min-h-[min(900px,calc(100svh-4rem))] xl:px-16 2xl:px-20">
+      <div className="relative z-20 mx-auto flex min-h-[calc(100svh-4rem)] w-full max-w-[1540px] items-start px-5 pb-10 pt-24 sm:items-center sm:px-7 sm:pb-20 sm:pt-24 lg:min-h-[min(820px,calc(100svh-4rem))] lg:px-12 lg:pb-8 lg:pt-12 xl:min-h-[min(900px,calc(100svh-4rem))] xl:px-16 2xl:px-20">
         <motion.div
-          className="flex min-w-0 w-[calc(100vw-2.5rem)] max-w-[calc(100vw-2.5rem)] flex-col gap-4 overflow-hidden sm:w-full sm:max-w-[38rem] sm:gap-5 lg:max-w-[31rem] lg:gap-5 xl:max-w-[35rem]"
+          className="flex min-w-0 w-[calc(100vw-2.5rem)] max-w-[20.75rem] flex-col gap-3 overflow-hidden sm:w-full sm:max-w-[38rem] sm:gap-5 lg:max-w-[31rem] lg:gap-5 xl:max-w-[35rem]"
           variants={reduceMotion ? undefined : container}
           initial={reduceMotion ? undefined : "hidden"}
           animate={reduceMotion ? undefined : "show"}
@@ -219,7 +219,7 @@ export const Hero = () => {
           {/* Eyebrow */}
           <motion.p
             variants={reduceMotion ? undefined : item}
-            className="max-w-full font-mono text-[0.9rem] font-bold uppercase tracking-[0.18em] text-[#2f2922] sm:text-[1rem]"
+            className="max-w-full font-mono text-[0.78rem] font-bold uppercase tracking-[0.16em] text-[#2f2922] sm:text-[1rem] sm:tracking-[0.18em]"
           >
             <span>Nivedita — PM + Builder</span>
           </motion.p>
@@ -227,15 +227,15 @@ export const Hero = () => {
           <motion.ul
             variants={reduceMotion ? undefined : item}
             aria-label="Product principles"
-            className="grid w-full max-w-full grid-cols-2 gap-x-4 gap-y-2 overflow-hidden sm:max-w-[31rem] sm:grid-cols-3 lg:hidden"
+            className="hidden w-full max-w-[17.5rem] grid-cols-2 gap-x-4 gap-y-2 overflow-hidden sm:grid sm:max-w-[31rem] sm:grid-cols-3 lg:hidden"
           >
             {heroPrinciples.map((principle) => (
               <li
                 key={principle.label}
                 className="flex min-w-0 items-center justify-start gap-1.5"
               >
-                <HeroPrincipleMark mark={principle.mark} size={27} />
-                <span className="min-w-0 max-w-full break-words font-mono text-[0.58rem] font-extrabold uppercase leading-[1.05] tracking-[0.035em] text-[#211b16] sm:text-[0.69rem]">
+                <HeroPrincipleMark mark={principle.mark} size={24} />
+                <span className="min-w-0 max-w-full break-words font-mono text-[0.56rem] font-extrabold uppercase leading-[1.05] tracking-[0.03em] text-[#211b16] sm:text-[0.69rem]">
                   {principle.label}
                 </span>
               </li>
@@ -246,7 +246,7 @@ export const Hero = () => {
           <motion.h1
             variants={reduceMotion ? undefined : item}
             className="font-fraunces m-0 max-w-full font-normal leading-[1.02] text-[#211b16]"
-            style={{ fontSize: "clamp(2.65rem, 4.6vw, 4.35rem)", textWrap: "pretty" }}
+            style={{ fontSize: "clamp(2.35rem, 11vw, 4.35rem)", textWrap: "pretty" }}
           >
             I bring clarity<br />
             to <span className="font-semibold italic text-[#e34312]">messy</span><br />
@@ -256,12 +256,58 @@ export const Hero = () => {
           {/* Subhead */}
           <motion.p
             variants={reduceMotion ? undefined : item}
-            className="m-0 w-full max-w-[20.5rem] text-[0.98rem] font-medium leading-[1.55] text-[#4d4339] sm:max-w-[420px] sm:text-[1.08rem]"
+            className="m-0 w-full max-w-[19.5rem] text-[0.9rem] font-medium leading-[1.45] text-[#3f362d] sm:max-w-[420px] sm:text-[1.08rem] sm:leading-[1.55]"
             style={{ overflowWrap: "break-word", whiteSpace: "normal" }}
           >
             Former software engineer turned product manager, working across startups and enterprise
             teams to turn unclear workflows into direction teams can build and ship.
           </motion.p>
+
+          <div className="flex flex-wrap gap-3 sm:hidden">
+            <Link href="/projects">
+              <span className="mistral-action cursor-pointer">
+                View Work
+              </span>
+            </Link>
+            <a
+              href={siteConfig.links.resume}
+              target="_blank"
+              rel="noreferrer"
+              className="mistral-outline-action"
+            >
+              View Resume
+            </a>
+          </div>
+
+          <motion.figure
+            variants={reduceMotion ? undefined : item}
+            className="relative mt-1 w-full max-w-[20rem] rotate-[-1.5deg] border border-[#d9bd7e] bg-[#fff8e2] p-2 pb-3 shadow-[0_20px_40px_-28px_rgba(44,31,20,0.55)] sm:hidden"
+          >
+            <span
+              aria-hidden="true"
+              className="absolute -top-3 left-1/2 h-5 w-16 -translate-x-1/2 rotate-2 border border-[#e1c982]/70 bg-[#ffefb6]/90"
+            />
+            <img
+              src="/hero-portrait.jpg"
+              alt="Nivedita in front of whiteboard product doodles"
+              className="aspect-[16/10] w-full object-cover object-[58%_0%]"
+              loading="eager"
+            />
+            <figcaption className="mt-2 grid grid-cols-3 gap-1.5 border-t border-[#dfc895]/70 pt-2">
+              {heroPrinciples.map((principle, index) => (
+                <span
+                  key={principle.label}
+                  className="hero-pixel-float flex min-w-0 flex-col items-center gap-1 text-center"
+                  style={{ animationDelay: `${-1.2 - index * 1.45}s` }}
+                >
+                  <HeroPrincipleMark mark={principle.mark} size={23} />
+                  <span className="max-w-[5.9rem] font-mono text-[0.5rem] font-black uppercase leading-[1.05] tracking-[0.07em] text-[#211b16]">
+                    {principle.label}
+                  </span>
+                </span>
+              ))}
+            </figcaption>
+          </motion.figure>
 
           <motion.p
             variants={reduceMotion ? undefined : item}
@@ -271,7 +317,7 @@ export const Hero = () => {
           </motion.p>
 
           {/* CTAs */}
-          <motion.div variants={reduceMotion ? undefined : item} className="flex flex-wrap gap-3.5">
+          <motion.div variants={reduceMotion ? undefined : item} className="hidden flex-wrap gap-3 sm:flex">
             <Link href="/projects">
               <span className="mistral-action cursor-pointer"
               >

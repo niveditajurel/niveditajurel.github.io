@@ -114,7 +114,7 @@ export function RecentExperienceCard({
         tone={project.id === "anand-pag" ? "dark" : meta.mediaTone ?? "light"}
         disableAmbientFloat
         panelClassName={cn(
-          "relative min-h-[22rem] overflow-hidden border border-[var(--bp-hairline)] sm:min-h-[24rem]",
+          "relative min-h-[18.5rem] overflow-hidden border border-[var(--bp-hairline)] sm:min-h-[24rem]",
           project.id === "anand-pag"
             ? "bg-[var(--bp-panel)]"
             : meta.mediaPanelClassName ?? "bg-[#f7efe4]",
@@ -135,7 +135,7 @@ export function RecentExperienceCard({
             <img
               src={meta.mediaSrc}
               alt={meta.mediaAlt ?? ""}
-              className="h-[82%] w-[74%] border border-black/5 object-cover object-left-top shadow-[0_22px_48px_-24px_rgba(24,44,24,0.34)] transition-transform duration-500 ease-snappy group-hover/thumbnail:-translate-y-1 group-hover/thumbnail:scale-[1.025]"
+            className="h-[84%] w-[82%] border border-black/5 object-cover object-left-top shadow-[0_22px_48px_-24px_rgba(24,44,24,0.34)] transition-transform duration-500 ease-snappy group-hover/thumbnail:-translate-y-1 group-hover/thumbnail:scale-[1.025] sm:w-[74%] sm:h-[82%]"
             />
           </div>
         ) : (
@@ -143,8 +143,8 @@ export function RecentExperienceCard({
         )}
       </EditorialThumbnailLink>
 
-      <div className="flex flex-1 flex-col gap-4 pt-4">
-        <div className="flex items-center gap-3 font-mono">
+      <div className="flex flex-1 flex-col gap-3 pt-4 sm:gap-4">
+        <div className="flex flex-wrap items-center gap-x-3 gap-y-1.5 font-mono">
           <span className="inline-flex items-center gap-1.5 rounded bg-[var(--bp-cobalt-subtle)] px-2 py-0.5 text-[0.62rem] font-medium uppercase tracking-[0.14em] text-[var(--bp-cobalt)]">
             <PixelIcon name={proofIcon} size={10} color="currentColor" />
             {meta.roleLabel}
@@ -155,11 +155,11 @@ export function RecentExperienceCard({
         </div>
 
         <div className="flex flex-1 flex-col gap-1.5">
-          <div className="flex items-start justify-between gap-3">
-            <h3 className="font-fraunces text-[1.55rem] font-semibold leading-[1.06] tracking-tight text-[var(--bp-ink)]">
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+            <h3 className="font-fraunces text-[1.45rem] font-semibold leading-[1.06] tracking-tight text-[var(--bp-ink)] sm:text-[1.55rem]">
               {meta.displayTitle ?? project.title}
             </h3>
-            <div className="flex shrink-0 items-center gap-2">
+            <div className="flex shrink-0 flex-wrap items-center gap-2">
               {project.externalHref ? (
                 <a
                   href={project.externalHref}
@@ -185,7 +185,7 @@ export function RecentExperienceCard({
               ) : null}
             </div>
           </div>
-          <p className="line-clamp-2 text-[0.84rem] leading-[1.55] text-[var(--bp-ink-muted)]">
+          <p className="line-clamp-3 text-[0.84rem] leading-[1.55] text-[var(--bp-ink-muted)] sm:line-clamp-2">
             {meta.visualNote}
           </p>
         </div>

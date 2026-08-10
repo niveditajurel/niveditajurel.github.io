@@ -117,6 +117,10 @@ const SCENES: Record<AnimatedThumbnailVariant, string> = {
     `<div data-apt-veil style="position:absolute;inset:0;transition:filter .5s ease">
       <div style="position:absolute;inset:-12%;background-image:linear-gradient(to right,#ffffff0d 1px,transparent 1px),linear-gradient(to bottom,#ffffff0d 1px,transparent 1px);background-size:11% 16%;animation:uGrid 16s linear infinite"></div>
       <div style="position:absolute;width:46%;height:46%;left:30%;top:18%;border-radius:50%;background:radial-gradient(circle,#b5966733,transparent 70%);filter:blur(6px)"></div>
+      <div style="position:absolute;left:50%;top:6%;z-index:2;display:flex;min-width:25cqw;transform:translateX(-50%);align-items:center;justify-content:center;border:1px solid #5f4a2b;background:#15100bf2;border-radius:99px;padding:1.7cqw 4.2cqw;box-shadow:0 3cqw 10cqw -5cqw #000">
+        <span style="font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:7.1cqw;font-weight:780;letter-spacing:-.09em;color:#fbeede;line-height:.92;text-align:center">Uber</span>
+        <span style="position:absolute;right:2.2cqw;width:1.8cqw;height:1.8cqw;border-radius:50%;background:#ffce8e;box-shadow:0 0 0 .9cqw #ffce8e22"></span>
+      </div>
       <svg viewBox="0 0 120 80" preserveAspectRatio="none" style="position:absolute;inset:0;width:100%;height:100%" fill="none">
         <path d="M8 70 C 26 70 30 50 46 50 C 64 50 64 36 80 36 C 96 36 100 18 114 14" stroke="#7c6038" stroke-width="6" stroke-linecap="round" vector-effect="non-scaling-stroke" opacity="0.5"/>
         <path id="uroute" d="M8 70 C 26 70 30 50 46 50 C 64 50 64 36 80 36 C 96 36 100 18 114 14" stroke="#d8b072" stroke-width="3.4" stroke-linecap="round" stroke-dasharray="10 14" vector-effect="non-scaling-stroke" style="animation:uFlow 2.2s linear infinite"></path>

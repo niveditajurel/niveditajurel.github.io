@@ -575,7 +575,7 @@ const About = () => {
                 transition={{ duration: 0.6, delay: 0.6 }}
               >
                 <motion.a
-                  href="https://drive.google.com/file/d/1fp0U0Oz0YUZwfNRGqBSR6vwijg5j4hLv/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1M7wCjjdGehQbbGCNRQM4OAIPfldjEUp3/view?usp=sharing"
                   className="btn-primary group relative overflow-hidden focus:outline-none focus-visible:ring-2 focus-visible:ring-accent bg-black text-white hover:bg-neutral-900"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}

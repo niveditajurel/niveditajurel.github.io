@@ -27,7 +27,7 @@ export const siteConfig = {
         twitter: "https://x.com/niviintech",
         email: "mailto:nivedita9826@gmail.com",
         instagram: "https://www.instagram.com/niv.in.tech/",
-        resume: "https://drive.google.com/file/d/1fp0U0Oz0YUZwfNRGqBSR6vwijg5j4hLv/view?usp=sharing",
+        resume: "https://drive.google.com/file/d/1M7wCjjdGehQbbGCNRQM4OAIPfldjEUp3/view?usp=sharing",
     },
     nav: [
         { name: "Home", href: "/" },

@@ -138,7 +138,7 @@ export function Hero() {
               </Link>
 
               <a
-                href="https://drive.google.com/file/d/1fp0U0Oz0YUZwfNRGqBSR6vwijg5j4hLv/view?usp=sharing"
+                href="https://drive.google.com/file/d/1M7wCjjdGehQbbGCNRQM4OAIPfldjEUp3/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={handleDownloadResume}

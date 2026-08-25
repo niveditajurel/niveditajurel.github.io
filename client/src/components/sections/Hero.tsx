@@ -152,9 +152,16 @@ export const Hero = () => {
 
       {/* Portrait — full-bleed background */}
       <motion.img
-        src="/hero-portrait.jpg"
+        src="/hero-portrait.webp"
+        srcSet="/hero-portrait-mobile.webp 900w, /hero-portrait.webp 1393w"
+        sizes="100vw"
         alt="Nivedita, product manager and builder, in front of a whiteboard of hand-drawn product doodles"
         className="absolute inset-0 hidden h-full w-full object-cover sm:block sm:object-[66%_0%] lg:object-[76%_4%] xl:object-[82%_5%]"
+        loading="eager"
+        fetchPriority="high"
+        decoding="async"
+        width={1393}
+        height={1129}
         style={{ transformOrigin: "80% 30%" }}
         initial={reduceMotion ? { opacity: 1, scale: 1.02 } : { opacity: 0, scale: 1.055 }}
         animate={{ opacity: 1, scale: 1.02 }}
@@ -288,10 +295,16 @@ export const Hero = () => {
               className="absolute -top-3 left-1/2 h-5 w-16 -translate-x-1/2 rotate-2 border border-[#e1c982]/70 bg-[#ffefb6]/90"
             />
             <img
-              src="/hero-portrait.jpg"
+              src="/hero-portrait-mobile.webp"
+              srcSet="/hero-portrait-mobile.webp 900w, /hero-portrait.webp 1393w"
+              sizes="(max-width: 639px) 320px, 100vw"
               alt="Nivedita in front of whiteboard product doodles"
               className="aspect-[16/10] w-full object-cover object-[58%_0%]"
               loading="eager"
+              fetchPriority="high"
+              decoding="async"
+              width={900}
+              height={730}
             />
             <figcaption className="mt-2 grid grid-cols-3 gap-1.5 border-t border-[#dfc895]/70 pt-2">
               {heroPrinciples.map((principle, index) => (

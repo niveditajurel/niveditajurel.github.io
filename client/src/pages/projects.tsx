@@ -108,6 +108,18 @@ type GithubBuild = {
 
 const githubBuilds: GithubBuild[] = [
   {
+    id: "sclera-recognition",
+    title: "Sclera Recognition Security System",
+    eyebrow: "Public GitHub build",
+    description:
+      "A MATLAB biometric-security prototype that processes eye images from a Kaggle sclera database, segments the sclera region, extracts vessel features, and converts the pattern into an enrolment template for recognition.",
+    href: "https://github.com/niveditajurel/sclera_recog",
+    repoLabel: "niveditajurel/sclera_recog",
+    status: "MATLAB biometrics",
+    tags: ["Sclera Recognition", "Image Processing", "Kaggle Dataset"],
+    wordmark: "SC",
+  },
+  {
     id: "diabetic-retinopathy",
     title: "Diabetic Retinopathy Detection",
     eyebrow: "Public GitHub build",
@@ -117,6 +129,7 @@ const githubBuilds: GithubBuild[] = [
     repoLabel: "niveditajurel/diabetic-retinopathy-using-deep-learning",
     status: "ML research build",
     tags: ["Deep Learning", "Computer Vision"],
+    imagePanelClassName: "bg-[#0d1115]",
     wordmark: "DR",
   },
   {
@@ -432,7 +445,7 @@ export default function Projects() {
               >
                 <SectionHeader
                   title="GitHub builds"
-                  meta="2 builds worth opening"
+                  meta="3 builds worth opening"
                   isClayNotionMode={isClayNotionMode}
                 />
                 <div className="mt-5 grid gap-4 lg:grid-cols-2">
@@ -627,6 +640,7 @@ function BreakdownCard({
   index: number;
   featured?: boolean;
 }) {
+  const isFeaturedRoute = Boolean(featured && tile.motif === "route");
   const card = (
     <motion.article
       initial={{ opacity: 0, y: 18 }}
@@ -635,36 +649,81 @@ function BreakdownCard({
       transition={{ duration: 0.5, delay: index * 0.05, ease: "easeOut" }}
       whileHover={{ y: -3 }}
       className={cn(
-        "group overflow-hidden border border-[#d8c08f] bg-gradient-to-br p-5",
+        "group overflow-hidden border border-[#d8c08f] bg-gradient-to-br",
         featured ? "min-h-[20rem] sm:col-span-2" : "min-h-[16.5rem]",
+        isFeaturedRoute ? "p-4 sm:p-5" : "p-5",
         tile.toneClassName,
       )}
     >
-      <div className="flex h-full flex-col justify-between">
-        <div className="flex items-start justify-between gap-3">
-          <div>
-            <p className="section-kicker text-current/70">{tile.eyebrow}</p>
-            <h3 className="mt-3 max-w-[10ch] text-balance text-[1.8rem] font-semibold leading-[0.96] tracking-[-0.04em] text-current">
-              {tile.title}
-            </h3>
-          </div>
-          <span className="rounded-full border border-black/10 bg-white/55 px-3 py-1 text-[0.68rem] font-semibold text-current/75">
-            {tile.status}
-          </span>
-        </div>
+      {isFeaturedRoute ? (
+        <div className="grid gap-4 lg:grid-cols-[minmax(0,0.34fr)_minmax(0,0.66fr)] lg:items-stretch">
+          <div className="flex min-w-0 flex-col rounded-[1.35rem] border border-black/8 bg-white/42 p-5 sm:p-6">
+            <div className="flex items-start justify-between gap-3">
+              <div>
+                <p className="section-kicker text-current/70">{tile.eyebrow}</p>
+                <h3 className="mt-3 max-w-[7ch] text-balance text-[clamp(2.25rem,3vw,3rem)] font-semibold leading-[0.94] tracking-[-0.05em] text-current">
+                  {tile.title}
+                </h3>
+              </div>
+              <span className="rounded-full border border-black/10 bg-white/68 px-3 py-1 text-[0.68rem] font-semibold text-current/75">
+                {tile.status}
+              </span>
+            </div>
 
-        <div className="mt-4 space-y-4">
-          <BreakdownPreview motif={tile.motif} />
-          <p className="max-w-[24ch] text-sm leading-6 text-current/80">
-            {tile.description}
-          </p>
-          <div className="flex justify-end">
-            <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white/82 text-current shadow-sm transition-transform duration-200 group-hover:translate-x-0.5">
-              <ArrowRight className="h-4 w-4" />
+            <p className="mt-5 max-w-[26ch] text-[0.98rem] leading-7 text-current/82">
+              {tile.description}
+            </p>
+
+            <div className="mt-5 flex flex-wrap gap-2">
+              <span className="rounded-full border border-black/10 bg-white/62 px-3 py-1 text-[0.68rem] font-semibold uppercase tracking-[0.12em] text-current/72">
+                Dispatch vs navigation
+              </span>
+              <span className="rounded-full border border-black/10 bg-white/62 px-3 py-1 text-[0.68rem] font-semibold uppercase tracking-[0.12em] text-current/72">
+                Safety + marketplace
+              </span>
+            </div>
+
+            <div className="mt-auto flex items-end justify-between gap-4 pt-8">
+              <p className="max-w-[18ch] text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-current/58">
+                Open the full breakdown
+              </p>
+              <span className="flex h-11 w-11 items-center justify-center rounded-full bg-white/84 text-current shadow-sm transition-transform duration-200 group-hover:translate-x-0.5">
+                <ArrowRight className="h-4 w-4" />
+              </span>
+            </div>
+          </div>
+
+          <div className="min-w-0 rounded-[1.35rem] border border-black/8 bg-black/4 p-2.5">
+            <BreakdownPreview motif={tile.motif} featured />
+          </div>
+        </div>
+      ) : (
+        <div className="flex h-full flex-col justify-between">
+          <div className="flex items-start justify-between gap-3">
+            <div>
+              <p className="section-kicker text-current/70">{tile.eyebrow}</p>
+              <h3 className="mt-3 max-w-[10ch] text-balance text-[1.8rem] font-semibold leading-[0.96] tracking-[-0.04em] text-current">
+                {tile.title}
+              </h3>
+            </div>
+            <span className="rounded-full border border-black/10 bg-white/55 px-3 py-1 text-[0.68rem] font-semibold text-current/75">
+              {tile.status}
             </span>
           </div>
+
+          <div className="mt-4 space-y-4">
+            <BreakdownPreview motif={tile.motif} />
+            <p className="max-w-[24ch] text-sm leading-6 text-current/80">
+              {tile.description}
+            </p>
+            <div className="flex justify-end">
+              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white/82 text-current shadow-sm transition-transform duration-200 group-hover:translate-x-0.5">
+                <ArrowRight className="h-4 w-4" />
+              </span>
+            </div>
+          </div>
         </div>
-      </div>
+      )}
     </motion.article>
   );
 
@@ -679,14 +738,25 @@ function BreakdownCard({
   return card;
 }
 
-function BreakdownPreview({ motif }: { motif: BreakdownTile["motif"] }) {
+function BreakdownPreview({
+  motif,
+  featured = false,
+}: {
+  motif: BreakdownTile["motif"];
+  featured?: boolean;
+}) {
   const frameClassName =
     "rounded-[1.2rem] border border-black/8 bg-white/70 p-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.45)]";
 
   if (motif === "route") {
     return (
       <div className="overflow-hidden rounded-[1.2rem]">
-        <div className="relative h-[14rem] overflow-hidden rounded-[1rem] sm:h-[16rem]">
+        <div
+          className={cn(
+            "relative overflow-hidden rounded-[1rem]",
+            featured ? "h-[17.5rem] sm:h-[19rem]" : "h-[14rem] sm:h-[16rem]",
+          )}
+        >
           <AnimatedProjectThumbnail variant="uber-driver-navigation" motion="hover" />
         </div>
       </div>
@@ -948,6 +1018,10 @@ function GithubBuildCard({
   index: number;
   isClayNotionMode: boolean;
 }) {
+  const usesCustomMedicalPreview =
+    build.id === "sclera-recognition" || build.id === "diabetic-retinopathy";
+  const customPreviewHeightClass = "h-[21.5rem] sm:h-[23.5rem]";
+
   return (
     <motion.article
       initial={{ opacity: 0, y: 18 }}
@@ -963,11 +1037,16 @@ function GithubBuildCard({
         tone={(build.imagePanelClassName ?? "").includes("#050709") ? "dark" : "light"}
         disableAmbientFloat={Boolean(build.videoSrc) || !build.image}
         panelClassName={cn(
-          "relative h-[18rem] overflow-hidden border border-[#d8c08f] sm:h-[20rem]",
+          "relative overflow-hidden border border-[#d8c08f]",
+          usesCustomMedicalPreview ? customPreviewHeightClass : "h-[18rem] sm:h-[20rem]",
           build.imagePanelClassName ?? "bg-[#f3ebdf]",
         )}
       >
-        {build.image ? (
+        {build.id === "sclera-recognition" ? (
+          <ScleraRecognitionPreview />
+        ) : build.id === "diabetic-retinopathy" ? (
+          <DiabeticRetinopathyPreview />
+        ) : build.image ? (
           <ThumbnailPreviewMedia
             imageSrc={build.image}
             videoSrc={build.videoSrc}
@@ -1041,6 +1120,261 @@ function GithubBuildCard({
         </div>
       </div>
     </motion.article>
+  );
+}
+
+function ScleraRecognitionPreview() {
+  const pipelineSteps = ["Input", "Segment", "Vessels", "Template"];
+
+  return (
+    <div className="relative h-full overflow-hidden bg-[#0f1715] px-4 py-4 sm:px-5 sm:py-5 text-[#ecfff6]">
+      <div className="absolute inset-0 opacity-35">
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(122,210,178,0.12)_1px,transparent_1px),linear-gradient(to_bottom,rgba(122,210,178,0.1)_1px,transparent_1px)] bg-[size:2.25rem_2.25rem]" />
+        <div className="absolute left-1/2 top-1/2 h-72 w-72 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#2dd4bf]/12 blur-3xl" />
+      </div>
+
+      <div className="relative flex items-start justify-between gap-4">
+        <div>
+          <p className="font-mono text-[0.66rem] font-semibold uppercase tracking-[0.18em] text-[#8ee8c7]">
+            MATLAB / BIOMETRIC SECURITY
+          </p>
+          <h4 className="mt-2 max-w-[12ch] font-fraunces text-[clamp(1.55rem,3vw,2.2rem)] font-semibold leading-[0.92] tracking-[-0.04em] text-[#f5fff8]">
+            Sclera vein recognition
+          </h4>
+        </div>
+        <div className="rounded-full border border-[#8ee8c7]/35 bg-[#17231f] px-3 py-1 font-mono text-[0.65rem] font-semibold uppercase tracking-[0.16em] text-[#b7f6dd]">
+          Kaggle data
+        </div>
+      </div>
+
+      <div className="relative mt-4 grid min-h-[8rem] place-items-center sm:min-h-[9rem]">
+        <svg
+          viewBox="0 0 360 180"
+          role="img"
+          aria-label="Eye image processing pipeline showing sclera segmentation and vessel-template extraction"
+          className="h-[8.6rem] w-full max-w-[28rem] sm:h-[9.8rem]"
+        >
+          <defs>
+            <linearGradient id="scleraEyeFill" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stopColor="#f8fff9" />
+              <stop offset="58%" stopColor="#cceee2" />
+              <stop offset="100%" stopColor="#85d9ba" />
+            </linearGradient>
+            <radialGradient id="scleraIris" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stopColor="#07110f" />
+              <stop offset="48%" stopColor="#145b52" />
+              <stop offset="100%" stopColor="#38b798" />
+            </radialGradient>
+            <filter id="scleraGlow">
+              <feGaussianBlur stdDeviation="2.2" result="blur" />
+              <feMerge>
+                <feMergeNode in="blur" />
+                <feMergeNode in="SourceGraphic" />
+              </feMerge>
+            </filter>
+          </defs>
+          <path
+            d="M35 92C71 37 133 27 180 29c47 2 105 13 145 63-40 49-98 63-145 63S75 141 35 92Z"
+            fill="url(#scleraEyeFill)"
+            stroke="#8ee8c7"
+            strokeWidth="3"
+          />
+          <circle cx="181" cy="92" r="39" fill="url(#scleraIris)" stroke="#d7fff1" strokeWidth="2" />
+          <circle cx="181" cy="92" r="15" fill="#050b0a" />
+          <circle cx="169" cy="78" r="5" fill="#f6fff9" opacity="0.9" />
+          {[
+            "M64 87C95 75 114 83 137 97",
+            "M75 108C108 106 128 118 150 132",
+            "M219 74C247 55 269 58 304 74",
+            "M224 116C251 126 272 123 302 105",
+            "M91 62C117 56 136 61 151 74",
+            "M210 139C237 143 258 137 286 123",
+          ].map((path, index) => (
+            <motion.path
+              key={path}
+              d={path}
+              fill="none"
+              stroke={index % 2 ? "#2563eb" : "#f97316"}
+              strokeLinecap="round"
+              strokeWidth="3"
+              opacity="0.8"
+              filter="url(#scleraGlow)"
+              initial={{ pathLength: 0, opacity: 0.25 }}
+              whileInView={{ pathLength: 1, opacity: 0.8 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7, delay: index * 0.08, ease: "easeOut" }}
+            />
+          ))}
+          <path
+            d="M26 92h44M290 92h44"
+            stroke="#f7c66f"
+            strokeDasharray="6 8"
+            strokeLinecap="round"
+            strokeWidth="2"
+            opacity="0.75"
+          />
+        </svg>
+      </div>
+
+      <div className="relative mt-3.5 grid grid-cols-4 gap-1.5 sm:mt-4 sm:gap-2">
+        {pipelineSteps.map((step, index) => (
+          <div key={step} className="border border-[#8ee8c7]/25 bg-[#17231f]/86 px-2 py-1.5 sm:py-2">
+            <p className="font-mono text-[0.58rem] font-semibold uppercase tracking-[0.16em] text-[#7ad2b2]">
+              0{index + 1}
+            </p>
+            <p className="mt-1 text-[0.68rem] font-semibold leading-tight text-[#f5fff8] sm:text-[0.72rem]">
+              {step}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function DiabeticRetinopathyPreview() {
+  const gradeSteps = [
+    { label: "Mild", width: "w-5/12", tone: "bg-[#f7c66f]" },
+    { label: "Moderate", width: "w-8/12", tone: "bg-[#f28c52]" },
+    { label: "Referable", width: "w-10/12", tone: "bg-[#dc5f52]" },
+  ] as const;
+  const lesionPoints = [
+    { cx: 68, cy: 90, r: 8, fill: "#f7c66f" },
+    { cx: 170, cy: 78, r: 7, fill: "#f08b59" },
+    { cx: 188, cy: 162, r: 9, fill: "#dc5f52" },
+    { cx: 112, cy: 182, r: 6, fill: "#ffd9b4" },
+  ] as const;
+
+  return (
+    <div className="relative h-full overflow-hidden bg-[#0d1115] px-4 py-4 sm:px-5 sm:py-5 text-[#f6fbff]">
+      <div className="absolute inset-0 opacity-35">
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(120,201,244,0.11)_1px,transparent_1px),linear-gradient(to_bottom,rgba(120,201,244,0.08)_1px,transparent_1px)] bg-[size:2.5rem_2.5rem]" />
+        <div className="absolute left-[20%] top-[24%] h-40 w-40 rounded-full bg-[#d96c4c]/22 blur-3xl" />
+        <div className="absolute right-[10%] top-[14%] h-32 w-32 rounded-full bg-[#49a7d8]/18 blur-3xl" />
+      </div>
+
+      <div className="relative flex items-start justify-between gap-4">
+        <div>
+          <p className="font-mono text-[0.66rem] font-semibold uppercase tracking-[0.18em] text-[#8ed4f4]">
+            CNN / RETINAL SCREENING
+          </p>
+          <h4 className="mt-2 max-w-[12ch] font-fraunces text-[clamp(1.55rem,3vw,2.2rem)] font-semibold leading-[0.92] tracking-[-0.04em] text-[#f8fbff]">
+            Diabetic retinopathy grading
+          </h4>
+        </div>
+        <div className="rounded-full border border-[#8ed4f4]/30 bg-[#142029] px-3 py-1 font-mono text-[0.65rem] font-semibold uppercase tracking-[0.16em] text-[#b8e7fb]">
+          Severity model
+        </div>
+      </div>
+
+      <div className="relative mt-4 grid gap-2.5 sm:grid-cols-[0.94fr_1.06fr] sm:items-center sm:gap-3">
+        <div className="relative overflow-hidden rounded-[1.3rem] border border-[#8ed4f4]/18 bg-[#111820]/90 p-2.5 sm:p-3">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_48%,rgba(248,187,127,0.16),transparent_58%)]" />
+          <svg
+            viewBox="0 0 260 260"
+            role="img"
+            aria-label="Stylized retinal scan with highlighted lesion markers for diabetic retinopathy detection"
+            className="relative mx-auto h-[8.8rem] w-[8.8rem] sm:h-[9.8rem] sm:w-[9.8rem]"
+          >
+            <defs>
+              <radialGradient id="retinaField" cx="50%" cy="46%" r="52%">
+                <stop offset="0%" stopColor="#ffb372" />
+                <stop offset="48%" stopColor="#da674b" />
+                <stop offset="100%" stopColor="#4e191c" />
+              </radialGradient>
+              <radialGradient id="opticDisc" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stopColor="#ffe4ae" />
+                <stop offset="100%" stopColor="#f5a95d" />
+              </radialGradient>
+            </defs>
+            <circle cx="130" cy="130" r="102" fill="url(#retinaField)" />
+            <circle cx="130" cy="130" r="110" fill="none" stroke="#ffc483" strokeOpacity="0.4" strokeWidth="2.5" />
+            <circle cx="86" cy="132" r="26" fill="url(#opticDisc)" opacity="0.95" />
+            <circle cx="86" cy="132" r="10" fill="#fff2cc" opacity="0.9" />
+            {[
+              "M88 130C112 125 138 116 170 88",
+              "M90 134C118 137 143 146 176 166",
+              "M93 127C122 101 151 89 188 78",
+              "M95 138C120 156 146 174 176 188",
+              "M104 116C129 104 151 102 178 108",
+              "M107 150C136 150 160 156 188 170",
+            ].map((path, index) => (
+              <motion.path
+                key={path}
+                d={path}
+                fill="none"
+                stroke={index % 2 ? "#ffd59c" : "#ffefcf"}
+                strokeLinecap="round"
+                strokeWidth="2.4"
+                opacity="0.62"
+                initial={{ pathLength: 0, opacity: 0.18 }}
+                whileInView={{ pathLength: 1, opacity: 0.62 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.75, delay: index * 0.07, ease: "easeOut" }}
+              />
+            ))}
+            {lesionPoints.map((point, index) => (
+              <g key={`${point.cx}-${point.cy}`}>
+                <motion.circle
+                  cx={point.cx}
+                  cy={point.cy}
+                  r={point.r}
+                  fill={point.fill}
+                  initial={{ scale: 0.7, opacity: 0.32 }}
+                  whileInView={{ scale: 1, opacity: 0.95 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.35, delay: 0.14 + index * 0.08, ease: "easeOut" }}
+                />
+                <circle cx={point.cx} cy={point.cy} r={point.r + 8} fill="none" stroke={point.fill} strokeOpacity="0.35" strokeWidth="1.5" />
+              </g>
+            ))}
+          </svg>
+        </div>
+
+        <div className="rounded-[1.2rem] border border-[#8ed4f4]/18 bg-[#111820]/88 p-2.5 sm:p-3">
+          <p className="font-mono text-[0.62rem] font-semibold uppercase tracking-[0.16em] text-[#8ed4f4]">
+            MODEL FLOW
+          </p>
+          <div className="mt-2.5 grid gap-1.5">
+            {["Retinal image", "Lesion features", "Severity class"].map((step, index) => (
+              <div key={step} className="flex items-center gap-2 rounded-full border border-[#24404f] bg-[#16222b] px-3 py-1.5 sm:py-2">
+                <span className="font-mono text-[0.62rem] font-semibold text-[#8ed4f4]">
+                  0{index + 1}
+                </span>
+                <span className="text-[0.72rem] font-semibold text-[#f4f9fd] sm:text-[0.76rem]">
+                  {step}
+                </span>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-3 border-t border-[#28404c] pt-3">
+            <div className="flex items-center justify-between">
+              <p className="font-mono text-[0.62rem] font-semibold uppercase tracking-[0.16em] text-[#8ed4f4]">
+                Grade signal
+              </p>
+              <span className="text-[0.68rem] font-semibold uppercase tracking-[0.12em] text-[#bfdcf0]">
+                3 classes
+              </span>
+            </div>
+
+            <div className="mt-2.5 space-y-1.5">
+              {gradeSteps.map((step) => (
+                <div key={step.label}>
+                  <div className="flex items-center justify-between text-[0.68rem] font-semibold text-[#d8e9f4] sm:text-[0.72rem]">
+                    <span>{step.label}</span>
+                    <span className="text-[#8ed4f4]">{step.width.replace("w-", "")}</span>
+                  </div>
+                  <div className="mt-1 h-2 rounded-full bg-[#21313c]">
+                    <div className={cn("h-full rounded-full", step.width, step.tone)} />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }
 

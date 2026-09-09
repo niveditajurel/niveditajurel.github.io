@@ -23,6 +23,7 @@ import FinwiseCaseStudy from './pages/projects/finwise';
 import LearningCouncilCaseStudy from './pages/projects/learning-council';
 import NomadAiCaseStudy from './pages/projects/nomad-ai';
 import SkingeniusCaseStudy from './pages/projects/skingenius';
+import ShabhashCaseStudy from './pages/projects/shabhash';
 import UberDriverNavigationCaseStudy from "./pages/projects/uber-driver-navigation";
 import AisliResearchPage from "./pages/research/aisli";
 
@@ -38,6 +39,7 @@ function Router() {
       <Route path="/projects/learning-council" component={LearningCouncilCaseStudy} />
       <Route path="/projects/nomad-ai" component={NomadAiCaseStudy} />
       <Route path="/projects/skingenius" component={SkingeniusCaseStudy} />
+      <Route path="/projects/shabhash" component={ShabhashCaseStudy} />
       <Route path="/projects/uber-driver-navigation" component={UberDriverNavigationCaseStudy} />
       <Route path="/research/aisli" component={AisliResearchPage} />
       <Route path="/work" component={Projects} />

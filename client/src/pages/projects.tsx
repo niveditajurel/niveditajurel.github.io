@@ -54,7 +54,7 @@ type BreakdownTile = {
   href?: string;
   status: string;
   toneClassName: string;
-  motif: "route" | "loop" | "stack" | "signal";
+  motif: "route" | "voice" | "loop" | "stack" | "signal";
 };
 
 const productBreakdowns: BreakdownTile[] = [
@@ -69,6 +69,18 @@ const productBreakdowns: BreakdownTile[] = [
     toneClassName:
       "from-[#f7ecdf] via-[#fbf4ea] to-[#ead7c0] text-[#221913]",
     motif: "route",
+  },
+  {
+    id: "shabhash",
+    title: "Shabhash",
+    eyebrow: "2019 founder venture",
+    description:
+      "An AAC communication concept shaped through field conversations, product pivots, a small developer team, and an investor-ready operating plan.",
+    href: "/projects/shabhash",
+    status: "Assistive technology",
+    toneClassName:
+      "from-[#fff3da] via-[#fffaf0] to-[#e6f0e9] text-[#231d18]",
+    motif: "voice",
   },
 ];
 
@@ -408,12 +420,12 @@ export default function Projects() {
               >
                 <SectionHeader
                   title="Product breakdowns"
-                  meta="1 live breakdown"
+                  meta="2 product stories"
                   isClayNotionMode={isClayNotionMode}
                 />
                 <div className="mt-5 grid gap-4 sm:grid-cols-2">
                   {productBreakdowns.map((tile, index) => (
-                    <BreakdownCard key={tile.id} tile={tile} index={index} featured={tile.motif === "route"} />
+                    <BreakdownCard key={tile.id} tile={tile} index={index} featured />
                   ))}
                 </div>
               </section>
@@ -641,6 +653,7 @@ function BreakdownCard({
   featured?: boolean;
 }) {
   const isFeaturedRoute = Boolean(featured && tile.motif === "route");
+  const isFeaturedVoice = Boolean(featured && tile.motif === "voice");
   const card = (
     <motion.article
       initial={{ opacity: 0, y: 18 }}
@@ -655,7 +668,7 @@ function BreakdownCard({
         tile.toneClassName,
       )}
     >
-      {isFeaturedRoute ? (
+      {isFeaturedRoute || isFeaturedVoice ? (
         <div className="grid gap-4 lg:grid-cols-[minmax(0,0.34fr)_minmax(0,0.66fr)] lg:items-stretch">
           <div className="flex min-w-0 flex-col rounded-[1.35rem] border border-black/8 bg-white/42 p-5 sm:p-6">
             <div className="flex items-start justify-between gap-3">
@@ -675,12 +688,14 @@ function BreakdownCard({
             </p>
 
             <div className="mt-5 flex flex-wrap gap-2">
-              <span className="rounded-full border border-black/10 bg-white/62 px-3 py-1 text-[0.68rem] font-semibold uppercase tracking-[0.12em] text-current/72">
-                Dispatch vs navigation
-              </span>
-              <span className="rounded-full border border-black/10 bg-white/62 px-3 py-1 text-[0.68rem] font-semibold uppercase tracking-[0.12em] text-current/72">
-                Safety + marketplace
-              </span>
+              {(isFeaturedVoice
+                ? ["AAC product concept", "Founder discovery"]
+                : ["Dispatch vs navigation", "Safety + marketplace"]
+              ).map((label) => (
+                <span key={label} className="rounded-full border border-black/10 bg-white/62 px-3 py-1 text-[0.68rem] font-semibold uppercase tracking-[0.12em] text-current/72">
+                  {label}
+                </span>
+              ))}
             </div>
 
             <div className="mt-auto flex items-end justify-between gap-4 pt-8">
@@ -758,6 +773,39 @@ function BreakdownPreview({
           )}
         >
           <AnimatedProjectThumbnail variant="uber-driver-navigation" motion="hover" />
+        </div>
+      </div>
+    );
+  }
+
+  if (motif === "voice") {
+    const words = ["I", "want", "water"];
+    const categories = ["Food", "Feelings", "People", "Activities"];
+
+    return (
+      <div className="relative h-[17.5rem] overflow-hidden rounded-[1rem] bg-[#23433b] p-4 text-[#1f2d29] sm:h-[19rem] sm:p-5">
+        <div className="absolute -right-10 -top-12 h-36 w-36 rounded-full bg-[#f7c76d]/32 blur-2xl" />
+        <div className="relative mx-auto flex h-full max-w-[35rem] flex-col rounded-[1.45rem] border border-white/30 bg-[#fffaf0] p-4 shadow-[0_24px_50px_-32px_rgba(0,0,0,0.7)] sm:p-5">
+          <div className="flex items-center justify-between gap-3">
+            <div>
+              <p className="font-mono text-[0.58rem] font-bold uppercase tracking-[0.16em] text-[#7b6a58]">Phrase builder</p>
+              <p className="mt-1 text-sm font-semibold text-[#22352f]">Tap pictures. Build a sentence. Speak.</p>
+            </div>
+            <span className="rounded-full bg-[#23433b] px-3 py-1.5 text-[0.62rem] font-semibold uppercase tracking-[0.12em] text-[#fff7e8]">Speak</span>
+          </div>
+          <div className="mt-4 flex gap-2 rounded-[1rem] border border-[#e7d9c3] bg-white p-2.5">
+            {words.map((word, index) => (
+              <span key={word} className={cn("rounded-lg px-3 py-2 text-sm font-semibold", index === 2 ? "bg-[#f8c96f] text-[#3c2d14]" : "bg-[#eef2eb] text-[#34413a]")}>{word}</span>
+            ))}
+          </div>
+          <div className="mt-3 grid flex-1 grid-cols-2 gap-2 sm:grid-cols-4">
+            {categories.map((category, index) => (
+              <div key={category} className={cn("flex items-end rounded-[1rem] p-3", index === 0 ? "bg-[#fbe4aa]" : index === 1 ? "bg-[#f2d7da]" : index === 2 ? "bg-[#d9e8df]" : "bg-[#dbe4f1]")}>
+                <span className="text-xs font-semibold">{category}</span>
+              </div>
+            ))}
+          </div>
+          <p className="mt-3 font-mono text-[0.58rem] uppercase tracking-[0.13em] text-[#806e5d]">Concept reconstruction from 2019 venture notes</p>
         </div>
       </div>
     );

@@ -72,6 +72,51 @@ export const InTheWild = () => {
             </motion.figure>
           ))}
         </div>
+
+        <div className="mt-10 border-t border-[var(--bp-hairline)] pt-8 lg:mt-14 lg:pt-10">
+          <div className="mb-6 flex flex-col gap-3 lg:flex-row lg:items-end lg:justify-between">
+            <div>
+              <p className="font-mono text-[0.7rem] uppercase tracking-[0.24em] text-[var(--bp-ink-muted)]">Off the clock</p>
+              <h3 className="font-fraunces mt-3 text-[clamp(2rem,3.5vw,3.2rem)] font-normal leading-[0.98] tracking-[-0.035em] text-[var(--bp-ink)]">I make room for play, too.</h3>
+            </div>
+            <p className="max-w-[36rem] text-[0.95rem] leading-7 text-[var(--bp-ink-muted)] lg:text-right">
+              Badminton, chess, and painting are part of life beyond product work.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
+            {([
+              { label: "Badminton", position: "left center", alt: "Pixel-art illustration of Nivedita playing badminton" },
+              { label: "Chess", position: "center center", alt: "Pixel-art illustration of Nivedita playing chess" },
+            ] as const).map((interest, index) => (
+              <figure key={interest.label} className="overflow-hidden border border-[var(--bp-hairline)] bg-[#211d19]">
+                <div
+                  role="img"
+                  aria-label={interest.alt}
+                  className="aspect-[1/2] bg-[url('/offline-interests-triptych.webp')] bg-[length:300%_auto] bg-no-repeat"
+                  style={{ backgroundPosition: interest.position }}
+                />
+                <figcaption className="border-t border-[var(--bp-hairline)] bg-[#fff8e8] px-4 py-3 font-mono text-[0.7rem] uppercase tracking-[0.12em] text-[var(--bp-ink)]">
+                  <span className="mr-3 text-[var(--bp-ink-muted)]">0{index + 1}</span>{interest.label}
+                </figcaption>
+              </figure>
+            ))}
+            <figure className="col-span-2 flex flex-col overflow-hidden border border-[var(--bp-hairline)] bg-[#211d19]">
+              <div className="relative aspect-[7/5] w-full flex-none overflow-hidden lg:aspect-auto lg:min-h-0 lg:flex-1">
+                <img
+                  src="/offline-painting.webp"
+                  alt="Pixel-art illustration of Nivedita painting at an easel"
+                  loading="lazy"
+                  decoding="async"
+                  className="absolute inset-0 h-full w-full object-cover object-center"
+                />
+              </div>
+              <figcaption className="border-t border-[var(--bp-hairline)] bg-[#fff8e8] px-4 py-3 font-mono text-[0.7rem] uppercase tracking-[0.12em] text-[var(--bp-ink)]">
+                <span className="mr-3 text-[var(--bp-ink-muted)]">03</span>Painting
+              </figcaption>
+            </figure>
+          </div>
+        </div>
       </div>
     </section>
   );

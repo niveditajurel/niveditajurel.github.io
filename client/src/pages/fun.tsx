@@ -69,11 +69,9 @@ function SourceBadge({ source }: { source: FunMediaItem["source"] }) {
 
 function ReelCard({
   item,
-  featured = false,
   onOpen,
 }: {
   item: FunMediaItem;
-  featured?: boolean;
   onOpen: () => void;
 }) {
   return (
@@ -81,33 +79,19 @@ function ReelCard({
       href={item.href}
       target="_blank"
       rel="noreferrer"
+      aria-label={`Watch ${item.title} on Instagram (opens in a new tab)`}
       onClick={onOpen}
       data-cursor="site"
       data-cursor-label="Open reel"
       whileHover={{ y: -4 }}
       transition={{ duration: 0.22, ease: [0.22, 1, 0.36, 1] }}
-      className={cn(
-        "group/thumbnail hover-cursor-target relative block overflow-hidden border border-[#d7ba95] bg-[#fff4df] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#f45117] focus-visible:ring-offset-4",
-        featured ? "min-h-[24rem] lg:min-h-[29rem]" : "min-h-[18rem] lg:min-h-[23rem]",
-      )}
+      className="group/thumbnail hover-cursor-target relative block aspect-[3/4] overflow-hidden border border-[#d7ba95] bg-[#fff4df] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#f45117] focus-visible:ring-offset-4"
     >
       <img
         src={item.imageSrc}
         alt={item.imageAlt ?? item.title}
         className="absolute inset-0 h-full w-full object-cover object-center transition-transform duration-700 ease-out group-hover/thumbnail:scale-[1.035]"
       />
-      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(26,17,10,0.02)_38%,rgba(27,17,10,0.86)_100%)]" />
-      <div className="absolute left-4 top-4">
-        <SourceBadge source={item.source} />
-      </div>
-      <div className="absolute inset-x-0 bottom-0 p-4 text-[#fff8e8] sm:p-5">
-        <p className="mb-2 font-mono text-[0.58rem] font-bold uppercase tracking-[0.16em] text-[#ffd06a]">
-          Press play ↗
-        </p>
-        <h3 className={cn("max-w-[16ch] font-fraunces font-normal leading-[0.98] tracking-[-0.02em]", featured ? "text-[1.85rem] sm:text-[2.2rem]" : "text-[1.45rem] lg:text-[1.65rem]")}>
-          {item.title}
-        </h3>
-      </div>
     </motion.a>
   );
 }
@@ -374,19 +358,16 @@ export default function Fun() {
           <div className="mx-auto max-w-7xl">
             <div className="mb-6 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
               <div>
-                <p className="font-mono text-[0.66rem] font-bold uppercase tracking-[0.18em] text-[#ad4a22]">01 · Watch</p>
+                <p className="font-mono text-[0.66rem] font-bold uppercase tracking-[0.18em] text-[#ad4a22]">01 · Watch · Instagram reels</p>
                 <h2 className="mt-3 font-fraunces text-[clamp(2.35rem,4vw,4rem)] font-normal leading-[0.92] tracking-[-0.04em] text-[#211b16]">Watch the ideas move.</h2>
               </div>
               <p className="max-w-[33rem] text-sm leading-6 text-[#6b5848] lg:text-right">{trailCopy.watch}</p>
             </div>
 
-            <div className="grid gap-3 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.55fr)]">
-              <ReelCard item={reelItems[0]} featured onOpen={() => markTrail("watch")} />
-              <div className="grid gap-3 sm:grid-cols-3">
-                {reelItems.slice(1, 4).map((item) => (
-                  <ReelCard key={item.id} item={item} onOpen={() => markTrail("watch")} />
-                ))}
-              </div>
+            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+              {reelItems.slice(0, 4).map((item) => (
+                <ReelCard key={item.id} item={item} onOpen={() => markTrail("watch")} />
+              ))}
             </div>
           </div>
         </section>

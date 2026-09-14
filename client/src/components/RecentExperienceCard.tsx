@@ -25,13 +25,14 @@ type RecentExperienceMeta = {
   mediaPanelClassName?: string;
   mediaClassName?: string;
   mediaTone?: "light" | "dark";
+  descriptionLines?: 2 | 3 | 4;
 };
 
 const recentExperienceMeta: Record<string, RecentExperienceMeta> = {
   "anand-pag": {
-    roleLabel: "Builder PM",
+    roleLabel: "Enterprise PM + Builder",
     visualNote:
-      "Enterprise operations product for workflow clarity, vendor coordination, and internal process visibility.",
+      "Shaped a multi-application platform for a Fortune 500 client from MVP through delivery. Led functional design across core workflows and technical design for selected vendor, document, service-order, and SAP features.",
     displayTitle: "Anand PAG",
     displayPeriod: "2025 - Present",
     mediaSrc: "/anand-workflow-system-map.png",
@@ -40,6 +41,7 @@ const recentExperienceMeta: Record<string, RecentExperienceMeta> = {
     mediaPanelClassName: "bg-white",
     mediaClassName: "h-full w-full object-contain p-4 sm:p-5",
     mediaTone: "light",
+    descriptionLines: 4,
   },
   "nomad-ai": {
     roleLabel: "Product Manager",
@@ -185,7 +187,16 @@ export function RecentExperienceCard({
               ) : null}
             </div>
           </div>
-          <p className="line-clamp-3 text-[0.84rem] leading-[1.55] text-[var(--bp-ink-muted)] sm:line-clamp-2">
+          <p
+            className={cn(
+              "text-[0.84rem] leading-[1.55] text-[var(--bp-ink-muted)]",
+              meta.descriptionLines === 4
+                ? "line-clamp-4"
+                : meta.descriptionLines === 3
+                  ? "line-clamp-3"
+                  : "line-clamp-3 sm:line-clamp-2",
+            )}
+          >
             {meta.visualNote}
           </p>
         </div>

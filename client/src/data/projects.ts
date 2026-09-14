@@ -92,7 +92,7 @@ export const projects: ProjectData[] = [
   {
     id: "anand-pag",
     category: "product",
-    title: "Anand PAG / Cintas FNA",
+    title: "Anand PAG / Fortune 500 enterprise client",
     subtitle: "Integration-heavy vendor operations system",
     description:
       "Led product delivery for a cloud vendor-operations system that replaced a legacy workflow and digitized service-order execution across internal teams and external vendors.",

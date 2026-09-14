@@ -20,6 +20,16 @@ export const funMediaItems: FunMediaItem[] = [
     imageAlt: "Instagram reel cover about keeping up with AI, tech, and product as a product builder.",
   },
   {
+    id: "instagram-learning-coordination",
+    source: "Instagram",
+    title: "Learning ≠ coordination",
+    description:
+      "A short take on why learning a tool and coordinating work are different skills.",
+    href: "https://www.instagram.com/niv.in.tech/",
+    imageSrc: "/video-learning-coordination-cover.png",
+    imageAlt: "Nivedita outdoors in a reel titled Learning is not Coordination.",
+  },
+  {
     id: "linkedin-public-trail",
     source: "LinkedIn",
     title: "Career moves, startup stories, and public proof",
@@ -36,33 +46,23 @@ export const funMediaItems: FunMediaItem[] = [
     href: "https://nivedita9826.substack.com/",
   },
   {
-    id: "instagram-software-fundamentals",
+    id: "instagram-graph-engineering",
     source: "Instagram",
-    title: "Software fundamentals matter more with AI",
+    title: "Graph engineering, beyond the buzzword",
     description:
-      "A reel on why clearer thinking and stronger fundamentals become more important, not less, in AI-heavy product work.",
+      "A visual note on graph engineering and what sits beneath the buzzword.",
     href: "https://www.instagram.com/niv.in.tech/",
-    imageSrc: "/instagram-cover-8.png",
-    imageAlt: "Instagram reel cover about software fundamentals mattering more with AI.",
+    imageSrc: "/video-graph-engineering-cover.png",
+    imageAlt: "Nivedita in a reel titled Graph Engineering: Not Another Twitter Buzzword.",
   },
   {
-    id: "instagram-weak-prompt",
+    id: "instagram-ai-physics",
     source: "Instagram",
-    title: "Why 'make this look better' is a weak AI prompt",
+    title: "AI that understands physics",
     description:
-      "A short take on prompt quality, design critique, and how vague requests produce weak outcomes.",
+      "A short video exploring what it means for AI to reason about the physical world.",
     href: "https://www.instagram.com/niv.in.tech/",
-    imageSrc: "/instagram-cover-2.png",
-    imageAlt: "Instagram reel cover about the prompt make this look better being a weak AI prompt.",
-  },
-  {
-    id: "instagram-builder-notes",
-    source: "Instagram",
-    title: "Builder notes from Tony Fadell",
-    description:
-      "A visual note on taste, product judgment, and why you cannot outsource the hard part of building.",
-    href: "https://www.instagram.com/niv.in.tech/",
-    imageSrc: "/instagram-cover-3.png",
-    imageAlt: "Instagram reel cover about builder notes from Tony Fadell.",
+    imageSrc: "/video-ai-physics-cover.png",
+    imageAlt: "Nivedita in a reel titled AI that understands Physics.",
   },
 ];

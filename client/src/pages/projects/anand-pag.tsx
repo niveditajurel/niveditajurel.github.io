@@ -26,23 +26,23 @@ const heroStats = [
 ];
 
 const contextFacts = [
-  { label: "Company / Client", value: "Anand PAG for a Fortune 500 B2B services client" },
-  { label: "Role", value: "Builder-style PM across workflow logic, integrations, QA, and launch readiness" },
-  { label: "Product", value: "Cloud vendor-operations platform replacing fragmented legacy workflows" },
-  { label: "Primary goal", value: "Make service-order execution, documentation, and sync logic reliable at scale" },
+  { label: "Company / Client", value: "Anand PAG for a Fortune 500 enterprise client" },
+  { label: "Role", value: "Product Manager leading functional design from MVP definition through feature delivery" },
+  { label: "Product", value: "Multi-application operations platform supporting internal teams and external vendors" },
+  { label: "Primary goal", value: "Coordinate service orders, document operations, and SAP-connected processes across roles" },
 ];
 
 const problemPoints = [
-  "Service-order execution was fragmented across the vendor portal, integrations, and document services.",
-  "Operations teams were losing time to unclear statuses, delayed syncs, and exception-heavy coordination.",
-  "Document classification and PDF bundling were high-risk backend workflows, but they directly affected invoicing readiness.",
-  "The product needed to support scale without creating more manual follow-up for admins or vendors.",
+  "Vendors needed one place to manage service orders, schedule work, share attachments, and follow status and IVR updates.",
+  "Document operations moved through upload, classification, review, notes, bundling, printing, download, and export.",
+  "Four to five user types needed clear handoffs, ownership, and next actions across multiple applications.",
+  "The platform also had to coordinate with SAP-connected enterprise processes without increasing manual follow-up.",
 ];
 
 const proofSignals = [
-  "Owned workflow logic, exceptions, triggers, and status transitions across multiple systems.",
-  "Translated edge cases and expected behavior into engineer-ready product direction through POCs, MVP flows, and prototypes.",
-  "Used AI builder tools and reusable team skills to reduce repetitive product and delivery work.",
+  "Translated business requirements into the initial MVP, multi-role workflows, and functional direction for new features and changes.",
+  "Worked with engineers on implementation details, system behavior, edge cases, and SAP-connected processes.",
+  "Used AI builder tools, agents, and reusable team skills to make product development and delivery work faster.",
 ];
 
 const ownershipAreas: Array<{
@@ -51,35 +51,39 @@ const ownershipAreas: Array<{
   icon: LucideIcon;
 }> = [
   {
-    title: "POC, MVP, and workflow concepts",
-    body: "Built product flows, prototypes, and UX concepts in Cursor and other AI builder tooling to turn journeys, edge cases, and expected behavior into something engineering could act on quickly.",
+    title: "Initial MVP and product direction",
+    body: "Helped define the first version of a complex enterprise product, translating business requirements into product flows, prototypes, and priorities the team could build on.",
     icon: Workflow,
   },
   {
-    title: "Workflow logic across systems",
-    body: "Defined service-order statuses, user actions, triggers, sync rules, and exception paths across the vendor portal, integrations, and document services.",
+    title: "Vendor and service-order operations",
+    body: "Led functional decisions for vendor management, scheduling, status tracking, attachments, IVR updates, and communication between vendors and internal teams.",
     icon: GitBranch,
   },
   {
-    title: "Async document services",
-    body: "Drove requirements, validation, and release coordination for document classification and PDF bundling so the backend pipeline became operationally reliable.",
+    title: "Document lifecycle",
+    body: "Shaped the flow from upload and classification through review, notes, bundling, printing, download, and export across different users and applications.",
     icon: Boxes,
   },
   {
-    title: "AI-first PM leverage",
-    body: "Created reusable team skills and AI agents for requirement breakdown, test-case structuring, shared context, documentation, code-review prep, and frontend review workflows.",
+    title: "AI-enabled team delivery",
+    body: "Created reusable skills and agents for requirement breakdown, shared context, documentation, test structure, and development workflows the wider team could use.",
     icon: BrainCircuit,
   },
 ];
 
 const moduleHighlights = [
   {
-    title: "Workflow and status engine",
-    detail: "The product only worked if every team understood what state an order was in, who owned the next step, and when sync or exception logic should fire.",
+    title: "What belonged in the initial MVP?",
+    detail: "The first version had to support an end-to-end operational journey while leaving room for the many features, roles, and edge cases that followed.",
   },
   {
-    title: "Async document pipeline",
-    detail: "Classification and bundling had to be reliable enough for high-volume vendor orders because failures here slowed invoice readiness and created manual follow-up.",
+    title: "How should documents move across roles?",
+    detail: "Upload, classification, review, notes, bundling, and export formed one connected lifecycle. Each status and handoff had to make ownership and next steps clear.",
+  },
+  {
+    title: "How should service orders stay coordinated?",
+    detail: "Vendors and internal teams needed a shared view of status, scheduling, actions, and updates while the platform stayed aligned with SAP-connected processes.",
   },
 ];
 
@@ -197,10 +201,10 @@ export default function AnandPagCaseStudy() {
                   Rebuilding vendor operations for faster, more reliable service-order execution.
                 </h1>
                 <p className="max-w-3xl text-lg leading-8 !text-[#4f3523]">
-                  I led product delivery and implementation planning for a cloud vendor-operations
-                  platform that replaced fragmented legacy workflows. My work focused on workflow logic,
-                  integrations, async document services, and launch readiness across internal ops teams
-                  and external vendors.
+                  I helped shape a multi-application enterprise operations platform from initial MVP
+                  design through ongoing feature delivery. I led functional design across vendor
+                  management, service orders, document workflows, and multi-role coordination while
+                  translating business needs into implementation direction with engineers.
                 </p>
                 <div className="inline-flex w-fit items-center gap-2 rounded-full border border-[#dccfc2] bg-[#fff9f2] px-4 py-2 text-sm font-medium text-[#6d4a2c] shadow-[0_12px_28px_-24px_rgba(81,57,24,0.18)]">
                   <Gauge className="h-4 w-4 text-[#8f5a2d]" />
@@ -317,8 +321,8 @@ export default function AnandPagCaseStudy() {
           <section id="scope" className="space-y-6">
             <SectionIntro
               eyebrow="What I Owned"
-              title="The value was in turning ambiguity into buildable product direction."
-              description="My role sat between systems thinking and delivery execution: define the logic, model the edge cases, make backend work legible, and keep the release path grounded."
+              title="My contribution stretched from product definition to delivery."
+              description="I worked across business discovery, functional product decisions, implementation detail, and team enablement as the platform expanded beyond its first version."
             />
 
             <div className="grid gap-6 md:grid-cols-2">
@@ -345,12 +349,12 @@ export default function AnandPagCaseStudy() {
 
           <section id="system" className="space-y-6">
             <SectionIntro
-              eyebrow="System Complexity"
-              title="Two areas carried most of the product risk."
-              description="This is where the product-management work mattered most: state logic and async backend reliability."
+              eyebrow="Decision Stories"
+              title="Three decisions make the product scope understandable."
+              description="The complete feature set is broad. These connected decisions show the judgment behind the product without turning the case study into an inventory."
             />
 
-            <div className="grid gap-6 lg:grid-cols-2">
+            <div className="grid gap-6 lg:grid-cols-3">
               {moduleHighlights.map((module) => (
                 <div
                   key={module.title}

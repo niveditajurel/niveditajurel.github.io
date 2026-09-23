@@ -14,13 +14,26 @@ export const ToolkitPreview = () => {
           number="03"
           label="AI-native stack"
           title="How I move from thought to shipped work."
-          description="A working stack for research, prototyping, automation, data, and delivery. Tools stay secondary to the product decision."
+          description="From designing an initial MVP to creating reusable tools for the team: how AI fits into my product work."
           icon="chip"
           compact
           headingStyle="editorial"
         />
 
-        <div className="mistral-surface overflow-hidden rounded-none shadow-none">
+        <div className="mb-6 grid gap-4 border-l-2 border-[var(--bp-cobalt)] pl-5 sm:grid-cols-[13rem_minmax(0,1fr)] sm:gap-6">
+          <div>
+            <p className="font-mono text-[0.66rem] uppercase tracking-[0.14em] text-[var(--bp-cobalt)]">In practice · Anand PAG</p>
+            <h3 className="mt-2 font-fraunces text-xl leading-tight text-[var(--bp-ink)]">From MVP to shared team tools.</h3>
+          </div>
+          <p className="max-w-[70ch] text-sm leading-6 text-[var(--bp-ink-muted)]">
+            I used Visily for AI-assisted design and Cursor while building the initial MVP.
+            I also created agents to support development workflows and reusable skills for
+            the team, primarily for frontend tasks.
+          </p>
+        </div>
+
+        <details className="mistral-surface overflow-hidden rounded-none shadow-none">
+          <summary className="cursor-pointer px-4 py-4 text-sm font-semibold text-[var(--bp-ink)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[var(--bp-cobalt)] sm:px-5">Explore my full working stack</summary>
           {toolkitGroups.map((group, index) => (
             <motion.div
               key={group.id}
@@ -64,7 +77,7 @@ export const ToolkitPreview = () => {
               </div>
             </motion.div>
           ))}
-        </div>
+        </details>
       </div>
     </section>
   );

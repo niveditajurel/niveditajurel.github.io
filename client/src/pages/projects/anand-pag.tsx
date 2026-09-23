@@ -27,22 +27,23 @@ const heroStats = [
 
 const contextFacts = [
   { label: "Company / Client", value: "Anand PAG for a Fortune 500 enterprise client" },
-  { label: "Role", value: "Product Manager leading functional design from MVP definition through feature delivery" },
-  { label: "Product", value: "Multi-application operations platform supporting internal teams and external vendors" },
-  { label: "Primary goal", value: "Coordinate service orders, document operations, and SAP-connected processes across roles" },
+  { label: "Role", value: "Product Manager leading product development from MVP through ongoing feature delivery" },
+  { label: "Product", value: "Cloud operations platform with multiple applications for internal teams and external vendors" },
+  { label: "Primary goal", value: "Support vendor, service-order, and document operations at scale" },
 ];
 
 const problemPoints = [
   "Vendors needed one place to manage service orders, schedule work, share attachments, and follow status and IVR updates.",
   "Document operations moved through upload, classification, review, notes, bundling, printing, download, and export.",
   "Four to five user types needed clear handoffs, ownership, and next actions across multiple applications.",
-  "The platform also had to coordinate with SAP-connected enterprise processes without increasing manual follow-up.",
+  "Service-order and document processing for 500–700 daily users created application load, performance issues, and latency alongside demand for new features.",
+  "The cloud platform received data from an SAP system. That integration supported operations; the product itself ran outside SAP.",
 ];
 
 const proofSignals = [
-  "Translated business requirements into the initial MVP, multi-role workflows, and functional direction for new features and changes.",
-  "Worked with engineers on implementation details, system behavior, edge cases, and SAP-connected processes.",
-  "Used AI builder tools, agents, and reusable team skills to make product development and delivery work faster.",
+  "Led MVP development and ongoing feature delivery, translating stakeholder requirements into product priorities and user experiences.",
+  "Partnered with engineers on product and technical decisions, including application performance, edge cases, and system integrations.",
+  "Used Visily and Cursor to build the initial MVP, then created agents and shared skills, primarily for frontend development tasks.",
 ];
 
 const ownershipAreas: Array<{
@@ -52,12 +53,12 @@ const ownershipAreas: Array<{
 }> = [
   {
     title: "Initial MVP and product direction",
-    body: "Helped define the first version of a complex enterprise product, translating business requirements into product flows, prototypes, and priorities the team could build on.",
+    body: "Led the initial MVP from business requirements into product flows, prototypes, and a working version, then set priorities as the platform expanded.",
     icon: Workflow,
   },
   {
     title: "Vendor and service-order operations",
-    body: "Led functional decisions for vendor management, scheduling, status tracking, attachments, IVR updates, and communication between vendors and internal teams.",
+    body: "Led product decisions across vendor management, scheduling, status tracking, attachments, IVR updates, and communication between vendors and internal teams.",
     icon: GitBranch,
   },
   {
@@ -67,7 +68,7 @@ const ownershipAreas: Array<{
   },
   {
     title: "AI-enabled team delivery",
-    body: "Created reusable skills and agents for requirement breakdown, shared context, documentation, test structure, and development workflows the wider team could use.",
+    body: "Used Visily for AI-assisted design and Cursor during MVP development. Created agents to support development workflows and reusable skills for the team, primarily for frontend tasks.",
     icon: BrainCircuit,
   },
 ];
@@ -83,7 +84,7 @@ const moduleHighlights = [
   },
   {
     title: "How should service orders stay coordinated?",
-    detail: "Vendors and internal teams needed a shared view of status, scheduling, actions, and updates while the platform stayed aligned with SAP-connected processes.",
+    detail: "Vendors and internal teams needed a shared view of status, scheduling, actions, and updates, with incoming data from an external enterprise system.",
   },
 ];
 
@@ -96,7 +97,7 @@ const measuredResults = [
 
 const builderSignals = [
   "Builder PM ownership means I did not stop at requirements. I used prototypes, edge-case mapping, and engineer-facing flow logic to move ambiguous work into buildable product direction.",
-  "AI leverage was operational, not cosmetic. I created reusable skills and agents that made requirement shaping, review prep, and test-structure work faster for the team.",
+  "I extended my own AI-assisted building practice into reusable agents and frontend skills the team could use in development.",
   "The strongest PM contribution here was making a multi-system workflow understandable enough to ship with confidence.",
 ];
 
@@ -198,13 +199,26 @@ export default function AnandPagCaseStudy() {
                   Case Study
                 </p>
                 <h1 className="font-editorial text-[clamp(2.5rem,4.2vw,4.45rem)] font-medium leading-[0.92] tracking-[-0.065em] text-[#201712]">
-                  Rebuilding vendor operations for faster, more reliable service-order execution.
+                  Leading a cloud operations platform from MVP to daily enterprise use.
                 </h1>
-                <p className="max-w-3xl text-lg leading-8 !text-[#4f3523]">
-                  I helped shape a multi-application enterprise operations platform from initial MVP
-                  design through ongoing feature delivery. I led functional design across vendor
-                  management, service orders, document workflows, and multi-role coordination while
-                  translating business needs into implementation direction with engineers.
+              <nav className="flex flex-wrap gap-2" aria-label="Case study sections">
+                {jumpLinks.map((link) => (
+                  <button
+                    key={link.id}
+                    type="button"
+                    onClick={() => scrollToSection(link.id)}
+                    className="min-h-11 rounded-full border border-border/70 bg-background/82 px-4 py-2 text-sm font-semibold text-[#201712] transition-colors duration-200 hover:border-[#8f5a2d] hover:text-[#6f4a2a]"
+                  >
+                    {link.label}
+                  </button>
+                ))}
+              </nav>
+                <p className="text-base leading-7 !text-[#4f3523] sm:hidden">I led a Fortune 500 cloud operations platform from MVP through feature delivery, setting priorities across vendor, service-order, and document workflows for 500–700 daily users.</p>
+                <p className="hidden max-w-3xl text-lg leading-8 sm:block !text-[#4f3523]">
+                  I led product development for a Fortune 500 cloud operations platform, from MVP
+                  to ongoing feature delivery. My scope spanned stakeholder discovery, product priorities,
+                  hands-on building, and technical decisions with engineers—across vendor, service-order,
+                  and document operations serving 500–700 daily users.
                 </p>
                 <div className="inline-flex w-fit items-center gap-2 rounded-full border border-[#dccfc2] bg-[#fff9f2] px-4 py-2 text-sm font-medium text-[#6d4a2c] shadow-[0_12px_28px_-24px_rgba(81,57,24,0.18)]">
                   <Gauge className="h-4 w-4 text-[#8f5a2d]" />
@@ -214,28 +228,18 @@ export default function AnandPagCaseStudy() {
 
               <div className="rounded-[1.9rem] border border-[#d7cabd] bg-[#fff9f2] px-5 py-5 shadow-[0_18px_44px_-38px_rgba(81,57,24,0.14)] sm:px-6">
                 <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-[#7a5637]">
-                  TL;DR
+                  A product decision · Document lifecycle
                 </p>
                 <p className="mt-3 text-base leading-7 !text-[#4f3523]">
-                  The platform served 300+ admins and 600+ vendors, pushed cross-system updates under
-                  one minute, improved async job success from 90% to 100%, and processed 200+ bundles
-                  under one minute. I worked like a builder PM: prototypes, workflow logic, engineer-ready
-                  specs, and release coordination.
+                  Documents passed through upload, classification, review, and export across several
+                  user roles. I defined a connected workflow with explicit statuses, ownership, and next
+                  actions, giving engineers a shared model to implement across the applications.
+                  That workflow was one part of a broader product remit that also included performance,
+                  stakeholder requirements, and ongoing feature delivery.
                 </p>
               </div>
 
-              <div className="flex flex-wrap gap-3">
-                {jumpLinks.map((link) => (
-                  <button
-                    key={link.id}
-                    type="button"
-                    onClick={() => scrollToSection(link.id)}
-                    className="rounded-full border border-border/70 bg-background/82 px-4 py-2 text-sm font-semibold text-[#201712] transition-colors duration-200 hover:border-[#8f5a2d] hover:text-[#6f4a2a]"
-                  >
-                    {link.label}
-                  </button>
-                ))}
-              </div>
+
             </div>
 
             <aside className="space-y-4">
@@ -322,7 +326,7 @@ export default function AnandPagCaseStudy() {
             <SectionIntro
               eyebrow="What I Owned"
               title="My contribution stretched from product definition to delivery."
-              description="I worked across business discovery, functional product decisions, implementation detail, and team enablement as the platform expanded beyond its first version."
+              description="I led discovery, product priorities, and feature delivery, working hands-on with engineers and enabling the team as the platform expanded."
             />
 
             <div className="grid gap-6 md:grid-cols-2">

@@ -26,7 +26,7 @@ const heroMetrics = [
 const snapshotFacts = [
   { label: "Role", value: "Product Manager" },
   { label: "Product", value: "AI-powered skincare recommendation platform" },
-  { label: "Focus", value: "Onboarding clarity, recommendation trust, and first-session value" },
+  { label: "Focus", value: "Customer discovery, MVP and beta design, onboarding, and recommendation trust" },
   { label: "Timeline", value: "Aug 2024 to Dec 2024" },
 ];
 
@@ -41,6 +41,11 @@ const ownershipAreas: Array<{
   body: string;
   icon: LucideIcon;
 }> = [
+  {
+    title: "Customer discovery and MVP development",
+    body: "Spoke with customers and estheticians to understand skincare needs. Designed and helped develop MVP and beta experiences, including a path for customers to contact estheticians.",
+    icon: UserRoundSearch,
+  },
   {
     title: "Onboarding clarity",
     body: "Reviewed the quiz and onboarding journey to find where users dropped off and where the product was asking too much too early.",
@@ -206,36 +211,39 @@ export default function SkingeniusCaseStudy() {
                 <h1 className="font-editorial text-[clamp(3rem,5vw,5.2rem)] font-medium leading-[0.9] tracking-[-0.07em] text-[#1f1713]">
                   Making AI skincare recommendations easier to trust from the first session.
                 </h1>
-                <p className="max-w-3xl text-lg leading-8 text-[#52443a]">
-                  I worked on an AI skincare platform where the key product problem was not only
-                  recommendation logic. It was onboarding clarity, first-session trust, and making the
-                  product feel useful early enough that users kept going.
-                </p>
-              </div>
-
-              <div className="rounded-[1.9rem] border border-[#dfcdbc] bg-[#fff9f1] px-5 py-5 shadow-[0_18px_44px_-38px_rgba(89,64,43,0.14)] sm:px-6">
-                <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-[#8e684f]">
-                  TL;DR
-                </p>
-                <p className="mt-3 text-base leading-7 text-[#52443a]">
-                  I focused on the product layer between AI output and user trust: reduce onboarding
-                  friction, sharpen recommendation framing, and give the team a faster way to iterate on
-                  what users actually finished and engaged with.
-                </p>
-              </div>
-
-              <div className="flex flex-wrap gap-3">
+              <nav className="flex flex-wrap gap-2" aria-label="Case study sections">
                 {jumpLinks.map((link) => (
                   <button
                     key={link.id}
                     type="button"
                     onClick={() => scrollToSection(link.id)}
-                    className="rounded-full border border-border/70 bg-background/82 px-4 py-2 text-sm font-semibold text-[#1f1713] transition-colors duration-200 hover:border-[#8e684f] hover:text-[#704f39]"
+                    className="min-h-11 rounded-full border border-border/70 bg-background/82 px-4 py-2 text-sm font-semibold text-[#1f1713] transition-colors duration-200 hover:border-[#8e684f] hover:text-[#704f39]"
                   >
                     {link.label}
                   </button>
                 ))}
+              </nav>
+                <p className="text-base leading-7 !text-[#52443a] sm:hidden">I worked with customers and estheticians to shape MVP and beta experiences, improving onboarding, personalized recommendations, and access to human advice.</p>
+                <p className="hidden max-w-3xl text-lg leading-8 sm:block text-[#52443a]">
+                  I worked with customers and estheticians to shape an AI skincare platform, designed
+                  and helped develop MVP and beta experiences, and refined onboarding and recommendations.
+                  The product paired personalized discovery with an option to contact an esthetician.
+                </p>
               </div>
+
+              <div className="rounded-[1.9rem] border border-[#dfcdbc] bg-[#fff9f1] px-5 py-5 shadow-[0_18px_44px_-38px_rgba(89,64,43,0.14)] sm:px-6">
+                <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-[#8e684f]">
+                  A product decision · Personalization without overload
+                </p>
+                <p className="mt-3 text-base leading-7 text-[#52443a]">
+                  The quiz needed enough information to personalize recommendations, but the first
+                  session asked too much too early. I refined the sequence and context of questions
+                  while retaining the inputs needed for personalization. Quiz completion improved
+                  by 25% after the onboarding changes.
+                </p>
+              </div>
+
+
             </div>
 
             <aside className="space-y-4">

@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ArrowUp } from "lucide-react";
 import { siteConfig } from "@/data/site";
 import { PixelStripe } from "@/components/ui/PixelBlocks";
 import { PixelIcon } from "@/components/ui/PixelIcon";
@@ -17,11 +17,11 @@ export function Footer() {
               Contact
             </p>
             <h2 className="font-statement mt-4 text-[clamp(2.3rem,5vw,4.25rem)] font-semibold leading-[0.98] tracking-[-0.045em]">
-              Have a messy product space?
-              <span className="block text-[var(--bp-cobalt)]">Let&apos;s make it shippable.</span>
+              Hiring for your product team?
+              <span className="block text-[var(--bp-cobalt)]">Let&apos;s build something useful.</span>
             </h2>
             <p className="mt-5 max-w-[42rem] text-base leading-7 text-[var(--bp-ink-muted)]">
-              Product strategy, systems thinking, and builder energy for work that needs clarity and momentum.
+              I’m looking for product roles where customer discovery, technical depth, and hands-on building matter—across enterprise platforms and early-stage AI products.
             </p>
             <div className="mt-5 inline-flex items-center gap-3 border-l-2 border-[var(--bp-cobalt)] pl-3">
               <span className="font-mono text-[0.68rem] font-bold uppercase tracking-[0.16em] text-[var(--bp-ink-muted)]">
@@ -31,7 +31,7 @@ export function Footer() {
           </div>
           <Link href="/contact">
             <span className="mistral-action cursor-pointer px-6">
-              Start a conversation
+              Talk about a role
               <ArrowRight className="h-4 w-4" />
             </span>
           </Link>
@@ -56,6 +56,11 @@ export function Footer() {
           </nav>
           <p className="font-mono text-[0.68rem] text-[var(--bp-ink-muted)]">© {currentYear} Nivedita</p>
         </div>
+      </div>
+      <div className="mx-auto max-w-7xl px-4 pb-8 sm:px-6 md:hidden">
+        <button type="button" onClick={() => window.scrollTo({ top: 0, behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' })} className="inline-flex min-h-11 items-center gap-2 px-2 text-sm font-semibold text-[var(--bp-ink)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[var(--bp-cobalt)]">
+          Back to top <ArrowUp aria-hidden="true" className="h-4 w-4" />
+        </button>
       </div>
       <PixelStripe />
     </footer>

@@ -911,3 +911,26 @@
     letter-spacing: -0.01em;
   }
 }
+
+/* Comfortable mobile targets without enlarging thumbnail artwork. */
+@media (max-width: 767px) {
+  #featured-work a:not(.hover-cursor-target),
+  #case-studies-builds a:not(.hover-cursor-target),
+  #content-preview a:not(:has(figure)),
+  #journey-preview a,
+  footer nav a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    min-width: 44px;
+  }
+  #featured-work a:not(.hover-cursor-target) > span,
+  #case-studies-builds a:not(.hover-cursor-target) > span {
+    min-height: 44px;
+  }
+  nav button[aria-label="Open menu"],
+  nav button[aria-label="Close menu"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}

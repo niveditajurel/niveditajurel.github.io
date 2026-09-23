@@ -45,7 +45,7 @@ export const contentItems: ContentItem[] = [
       },
       {
         label: "Substack",
-        href: "https://nivedita9826.substack.com/",
+        href: "https://substack.com/@nivdebugs",
       },
     ],
     featuredPieces: [

@@ -43,7 +43,7 @@ export const funMediaItems: FunMediaItem[] = [
     title: "Nivedita's Substack",
     description:
       "A newer home for longer notes, recurring ideas, and the threads that are still evolving.",
-    href: "https://nivedita9826.substack.com/",
+    href: "https://substack.com/@nivdebugs",
   },
   {
     id: "instagram-graph-engineering",

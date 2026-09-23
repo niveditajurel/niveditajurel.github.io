@@ -266,8 +266,8 @@ export const Hero = () => {
             className="m-0 w-full max-w-[19.5rem] text-[0.9rem] font-medium leading-[1.45] text-[#3f362d] sm:max-w-[420px] sm:text-[1.08rem] sm:leading-[1.55]"
             style={{ overflowWrap: "break-word", whiteSpace: "normal" }}
           >
-            Former software engineer turned product manager, working across startups and enterprise
-            teams to turn unclear workflows into direction teams can build and ship.
+            Former software engineer turned PM, connecting customer discovery, product decisions,
+            and technical design—from enterprise operations to early-stage AI products.
           </motion.p>
 
           <div className="flex flex-wrap gap-3 sm:hidden">
@@ -326,7 +326,7 @@ export const Hero = () => {
             variants={reduceMotion ? undefined : item}
             className="font-mono m-0 hidden text-[0.78rem] font-bold uppercase tracking-[0.22em] text-[#3b332b] sm:block"
           >
-            Former SWE · Startups + Enterprise PM
+            United States · Open to relocation
           </motion.p>
 
           {/* CTAs */}

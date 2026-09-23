@@ -1,6 +1,5 @@
 import type { ReactNode } from "react";
 import { motion, useReducedMotion } from "framer-motion";
-import { ArrowRight, ArrowUpRight, Eye } from "lucide-react";
 import { Link } from "wouter";
 import { cn } from "@/lib/utils";
 import { PixelIcon, type PixelIconName } from "@/components/ui/PixelIcon";
@@ -99,24 +98,7 @@ function ThumbnailPanel({
         />
       </span>
 
-      <div className="absolute inset-x-4 bottom-4 flex justify-end md:hidden sm:inset-x-5 sm:bottom-5">
-        <span
-          className={cn(
-            "ease-snappy inline-flex items-center gap-2 rounded-full border px-4 py-2 text-[0.7rem] font-semibold uppercase tracking-[0.16em] shadow-[0_16px_32px_-22px_rgba(23,18,15,0.42)] transition-all duration-200 opacity-100",
-            tone === "dark"
-              ? "border-[var(--bp-cobalt-hover)] bg-[var(--bp-cobalt)] text-[var(--bp-action-ink)]"
-              : "border-[#d96f3d] bg-[#cb6638] text-[#fff8ef]",
-          )}
-        >
-          <Eye className="h-3.5 w-3.5" />
-          <span>{ctaLabel}</span>
-          {isExternal ? (
-            <ArrowUpRight className="h-3.5 w-3.5" />
-          ) : (
-            <ArrowRight className="h-3.5 w-3.5" />
-          )}
-        </span>
-      </div>
+
     </div>
   );
 }

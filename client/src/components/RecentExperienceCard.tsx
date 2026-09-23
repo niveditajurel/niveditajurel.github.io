@@ -32,7 +32,7 @@ const recentExperienceMeta: Record<string, RecentExperienceMeta> = {
   "anand-pag": {
     roleLabel: "Enterprise PM + Builder",
     visualNote:
-      "Shaped a multi-application platform for a Fortune 500 client from MVP through delivery. Led functional design across core workflows and technical design for selected vendor, document, service-order, and SAP features.",
+      "Led product development for a Fortune 500 cloud operations platform, from MVP to ongoing feature delivery. Set priorities across vendor, service-order, and document workflows, balancing stakeholder needs, usability, and performance for 500–700 daily users.",
     displayTitle: "Anand PAG",
     displayPeriod: "2025 - Present",
     mediaSrc: "/anand-workflow-system-map.png",
@@ -46,7 +46,7 @@ const recentExperienceMeta: Record<string, RecentExperienceMeta> = {
   "nomad-ai": {
     roleLabel: "Product Manager",
     visualNote:
-      "Wealth OS for SMBs, built around valuation workflows, financial clarity, and AI-assisted decision support.",
+      "Worked with SMBs and brokers to understand valuation needs. Shaped the AI product’s MVP, interface, and usability, alongside pricing, analytics, and go-to-market strategy.",
     displayPeriod: "May 2024 - Jul 2024",
     mediaSrc: "/nomad-landing.png",
     mediaVideoSrc: "/thumbnail-previews/nomad-ai-dashboard-preview.mp4",
@@ -58,7 +58,7 @@ const recentExperienceMeta: Record<string, RecentExperienceMeta> = {
   skingenius: {
     roleLabel: "Product Manager",
     visualNote:
-      "AI-led skincare ecommerce marketplace focused on discovery, trust, and recommendation-led shopping.",
+      "Worked with customers and estheticians to shape an AI skincare product. Designed and helped build MVP and beta experiences, including personalized discovery and access to human advice.",
     displayPeriod: "Aug 2024 - Dec 2024",
     mediaSrc: "/teasers/skingenius1.jpg",
     mediaVideoSrc: "/thumbnail-previews/skingenius-preview.mp4",
@@ -188,14 +188,7 @@ export function RecentExperienceCard({
             </div>
           </div>
           <p
-            className={cn(
-              "text-[0.84rem] leading-[1.55] text-[var(--bp-ink-muted)]",
-              meta.descriptionLines === 4
-                ? "line-clamp-4"
-                : meta.descriptionLines === 3
-                  ? "line-clamp-3"
-                  : "line-clamp-3 sm:line-clamp-2",
-            )}
+            className="text-[0.84rem] leading-[1.55] text-[var(--bp-ink-muted)]"
           >
             {meta.visualNote}
           </p>

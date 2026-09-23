@@ -30,7 +30,7 @@ const snapshotFacts = [
   { label: "Role", value: "Consultant Product Manager" },
   { label: "Team", value: "Founder-led team of 4 across product and engineering" },
   { label: "Product", value: "AI-powered SMB valuation and exit-planning platform" },
-  { label: "Scope", value: "Pricing, analytics, ETL reliability, and MVP launch structure" },
+  { label: "Scope", value: "Customer discovery, MVP and UX design, pricing, analytics, and go-to-market" },
 ];
 
 const marketReality = [
@@ -50,6 +50,11 @@ const ownershipAreas: Array<{
   body: string;
   icon: LucideIcon;
 }> = [
+  {
+    title: "Customer discovery and MVP design",
+    body: "Worked with SMBs and brokers to understand their needs, then shaped the initial MVP, interface, and usability for the target audience.",
+    icon: Users2,
+  },
   {
     title: "Pricing and packaging",
     body: "Authored a pricing PRD spanning four monetization models and mapped which offers best matched early user trust and willingness to pay.",
@@ -205,38 +210,41 @@ export default function NomadAiCaseStudy() {
                   AI fintech case study
                 </p>
                 <h1 className="font-editorial text-[clamp(3rem,5vw,5.2rem)] font-medium leading-[0.9] tracking-[-0.07em] text-[#151c27]">
-                  Pricing and launch strategy for an AI valuation product in a trust-sensitive market.
+                  Shaping an AI valuation product from customer discovery to launch.
                 </h1>
-                <p className="max-w-3xl text-lg leading-8 text-[#445066]">
-                  I worked as a consultant product manager on a founder-led SMB valuation platform,
-                  shaping pricing, analytics, and MVP decisions so the product could earn trust before
-                  it tried to scale monetization.
-                </p>
-              </div>
-
-              <div className="rounded-[1.9rem] border border-[#d1dced] bg-[#f8fbff] px-5 py-5 shadow-[0_18px_44px_-38px_rgba(41,62,98,0.14)] sm:px-6">
-                <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-[#5877a7]">
-                  TL;DR
-                </p>
-                <p className="mt-3 text-base leading-7 text-[#445066]">
-                  My scope was not the later user growth alone. I owned the product foundation around
-                  pricing, analytics, ETL reliability, and launch sequencing so the team had a more
-                  credible way to test monetization and learn from real usage.
-                </p>
-              </div>
-
-              <div className="flex flex-wrap gap-3">
+              <nav className="flex flex-wrap gap-2" aria-label="Case study sections">
                 {jumpLinks.map((link) => (
                   <button
                     key={link.id}
                     type="button"
                     onClick={() => scrollToSection(link.id)}
-                    className="rounded-full border border-border/70 bg-background/82 px-4 py-2 text-sm font-semibold text-[#151c27] transition-colors duration-200 hover:border-[#5877a7] hover:text-[#38527a]"
+                    className="min-h-11 rounded-full border border-border/70 bg-background/82 px-4 py-2 text-sm font-semibold text-[#151c27] transition-colors duration-200 hover:border-[#5877a7] hover:text-[#38527a]"
                   >
                     {link.label}
                   </button>
                 ))}
+              </nav>
+                <p className="text-base leading-7 !text-[#445066] sm:hidden">I shaped an AI valuation product through SMB and broker discovery, MVP design, pricing, analytics, and go-to-market planning with a small founder-led team.</p>
+                <p className="hidden max-w-3xl text-lg leading-8 sm:block text-[#445066]">
+                  As a consultant product manager, I worked with SMBs and brokers to understand
+                  valuation needs, shaped the MVP and user experience, and developed pricing, analytics,
+                  and go-to-market plans with a small founder-led team.
+                </p>
               </div>
+
+              <div className="rounded-[1.9rem] border border-[#d1dced] bg-[#f8fbff] px-5 py-5 shadow-[0_18px_44px_-38px_rgba(41,62,98,0.14)] sm:px-6">
+                <p className="text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-[#5877a7]">
+                  A product decision · Make launch measurable
+                </p>
+                <p className="mt-3 text-base leading-7 text-[#445066]">
+                  The team needed to understand whether onboarding, trust, or pricing was limiting
+                  conversion. I defined funnel metrics and leading indicators before launch so those
+                  questions could guide iteration. This established a measurement foundation; the
+                  projected conversion and revenue lifts below remain separate from observed results.
+                </p>
+              </div>
+
+
             </div>
 
             <aside className="space-y-4">
@@ -318,7 +326,7 @@ export default function NomadAiCaseStudy() {
             <SectionIntro
               eyebrow="What I Owned"
               title="I focused on the product decisions that made the launch testable and commercially coherent."
-              description="My contribution was not one feature. It was the operating frame for how the team would learn: who to price for, what to measure, how to sequence the MVP, and how to make valuation data flow more reliably."
+              description="My scope connected customer discovery and MVP usability with pricing, go-to-market planning, measurement, and the reliability of valuation inputs."
             />
 
             <div className="grid gap-6 md:grid-cols-2">

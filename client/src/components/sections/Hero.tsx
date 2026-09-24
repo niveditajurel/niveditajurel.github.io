@@ -158,7 +158,7 @@ export const Hero = () => {
         alt="Nivedita, product manager and builder, in front of a whiteboard of hand-drawn product doodles"
         className="absolute inset-0 hidden h-full w-full object-cover sm:block sm:object-[66%_0%] lg:object-[76%_4%] xl:object-[82%_5%]"
         loading="eager"
-        fetchPriority="high"
+        {...{ fetchpriority: "high" }}
         decoding="async"
         width={1393}
         height={1129}
@@ -301,7 +301,7 @@ export const Hero = () => {
               alt="Nivedita in front of whiteboard product doodles"
               className="aspect-[16/10] w-full object-cover object-[58%_0%]"
               loading="eager"
-              fetchPriority="high"
+              {...{ fetchpriority: "high" }}
               decoding="async"
               width={900}
               height={730}

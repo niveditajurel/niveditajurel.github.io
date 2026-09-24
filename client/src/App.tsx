@@ -1,6 +1,5 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Switch, Route, Router as WouterRouter, useLocation } from "wouter";
-import { useHashLocation } from "wouter/use-hash-location";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
@@ -10,6 +9,7 @@ import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { HoverCursor } from "@/components/ui/hover-cursor";
+import { RouteMetadata } from "@/components/RouteMetadata";
 import Home from "@/pages/home";
 import About from "@/pages/about";
 import Content from "@/pages/content";
@@ -66,19 +66,32 @@ function SiteHoverCursor() {
   return isEnabled ? <HoverCursor /> : null;
 }
 
-function App() {
+function ClientHoverCursor() {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => setMounted(true), []);
+
+  return mounted ? <SiteHoverCursor /> : null;
+}
+
+type AppProps = {
+  ssrPath?: string;
+};
+
+function App({ ssrPath }: AppProps) {
   return (
     <ThemeProvider defaultTheme="light" storageKey="portfolio-theme">
       <QueryClientProvider client={queryClient}>
         <TooltipProvider>
-          <WouterRouter hook={useHashLocation}>
+          <WouterRouter ssrPath={ssrPath}>
             <div className="relative min-h-screen flex flex-col">
+              <RouteMetadata />
               <Navigation />
               <main className="flex-1 pt-16">
                 <Router />
               </main>
               <Footer />
-              <SiteHoverCursor />
+              <ClientHoverCursor />
               <ScrollToTop />
               <Toaster />
             </div>
